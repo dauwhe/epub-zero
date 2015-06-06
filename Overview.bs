@@ -1,0 +1,143 @@
+<h1>EPUB Zero</h1>
+<pre class='metadata'>
+Status: ED
+Shortname: e0
+Level: 1
+Group: dpub
+ED: http://dev.w3.org/csswg/tk/
+Editor: Tzviya Seigman, Wiley, tseigman@wiley.com
+Editor: Dave Cramer, Hachette Book Group, dauwhe@gmail.com
+
+Abstract: The simplest possible ebook format.
+!Issue Tracking: TK
+Ignored Terms: 
+</pre>
+
+<h2 class="no-num" id="introduction">
+Introduction
+</h2>
+
+EPUB3 is unnecessarily complex. It requires numerous custom XML vocabularies, and massive repetition of content. Developing a reading system for EPUB3 is a herculean task, as evidenced by the slow progress of Readium. Our goal is to create a simpler publication format, easier to author, and easy to read in a browser with as little additional technology as possible.
+
+Note: EPUB Zero is not just for books, but any packaged web content. We will use the term <i>publication</i> to describe books, magazines, journals, manuals, reference documents, corporate documents, articles, etc.
+
+<h2 id="goals">
+Design goals and rationale
+</h2>
+
+Note: Are we discussing a <b>portable</b> publication format? Or just a publication format?
+
+Note: The ultimate test of this specification is whether we can build a reading system on top of an ordinary browser with only a bit of JS.
+
+EPUB Zero satisfies the following design goals:
+
+1. Simplicity
+2. Webbiness
+3. Built from HTML and CSS and JSON(-LD) as much as possible
+4. Uses existing standards whenever possible
+5. Can packaging be optional?
+6. Don't repeat yourself
+7. publication as URI
+8. linked data
+9. Easy to author
+10. Aims to use the browser as reading system
+
+<h2 id="e0-documents">EPUB Zero documents</h2>
+
+
+<h3 id="content-docs">
+Content documents
+</h3>
+
+An EPUB Zero content document is an HTML5 document.
+
+Issue: Can SVG or raster images be a content document? Does [[HTML5]] define required media types?  
+
+<h3 id="style">Style</h3>
+
+There are no restrictions on the use of CSS.
+
+Note: Reading long-form content in paginated form often offers a better experience for readers. We encourage document authors to support pagination via CSS, polyfills, prollyfills, reading systems, and/or political action. 
+
+<h3 id="interactivity">Interactivity</h3>
+
+There are no restrictions on the use of Javascript in Epub zero. 
+
+Note: Beware of footguns
+
+<h2 id="installing">Installing EPUB Zero publications</h2>
+
+Epub zero uses the web manifest specification https://w3c.github.io/manifest/ to facilitate installation as a webapp on user devices. 
+
+
+
+<h2 id="offline">Offline reading</h2>
+
+An epub zero publication must have a cache manifest so that it can function offline as well as online https://html.spec.whatwg.org/multipage/browsers.html#offline
+
+
+
+<h2 id="structure">
+Publication structure and packaging
+</h2>
+
+An EPUB Zero publication is a collection of files, which must be collected inside a folder or directory. The top level of the directory should contain the web manifest and cache manifest. No other restrictions exist on the directory structure. 
+
+Compressing or otherwise packaging this directory may be required for many reasons, including
+
+1. reduction of file size
+2. creating a single "blob" that can be easily transmitted
+3. allowing for a digital signature
+4. allowing for digital rights management
+5. allowing for streaming of the publication
+
+In simple cases, using ZIP may be sufficient. The W3C WebApps Packaging format may prove useful as well http://w3ctag.github.io/packaging-on-the-web/
+
+Issue: how about using presence of manifest.json as trigger, as what defines a publication as something different than an ordinary bundle of web content? Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”
+
+
+<h2 id="metadata">
+Metadata
+</h2>
+
+Publication-level metadata can be stored in the publication folder. We recommend the use of JSON-LD as a metadata format, but different communities may use other formats such as RDF, Turtle, or (god forbid) ONIX.
+
+
+
+<h2 class="no-num" id="acknowledgments">
+Acknowledgments
+</h2>
+
+Daniel Glazman, Ivan Herman, Markus Gylling
+
+
+<h2 class="appendix">
+Reading system behaviour
+</h2>
+
+1. a user agent receives an http request 
+
+<pre>
+GET /urn:isbn:9780316123456
+Host: http://www.hachettebookgroup.com
+Accept: ????
+</pre>
+
+Issue: what if there's a zip (or any compressed file) or .e0 there?
+
+2. If manifest.json exists, read manifest.json; open start_url
+
+3. If manifest.json does not exist
+    a. if index.html exists open that
+    b. if index.html doesn't exist open first html file 
+    c. if there are no html files open the first supported format 
+    d. otherwise error "there is not a book here"
+
+
+<h2 class="appendix">
+
+</h2>
+
+http://manu.sporny.org/2014/json-ld-origins-2/
+
+
