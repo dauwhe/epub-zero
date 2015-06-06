@@ -1,12 +1,12 @@
 <h1>EPUB Zero</h1>
 <pre class='metadata'>
-Status: ED
+Status: UD
 Shortname: e0
 Level: 1
-Group: dpub
-ED: http://dev.w3.org/csswg/tk/
+Group: TK
+ED: http://dauwhe.github.io/epub-zero/
 Editor: Tzviya Seigman, Wiley, tseigman@wiley.com
-Editor: Dave Cramer, Hachette Book Group, dauwhe@gmail.com
+Editor: Dave Cramer, Hachette Livre, dauwhe@gmail.com
 
 Abstract: The simplest possible ebook format.
 !Issue Tracking: TK
@@ -61,19 +61,19 @@ Note: Reading long-form content in paginated form often offers a better experien
 
 <h3 id="interactivity">Interactivity</h3>
 
-There are no restrictions on the use of Javascript in Epub zero. 
+There are no restrictions on the use of Javascript in EPUB Zero. 
 
-Note: Beware of footguns
+Note: Beware of footguns.
 
 <h2 id="installing">Installing EPUB Zero publications</h2>
 
-Epub zero uses the web manifest specification https://w3c.github.io/manifest/ to facilitate installation as a webapp on user devices. 
+EPUB Zero uses the web manifest specification https://w3c.github.io/manifest/ to facilitate installation as a webapp on user devices. 
 
 
 
 <h2 id="offline">Offline reading</h2>
 
-An epub zero publication must have a cache manifest so that it can function offline as well as online https://html.spec.whatwg.org/multipage/browsers.html#offline
+An EPUB Zero publication must have a cache manifest so that it can function offline as well as online https://html.spec.whatwg.org/multipage/browsers.html#offline
 
 
 
@@ -100,7 +100,7 @@ Issue: how about using presence of manifest.json as trigger, as what defines a p
 Metadata
 </h2>
 
-Publication-level metadata can be stored in the publication folder. We recommend the use of JSON-LD as a metadata format, but different communities may use other formats such as RDF, Turtle, or (god forbid) ONIX.
+Publication-level metadata can be stored in the publication folder. We recommend the use of JSON-LD as a metadata format, but different communities may use other formats such as RDF, Turtle, or ONIX.
 
 
 
