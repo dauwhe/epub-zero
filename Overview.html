@@ -573,7 +573,7 @@ span.issue, span.note {
    <h1 class="p-name no-ref" id="title">EPUB Zero</h1>
   
    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Unofficial Proposal Draft,
-    <time class="dt-updated" datetime="2015-06-06">6 June 2015</time></span></h2>
+    <time class="dt-updated" datetime="2015-06-08">8 June 2015</time></span></h2>
   
    <div data-fill-with="spec-metadata">
     <dl>
@@ -581,11 +581,9 @@ span.issue, span.note {
      <dd><a class="u-url" href="http://dauwhe.github.io/epub-zero/">http://dauwhe.github.io/epub-zero/</a>
      <dt>Issue Tracking:
      <dd><a href="#issues-index">Inline In Spec</a>
-     <dd><span>TK</span>
      <dt class="editor">Editors:
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:tseigman@wiley.com">Tzviya Seigman</a> (<span class="p-org org">Wiley</span>)
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:dauwhe@gmail.com">Dave Cramer</a> (<span class="p-org org">Hachette Livre</span>)
-     <dd class="editor p-author h-card vcard"><span class="p-name fn"></span>
     </dl>
    </div>
   
@@ -594,7 +592,7 @@ span.issue, span.note {
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/80x15.png"></a>
 To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 6 June 2015,
+In addition, as of 8 June 2015,
 the editors have made this specification available under the
 <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
@@ -608,7 +606,7 @@ Parts of this work may be from another specification document.  If so, those par
   <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
 
   <div class="p-summary" data-fill-with="abstract">
-   <p>The simplest possible ebook format.</p>
+   <p>A simple ebook format, as close to the Open Web Platform as possible.</p>
 
 </div>
 
@@ -632,6 +630,11 @@ Content documents
 </span></a>
       <li><a href="#style"><span class="secno">2.2</span> <span class="content">Style</span></a>
       <li><a href="#interactivity"><span class="secno">2.3</span> <span class="content">Interactivity</span></a>
+      <li><a href="#media-overlays"><span class="secno">2.4</span> <span class="content">Media Overlays</span></a>
+      <li><a href="#global"><span class="secno">2.5</span> <span class="content">Global Language Support</span></a>
+      <li><a href="#navigation"><span class="secno">2.6</span> <span class="content">Navigation</span></a>
+      <li><a href="#fxl"><span class="secno">2.7</span> <span class="content">Fixed Layout</span></a>
+      <li><a href="#a11y"><span class="secno">2.8</span> <span class="content">Accessibility</span></a>
      </ul>
     <li><a href="#installing"><span class="secno">3</span> <span class="content">Installing EPUB Zero publications</span></a>
     <li><a href="#offline"><span class="secno">4</span> <span class="content">Offline reading</span></a>
@@ -644,11 +647,11 @@ Metadata
     <li><a href="#acknowledgments"><span class="secno"></span> <span class="content">
 Acknowledgments
 </span></a>
-    <li><a href="#reading-system-behaviour"><span class="secno">7</span> <span class="content">
+    <li><a href="#appendix-1"><span class="secno">7</span> <span class="content">
 Reading system behaviour
 </span></a>
-    <li><a href="#"><span class="secno">8</span> <span class="content">
-
+    <li><a href="#appendix-2"><span class="secno">8</span> <span class="content">
+References and Further Reading
 </span></a>
     <li><a href="#conformance"><span class="secno"></span> <span class="content">
 Conformance</span></a>
@@ -670,6 +673,13 @@ Introduction
 </span></h2>
 
 
+
+   <p class="note" role="note">Note: This specification is only a thought experiment, inspired by the <a href="http://w3c.github.io/epubweb/">EPUB+WEB White Paper</a> (by the <a href="https://www.w3.org/dpub/IG/wiki/">W3C Digital Publishing Interest Group</a> and the <a href="idpf.org">IDPF</a>) and by concerns about the complexity of EPUB3. Please join the Digital Publishing Interest Group and IDPF to help bring about a better future for ebooks.</p>
+
+
+   <p>A book, in the digital world, is a reading mode, not a file format. The Open Web Platform provides us with most of what we need for the content, style, and behavior of a publication. EPUB Zero aims to make publications just another part of the web.</p>
+
+
    <p>EPUB3 is unnecessarily complex. It requires numerous custom XML vocabularies, and massive repetition of content. Developing a reading system for EPUB3 is a herculean task, as evidenced by the slow progress of Readium. Our goal is to create a simpler publication format, easier to author, and easy to read in a browser with as little additional technology as possible.</p>
 
 
@@ -681,7 +691,7 @@ Design goals and rationale
 </span><a class="self-link" href="#goals"></a></h2>
 
 
-   <p class="note" role="note">Note: Are we discussing a <b>portable</b> publication format? Or just a publication format?</p>
+   <p class="issue" id="issue-38399239"><a class="self-link" href="#issue-38399239"></a> Are we discussing a <b>portable</b> publication format? Or just a publication format?</p>
 
 
    <p class="note" role="note">Note: The ultimate test of this specification is whether we can build a reading system on top of an ordinary browser with only a bit of JS.</p>
@@ -765,10 +775,45 @@ Content documents
    <p class="note" role="note">Note: Beware of footguns.</p>
 
 
+
+
+   <h3 class="heading settled" data-level="2.4" id="media-overlays"><span class="secno">2.4. </span><span class="content">Media Overlays</span><a class="self-link" href="#media-overlays"></a></h3>
+
+
+   <h3 class="heading settled" data-level="2.5" id="global"><span class="secno">2.5. </span><span class="content">Global Language Support</span><a class="self-link" href="#global"></a></h3>
+
+
+   <h3 class="heading settled" data-level="2.6" id="navigation"><span class="secno">2.6. </span><span class="content">Navigation</span><a class="self-link" href="#navigation"></a></h3>
+
+
+   <h3 class="heading settled" data-level="2.7" id="fxl"><span class="secno">2.7. </span><span class="content">Fixed Layout</span><a class="self-link" href="#fxl"></a></h3>
+
+
+   <h3 class="heading settled" data-level="2.8" id="a11y"><span class="secno">2.8. </span><span class="content">Accessibility</span><a class="self-link" href="#a11y"></a></h3>
+
+
    <h2 class="heading settled" data-level="3" id="installing"><span class="secno">3. </span><span class="content">Installing EPUB Zero publications</span><a class="self-link" href="#installing"></a></h2>
 
 
    <p>EPUB Zero uses the web manifest specification https://w3c.github.io/manifest/ to facilitate installation as a webapp on user devices.</p>
+
+
+   <div class="example" id="example-996cf67d"><a class="self-link" href="#example-996cf67d"></a>
+
+    <pre>{  "name": "Moby-Dick",
+  "short_name": "Moby-Dick",
+  "icons": [{
+        "src": "icons/moby-dick-icon.webp",
+        "sizes": "64x64",
+        "type": "image/webp"
+      }],
+  "start_url": "title-page.html",
+  "display": "minimal-ui",
+}</pre>
+</div>
+
+
+   <p class="issue" id="issue-00d55662"><a class="self-link" href="#issue-00d55662"></a> the <code>display</code> property is interesting. Adding an additional value <code>"display": "book"</code> might be a good way of indicating to the browser that it should display the content with a UI optimized for long-form content.</p>
 
 
 
@@ -779,6 +824,25 @@ Content documents
    <p>An EPUB Zero publication must have a cache manifest so that it can function offline as well as online https://html.spec.whatwg.org/multipage/browsers.html#offline</p>
 
 
+   <div class="example" id="example-ffd63990"><a class="self-link" href="#example-ffd63990"></a>
+
+    <pre>CACHE MANIFEST
+#v3 2015-06-05
+css/mobydick.css
+metadata.json
+manifest.json
+title-page.html
+copyright.html
+introduction.html
+epigraph.html
+c001.html
+c002.html
+...
+</pre>
+</div>
+
+
+   <p class="note" role="note">Note: this seems to handle the issue of updating ebooks—make a change to the cache manifest on the server and new files will be uploaded the next time the reader is online.</p>
 
 
    <h2 class="heading settled" data-level="5" id="structure"><span class="secno">5. </span><span class="content">
@@ -829,6 +893,63 @@ Metadata
    <p>Publication-level metadata can be stored in the publication folder. We recommend the use of JSON-LD as a metadata format, but different communities may use other formats such as RDF, Turtle, or ONIX.</p>
 
 
+   <div class="example" id="example-5f6f7746"><a class="self-link" href="#example-5f6f7746"></a>
+
+    <pre>{
+  "@context": "http://schema.org",
+  "@type": "Book",
+  "accessibilityAPI": "ARIA",
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "largePrint/CSSEnabled",
+    "highContrast/CSSEnabled",
+    "resizeText/CSSEnabled"
+  ],
+  "accessibilityHazard": [
+    "noFlashing",
+    "noMotionSimulation",
+    "noSound"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "reviewCount": "0"
+  },
+  "bookFormat": "EBook/e0",
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Harper &amp; Row"
+  },
+  "author": "Herman Melville",
+  "datePublished": "1851-10-19",
+  "image": "moby-dick-book-cover.jpg",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://example.com/BuyMe?isbn=9780316123456",
+    "price": "6.99",
+    "priceCurrency": "USD"
+  },
+  "copyrightYear": "1851",
+  "description": "Project Gutenberg edition of Moby-Dick",
+  "genre": "Literary Fiction",
+  "inLanguage": "en-US",
+  "isFamilyFriendly": "true",
+  "isbn": "9780000000000",
+  "name": "Moby-Dick",
+  "numberOfPages": "777",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Harper &amp; Row"
+  }
+}
+
+
+</pre>
+</div>
+
+
 
 
    <h2 class="no-num heading settled" id="acknowledgments"><span class="content">
@@ -836,13 +957,13 @@ Acknowledgments
 </span><a class="self-link" href="#acknowledgments"></a></h2>
 
 
-   <p>Daniel Glazman, Ivan Herman, Markus Gylling</p>
+   <p>EPUB Zero was originally inspired by a series of posts on EPUB3 by Daniel Glazman.</p>
 
 
 
-   <h2 class="appendix heading settled" data-level="7" id="reading-system-behaviour"><span class="secno">7. </span><span class="content">
+   <h2 class="appendix heading settled" data-level="7" id="appendix-1"><span class="secno">7. </span><span class="content">
 Reading system behaviour
-</span><a class="self-link" href="#reading-system-behaviour"></a></h2>
+</span><a class="self-link" href="#appendix-1"></a></h2>
 
 
    <ol>
@@ -877,14 +998,17 @@ d. otherwise error "there is not a book here"</p>
 
 </ol>
 
-   <h2 class="appendix heading settled" data-level="8" id=""><span class="secno">8. </span><span class="content">
-
-</span><a class="self-link" href="#"></a></h2>
-
-
-   <p>http://manu.sporny.org/2014/json-ld-origins-2/</p>
+   <h2 class="appendix heading settled" data-level="8" id="appendix-2"><span class="secno">8. </span><span class="content">
+References and Further Reading
+</span><a class="self-link" href="#appendix-2"></a></h2>
 
 
+   <ul>
+    <li data-md="">
+     <p>http://manu.sporny.org/2014/json-ld-origins-2/</p>
+     
+
+</ul>
 
 </main>
 
@@ -940,7 +1064,9 @@ Conformance</span><a class="self-link" href="#conformance"></a></h2>
   </dl>
   <h2 class="no-num heading settled" id="issues-index"><span class="content">Issues Index</span><a class="self-link" href="#issues-index"></a></h2>
   <div style="counter-reset:issue">
+   <div class="issue"> Are we discussing a <b>portable</b> publication format? Or just a publication format?<a href="#issue-38399239"> ↵ </a></div>
    <div class="issue"> Can SVG or raster images be a content document? Does <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> define required media types?<a href="#issue-28379cf4"> ↵ </a></div>
+   <div class="issue"> the <code>display</code> property is interesting. Adding an additional value <code>"display": "book"</code> might be a good way of indicating to the browser that it should display the content with a UI optimized for long-form content.<a href="#issue-00d55662"> ↵ </a></div>
    <div class="issue"> how about using presence of manifest.json as trigger, as what defines a publication as something different than an ordinary bundle of web content? Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”<a href="#issue-b4bfdeef"> ↵ </a></div>
    <div class="issue"> what if there’s a zip (or any compressed file) or .e0 there?<a href="#issue-22f0ee80"> ↵ </a></div>
   </div></body>
