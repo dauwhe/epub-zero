@@ -7,15 +7,17 @@ Group: TK
 ED: http://dauwhe.github.io/epub-zero/
 Editor: Tzviya Seigman, Wiley, tseigman@wiley.com
 Editor: Dave Cramer, Hachette Livre, dauwhe@gmail.com
-
-Abstract: The simplest possible ebook format.
-!Issue Tracking: TK
-Ignored Terms: 
+Abstract: A simple ebook format, as close to the Open Web Platform as possible.
 </pre>
 
 <h2 class="no-num" id="introduction">
 Introduction
 </h2>
+
+
+Note: This specification is only a thought experiment, inspired by the <a href="http://w3c.github.io/epubweb/">EPUB+WEB White Paper</a> (by the <a href="https://www.w3.org/dpub/IG/wiki/">W3C Digital Publishing Interest Group</a> and the <a href="idpf.org">IDPF</a>) and by concerns about the complexity of EPUB3. Please join the Digital Publishing Interest Group and IDPF to help bring about a better future for ebooks. 
+
+A book, in the digital world, is a reading mode, not a file format. The Open Web Platform provides us with most of what we need for the content, style, and behavior of a publication. EPUB Zero aims to make publications just another part of the web. 
 
 EPUB3 is unnecessarily complex. It requires numerous custom XML vocabularies, and massive repetition of content. Developing a reading system for EPUB3 is a herculean task, as evidenced by the slow progress of Readium. Our goal is to create a simpler publication format, easier to author, and easy to read in a browser with as little additional technology as possible.
 
@@ -25,7 +27,7 @@ Note: EPUB Zero is not just for books, but any packaged web content. We will use
 Design goals and rationale
 </h2>
 
-Note: Are we discussing a <b>portable</b> publication format? Or just a publication format?
+Issue: Are we discussing a <b>portable</b> publication format? Or just a publication format?
 
 Note: The ultimate test of this specification is whether we can build a reading system on top of an ordinary browser with only a bit of JS.
 
@@ -65,9 +67,39 @@ There are no restrictions on the use of Javascript in EPUB Zero.
 
 Note: Beware of footguns.
 
+<!--<h3 id="fonts">Fonts</h3>
+
+<h3 id="flow">Document Flow</h3>-->
+
+<h3 id="media-overlays">Media Overlays</h3>
+
+<h3 id="global">Global Language Support</h3>
+
+<h3 id="navigation">Navigation</h3>
+
+<h3 id="fxl">Fixed Layout</h3>
+
+<h3 id="a11y">Accessibility</h3>
+
 <h2 id="installing">Installing EPUB Zero publications</h2>
 
 EPUB Zero uses the web manifest specification https://w3c.github.io/manifest/ to facilitate installation as a webapp on user devices. 
+
+<div class="example">
+<pre>{
+  "name": "Moby-Dick",
+  "short_name": "Moby-Dick",
+  "icons": [{
+        "src": "icons/moby-dick-icon.webp",
+        "sizes": "64x64",
+        "type": "image/webp"
+      }],
+  "start_url": "title-page.html",
+  "display": "minimal-ui",
+}</pre>
+</div>
+
+Issue: the <code>display</code> property is interesting. Adding an additional value <code>"display": "book"</code> might be a good way of indicating to the browser that it should display the content with a UI optimized for long-form content. 
 
 
 
@@ -75,7 +107,24 @@ EPUB Zero uses the web manifest specification https://w3c.github.io/manifest/ to
 
 An EPUB Zero publication must have a cache manifest so that it can function offline as well as online https://html.spec.whatwg.org/multipage/browsers.html#offline
 
+<div class="example">
+<pre>
+CACHE MANIFEST
+#v3 2015-06-05
+css/mobydick.css
+metadata.json
+manifest.json
+title-page.html
+copyright.html
+introduction.html
+epigraph.html
+c001.html
+c002.html
+...
+</pre>
+</div>
 
+Note: this seems to handle the issue of updating ebooks—make a change to the cache manifest on the server and new files will be uploaded the next time the reader is online. 
 
 <h2 id="structure">
 Publication structure and packaging
@@ -102,16 +151,72 @@ Metadata
 
 Publication-level metadata can be stored in the publication folder. We recommend the use of JSON-LD as a metadata format, but different communities may use other formats such as RDF, Turtle, or ONIX.
 
+<div class="example">
+<pre>
+{
+  "@context": "http://schema.org",
+  "@type": "Book",
+  "accessibilityAPI": "ARIA",
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "largePrint/CSSEnabled",
+    "highContrast/CSSEnabled",
+    "resizeText/CSSEnabled"
+  ],
+  "accessibilityHazard": [
+    "noFlashing",
+    "noMotionSimulation",
+    "noSound"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "reviewCount": "0"
+  },
+  "bookFormat": "EBook/e0",
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Harper &amp; Row"
+  },
+  "author": "Herman Melville",
+  "datePublished": "1851-10-19",
+  "image": "moby-dick-book-cover.jpg",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://example.com/BuyMe?isbn=9780316123456",
+    "price": "6.99",
+    "priceCurrency": "USD"
+  },
+  "copyrightYear": "1851",
+  "description": "Project Gutenberg edition of Moby-Dick",
+  "genre": "Literary Fiction",
+  "inLanguage": "en-US",
+  "isFamilyFriendly": "true",
+  "isbn": "9780000000000",
+  "name": "Moby-Dick",
+  "numberOfPages": "777",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Harper &amp; Row"
+  }
+}
+
+
+</pre>
+</div>
+
 
 
 <h2 class="no-num" id="acknowledgments">
 Acknowledgments
 </h2>
 
-Daniel Glazman, Ivan Herman, Markus Gylling
+EPUB Zero was originally inspired by a series of posts on EPUB3 by Daniel Glazman. 
 
 
-<h2 class="appendix">
+<h2 class="appendix" id="appendix-1">
 Reading system behaviour
 </h2>
 
@@ -134,10 +239,10 @@ Issue: what if there's a zip (or any compressed file) or .e0 there?
     d. otherwise error "there is not a book here"
 
 
-<h2 class="appendix">
-
+<h2 class="appendix" id="appendix-2">
+References and Further Reading
 </h2>
 
-http://manu.sporny.org/2014/json-ld-origins-2/
+* http://manu.sporny.org/2014/json-ld-origins-2/
 
 
