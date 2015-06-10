@@ -573,7 +573,7 @@ span.issue, span.note {
    <h1 class="p-name no-ref" id="title">EPUB Zero</h1>
   
    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Unofficial Proposal Draft,
-    <time class="dt-updated" datetime="2015-06-08">8 June 2015</time></span></h2>
+    <time class="dt-updated" datetime="2015-06-10">10 June 2015</time></span></h2>
   
    <div data-fill-with="spec-metadata">
     <dl>
@@ -592,7 +592,7 @@ span.issue, span.note {
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/80x15.png"></a>
 To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 8 June 2015,
+In addition, as of 10 June 2015,
 the editors have made this specification available under the
 <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
@@ -780,6 +780,9 @@ Content documents
    <h3 class="heading settled" data-level="2.4" id="media-overlays"><span class="secno">2.4. </span><span class="content">Media Overlays</span><a class="self-link" href="#media-overlays"></a></h3>
 
 
+   <p class="issue" id="issue-b731b978"><a class="self-link" href="#issue-b731b978"></a> Browsers (as far as we know) do not support SMIL. Are there polyfills that are “good enough?” Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?</p>
+
+
    <h3 class="heading settled" data-level="2.5" id="global"><span class="secno">2.5. </span><span class="content">Global Language Support</span><a class="self-link" href="#global"></a></h3>
 
 
@@ -790,6 +793,9 @@ Content documents
 
 
    <h3 class="heading settled" data-level="2.8" id="a11y"><span class="secno">2.8. </span><span class="content">Accessibility</span><a class="self-link" href="#a11y"></a></h3>
+
+
+   <p class="issue" id="issue-55fd4411"><a class="self-link" href="#issue-55fd4411"></a> How do we make EPUB Zero documents “born accessible?” EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> heading elements.</p>
 
 
    <h2 class="heading settled" data-level="3" id="installing"><span class="secno">3. </span><span class="content">Installing EPUB Zero publications</span><a class="self-link" href="#installing"></a></h2>
@@ -1066,6 +1072,8 @@ Conformance</span><a class="self-link" href="#conformance"></a></h2>
   <div style="counter-reset:issue">
    <div class="issue"> Are we discussing a <b>portable</b> publication format? Or just a publication format?<a href="#issue-38399239"> ↵ </a></div>
    <div class="issue"> Can SVG or raster images be a content document? Does <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> define required media types?<a href="#issue-28379cf4"> ↵ </a></div>
+   <div class="issue"> Browsers (as far as we know) do not support SMIL. Are there polyfills that are “good enough?” Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?<a href="#issue-b731b978"> ↵ </a></div>
+   <div class="issue"> How do we make EPUB Zero documents “born accessible?” EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> heading elements.<a href="#issue-55fd4411"> ↵ </a></div>
    <div class="issue"> the <code>display</code> property is interesting. Adding an additional value <code>"display": "book"</code> might be a good way of indicating to the browser that it should display the content with a UI optimized for long-form content.<a href="#issue-00d55662"> ↵ </a></div>
    <div class="issue"> how about using presence of manifest.json as trigger, as what defines a publication as something different than an ordinary bundle of web content? Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”<a href="#issue-b4bfdeef"> ↵ </a></div>
    <div class="issue"> what if there’s a zip (or any compressed file) or .e0 there?<a href="#issue-22f0ee80"> ↵ </a></div>
