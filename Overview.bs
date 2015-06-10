@@ -73,6 +73,8 @@ Note: Beware of footguns.
 
 <h3 id="media-overlays">Media Overlays</h3>
 
+Issue: Browsers (as far as we know) do not support SMIL. Are there polyfills that are “good enough?” Is there a better approach for synchronizing [[HTML5]] with multimedia?
+
 <h3 id="global">Global Language Support</h3>
 
 <h3 id="navigation">Navigation</h3>
@@ -80,6 +82,8 @@ Note: Beware of footguns.
 <h3 id="fxl">Fixed Layout</h3>
 
 <h3 id="a11y">Accessibility</h3>
+
+Issue: How do we make EPUB Zero documents “born accessible?” EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of [[HTML5]] heading elements. 
 
 <h2 id="installing">Installing EPUB Zero publications</h2>
 
