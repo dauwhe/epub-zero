@@ -561,6 +561,23 @@ span.issue, span.note {
   
 
   <meta content="Bikeshed 1.0.0" name="generator">
+  <style type="text/css">
+td, th { 
+vertical-align: top; 
+border: thin solid #aaa;
+padding: 2px;
+}
+
+th {
+text-align: left;
+}
+table { 
+border-collapse: collapse;
+}
+</style>
+  
+
+
  </head>
  
 
@@ -624,6 +641,9 @@ Introduction
 Design goals and rationale
 </span></a>
     <li><a href="#overview"><span class="secno">2</span> <span class="content">Overview</span></a>
+     <ul class="toc">
+      <li><a href="#comparison-of-epub-3-and-epub-zero"><span class="secno">2.1</span> <span class="content">Comparison of EPUB 3 and EPUB Zero</span></a>
+     </ul>
     <li><a href="#e0-documents"><span class="secno">3</span> <span class="content">EPUB Zero documents</span></a>
      <ul class="toc">
       <li><a href="#content-docs"><span class="secno">3.1</span> <span class="content">
@@ -681,7 +701,7 @@ Introduction
    <p>A book, in the digital world, is a reading mode, not a file format. The Open Web Platform provides us with most of what we need for the content, style, and behavior of a publication. EPUB Zero aims to make publications just another part of the web.</p>
 
 
-   <p>EPUB3 is unnecessarily complex. It requires numerous custom XML vocabularies, and massive repetition of content. Developing a reading system for EPUB3 is a herculean task, as evidenced by the slow progress of Readium. Our goal is to create a simpler publication format, easier to author, and easy to read in a browser with as little additional technology as possible.</p>
+   <p>EPUB3 is complex. It requires numerous custom XML vocabularies, and massive repetition of content. Developing a reading system for EPUB3 is a herculean task, as evidenced by the slow progress of Readium. Our goal is to create a simpler publication format, easier to author, and easy to read in a browser with as little additional technology as possible.</p>
 
 
    <p class="note" role="note">Note: EPUB Zero is not just for books, but any packaged web content. We will use the term <i>publication</i> to describe books, magazines, journals, manuals, reference documents, corporate documents, articles, etc.</p>
@@ -691,8 +711,6 @@ Introduction
 Design goals and rationale
 </span><a class="self-link" href="#goals"></a></h2>
 
-
-   <p class="issue" id="issue-38399239"><a class="self-link" href="#issue-38399239"></a> Are we discussing a <b>portable</b> publication format? Or just a publication format?</p>
 
 
    <p class="note" role="note">Note: The ultimate test of this specification is whether we can build a reading system on top of an ordinary browser with only a bit of JS.</p>
@@ -753,6 +771,167 @@ Design goals and rationale
 </figure>
 
 
+   <h3 class="heading settled" data-level="2.1" id="comparison-of-epub-3-and-epub-zero"><span class="secno">2.1. </span><span class="content">Comparison of EPUB 3 and EPUB Zero</span><a class="self-link" href="#comparison-of-epub-3-and-epub-zero"></a></h3>
+
+   <table>
+
+    <thead>
+
+     <tr>
+
+      <th>Feature
+
+      <th>EPUB 3
+
+      <th>EPUB Zero
+
+
+
+
+    <tbody>
+
+
+     <tr>
+
+      <td>Package Document
+
+      <td>manifest, reading order, metadata in XML vocabulary
+
+      <td>TK
+
+
+
+     <tr>
+
+      <td>Reading Order
+
+      <td>spine element in package file
+
+      <td>link rel=next in HTML
+
+
+
+     <tr>
+
+      <td>Navigation Document
+
+      <td>required nav, optional ncx
+
+      <td>
+
+
+
+     <tr>
+
+      <td>Linking
+
+      <td>EPUB CFI
+
+      <td>TK
+
+
+
+
+     <tr>
+
+      <td>Publication Metadata
+
+      <td>custom XML format inside package file
+
+      <td>external file in any vocabulary
+
+
+
+
+
+     <tr>
+
+      <td>Content Documents
+
+      <td>XHTML5, SVG
+
+      <td>HTML5, SVG
+
+
+
+     <tr>
+
+      <td>Fixed Layout
+
+      <td>viewport in HTML + configuration in package
+
+      <td>just don’t even
+
+
+
+
+
+     <tr>
+
+      <td>Style
+
+      <td>subset of CSS
+
+      <td>any CSS
+
+
+
+     <tr>
+
+      <td>Multimedia
+
+      <td>html audio and video, mp3 and mp4 are core media types
+
+      <td>TK
+
+
+
+
+     <tr>
+
+      <td>Fonts
+
+      <td>OTF and WOFF
+
+      <td>TK
+
+
+
+     <tr>
+
+      <td>Scripting
+
+      <td>optional, recommend container constrained
+
+      <td>TK
+
+
+
+     <tr>
+
+      <td>Text-to-speech
+
+      <td>TK
+
+      <td>TK
+
+
+
+     <tr>
+
+      <td>Container
+
+      <td>TK
+
+      <td>TK
+
+
+
+
+
+</table>
+
+
    <h2 class="heading settled" data-level="3" id="e0-documents"><span class="secno">3. </span><span class="content">EPUB Zero documents</span><a class="self-link" href="#e0-documents"></a></h2>
 
 
@@ -780,10 +959,7 @@ Content documents
    <h3 class="heading settled" data-level="3.3" id="interactivity"><span class="secno">3.3. </span><span class="content">Interactivity</span><a class="self-link" href="#interactivity"></a></h3>
 
 
-   <p>There are no restrictions on the use of Javascript in EPUB Zero.</p>
-
-
-   <p class="note" role="note">Note: Beware of footguns.</p>
+   <p class="issue" id="issue-9b4d6969"><a class="self-link" href="#issue-9b4d6969"></a> Security for downloaded publications</p>
 
 
 
@@ -801,6 +977,9 @@ Content documents
 
 
    <h3 class="heading settled" data-level="3.7" id="fxl"><span class="secno">3.7. </span><span class="content">Fixed Layout</span><a class="self-link" href="#fxl"></a></h3>
+
+
+   <p class="issue" id="issue-f427b169"><a class="self-link" href="#issue-f427b169"></a> FXL is often a bad idea</p>
 
 
    <h3 class="heading settled" data-level="3.8" id="a11y"><span class="secno">3.8. </span><span class="content">Accessibility</span><a class="self-link" href="#a11y"></a></h3>
@@ -860,6 +1039,9 @@ c002.html
 
 
    <p class="note" role="note">Note: this seems to handle the issue of updating ebooks—make a change to the cache manifest on the server and new files will be uploaded the next time the reader is online.</p>
+
+
+   <p class="issue" id="issue-72c93c8b"><a class="self-link" href="#issue-72c93c8b"></a> AppCache sucks</p>
 
 
    <h2 class="heading settled" data-level="6" id="structure"><span class="secno">6. </span><span class="content">
@@ -968,13 +1150,14 @@ Metadata
 
 
 
-
    <h2 class="no-num heading settled" id="acknowledgments"><span class="content">
 Acknowledgments
 </span><a class="self-link" href="#acknowledgments"></a></h2>
 
 
    <p>EPUB Zero was originally inspired by a series of posts on EPUB3 by Daniel Glazman.</p>
+
+
 
 
 
@@ -1081,11 +1264,13 @@ Conformance</span><a class="self-link" href="#conformance"></a></h2>
   </dl>
   <h2 class="no-num heading settled" id="issues-index"><span class="content">Issues Index</span><a class="self-link" href="#issues-index"></a></h2>
   <div style="counter-reset:issue">
-   <div class="issue"> Are we discussing a <b>portable</b> publication format? Or just a publication format?<a href="#issue-38399239"> ↵ </a></div>
    <div class="issue"> Can SVG or raster images be a content document? Does <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> define required media types?<a href="#issue-28379cf4"> ↵ </a></div>
+   <div class="issue"> Security for downloaded publications<a href="#issue-9b4d6969"> ↵ </a></div>
    <div class="issue"> Browsers (as far as we know) do not support SMIL. Are there polyfills that are “good enough?” Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?<a href="#issue-b731b978"> ↵ </a></div>
+   <div class="issue"> FXL is often a bad idea<a href="#issue-f427b169"> ↵ </a></div>
    <div class="issue"> How do we make EPUB Zero documents “born accessible?” EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> heading elements.<a href="#issue-55fd4411"> ↵ </a></div>
    <div class="issue"> the <code>display</code> property is interesting. Adding an additional value <code>"display": "book"</code> might be a good way of indicating to the browser that it should display the content with a UI optimized for long-form content.<a href="#issue-00d55662"> ↵ </a></div>
+   <div class="issue"> AppCache sucks<a href="#issue-72c93c8b"> ↵ </a></div>
    <div class="issue"> how about using presence of manifest.json as trigger, as what defines a publication as something different than an ordinary bundle of web content? Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”<a href="#issue-b4bfdeef"> ↵ </a></div>
    <div class="issue"> what if there’s a zip (or any compressed file) or .e0 there?<a href="#issue-22f0ee80"> ↵ </a></div>
   </div></body>
