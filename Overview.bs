@@ -44,6 +44,13 @@ EPUB Zero satisfies the following design goals:
 9. Easy to author
 10. Aims to use the browser as reading system
 
+<h2 id="overview">Overview</h2>
+
+<figure>
+<img src="images/e0-folder.png" alt="folder structure of an EPUB Zero publication" width="480"/>
+<figcaption>Folder structure of an EPUB Zero publication</figcaption>
+</figure>
+
 <h2 id="e0-documents">EPUB Zero documents</h2>
 
 
@@ -220,7 +227,7 @@ Acknowledgments
 EPUB Zero was originally inspired by a series of posts on EPUB3 by Daniel Glazman. 
 
 
-<h2 class="appendix" id="appendix-1">
+<h2 class="no-num appendix" id="appendix-1">
 Reading system behaviour
 </h2>
 
@@ -243,7 +250,7 @@ Issue: what if there's a zip (or any compressed file) or .e0 there?
     d. otherwise error "there is not a book here"
 
 
-<h2 class="appendix" id="appendix-2">
+<h2 class="no-num appendix" id="appendix-2">
 References and Further Reading
 </h2>
 

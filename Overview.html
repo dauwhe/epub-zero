@@ -623,34 +623,35 @@ Introduction
     <li><a href="#goals"><span class="secno">1</span> <span class="content">
 Design goals and rationale
 </span></a>
-    <li><a href="#e0-documents"><span class="secno">2</span> <span class="content">EPUB Zero documents</span></a>
+    <li><a href="#overview"><span class="secno">2</span> <span class="content">Overview</span></a>
+    <li><a href="#e0-documents"><span class="secno">3</span> <span class="content">EPUB Zero documents</span></a>
      <ul class="toc">
-      <li><a href="#content-docs"><span class="secno">2.1</span> <span class="content">
+      <li><a href="#content-docs"><span class="secno">3.1</span> <span class="content">
 Content documents
 </span></a>
-      <li><a href="#style"><span class="secno">2.2</span> <span class="content">Style</span></a>
-      <li><a href="#interactivity"><span class="secno">2.3</span> <span class="content">Interactivity</span></a>
-      <li><a href="#media-overlays"><span class="secno">2.4</span> <span class="content">Media Overlays</span></a>
-      <li><a href="#global"><span class="secno">2.5</span> <span class="content">Global Language Support</span></a>
-      <li><a href="#navigation"><span class="secno">2.6</span> <span class="content">Navigation</span></a>
-      <li><a href="#fxl"><span class="secno">2.7</span> <span class="content">Fixed Layout</span></a>
-      <li><a href="#a11y"><span class="secno">2.8</span> <span class="content">Accessibility</span></a>
+      <li><a href="#style"><span class="secno">3.2</span> <span class="content">Style</span></a>
+      <li><a href="#interactivity"><span class="secno">3.3</span> <span class="content">Interactivity</span></a>
+      <li><a href="#media-overlays"><span class="secno">3.4</span> <span class="content">Media Overlays</span></a>
+      <li><a href="#global"><span class="secno">3.5</span> <span class="content">Global Language Support</span></a>
+      <li><a href="#navigation"><span class="secno">3.6</span> <span class="content">Navigation</span></a>
+      <li><a href="#fxl"><span class="secno">3.7</span> <span class="content">Fixed Layout</span></a>
+      <li><a href="#a11y"><span class="secno">3.8</span> <span class="content">Accessibility</span></a>
      </ul>
-    <li><a href="#installing"><span class="secno">3</span> <span class="content">Installing EPUB Zero publications</span></a>
-    <li><a href="#offline"><span class="secno">4</span> <span class="content">Offline reading</span></a>
-    <li><a href="#structure"><span class="secno">5</span> <span class="content">
+    <li><a href="#installing"><span class="secno">4</span> <span class="content">Installing EPUB Zero publications</span></a>
+    <li><a href="#offline"><span class="secno">5</span> <span class="content">Offline reading</span></a>
+    <li><a href="#structure"><span class="secno">6</span> <span class="content">
 Publication structure and packaging
 </span></a>
-    <li><a href="#metadata"><span class="secno">6</span> <span class="content">
+    <li><a href="#metadata"><span class="secno">7</span> <span class="content">
 Metadata
 </span></a>
     <li><a href="#acknowledgments"><span class="secno"></span> <span class="content">
 Acknowledgments
 </span></a>
-    <li><a href="#appendix-1"><span class="secno">7</span> <span class="content">
+    <li><a href="#appendix-1"><span class="secno"></span> <span class="content">
 Reading system behaviour
 </span></a>
-    <li><a href="#appendix-2"><span class="secno">8</span> <span class="content">
+    <li><a href="#appendix-2"><span class="secno"></span> <span class="content">
 References and Further Reading
 </span></a>
     <li><a href="#conformance"><span class="secno"></span> <span class="content">
@@ -742,11 +743,21 @@ Design goals and rationale
      
 </ol>
 
-   <h2 class="heading settled" data-level="2" id="e0-documents"><span class="secno">2. </span><span class="content">EPUB Zero documents</span><a class="self-link" href="#e0-documents"></a></h2>
+   <h2 class="heading settled" data-level="2" id="overview"><span class="secno">2. </span><span class="content">Overview</span><a class="self-link" href="#overview"></a></h2>
+
+
+   <figure>
+<img alt="folder structure of an EPUB Zero publication" src="images/e0-folder.png" width="480">
+
+    <figcaption>Folder structure of an EPUB Zero publication</figcaption>
+</figure>
+
+
+   <h2 class="heading settled" data-level="3" id="e0-documents"><span class="secno">3. </span><span class="content">EPUB Zero documents</span><a class="self-link" href="#e0-documents"></a></h2>
 
 
 
-   <h3 class="heading settled" data-level="2.1" id="content-docs"><span class="secno">2.1. </span><span class="content">
+   <h3 class="heading settled" data-level="3.1" id="content-docs"><span class="secno">3.1. </span><span class="content">
 Content documents
 </span><a class="self-link" href="#content-docs"></a></h3>
 
@@ -757,7 +768,7 @@ Content documents
    <p class="issue" id="issue-28379cf4"><a class="self-link" href="#issue-28379cf4"></a> Can SVG or raster images be a content document? Does <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> define required media types?</p>
 
 
-   <h3 class="heading settled" data-level="2.2" id="style"><span class="secno">2.2. </span><span class="content">Style</span><a class="self-link" href="#style"></a></h3>
+   <h3 class="heading settled" data-level="3.2" id="style"><span class="secno">3.2. </span><span class="content">Style</span><a class="self-link" href="#style"></a></h3>
 
 
    <p>There are no restrictions on the use of CSS.</p>
@@ -766,7 +777,7 @@ Content documents
    <p class="note" role="note">Note: Reading long-form content in paginated form often offers a better experience for readers. We encourage document authors to support pagination via CSS, polyfills, prollyfills, reading systems, and/or political action.</p>
 
 
-   <h3 class="heading settled" data-level="2.3" id="interactivity"><span class="secno">2.3. </span><span class="content">Interactivity</span><a class="self-link" href="#interactivity"></a></h3>
+   <h3 class="heading settled" data-level="3.3" id="interactivity"><span class="secno">3.3. </span><span class="content">Interactivity</span><a class="self-link" href="#interactivity"></a></h3>
 
 
    <p>There are no restrictions on the use of Javascript in EPUB Zero.</p>
@@ -777,28 +788,28 @@ Content documents
 
 
 
-   <h3 class="heading settled" data-level="2.4" id="media-overlays"><span class="secno">2.4. </span><span class="content">Media Overlays</span><a class="self-link" href="#media-overlays"></a></h3>
+   <h3 class="heading settled" data-level="3.4" id="media-overlays"><span class="secno">3.4. </span><span class="content">Media Overlays</span><a class="self-link" href="#media-overlays"></a></h3>
 
 
    <p class="issue" id="issue-b731b978"><a class="self-link" href="#issue-b731b978"></a> Browsers (as far as we know) do not support SMIL. Are there polyfills that are “good enough?” Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?</p>
 
 
-   <h3 class="heading settled" data-level="2.5" id="global"><span class="secno">2.5. </span><span class="content">Global Language Support</span><a class="self-link" href="#global"></a></h3>
+   <h3 class="heading settled" data-level="3.5" id="global"><span class="secno">3.5. </span><span class="content">Global Language Support</span><a class="self-link" href="#global"></a></h3>
 
 
-   <h3 class="heading settled" data-level="2.6" id="navigation"><span class="secno">2.6. </span><span class="content">Navigation</span><a class="self-link" href="#navigation"></a></h3>
+   <h3 class="heading settled" data-level="3.6" id="navigation"><span class="secno">3.6. </span><span class="content">Navigation</span><a class="self-link" href="#navigation"></a></h3>
 
 
-   <h3 class="heading settled" data-level="2.7" id="fxl"><span class="secno">2.7. </span><span class="content">Fixed Layout</span><a class="self-link" href="#fxl"></a></h3>
+   <h3 class="heading settled" data-level="3.7" id="fxl"><span class="secno">3.7. </span><span class="content">Fixed Layout</span><a class="self-link" href="#fxl"></a></h3>
 
 
-   <h3 class="heading settled" data-level="2.8" id="a11y"><span class="secno">2.8. </span><span class="content">Accessibility</span><a class="self-link" href="#a11y"></a></h3>
+   <h3 class="heading settled" data-level="3.8" id="a11y"><span class="secno">3.8. </span><span class="content">Accessibility</span><a class="self-link" href="#a11y"></a></h3>
 
 
    <p class="issue" id="issue-55fd4411"><a class="self-link" href="#issue-55fd4411"></a> How do we make EPUB Zero documents “born accessible?” EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> heading elements.</p>
 
 
-   <h2 class="heading settled" data-level="3" id="installing"><span class="secno">3. </span><span class="content">Installing EPUB Zero publications</span><a class="self-link" href="#installing"></a></h2>
+   <h2 class="heading settled" data-level="4" id="installing"><span class="secno">4. </span><span class="content">Installing EPUB Zero publications</span><a class="self-link" href="#installing"></a></h2>
 
 
    <p>EPUB Zero uses the web manifest specification https://w3c.github.io/manifest/ to facilitate installation as a webapp on user devices.</p>
@@ -824,7 +835,7 @@ Content documents
 
 
 
-   <h2 class="heading settled" data-level="4" id="offline"><span class="secno">4. </span><span class="content">Offline reading</span><a class="self-link" href="#offline"></a></h2>
+   <h2 class="heading settled" data-level="5" id="offline"><span class="secno">5. </span><span class="content">Offline reading</span><a class="self-link" href="#offline"></a></h2>
 
 
    <p>An EPUB Zero publication must have a cache manifest so that it can function offline as well as online https://html.spec.whatwg.org/multipage/browsers.html#offline</p>
@@ -851,7 +862,7 @@ c002.html
    <p class="note" role="note">Note: this seems to handle the issue of updating ebooks—make a change to the cache manifest on the server and new files will be uploaded the next time the reader is online.</p>
 
 
-   <h2 class="heading settled" data-level="5" id="structure"><span class="secno">5. </span><span class="content">
+   <h2 class="heading settled" data-level="6" id="structure"><span class="secno">6. </span><span class="content">
 Publication structure and packaging
 </span><a class="self-link" href="#structure"></a></h2>
 
@@ -891,7 +902,7 @@ Publication structure and packaging
 
 
 
-   <h2 class="heading settled" data-level="6" id="metadata"><span class="secno">6. </span><span class="content">
+   <h2 class="heading settled" data-level="7" id="metadata"><span class="secno">7. </span><span class="content">
 Metadata
 </span><a class="self-link" href="#metadata"></a></h2>
 
@@ -967,7 +978,7 @@ Acknowledgments
 
 
 
-   <h2 class="appendix heading settled" data-level="7" id="appendix-1"><span class="secno">7. </span><span class="content">
+   <h2 class="no-num appendix heading settled" id="appendix-1"><span class="content">
 Reading system behaviour
 </span><a class="self-link" href="#appendix-1"></a></h2>
 
@@ -1004,7 +1015,7 @@ d. otherwise error "there is not a book here"</p>
 
 </ol>
 
-   <h2 class="appendix heading settled" data-level="8" id="appendix-2"><span class="secno">8. </span><span class="content">
+   <h2 class="no-num appendix heading settled" id="appendix-2"><span class="content">
 References and Further Reading
 </span><a class="self-link" href="#appendix-2"></a></h2>
 
