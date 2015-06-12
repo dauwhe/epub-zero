@@ -1,4 +1,19 @@
 <h1>EPUB Zero</h1>
+
+<style type="text/css">
+td, th { 
+vertical-align: top; 
+border: thin solid #aaa;
+padding: 2px;
+}
+
+th {
+text-align: left;
+}
+table { 
+border-collapse: collapse;
+}
+</style>
 <pre class='metadata'>
 Status: DREAM
 Shortname: e0
@@ -19,7 +34,7 @@ Note: This specification is only a thought experiment, inspired by the <a href="
 
 A book, in the digital world, is a reading mode, not a file format. The Open Web Platform provides us with most of what we need for the content, style, and behavior of a publication. EPUB Zero aims to make publications just another part of the web. 
 
-EPUB3 is unnecessarily complex. It requires numerous custom XML vocabularies, and massive repetition of content. Developing a reading system for EPUB3 is a herculean task, as evidenced by the slow progress of Readium. Our goal is to create a simpler publication format, easier to author, and easy to read in a browser with as little additional technology as possible.
+EPUB3 is complex. It requires numerous custom XML vocabularies, and massive repetition of content. Developing a reading system for EPUB3 is a herculean task, as evidenced by the slow progress of Readium. Our goal is to create a simpler publication format, easier to author, and easy to read in a browser with as little additional technology as possible.
 
 Note: EPUB Zero is not just for books, but any packaged web content. We will use the term <i>publication</i> to describe books, magazines, journals, manuals, reference documents, corporate documents, articles, etc.
 
@@ -27,7 +42,6 @@ Note: EPUB Zero is not just for books, but any packaged web content. We will use
 Design goals and rationale
 </h2>
 
-Issue: Are we discussing a <b>portable</b> publication format? Or just a publication format?
 
 Note: The ultimate test of this specification is whether we can build a reading system on top of an ordinary browser with only a bit of JS.
 
@@ -43,6 +57,114 @@ EPUB Zero satisfies the following design goals:
 8. linked data
 9. Easy to author
 10. Aims to use the browser as reading system
+
+<h2 id="overview">Overview</h2>
+
+<figure>
+<img src="images/e0-folder.png" alt="folder structure of an EPUB Zero publication" width="480"/>
+<figcaption>Folder structure of an EPUB Zero publication</figcaption>
+</figure>
+
+<h3>Comparison of EPUB 3 and EPUB Zero</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>EPUB 3</th>
+<th>EPUB Zero</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Package Document</td>
+<td>manifest, reading order, metadata in XML vocabulary</td>
+<td>TK</td>
+</tr>
+
+<tr>
+<td>Reading Order</td>
+<td>spine element in package file</td>
+<td>link rel=next in HTML</td>
+</tr>
+
+<tr>
+<td>Navigation Document</td>
+<td>required nav, optional ncx</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Linking</td>
+<td>EPUB CFI</td>
+<td>TK</td>
+</tr>
+
+
+<tr>
+<td>Publication Metadata</td>
+<td>custom XML format inside package file</td>
+<td>external file in any vocabulary</td>
+</tr>
+
+
+
+<tr>
+<td>Content Documents</td>
+<td>XHTML5, SVG</td>
+<td>HTML5, SVG</td>
+</tr>
+
+<tr>
+<td>Fixed Layout</td>
+<td>viewport in HTML + configuration in package</td>
+<td>just don't even</td>
+</tr>
+
+
+
+<tr>
+<td>Style</td>
+<td>subset of CSS</td>
+<td>any CSS</td>
+</tr>
+
+<tr>
+<td>Multimedia</td>
+<td>html audio and video, mp3 and mp4 are core media types</td>
+<td>TK</td>
+</tr>
+
+
+<tr>
+<td>Fonts</td>
+<td>OTF and WOFF</td>
+<td>TK</td>
+</tr>
+
+<tr>
+<td>Scripting</td>
+<td>optional, recommend container constrained</td>
+<td>TK</td>
+</tr>
+
+<tr>
+<td>Text-to-speech</td>
+<td>TK</td>
+<td>TK</td>
+</tr>
+
+<tr>
+<td>Container</td>
+<td>TK</td>
+<td>TK</td>
+</tr>
+
+</tbody>
+
+
+</table>
 
 <h2 id="e0-documents">EPUB Zero documents</h2>
 
@@ -63,9 +185,7 @@ Note: Reading long-form content in paginated form often offers a better experien
 
 <h3 id="interactivity">Interactivity</h3>
 
-There are no restrictions on the use of Javascript in EPUB Zero. 
-
-Note: Beware of footguns.
+Issue: Security for downloaded publications
 
 <!--<h3 id="fonts">Fonts</h3>
 
@@ -80,6 +200,8 @@ Issue: Browsers (as far as we know) do not support SMIL. Are there polyfills tha
 <h3 id="navigation">Navigation</h3>
 
 <h3 id="fxl">Fixed Layout</h3>
+
+Issue: FXL is often a bad idea
 
 <h3 id="a11y">Accessibility</h3>
 
@@ -129,6 +251,8 @@ c002.html
 </div>
 
 Note: this seems to handle the issue of updating ebooks—make a change to the cache manifest on the server and new files will be uploaded the next time the reader is online. 
+
+Issue: AppCache sucks
 
 <h2 id="structure">
 Publication structure and packaging
@@ -212,15 +336,16 @@ Publication-level metadata can be stored in the publication folder. We recommend
 </div>
 
 
-
 <h2 class="no-num" id="acknowledgments">
 Acknowledgments
 </h2>
 
-EPUB Zero was originally inspired by a series of posts on EPUB3 by Daniel Glazman. 
+EPUB Zero was originally inspired by a series of posts on EPUB3 by Daniel Glazman.
 
 
-<h2 class="appendix" id="appendix-1">
+
+
+<h2 class="no-num appendix" id="appendix-1">
 Reading system behaviour
 </h2>
 
@@ -243,7 +368,7 @@ Issue: what if there's a zip (or any compressed file) or .e0 there?
     d. otherwise error "there is not a book here"
 
 
-<h2 class="appendix" id="appendix-2">
+<h2 class="no-num appendix" id="appendix-2">
 References and Further Reading
 </h2>
 
