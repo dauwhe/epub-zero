@@ -1,6 +1,6 @@
 <h1>EPUB Zero</h1>
 <pre class='metadata'>
-Status: UD
+Status: DREAM
 Shortname: e0
 Level: 1
 Group: TK
