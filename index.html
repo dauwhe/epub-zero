@@ -590,7 +590,7 @@ border-collapse: collapse;
    <h1 class="p-name no-ref" id="title">EPUB Zero</h1>
   
    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">A Collection of Interesting Ideas,
-    <time class="dt-updated" datetime="2015-06-16">16 June 2015</time></span></h2>
+    <time class="dt-updated" datetime="2015-06-17">17 June 2015</time></span></h2>
   
    <div data-fill-with="spec-metadata">
     <dl>
@@ -609,7 +609,7 @@ border-collapse: collapse;
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/80x15.png"></a>
 To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 16 June 2015,
+In addition, as of 17 June 2015,
 the editors have made this specification available under the
 <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
@@ -642,7 +642,7 @@ Design goals and rationale
 </span></a>
     <li><a href="#overview"><span class="secno">2</span> <span class="content">Overview</span></a>
      <ul class="toc">
-      <li><a href="#comparison-of-epub-3-and-epub-zero"><span class="secno">2.1</span> <span class="content">Comparison of EPUB 3 and EPUB Zero</span></a>
+      <li><a href="#compare"><span class="secno">2.1</span> <span class="content">Comparison of EPUB 3 and EPUB Zero</span></a>
      </ul>
     <li><a href="#e0-documents"><span class="secno">3</span> <span class="content">EPUB Zero documents</span></a>
      <ul class="toc">
@@ -712,10 +712,6 @@ Design goals and rationale
 </span><a class="self-link" href="#goals"></a></h2>
 
 
-
-   <p class="note" role="note">Note: The ultimate test of this specification is whether we can build a reading system on top of an ordinary browser with only a bit of JS.</p>
-
-
    <p>EPUB Zero satisfies the following design goals:</p>
 
 
@@ -725,11 +721,11 @@ Design goals and rationale
      
 
     <li data-md="">
-     <p>Webbiness</p>
+     <p>“Webbiness”</p>
      
 
     <li data-md="">
-     <p>Built from HTML and CSS and JSON(-LD) as much as possible</p>
+     <p>Built from HTML and CSS and JSON as much as possible</p>
      
 
     <li data-md="">
@@ -737,19 +733,7 @@ Design goals and rationale
      
 
     <li data-md="">
-     <p>Can packaging be optional?</p>
-     
-
-    <li data-md="">
      <p>Don’t repeat yourself</p>
-     
-
-    <li data-md="">
-     <p>publication as URI</p>
-     
-
-    <li data-md="">
-     <p>linked data</p>
      
 
     <li data-md="">
@@ -761,17 +745,48 @@ Design goals and rationale
      
 </ol>
 
+   <p class="note" role="note">Note: The ultimate test of this specification is whether we can build a reading system on top of an ordinary browser with only a bit of JS.</p>
+
+
    <h2 class="heading settled" data-level="2" id="overview"><span class="secno">2. </span><span class="content">Overview</span><a class="self-link" href="#overview"></a></h2>
 
 
+   <p>EPUB Zero is yet another ebook format, which isn’t just “based on” HTML like EPUB, but <em>is</em> HTML. Where possible, we use HTML solutions to achieve book-like functionality:</p>
+
+
+   <ol>
+    <li data-md="">
+     <p>Online/offline reading via AppCache or Service Workers</p>
+     
+
+    <li data-md="">
+     <p>Pagination via prollyfills</p>
+     
+
+    <li data-md="">
+     <p>Installable via application manifest</p>
+     
+
+    <li data-md="">
+     <p>Access to navigation document via sidebar link relation</p>
+     
+</ol>
+
    <figure>
-<img alt="folder structure of an EPUB Zero publication" src="images/e0-folder.png" width="480">
+<img alt="screenshot of an epub zero in the Opera browser" src="images/reading-e0-opera.png" width="640">
+
+    <figcaption>Using Opera 12.16 as an EPUB Zero Reading system. </figcaption>
+</figure>
+
+
+   <figure>
+<img alt="folder structure of an EPUB Zero publication" src="images/e0-folder.png" width="640">
 
     <figcaption>Folder structure of an EPUB Zero publication</figcaption>
 </figure>
 
 
-   <h3 class="heading settled" data-level="2.1" id="comparison-of-epub-3-and-epub-zero"><span class="secno">2.1. </span><span class="content">Comparison of EPUB 3 and EPUB Zero</span><a class="self-link" href="#comparison-of-epub-3-and-epub-zero"></a></h3>
+   <h3 class="heading settled" data-level="2.1" id="compare"><span class="secno">2.1. </span><span class="content">Comparison of EPUB 3 and EPUB Zero</span><a class="self-link" href="#compare"></a></h3>
 
    <table>
 

@@ -42,30 +42,38 @@ Note: EPUB Zero is not just for books, but any packaged web content. We will use
 Design goals and rationale
 </h2>
 
-
-Note: The ultimate test of this specification is whether we can build a reading system on top of an ordinary browser with only a bit of JS.
-
 EPUB Zero satisfies the following design goals:
 
 1. Simplicity
-2. Webbiness
-3. Built from HTML and CSS and JSON(-LD) as much as possible
+2. “Webbiness”
+3. Built from HTML and CSS and JSON as much as possible
 4. Uses existing standards whenever possible
-5. Can packaging be optional?
-6. Don't repeat yourself
-7. publication as URI
-8. linked data
-9. Easy to author
-10. Aims to use the browser as reading system
+5. Don't repeat yourself
+6. Easy to author
+7. Aims to use the browser as reading system
+
+Note: The ultimate test of this specification is whether we can build a reading system on top of an ordinary browser with only a bit of JS.
 
 <h2 id="overview">Overview</h2>
 
+EPUB Zero is yet another ebook format, which isn't just “based on” HTML like EPUB, but <em>is</em> HTML. Where possible, we use HTML solutions to achieve book-like functionality:
+
+1. Online/offline reading via AppCache or Service Workers
+2. Pagination via prollyfills
+3. Installable via application manifest
+4. Access to navigation document via sidebar link relation
+
 <figure>
-<img src="images/e0-folder.png" alt="folder structure of an EPUB Zero publication" width="480"/>
+<img src="images/reading-e0-opera.png" alt="screenshot of an epub zero in the Opera browser" width="640"/>
+<figcaption>Using Opera 12.16 as an EPUB Zero Reading system. </figcaption>
+</figure>
+
+<figure>
+<img src="images/e0-folder.png" alt="folder structure of an EPUB Zero publication" width="640"/>
 <figcaption>Folder structure of an EPUB Zero publication</figcaption>
 </figure>
 
-<h3>Comparison of EPUB 3 and EPUB Zero</h3>
+<h3 id="compare">Comparison of EPUB 3 and EPUB Zero</h3>
 <table>
 <thead>
 <tr>
