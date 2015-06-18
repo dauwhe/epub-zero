@@ -56,12 +56,14 @@ Note: The ultimate test of this specification is whether we can build a reading 
 
 <h2 id="overview">Overview</h2>
 
-EPUB Zero is yet another ebook format, which isn't just “based on” HTML like EPUB, but <em>is</em> HTML. Where possible, we use HTML solutions to achieve book-like functionality:
+EPUB Zero is yet another ebook format, which isn't just “based on” HTML like EPUB, but <em>is</em> HTML. Where possible, we use HTML solutions to achieve book-like functionality. It appears to be possible to do this using mostly-existing web technology:
 
 1. Online/offline reading via AppCache or Service Workers
 2. Pagination via prollyfills
 3. Installable via application manifest
 4. Access to navigation document via sidebar link relation
+
+But each of these features are problematic. As this document evolves, we hope to propose alternatives. 
 
 <figure>
 <img src="images/reading-e0-opera.png" alt="screenshot of an epub zero in the Opera browser" width="640"/>
@@ -193,9 +195,35 @@ Issue: Can SVG or raster images be a content document? Does [[HTML5]] define req
 
 <h3 id="style">Style</h3>
 
-There are no restrictions on the use of CSS.
+There are no restrictions on the use of CSS. 
+
+
+<h4 id="pagination">
+Pagination
+</h4>
+
+Pagination is essential for an optimum long-form reading experience. Several approaches to pagination may be possible:
+
+1. Native support exists in Opera 12.16, via <code>overflow: paged</code>. 
+
+2. Polyfills exist, based on either multicol or regions. 
+
+3. Project Houdini may expose primitives making prollyfills possible.
+
 
 Note: Reading long-form content in paginated form often offers a better experience for readers. We encourage document authors to support pagination via CSS, polyfills, prollyfills, reading systems, and/or political action. 
+
+<h4 id="page-transitions">
+Page Transitions
+</h4>
+
+A book may consist of several HTML files. A user must be able to move from ch1.html to ch2.html as easily as moving from page 1 to page 2, and with the same action. 
+
+Note: discussed by CSSWG in thread starting at https://lists.w3.org/Archives/Public/www-style/2014Jan/0093.html
+
+HTML5 link relations support describing previous and next files. 
+
+Issue: Opera and Firefox have UI for <code>link rel=prev|next</code>, but Safari, Chrome, and IE do not. 
 
 <h3 id="interactivity">Interactivity</h3>
 
@@ -212,6 +240,10 @@ Issue: Browsers (as far as we know) do not support SMIL. Are there polyfills tha
 <h3 id="global">Global Language Support</h3>
 
 <h3 id="navigation">Navigation</h3>
+
+Most reading systems provide a link to the navigation document as part of the reading system user interface.
+
+Note: In Opera and Firefox, opening a link with <code>rel=sidebar</code> can open a navigation document in the "secondary browsing context", aka sidebar. This does not work in Safari, Chrome, or IE. 
 
 <h3 id="fxl">Fixed Layout</h3>
 
@@ -247,7 +279,19 @@ Issue: the <code>display</code> property is interesting. Adding an additional va
 
 <h2 id="offline">Offline reading</h2>
 
-An EPUB Zero publication must have a cache manifest so that it can function offline as well as online https://html.spec.whatwg.org/multipage/browsers.html#offline
+Books must be readable offline and online. 
+
+Issue: Is offline reading really the same question as packaging/archiving? 
+
+Browsers currently offer ways of accessing web content while offline:
+
+
+<h3 id="appcache">
+AppCache
+</h3>
+
+Cache manifests allow offline access to web content: https://html.spec.whatwg.org/multipage/browsers.html#offline
+
 
 <div class="example">
 <pre>
@@ -268,11 +312,19 @@ c002.html
 
 Note: this seems to handle the issue of updating ebooks—make a change to the cache manifest on the server and new files will be uploaded the next time the reader is online. 
 
-Issue: AppCache sucks. How can we replace it with service workers?
+Issue: AppCache sucks. Can we replace it with Service Workers?
+
+<h3 id="service-workers">
+Service Workers
+</3>
+
+
 
 <h2 id="structure">
 Publication structure and packaging
 </h2>
+
+Issue: the EPUB+WEB White Paper discusses offline access together with packaging. Are these in fact the same issue? 
 
 An EPUB Zero publication is a collection of files, which must be collected inside a folder or directory. The top level of the directory should contain the web manifest and cache manifest. No other restrictions exist on the directory structure. 
 
@@ -390,5 +442,12 @@ References and Further Reading
 
 * http://manu.sporny.org/2014/json-ld-origins-2/
 * https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/
+
+<h2 class="no-num appendix" id="appendix-3">
+Functional requirements for books, and possible solutions
+</h2>
+
+
+
 
 
