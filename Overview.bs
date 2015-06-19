@@ -47,7 +47,7 @@ EPUB Zero satisfies the following design goals:
 1. Simplicity
 2. “Webbiness”
 3. Built from HTML and CSS and JSON as much as possible
-4. Uses existing standards whenever possible
+4. Uses existing, forward-looking standards whenever possible
 5. Don't repeat yourself
 6. Easy to author
 7. Aims to use the browser as reading system
@@ -168,6 +168,12 @@ But each of these features are problematic. As this document evolves, we hope to
 <tr>
 <td>Container</td>
 <td>OCF</td>
+<td>Implied by the domain</td>
+</tr>
+
+<tr>
+<td>Manifest</td>
+<td>OCF manifest</td>
 <td>TK</td>
 </tr>
 
@@ -191,7 +197,8 @@ Content documents
 
 An EPUB Zero content document is an HTML5 document.
 
-Issue: Can SVG or raster images be a content document? Does [[HTML5]] define required media types?  
+Issue: Can SVG or raster images be a content document? Does [[HTML5]] define required media types? 
+Issue: Is question whether SVG can be embedded inline in HTML (yes, http://www.w3.org/html/wg/drafts/html/master/semantics.html#svg-0) or whether SVG can be first class citizen? 
 
 <h3 id="style">Style</h3>
 
@@ -250,7 +257,7 @@ Note: In Opera and Firefox, opening a link with <code>rel=sidebar</code> can ope
 Issue: FXL is often a bad idea
 
 <h3 id="a11y">Accessibility</h3>
-
+Note: Compliance with WCAG 2.0 and integration of ARIA 1.1 and the Digital Publishing module of ARIA will aid in creating accessible content.
 Issue: How do we make EPUB Zero documents “born accessible?” EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of [[HTML5]] heading elements. 
 
 Issue: What's the state of text-to-speech support in browsers? 
