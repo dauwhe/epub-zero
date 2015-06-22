@@ -590,7 +590,7 @@ border-collapse: collapse;
    <h1 class="p-name no-ref" id="title">EPUB Zero</h1>
   
    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">A Collection of Interesting Ideas,
-    <time class="dt-updated" datetime="2015-06-18">18 June 2015</time></span></h2>
+    <time class="dt-updated" datetime="2015-06-22">22 June 2015</time></span></h2>
   
    <div data-fill-with="spec-metadata">
     <dl>
@@ -609,7 +609,7 @@ border-collapse: collapse;
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/80x15.png"></a>
 To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 18 June 2015,
+In addition, as of 22 June 2015,
 the editors have made this specification available under the
 <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
@@ -752,7 +752,7 @@ Design goals and rationale
      
 
     <li data-md="">
-     <p>Uses existing standards whenever possible</p>
+     <p>Uses existing, forward-looking standards whenever possible</p>
      
 
     <li data-md="">
@@ -964,6 +964,16 @@ Design goals and rationale
 
       <td>OCF
 
+      <td>Implied by the domain
+
+
+
+     <tr>
+
+      <td>Manifest
+
+      <td>OCF manifest
+
       <td>TK
 
 
@@ -995,7 +1005,8 @@ Content documents
    <p>An EPUB Zero content document is an HTML5 document.</p>
 
 
-   <p class="issue" id="issue-28379cf4"><a class="self-link" href="#issue-28379cf4"></a> Can SVG or raster images be a content document? Does <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> define required media types?</p>
+   <p class="issue" id="issue-a7ffe277"><a class="self-link" href="#issue-a7ffe277"></a> Can SVG or raster images be a content document? Does <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> define required media types?
+Issue: Is question whether SVG can be embedded inline in HTML (yes, http://www.w3.org/html/wg/drafts/html/master/semantics.html#svg-0) or whether SVG can be first class citizen?</p>
 
 
    <h3 class="heading settled" data-level="3.2" id="style"><span class="secno">3.2. </span><span class="content">Style</span><a class="self-link" href="#style"></a></h3>
@@ -1083,6 +1094,9 @@ Page Transitions
 
 
    <h3 class="heading settled" data-level="3.8" id="a11y"><span class="secno">3.8. </span><span class="content">Accessibility</span><a class="self-link" href="#a11y"></a></h3>
+
+
+   <p class="note" role="note">Note: Compliance with WCAG 2.0 and integration of ARIA 1.1 and the Digital Publishing module of ARIA will aid in creating accessible content.</p>
 
 
    <p class="issue" id="issue-55fd4411"><a class="self-link" href="#issue-55fd4411"></a> How do we make EPUB Zero documents “born accessible?” EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> heading elements.</p>
@@ -1405,7 +1419,8 @@ Conformance</span><a class="self-link" href="#conformance"></a></h2>
   </dl>
   <h2 class="no-num heading settled" id="issues-index"><span class="content">Issues Index</span><a class="self-link" href="#issues-index"></a></h2>
   <div style="counter-reset:issue">
-   <div class="issue"> Can SVG or raster images be a content document? Does <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> define required media types?<a href="#issue-28379cf4"> ↵ </a></div>
+   <div class="issue"> Can SVG or raster images be a content document? Does <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> define required media types?
+Issue: Is question whether SVG can be embedded inline in HTML (yes, http://www.w3.org/html/wg/drafts/html/master/semantics.html#svg-0) or whether SVG can be first class citizen?<a href="#issue-a7ffe277"> ↵ </a></div>
    <div class="issue"> Opera and Firefox have UI for <code>link rel=prev|next</code>, but Safari, Chrome, and IE do not.<a href="#issue-4bbd800d"> ↵ </a></div>
    <div class="issue"> Security for downloaded publications. How is this handled with appcache and service workers?<a href="#issue-7febe916"> ↵ </a></div>
    <div class="issue"> Browsers (as far as we know) do not support SMIL. Are there polyfills that are “good enough?” Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?<a href="#issue-b731b978"> ↵ </a></div>

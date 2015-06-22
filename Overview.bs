@@ -257,7 +257,9 @@ Note: In Opera and Firefox, opening a link with <code>rel=sidebar</code> can ope
 Issue: FXL is often a bad idea
 
 <h3 id="a11y">Accessibility</h3>
+
 Note: Compliance with WCAG 2.0 and integration of ARIA 1.1 and the Digital Publishing module of ARIA will aid in creating accessible content.
+
 Issue: How do we make EPUB Zero documents “born accessible?” EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of [[HTML5]] heading elements. 
 
 Issue: What's the state of text-to-speech support in browsers? 
