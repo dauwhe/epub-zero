@@ -58,7 +58,7 @@ Note: The ultimate test of this specification is whether we can build a reading 
 
 EPUB Zero is yet another ebook format, which isn't just “based on” HTML like EPUB, but <em>is</em> HTML. Where possible, we use HTML solutions to achieve book-like functionality. It appears to be possible to do this using mostly-existing web technology:
 
-1. Online/offline reading via AppCache or Service Workers
+1. Online/offline reading via Service Workers
 2. Pagination via prollyfills
 3. Installable via application manifest
 4. Access to navigation document via sidebar link relation
@@ -284,6 +284,8 @@ EPUB Zero uses the web manifest specification https://w3c.github.io/manifest/ to
 
 Issue: the <code>display</code> property is interesting. Adding an additional value <code>"display": "book"</code> might be a good way of indicating to the browser that it should display the content with a UI optimized for long-form content. 
 
+Issue: there seems to be some pushback against the web manifest specification. 
+
 
 
 <h2 id="offline">Offline reading</h2>
@@ -302,6 +304,7 @@ AppCache
 Cache manifests allow offline access to web content: https://html.spec.whatwg.org/multipage/browsers.html#offline
 
 
+<!-- 
 <div class="example">
 <pre>
 CACHE MANIFEST
@@ -318,14 +321,16 @@ c002.html
 ...
 </pre>
 </div>
+ -->
 
-Note: this seems to handle the issue of updating ebooks—make a change to the cache manifest on the server and new files will be uploaded the next time the reader is online. 
 
-Issue: AppCache sucks. Can we replace it with Service Workers?
+Issue: AppCache will likely be removed from browsers in favor of Service Workers.
 
 <h3 id="service-workers">
 Service Workers
-</3>
+</h3>
+
+Note: A service worker should be declared in <code>start_url</code>.
 
 
 
