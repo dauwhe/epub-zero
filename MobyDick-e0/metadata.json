@@ -1,0 +1,53 @@
+
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Book",
+  "accessibilityAPI": "ARIA",
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "largePrint/CSSEnabled",
+    "highContrast/CSSEnabled",
+    "resizeText/CSSEnabled"
+  ],
+  "accessibilityHazard": [
+    "noFlashing",
+    "noMotionSimulation",
+    "noSound"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "reviewCount": "0"
+  },
+  "bookFormat": "EBook/e0",
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Harper & Row"
+  },
+  "author": "Herman Melville",
+  "datePublished": "1851-10-19",
+  "image": "moby-dick-book-cover.jpg",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://hachettebookgroup.biz/BuyMe?isbn=9780316123456",
+    "price": "6.99",
+    "priceCurrency": "USD"
+  },
+  "copyrightYear": "1851",
+  "description": "Project Gutenberg edition of Moby-Dick",
+  "genre": "Literary Fiction",
+  "inLanguage": "en-US",
+  "isFamilyFriendly": "true",
+  "isbn": "9780000000000",
+  "name": "Moby-Dick",
+  "numberOfPages": "000",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Harper & Row"
+  }
+}
+

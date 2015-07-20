@@ -1,0 +1,15 @@
+
+
+
+{
+  "name": "Moby-Dick",
+  "short_name": "Moby-Dick",
+  "icons": [{
+        "src": "icons/moby-dick-icon.webp",
+        "sizes": "64x64",
+        "type": "image/webp"
+      }],
+  "start_url": "toc.html",
+  "display": "minimal-ui",
+}
+
