@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
  <head>
-  
+
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  
-  
+
+
   <title>EPUB Zero</title>
-  
-  
+
+
   <style>
 @media print {
   html { margin: 0 !important; }
@@ -558,12 +558,12 @@ span.issue, span.note {
 }
 
   </style>
-  
+
 
   <meta content="Bikeshed 1.0.0" name="generator">
   <style type="text/css">
-td, th { 
-vertical-align: top; 
+td, th {
+vertical-align: top;
 border: thin solid #aaa;
 padding: 2px;
 }
@@ -571,27 +571,27 @@ padding: 2px;
 th {
 text-align: left;
 }
-table { 
+table {
 border-collapse: collapse;
 }
 </style>
-  
+
 
 
  </head>
- 
+
 
  <body class="h-entry">
 
   <div class="head">
-  
+
    <p data-fill-with="logo"></p>
-  
+
    <h1 class="p-name no-ref" id="title">EPUB Zero</h1>
-  
+
    <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">A Collection of Interesting Ideas,
     <time class="dt-updated" datetime="2015-06-22">22 June 2015</time></span></h2>
-  
+
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -603,9 +603,9 @@ border-collapse: collapse;
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:dauwhe@gmail.com">Dave Cramer</a> (<span class="p-org org">Hachette Livre</span>)
     </dl>
    </div>
-  
+
    <div data-fill-with="warning"></div>
-  
+
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/80x15.png"></a>
 To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
@@ -615,7 +615,7 @@ the editors have made this specification available under the
 which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
 Parts of this work may be from another specification document.  If so, those parts are instead covered by the license of that specification document.
 </p>
-  
+
    <hr title="Separator for header">
 </div>
 
@@ -741,31 +741,31 @@ Design goals and rationale
    <ol>
     <li data-md="">
      <p>Simplicity</p>
-     
+
 
     <li data-md="">
      <p>“Webbiness”</p>
-     
+
 
     <li data-md="">
      <p>Built from HTML and CSS and JSON as much as possible</p>
-     
+
 
     <li data-md="">
      <p>Uses existing, forward-looking standards whenever possible</p>
-     
+
 
     <li data-md="">
      <p>Don’t repeat yourself</p>
-     
+
 
     <li data-md="">
      <p>Easy to author</p>
-     
+
 
     <li data-md="">
      <p>Aims to use the browser as reading system</p>
-     
+
 </ol>
 
    <p class="note" role="note">Note: The ultimate test of this specification is whether we can build a reading system on top of an ordinary browser with only a bit of JS.</p>
@@ -780,19 +780,19 @@ Design goals and rationale
    <ol>
     <li data-md="">
      <p>Online/offline reading via AppCache or Service Workers</p>
-     
+
 
     <li data-md="">
      <p>Pagination via prollyfills</p>
-     
+
 
     <li data-md="">
      <p>Installable via application manifest</p>
-     
+
 
     <li data-md="">
      <p>Access to navigation document via sidebar link relation</p>
-     
+
 </ol>
 
    <p>But each of these features are problematic. As this document evolves, we hope to propose alternatives.</p>
@@ -1027,21 +1027,23 @@ Pagination
    <ol>
     <li data-md="">
      <p>Native support exists in Opera 12.16, via <code>overflow: paged</code>.</p>
-     
+
 
 
     <li data-md="">
      <p>Polyfills exist, based on either multicol or regions.</p>
-     
+
 
 
     <li data-md="">
      <p>Project Houdini may expose primitives making prollyfills possible.</p>
-     
+
 
 </ol>
 
    <p class="note" role="note">Note: Reading long-form content in paginated form often offers a better experience for readers. We encourage document authors to support pagination via CSS, polyfills, prollyfills, reading systems, and/or political action.</p>
+
+   <p>Another option is to use <a href='http://webcomponents.org/'>Web Components</a> to create custom elements for either the full reading experience like the pageable-text (<a href='https://jeffy.info/pageable-text/components/pageable-text/demo/'>demo</a> | <a href='https://github.com/jeffposnick/pageable-text'>code repository</a>) or just specific elements within the experience such as navigation or table of content.</p>
 
 
    <h4 class="heading settled" data-level="3.2.2" id="page-transitions"><span class="secno">3.2.2. </span><span class="content">
@@ -1060,6 +1062,8 @@ Page Transitions
 
    <p class="issue" id="issue-4bbd800d"><a class="self-link" href="#issue-4bbd800d"></a> Opera and Firefox have UI for <code>link rel=prev|next</code>, but Safari, Chrome, and IE do not.</p>
 
+   <p></p>
+
 
    <h3 class="heading settled" data-level="3.3" id="interactivity"><span class="secno">3.3. </span><span class="content">Interactivity</span><a class="self-link" href="#interactivity"></a></h3>
 
@@ -1072,7 +1076,9 @@ Page Transitions
    <h3 class="heading settled" data-level="3.4" id="media-overlays"><span class="secno">3.4. </span><span class="content">Media Overlays</span><a class="self-link" href="#media-overlays"></a></h3>
 
 
-   <p class="issue" id="issue-b731b978"><a class="self-link" href="#issue-b731b978"></a> Browsers (as far as we know) do not support SMIL. Are there polyfills that are “good enough?” Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?</p>
+   <p class="issue" id="issue-b731b978"><a class="self-link" href="#issue-b731b978"></a> Browsers (as far as we know) do not support SMIL and where it is supported plans are underway to deprecate and remove the feature (<a href='https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5o0yiO440LM'>Chrome</a> and <a href='https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_animation_with_SMIL'>Firefox</a>.) Are there polyfills that are “good enough?” Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?</p>
+
+   <p></p>
 
 
    <h3 class="heading settled" data-level="3.5" id="global"><span class="secno">3.5. </span><span class="content">Global Language Support</span><a class="self-link" href="#global"></a></h3>
@@ -1177,13 +1183,101 @@ c002.html
    <p class="issue" id="issue-34e7e5c6"><a class="self-link" href="#issue-34e7e5c6"></a> AppCache sucks. Can we replace it with Service Workers?</p>
 
 
-   <h3 class="heading settled" data-level="5.2" id="service-workers"><span class="secno">5.2. </span><span class="content">
-Service Workers
+   <h3 class="heading settled" data-level="5.2" id="service-workers"><span class="secno">5.2. </span><span class="content">Service Workers</span><a class="self-link" href="#service-workers"></a></h3>
 
+   <p class="note" role="note">Service Workers are fully supported in Chrome. Check <a href='https://jakearchibald.github.io/isserviceworkerready/'>Is Service Worker Ready?</a> for support information.</p>
+   
+   <p>Service Workers are a technology developed to address the shortcomings of AppCache as well as provide additional functionality that is not available as part of AppCache.</p>
 
+   <p>Using the same content as in the AppCache example, a Service Worker would look like this:</p>
 
+        <div class="example" id="example-ffd64000"><a class="self-link" href="#example-example-ffd64000"></a>
+        <pre>
+importScripts('js/serviceworker-cache-polyfill.js');
 
-</span><a class="self-link" href="#service-workers"></a></h3>
+var CACHE_NAME = 'ebook-content';
+var CACHE_VERSION = 1;
+
+self.oninstall = function(event) {
+
+  event.waitUntil(
+    caches.open(CACHE_NAME + '-v' + CACHE_VERSION).then(function(cache) {
+
+      return cache.addAll([
+        'css/mobydick.css',
+        'metadata.json',
+        'manifest.json',
+        'title-page.html',
+        'copyright.html',
+        'introduction.html',
+        'epigraph.html',
+        'c001.html',
+        'c002.html'
+      ]);
+    })
+  );
+};
+
+self.onactivate = function(event) {
+
+  var currentCacheName = CACHE_NAME + '-v' + CACHE_VERSION;
+  caches.keys().then(function(cacheNames) {
+    return Promise.all(
+      cacheNames.map(function(cacheName) {
+        if (cacheName.indexOf(CACHE_NAME) == -1) {
+          return;
+        }
+
+        if (cacheName != currentCacheName) {
+          return caches.delete(cacheName);
+        }
+      })
+    );
+  });
+
+};
+
+self.onfetch = function(event) {
+  var request = event.request;
+  var requestURL = new URL(event.request.url);
+
+  event.respondWith(
+
+    // Check the cache for a hit.
+    caches.match(request).then(function(response) {
+
+      // If we have a response return it.
+      if (response)
+        return response;
+
+      // Otherwise fetch it, store and respond.
+      return fetch(request).then(function(response) {
+
+        var responseToCache = response.clone();
+
+        caches.open(CACHE_NAME + '-v' + CACHE_VERSION).then(
+          function(cache) {
+            cache.put(request, responseToCache).catch(function(err) {
+              // Likely we got an opaque response which the polyfill
+              // can't deal with, so log out a warning.
+              console.warn(requestURL + ': ' + err.message);
+            });
+          });
+
+        return response;
+      });
+
+    })
+  );
+};
+        </pre>
+
+        </div>
+
+        <p>Where AppCache uses a lot of implicit assumptions to make the content available offline, Service Workers force you to make the assumptions explicit and code your Service Worker to work with those assumptions. They also provide <a href='https://jakearchibald.com/2014/offline-cookbook/'>multiple strategies for caching content</a></p>
+
+        <p>Updating AppCache has always been hard. Updating a Service Worker is as simple as adding the new content to the <code>return cache.addAll</code> array and updating the <code>CACHE_VERSION</code>. The next time you visit the content the new Service Worker will take over and fetch the new and updated content.</p>
+
    <h2 class="heading settled" data-level="6" id="structure"><span class="secno">6. </span><span class="content">
 Publication structure and packaging
 </span><a class="self-link" href="#structure"></a></h2>
@@ -1201,23 +1295,23 @@ Publication structure and packaging
    <ol>
     <li data-md="">
      <p>reduction of file size</p>
-     
+
 
     <li data-md="">
      <p>creating a single “blob” that can be easily transmitted</p>
-     
+
 
     <li data-md="">
      <p>allowing for a digital signature</p>
-     
+
 
     <li data-md="">
      <p>allowing for digital rights management</p>
-     
+
 
     <li data-md="">
      <p>allowing for streaming of the publication</p>
-     
+
 </ol>
 
    <p>In simple cases, using ZIP may be sufficient. The W3C WebApps Packaging format may prove useful as well http://w3ctag.github.io/packaging-on-the-web/</p>
@@ -1312,14 +1406,14 @@ Reading system behaviour
    <ol>
     <li data-md="">
      <p>a user agent receives an http request</p>
-     
+
 
 
      <pre>GET /urn:isbn:9780316123456
 Host: http://www.hachettebookgroup.com
 Accept: ????
 </pre>
-     
+
 </ol>
 
    <p class="issue" id="issue-22f0ee80"><a class="self-link" href="#issue-22f0ee80"></a> what if there’s a zip (or any compressed file) or .e0 there?</p>
@@ -1328,16 +1422,16 @@ Accept: ????
    <ol>
     <li data-md="">
      <p>If manifest.json exists, read manifest.json; open start_url</p>
-     
+
 
 
     <li data-md="">
      <p>If manifest.json does not exist
 a. if index.html exists open that
-b. if index.html doesn’t exist open first html file 
-c. if there are no html files open the first supported format 
+b. if index.html doesn’t exist open first html file
+c. if there are no html files open the first supported format
 d. otherwise error "there is not a book here"</p>
-     
+
 
 </ol>
 
@@ -1349,11 +1443,11 @@ References and Further Reading
    <ul>
     <li data-md="">
      <p>http://manu.sporny.org/2014/json-ld-origins-2/</p>
-     
+
 
     <li data-md="">
      <p>https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/</p>
-     
+
 </ul>
 
    <h2 class="no-num appendix heading settled" id="appendix-3"><span class="content">
@@ -1370,7 +1464,7 @@ Functional requirements for books, and possible solutions
   <h2 class="no-ref no-num heading settled" id="conformance"><span class="content">
 Conformance</span><a class="self-link" href="#conformance"></a></h2>
 
-    
+
   <p>
         Conformance requirements are expressed with a combination of descriptive assertions and RFC 2119 terminology.
         The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL”
@@ -1394,7 +1488,7 @@ Conformance</span><a class="self-link" href="#conformance"></a></h2>
         This is an example of an informative example.
     </div>
 
-    
+
   <p>
         Informative notes begin with the word “Note”
         and are set apart from the normative text with <code>class="note"</code>, like this:
