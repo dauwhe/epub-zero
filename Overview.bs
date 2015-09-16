@@ -30,13 +30,25 @@ Introduction
 </h2>
 
 
-Note: This specification is only a thought experiment, inspired by the <a href="http://w3c.github.io/epubweb/">EPUB+WEB White Paper</a> (by the <a href="https://www.w3.org/dpub/IG/wiki/">W3C Digital Publishing Interest Group</a> and the <a href="idpf.org">IDPF</a>) and by concerns about the complexity of EPUB3. Please join the Digital Publishing Interest Group and IDPF to help bring about a better future for ebooks. 
+Note: This specification is only a thought experiment, 
+inspired by the <a href="http://w3c.github.io/epubweb/">EPUB+WEB White Paper</a> 
+(by the <a href="https://www.w3.org/dpub/IG/wiki/">W3C Digital Publishing Interest Group</a> 
+and the <a href="idpf.org">IDPF</a>) and by concerns about the complexity of EPUB3. 
+Please join the Digital Publishing Interest Group and IDPF to help bring about a better future for ebooks. 
 
-A book, in the digital world, is a reading mode, not a file format. The Open Web Platform provides us with most of what we need for the content, style, and behavior of a publication. EPUB Zero aims to make publications just another part of the web. 
+A book, in the digital world, is a reading mode, not a file format. 
+The Open Web Platform provides us with most of what we need for the content, 
+style, and behavior of a publication. 
+EPUB Zero aims to make publications just another part of the web. 
 
-EPUB3 is complex. It requires numerous custom XML vocabularies, and massive repetition of content. Developing a reading system for EPUB3 is a herculean task, as evidenced by the slow progress of Readium. Our goal is to create a simpler publication format, easier to author, and easy to read in a browser with as little additional technology as possible.
+EPUB3 is complex. It requires numerous custom XML vocabularies, and massive repetition of content. 
+Developing a reading system for EPUB3 is a herculean task, as evidenced by the slow progress of Readium. 
+Our goal is to create a simpler publication format, easier to author, 
+and easy to read in a browser with as little additional technology as possible.
 
-Note: EPUB Zero is not just for books, but any packaged web content. We will use the term <i>publication</i> to describe books, magazines, journals, manuals, reference documents, corporate documents, articles, etc.
+Note: EPUB Zero is not just for books, but any packaged web content. 
+We will use the term <i>publication</i> to describe books, magazines, 
+journals, manuals, reference documents, corporate documents, articles, etc.
 
 <h2 id="goals">
 Design goals and rationale
@@ -52,18 +64,22 @@ EPUB Zero satisfies the following design goals:
 6. Easy to author
 7. Aims to use the browser as reading system
 
-Note: The ultimate test of this specification is whether we can build a reading system on top of an ordinary browser with only a bit of JS.
+Note: The ultimate test of this specification is whether we can build a reading system 
+on top of an ordinary browser with only a bit of JS.
 
 <h2 id="overview">Overview</h2>
 
-EPUB Zero is yet another ebook format, which isn't just “based on” HTML like EPUB, but <em>is</em> HTML. Where possible, we use HTML solutions to achieve book-like functionality. It appears to be possible to do this using mostly-existing web technology:
+EPUB Zero is yet another ebook format, which isn't just “based on” HTML like EPUB, 
+but <em>is</em> HTML. Where possible, we use HTML solutions to achieve book-like functionality. 
+It appears to be possible to do this using mostly-existing web technology:
 
 1. Online/offline reading via Service Workers
 2. Pagination via prollyfills
 3. Installable via application manifest
 4. Access to navigation document via sidebar link relation
 
-But each of these features are problematic. As this document evolves, we hope to propose alternatives. 
+But each of these features are problematic. 
+As this document evolves, we hope to propose alternatives. 
 
 <figure>
 <img src="images/reading-e0-opera.png" alt="screenshot of an epub zero in the Opera browser" width="640"/>
@@ -90,7 +106,7 @@ But each of these features are problematic. As this document evolves, we hope to
 <tr>
 <td>Package Document</td>
 <td>manifest, reading order, metadata in XML vocabulary</td>
-<td>TK</td>
+<td>nav + web app manifest</td>
 </tr>
 
 <tr>
@@ -156,7 +172,7 @@ But each of these features are problematic. As this document evolves, we hope to
 <tr>
 <td>Scripting</td>
 <td>optional, recommend container constrained</td>
-<td>TK</td>
+<td>required for offline reading</td>
 </tr>
 
 <tr>
@@ -174,13 +190,13 @@ But each of these features are problematic. As this document evolves, we hope to
 <tr>
 <td>Manifest</td>
 <td>OCF manifest</td>
-<td>TK</td>
+<td>nav + web app manifest</td>
 </tr>
 
 <tr>
 <td>Offline reading</td>
 <td>dependent on reading system</td>
-<td>AppCache or Service Workers</td>
+<td>Service Workers</td>
 </tr>
 
 </tbody>
@@ -198,7 +214,8 @@ Content documents
 An EPUB Zero content document is an HTML5 document.
 
 Issue: Can SVG or raster images be a content document? Does [[HTML5]] define required media types? 
-Issue: Is question whether SVG can be embedded inline in HTML (yes, http://www.w3.org/html/wg/drafts/html/master/semantics.html#svg-0) or whether SVG can be first class citizen? 
+Issue: Is question whether SVG can be embedded inline in HTML (yes, http://www.w3.org/html/wg/drafts/html/master/semantics.html#svg-0) 
+or whether SVG can be first class citizen? 
 
 <h3 id="style">Style</h3>
 
@@ -209,32 +226,38 @@ There are no restrictions on the use of CSS.
 Pagination
 </h4>
 
-Pagination is essential for an optimum long-form reading experience. Several approaches to pagination may be possible:
+Pagination is essential for an optimum long-form reading experience. 
+Several approaches to pagination may be possible:
 
 1. Native support exists in Opera 12.16, via <code>overflow: paged</code>. 
 
 2. Polyfills exist, based on either multicol or regions. 
 
-3. Project Houdini may expose primitives making prollyfills possible.
+3. Project Houdini may expose primitives making prollyfills easier.
 
 
-Note: Reading long-form content in paginated form often offers a better experience for readers. We encourage document authors to support pagination via CSS, polyfills, prollyfills, reading systems, and/or political action. 
+Note: Reading long-form content in paginated form often offers a better experience for readers. 
+We encourage document authors to support pagination via CSS, polyfills, 
+prollyfills, reading systems, and/or political action. 
 
 <h4 id="page-transitions">
 Page Transitions
 </h4>
 
-A book may consist of several HTML files. A user must be able to move from ch1.html to ch2.html as easily as moving from page 1 to page 2, and with the same action. 
+A book may consist of several HTML files. A user must be able to move 
+from ch1.html to ch2.html as easily as moving from page 1 to page 2, and with the same action. 
 
 Note: discussed by CSSWG in thread starting at https://lists.w3.org/Archives/Public/www-style/2014Jan/0093.html
 
 HTML5 link relations support describing previous and next files. 
 
-Issue: Opera and Firefox have UI for <code>link rel=prev|next</code>, but Safari, Chrome, and IE do not. 
+Issue: Opera and Firefox have UI for <code>link rel=prev|next</code>, but Safari, Chrome, and IE do not.
+
+Issue: Using link relations introduces a burden on authoring that does not currently exist in EPUB3.
 
 <h3 id="interactivity">Interactivity</h3>
 
-Issue: Security for downloaded publications. How is this handled with appcache and service workers?
+Issue: Security for downloaded publications. How is this handled with service workers?
 
 <!--<h3 id="fonts">Fonts</h3>
 
@@ -242,7 +265,9 @@ Issue: Security for downloaded publications. How is this handled with appcache a
 
 <h3 id="media-overlays">Media Overlays</h3>
 
-Issue: Browsers (as far as we know) do not support SMIL. Are there polyfills that are “good enough?” Is there a better approach for synchronizing [[HTML5]] with multimedia?
+Issue: Browsers (as far as we know) do not support SMIL. 
+Are there polyfills that are “good enough?” 
+Is there a better approach for synchronizing [[HTML5]] with multimedia?
 
 <h3 id="global">Global Language Support</h3>
 
@@ -260,7 +285,8 @@ Issue: FXL is often a bad idea
 
 Note: Compliance with WCAG 2.0 and integration of ARIA 1.1 and the Digital Publishing module of ARIA will aid in creating accessible content.
 
-Issue: How do we make EPUB Zero documents “born accessible?” EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of [[HTML5]] heading elements. 
+Issue: How do we make EPUB Zero documents “born accessible?” 
+EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of [[HTML5]] heading elements. 
 
 Issue: What's the state of text-to-speech support in browsers? 
 
@@ -282,9 +308,13 @@ EPUB Zero uses the web manifest specification https://w3c.github.io/manifest/ to
 }</pre>
 </div>
 
-Issue: the <code>display</code> property is interesting. Adding an additional value <code>"display": "book"</code> might be a good way of indicating to the browser that it should display the content with a UI optimized for long-form content. 
+Issue: the <code>display</code> property is interesting. Adding an additional 
+value <code>"display": "book"</code> might be a good way of indicating to the browser 
+that it should display the content with a UI optimized for long-form content. 
 
 Issue: there seems to be some pushback against the web manifest specification. 
+
+Issue: How might a web manifest fulfill the function of an EPUB manifest? 
 
 
 
@@ -330,6 +360,8 @@ Issue: AppCache will likely be removed from browsers in favor of Service Workers
 Service Workers
 </h3>
 
+Service Workers are the preferred way of implementing offline viewing for web content. 
+
 Note: A service worker should be declared in <code>start_url</code>.
 
 
@@ -338,9 +370,12 @@ Note: A service worker should be declared in <code>start_url</code>.
 Publication structure and packaging
 </h2>
 
-Issue: the EPUB+WEB White Paper discusses offline access together with packaging. Are these in fact the same issue? 
+Issue: the EPUB+WEB White Paper discusses offline access together with packaging. 
+Are these in fact the same issue? 
 
-An EPUB Zero publication is a collection of files, which must be collected inside a folder or directory. The top level of the directory should contain the web manifest and cache manifest. No other restrictions exist on the directory structure. 
+An EPUB Zero publication is a collection of files, which must be collected inside a folder or directory. 
+The top level of the directory should contain the web manifest and cache manifest. 
+No other restrictions exist on the directory structure. 
 
 Compressing or otherwise packaging this directory may be required for many reasons, including
 
@@ -350,16 +385,21 @@ Compressing or otherwise packaging this directory may be required for many reaso
 4. allowing for digital rights management
 5. allowing for streaming of the publication
 
-In simple cases, using ZIP may be sufficient. The W3C WebApps Packaging format may prove useful as well http://w3ctag.github.io/packaging-on-the-web/
+In simple cases, using ZIP may be sufficient. The W3C WebApps Packaging format 
+may prove useful as well http://w3ctag.github.io/packaging-on-the-web/
 
-Issue: how about using presence of manifest.json as trigger, as what defines a publication as something different than an ordinary bundle of web content? Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”
+Issue: how about using presence of manifest.json as trigger, as what defines a publication 
+as something different than an ordinary bundle of web content? 
+Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”
 
 
 <h2 id="metadata">
 Metadata
 </h2>
 
-Publication-level metadata can be stored in the publication folder. We recommend the use of JSON-LD as a metadata format, but different communities may use other formats such as RDF, Turtle, or ONIX.
+Publication-level metadata can be stored in the publication folder. 
+We recommend the use of JSON-LD as a metadata format, but different communities may use 
+other formats such as RDF, Turtle, or ONIX.
 
 <div class="example">
 <pre>

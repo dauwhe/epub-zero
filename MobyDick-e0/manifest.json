@@ -1,6 +1,3 @@
-
-
-
 {
   "name": "Moby-Dick",
   "short_name": "Moby-Dick",
@@ -11,5 +8,6 @@
       }],
   "start_url": "toc.html",
   "display": "minimal-ui",
+  "files": ["c001.html", "c002.html", "css/mobydick.css", "toc.html"]
 }
 

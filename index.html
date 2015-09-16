@@ -1,567 +1,995 @@
-<!doctype html>
-<html lang="en">
+<!doctype html><html lang="en">
  <head>
-  
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  
-  
   <title>EPUB Zero</title>
-  
-  
-  <style>
-@media print {
-  html { margin: 0 !important; }
-  body { font-family: serif; }
-  th, td { font-family: inherit; }
-  a { color: inherit !important; }
-  .example:before { font-family: serif !important; }
-  a:link, a:visited { text-decoration: none !important; }
-  a:link:after, a:visited:after { /* create a cross-ref "see..." */; }
-}
-@page {
-  margin: 1.5cm 1.1cm;
-}
-h1, h2, h3, h4, h5, h6 { page-break-after: avoid; }
-figure, div.figure, div.sidefigure, pre, table.propdef, table.propdef-extra,
-.example { page-break-inside: avoid; }
-dt { page-break-after: avoid; }
+<style data-fill-with="stylesheet">/* This section copied from the W3C's ED styles. */
 
-body {
-  background: white;
-  /* background-image: floating-margin-image-goes-here; */
-  background-position: top left;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: black;
-  counter-reset: exampleno figure issue;
-  font-family: sans-serif;
-  line-height: 1.5;
-  margin: 0 auto;
-  max-width: 50em;
-  padding: 2em 1em 2em 70px;
-}
+	body {
+		color: black;
+		font-family: sans-serif;
+		margin: 0 auto;
+		max-width: 50em;
+		padding: 2em 1em 2em 70px;
+	}
+	:link { color: #00C; background: transparent }
+	:visited { color: #609; background: transparent }
+	a[href]:active { color: #C00; background: transparent }
+	a[href]:hover { background: #ffa }
 
-/* General structural markup */
+	a[href] img { border-style: none }
 
-h1, h2, h3, h4, h5, h6 { text-align: left; }
-h1, h2, h3 { color: #005A9C; }
-h1 { font: 170% sans-serif; }
-h2 { font: 140% sans-serif; }
-h3 { font: 120% sans-serif; }
-h4 { font: bold 100% sans-serif; }
-h5 { font: italic 100% sans-serif; }
-h6 { font: small-caps 100% sans-serif; }
-h2, h3, h4, h5, h6 { margin-top: 3em; }
-h1 + h2 { margin-top: 0em; }
-h2 + h3, h3 + h4, h4 + h5, h5 + h6 { margin-top: 1.2em; }
+	h1, h2, h3, h4, h5, h6 { text-align: left }
+	h1, h2, h3 { color: #005A9C; }
+	h1 { font: 170% sans-serif }
+	h2 { font: 140% sans-serif }
+	h3 { font: 120% sans-serif }
+	h4 { font: bold 100% sans-serif }
+	h5 { font: italic 100% sans-serif }
+	h6 { font: small-caps 100% sans-serif }
 
-.head { margin-bottom: 1em; }
-.head h1 { margin-top: 2em; clear: both; }
-.head table { margin-left: 2em; margin-top: 2em; }
-.head dd { margin-bottom: 0; }
+	.hide { display: none }
 
-p.copyright { font-size: small; }
-p.copyright small { font-size: small; }
+	div.head { margin-bottom: 1em }
+	div.head h1 { margin-top: 2em; clear: both }
+	div.head table { margin-left: 2em; margin-top: 2em }
 
-pre { margin: 1em 0 1em 2em; overflow: auto; }
-pre, code, .idl-code {
-  font-size: .9em;
-  font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
-}
-pre .idl-code, pre code { font-size: 1em; }
-dt dfn code { font-size: inherit; }
+	p.copyright { font-size: small }
+	p.copyright small { font-size: small }
 
-dfn { font-weight: bolder; }
-dfn var { font-style: normal; }
+	pre { margin-left: 2em }
+	dt { font-weight: bold }
 
-s, del {text-decoration: line-through; color: red; }
-u, ins {text-decoration: underline; background: #bfa; }
+	ul.toc, ol.toc {
+		list-style: none;
+	}
 
-sup {
-  vertical-align: super;
-  font-size: 80%
-}
+/* The rest copied from the CSSWG's default.css */
 
-details { display: block; }
+	body {
+		counter-reset: exampleno figure issue;
+		max-width: 50em;
+		margin: 0 auto !important;
+		line-height: 1.5;
+	}
 
-dt { font-weight: bold; }
-dd { margin: 0 0 1em 2em; }
-ul, ol { margin-left: 0; padding-left: 2em; }
-li { margin: 0.25em 2em 0.5em 0; padding-left: 0; }
-[data-md] > :first-child { margin-top: 0; }
-[data-md] > :last-child { margin-bottom: 0; }
+/******************************************************************************/
+/*                                Sectioning                                  */
+/******************************************************************************/
 
-td.pre {
-  white-space: pre-wrap;
-}
+/** Headings ******************************************************************/
 
-.css, .property { color: #005a9c; }
-.property { white-space: nowrap; }
+	h1, h2, h3, h4, h5, h6, dt {
+		page-break-after: avoid;
+	}
 
+	h2, h3, h5, h6 {
+		margin-top: 3em;
+	}
+	h4 {
+		 margin-top: 4em;
+	}
 
-/* Boilerplate sections */
+/** Subheadings ***************************************************************/
 
-ul.indexlist { margin-left: 0; columns: 13em; }
-ul.indexlist li { margin-left: 0; list-style: none }
-ul.indexlist li li { margin-left: 1em; }
-ul.indexlist a { font-weight: bold; }
-ul.indexlist ul, ul.indexlist dl { font-size: smaller; }
-ul.indexlist dl { margin-top: 0; }
-ul.indexlist dt { margin: .2em 0 .2em 20px; }
-ul.indexlist dd { margin: .2em 0 .2em 40px; }
+	h1 + h2,
+	#subtitle + h2 {
+		/* #subtitle is a subtitle in an H2 under the H1 */
+		margin-top: 0;
+	}
+	h2 + h3,
+	h3 + h4,
+	h4 + h5,
+	h5 + h6 {
+		margin-top: 1.2em; /* = 1 x line-height */
+	}
 
-.toc {
-  font-weight: bold;
-  line-height: 1.3;
-  list-style: none;
-  margin: 1em 0 0 5em;
-  padding: 0;
-}
-.toc ul { margin: 0; padding: 0; font-weight: normal; }
-.toc ul ul { margin: 0 0 0 2em; font-style: italic; }
-.toc ul ul ul { margin: 0}
-.toc > li { margin: 1.5em 0; padding: 0; }
-.toc li { clear: both; }
-.toc ul.toc li { margin: 0.3em 0 0 0; }
-.toc a { border-bottom-style: none; }
-.toc a:hover, ul.toc a:focus { border-bottom-style: solid; }
-/* Section numbers in a column of their own */
-.toc span.secno {float: left; width: 4em; margin-left: -5em}
-.toc ul ul span.secno { margin-left: -7em; }
+/** Section divider ***********************************************************/
+	/* &lt;hr> used to separate TMI into the second half of a section              */
+	hr:not([title]) {
+		font-size: 1.5em;
+		text-align: center;
+		margin: 1em auto;
+		height: auto;
+		border: transparent solid 0;
+		background: transparent;
+	}
+	hr:not([title])::before {
+		content: "\1F411\2003\2003\1F411\2003\2003\1F411";
+	}
+	/* note: &lt;hr> with title separates document header from contents */
 
-table.proptable {
-  font-size: small;
-  border-collapse: collapse;
-  border-spacing: 0;
-  text-align: left;
-  margin: 1em 0;
-}
-table.proptable td, table.proptable th {
-  padding: 0.4em;
-  text-align: center;
-}
-table.proptable tr:hover td { background: #DEF; }
+/******************************************************************************/
+/*                            Paragraphs and Lists                            */
+/******************************************************************************/
 
+	p {
+		margin: 1em 0;
+	}
+	dd     > p:first-child,
+	li     > p:first-child {
+		margin-top: 0;
+	}
 
-/* Links */
+	ul, ol {
+		margin-left: 0;
+		padding-left: 2em;
+	}
+	li {
+		margin: 0.25em 2em 0.5em 0;
+		padding-left: 0;
+	}
 
-a[href] { color: inherit; border-bottom: 1px solid silver; text-decoration: none; }
-a[href]:hover { background: #ffa; }
-a[href]:active { color: #C00; background: transparent; }
-img, a.logo { border-style: none; }
-.heading, .issue, .note, .example, li, dt { position: relative; }
-/* CSS-ish link types */
-[data-link-type="property"]::before,
-[data-link-type="propdesc"]::before,
-[data-link-type="descriptor"]::before,
-[data-link-type="value"]::before,
-[data-link-type="function"]::before,
-[data-link-type="at-rule"]::before,
-[data-link-type="selector"]::before,
-[data-link-type="maybe"]::before {content: "“";}
-[data-link-type="property"]::after,
-[data-link-type="propdesc"]::after,
-[data-link-type="descriptor"]::after,
-[data-link-type="value"]::after,
-[data-link-type="function"]::after,
-[data-link-type="at-rule"]::after,
-[data-link-type="selector"]::after,
-[data-link-type="maybe"]::after {content: "”";}
-[data-link-type].production::before,
-[data-link-type].production::after,
-.prod [data-link-type]::before,
-.prod [data-link-type]::after { content: ""; }
-/* Element-type link styling */
-[data-link-type=element] { font-family: monospace; }
-[data-link-type=element]::before { content: "<" }
-[data-link-type=element]::after { content: ">" }
-/* Self-links */
-a.self-link {
-  position: absolute;
-  top: 0;
-  left: -2.5em;
-  width: 2em;
-  height: 2em;
-  text-align: center;
-  border: none;
-  transition: opacity .2s;
-  opacity: .5;
-}
-a.self-link:hover {
-  opacity: 1;
-}
-.heading > a.self-link {
-  font-size: 83%;
-}
-li > a.self-link {
-  left: -3.5em;
-}
-dfn > a.self-link {
-  top: auto;
-  left: auto;
-  opacity: 0;
-  width: 1.5em;
-  height: 1.5em;
-  background: gray;
-  color: white;
-  font-style: normal;
-  transition: opacity .2s, background-color .2s, color .2s;
-}
-dfn:hover > a.self-link {
-  opacity: 1;
-}
-dfn > a.self-link:hover {
-  color: black;
-}
-a.self-link::before { content: "¶"; }
-.heading > a.self-link::before { content: "§"; }
-dfn > a.self-link::before { content: "#"; }
+	dl dd {
+		margin: 0 0 1em 2em;
+	}
+	.head dd {
+		margin-bottom: 0;
+	}
+
+	/* Style for algorithms */
+	ol.algorithm ol {
+	 border-left: 1px solid #90b8de;
+	 margin-left: 1em;
+	}
+	ol.algorithm ol.algorithm {
+	 border-left: none;
+	 margin-left: 0;
+	}
+
+	/* Style for switch/case &lt;dl>s */
+	dl.switch > dd > ol.only {
+	 margin-left: 0;
+	}
+	dl.switch > dd > ol.algorithm {
+	 margin-left: -2em;
+	}
+	dl.switch {
+	 padding-left: 2em;
+	}
+	dl.switch > dt {
+	 text-indent: -1.5em;
+	 margin-top: 1em;
+	}
+	dl.switch > dt + dt {
+	 margin-top: 0;
+	}
+	dl.switch > dt::before {
+	 content: '\21AA';
+	 padding: 0 0.5em 0 0;
+	 display: inline-block;
+	 width: 1em;
+	 text-align: right;
+	 line-height: 0.5em;
+	}
+
+	/* Style for paragraphs I know are in MD-genned lists */
+	[data-md] > :first-child {
+		margin-top: 0;
+	}
+	[data-md] > :last-child {
+		margin-bottom: 0;
+	}
+
+/** Inline Lists **************************************************************/
+	/* This is mostly to make the list inside the CR exit criteria more compact. */
+
+	ol.inline, ol.inline li {
+		display: inline;
+		padding: 0; margin: 0;
+	}
+	ol.inline {
+		counter-reset: list-item;
+	}
+	ol.inline li {
+		counter-increment: list-item;
+	}
+	ol.inline li::before {
+		content: "(" counter(list-item) ") ";
+		font-weight: bold;
+	}
+
+/** Terminology Markup ********************************************************/
 
 
-/* Figures */
+/******************************************************************************/
+/*                                 Inline Markup                              */
+/******************************************************************************/
 
-figure {
-  display: block;
-  text-align: center;
-  margin: 2.5em 0;
-}
-figure.sidefigure {
-  float: right;
-  width: 50%;
-  margin: 0 0 0.5em 0.5em
-}
-figure pre {
-  text-align: left;
-  display: table;
-  margin: 1em auto;
-}
-figure table {
-  margin: auto;
-}
-figure img, figure object {
-  display: block;
-  margin: auto;
-  max-width: 100%
-}
-figcaption {
-  counter-increment: figure;
-  font-size: 90%;
-  font-style: italic;
-  text-align: center;
-}
-figcaption::before {
-  content: "Figure " counter(figure) ". ";
-  font-weight: bold;
-}
-dd figure { margin-left: -2em; }
+/** Terminology Markup ********************************************************/
+	dfn   { /* Defining instance */
+		font-weight: bolder;
+	}
+	a > i { /* Instance of term */
+		font-style: normal;
+	}
+	dt dfn code, code.idl {
+		font-size: inherit;
+	}
+	dfn var {
+		font-style: normal;
+	}
 
+/** Change Marking ************************************************************/
 
-/* Definition tables */
+	del { color: red;  text-decoration: line-through; }
+	ins { color: #080; text-decoration: underline;    }
 
-table.definition {
-  border-spacing: 0;
-  padding: 0 1em 0.5em;
-  width: 100%;
-  table-layout: fixed;
-  margin: 1.2em 0;
-}
-table.definition td, table.definition th {
-  padding: 0.5em;
-  vertical-align: baseline;
-  border-bottom: 1px solid #bbd7e9;
-}
-table.definition th:first-child {
-  font-style: italic;
-  font-weight: normal;
-  text-align: left;
-  width: 8.3em;
-  padding-left: 1em;
-}
-table.definition > tbody > tr:last-child > th,
-table.definition > tbody > tr:last-child > td {
-  border-bottom: none;
-}
-table.definition tr:first-child > th,
-table.definition tr:first-child > td {
-  padding-top: 1em;
-}
-/* Footnotes at the bottom of a definition table */
-table.definition td.footnote {
-  font-style: normal;
-  padding-top: .6em;
-  width: auto;
-}
-table.definition td.footnote::before {
-  content: " ";
-  display: block;
-  height: 0.6em;
-  width: 4em;
-  border-top: thin solid;
-}
+/** Miscellaneous improvements to inline formatting ***************************/
 
+	sup {
+		vertical-align: super;
+		font-size: 80%
+	}
 
-/* IDL fragments */
+/******************************************************************************/
+/*                                    Code                                    */
+/******************************************************************************/
 
-pre.idl {
-  padding: .5em 1em;
-  margin: 1.2em 0;
-}
-pre.idl :link, pre.idl :visited {
-  color:inherit;
-  background:transparent;
-}
+/** General monospace/pre rules ***********************************************/
 
+	pre, code {
+		font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
+		font-size: .9em;
+		page-break-inside: avoid;
+	}
+	pre {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		overflow: auto;
+	}
 
-/* Data tables */
-/* Comes in plain, long, complex, or define varieties */
+/** Syntax-Highlighted Code ***************************************************/
 
-.data {
-  margin: 1em auto;
-  border-collapse: collapse;
-  width: 100%;
-  border: hidden;
-}
-.data {
-  text-align: center;
-  width: auto;
-}
-.data caption {
-  width: 100%;
-}
-.data td, .data th {
-  padding: 0.5em;
-  border-width: 1px;
-  border-color: silver;
-  border-top-style: solid;
-}
-.data thead td:empty {
-  padding: 0;
-  border: 0;
-}
-.data thead th[scope="row"] {
-  text-align: right;
-  color: inherit;
-}
-.data thead,
-.data tbody {
-  color: inherit;
-  border-bottom: 2px solid;
-}
-.data colgroup {
-  border-left: 2px solid;
-}
-.data tbody th:first-child,
-.data tbody td[scope="row"]:first-child {
-  text-align: right;
-  color: inherit;
-  border-right: 2px solid;
-  border-top: 1px solid silver;
-  padding-right: 1em;
-}
-.data.define td:last-child {
-  text-align: left;
-}
-.data tbody th[rowspan],
-.data tbody td[rowspan] {
-  border-left: 1px solid silver;
-}
-.data tbody th[rowspan]:first-child,
-.data tbody td[rowspan]:first-child {
-  border-left: 0;
-  border-right: 1px solid silver;
-}
-.data.complex th,
-.data.complex td {
-  border: 1px solid silver;
-}
-.data td.long {
- vertical-align: baseline;
- text-align: left;
-}
-.data img {
-  vertical-align: middle;
-}
+	.example pre[class*="language-"],
+	.example [class*="language-"] pre,
+	.example pre[class*="lang-"],
+	.example [class*="lang-"] pre {
+		background: transparent; /* Prism applies a gray background that doesn't work well in the template. */
+	}
+
+/** Example Code **************************************************************/
+
+	div.html, div.xml,
+	pre.html, pre.xml {
+		padding: 0.5em;
+		margin: 1em 0;
+		position: relative;
+		clear: both;
+		color: #600;
+	}
+	pre.example,
+	pre.html,
+	pre.xml {
+		padding-top: 1.5em;
+	}
+
+	pre.illegal, .illegal pre
+	pre.deprecated, .deprecated pre {
+		color: red;
+	}
+
+/** IDL fragments *************************************************************/
+
+	pre.idl {
+		/* Match blue propdef boxes */
+		padding: .5em 1em;
+		background: #DEF;
+		margin: 1.2em 0;
+		border-left: 0.5em solid #8CCBF2;
+	}
+	pre.idl :link, pre.idl :visited {
+		color:inherit;
+		background:transparent;
+	}
+
+/** Inline CSS fragments ******************************************************/
+
+	.css.css, .property.property, .descriptor.descriptor {
+		color: #005a9c;
+		font-size: inherit;
+		font-family: inherit;
+	}
+	.css::before, .property::before, .descriptor::before {
+		content: "‘";
+	}
+	.css::after, .property::after, .descriptor::after {
+		content: "’";
+	}
+	.property, .descriptor {
+		/* Don't wrap property and descriptor names */
+		white-space: nowrap;
+	}
+	.type { /* CSS value &lt;type> */
+	font-style: italic;
+	}
+	pre .property::before, pre .property::after {
+		content: "";
+	}
+
+/** Inline markup fragments ***************************************************/
+
+	code.html, code.xml {
+		color: #660000;
+	}
+
+/** Autolinks produced using Bikeshed *****************************************/
+
+	[data-link-type="property"]::before,
+	[data-link-type="propdesc"]::before,
+	[data-link-type="descriptor"]::before,
+	[data-link-type="value"]::before,
+	[data-link-type="function"]::before,
+	[data-link-type="at-rule"]::before,
+	[data-link-type="selector"]::before,
+	[data-link-type="maybe"]::before {
+		content: "‘";
+	}
+	[data-link-type="property"]::after,
+	[data-link-type="propdesc"]::after,
+	[data-link-type="descriptor"]::after,
+	[data-link-type="value"]::after,
+	[data-link-type="function"]::after,
+	[data-link-type="at-rule"]::after,
+	[data-link-type="selector"]::after,
+	[data-link-type="maybe"]::after {
+		content: "’";
+	}
+
+	[data-link-type].production::before,
+	[data-link-type].production::after,
+	.prod [data-link-type]::before,
+	.prod [data-link-type]::after {
+		content: "";
+	}
+
+	[data-link-type=element]         { font-family: monospace; }
+	[data-link-type=element]::before { content: "&lt;" }
+	[data-link-type=element]::after  { content: ">" }
+
+	[data-link-type=biblio] {
+		white-space: pre;
+	}
 
 
-/* Switch/case <dl>s */
+/******************************************************************************/
+/*                                    Links                                   */
+/******************************************************************************/
 
-dl.switch {
- padding-left: 2em;
-}
-dl.switch > dt {
- text-indent: -1.5em;
-}
-dl.switch > dt:before {
- content: '↪';
- padding: 0 0.5em 0 0;
- display: inline-block;
- width: 1em;
- text-align: right;
- line-height: 0.5em;
+/** General Hyperlinks ********************************************************/
+
+	/* We hyperlink a lot, so make it less intrusive */
+	a:link, a:visited {
+		color: inherit;
+		text-decoration: none;
+		border-bottom: 1px solid silver;
+	}
+	@supports (text-decoration-color: silver) {
+		a:link, a:visited {
+			border-bottom: none;
+			text-decoration: underline;
+			text-decoration-color: silver;
+		}
+		a:visited {
+			text-decoration-style: dotted;
+		}
+	}
+
+	a.logo:link, a.logo:visited { /* backout above styling for W3C logo */
+		padding: 0;
+		border: none;
+		text-decoration: none;
+	}
+
+/** Self-Links ****************************************************************/
+	/* Auto-generated links from an element to its own anchor, for usability */
+
+	.heading, .issue, .note, .example, li, dt {
+		position: relative;
+	}
+	a.self-link {
+		position: absolute;
+		top: 0;
+		left: -2.5em;
+		width: 2em;
+		height: 2em;
+		text-align: center;
+		border: none;
+		transition: opacity .2s;
+		opacity: .5;
+	}
+	a.self-link:hover {
+		opacity: 1;
+	}
+	.heading > a.self-link {
+		font-size: 83%;
+	}
+	li > a.self-link {
+		left: -3.5em;
+	}
+	dfn > a.self-link {
+		top: auto;
+		left: auto;
+		opacity: 0;
+		width: 1.5em;
+		height: 1.5em;
+		background: gray;
+		color: white;
+		font-style: normal;
+		transition: opacity .2s, background-color .2s, color .2s;
+	}
+	dfn:hover > a.self-link {
+		opacity: 1;
+	}
+	dfn > a.self-link:hover {
+		color: black;
+	}
+
+	a.self-link::before            { content: "¶"; }
+	.heading > a.self-link::before { content: "§"; }
+	dfn > a.self-link::before      { content: "#"; }
+
+/******************************************************************************/
+/*                                    Images                                  */
+/******************************************************************************/
+
+	img {
+		border-style: none;
+		color: white;
+	}
+
+	figure, div.figure, div.sidefigure {
+		page-break-inside: avoid;
+	}
+
+	div.figure, p.figure, div.sidefigure, figure {
+		text-align: center;
+		margin: 2.5em 0;
+	}
+	div.figure pre, div.sidefigure pre, figure pre {
+		text-align: left;
+		display: table;
+		margin: 1em auto;
+	}
+	.figure table, figure table {
+		margin: auto;
+	}
+	div.sidefigure, figure.sidefigure {
+		float: right;
+		width: 50%;
+		margin: 0 0 0.5em 0.5em
+	}
+	div.figure img, div.sidefigure img, figure img,
+	div.figure object, div.sidefigure object, figure object {
+		display: block;
+		margin: auto;
+		max-width: 100%
+	}
+	p.caption, figcaption, caption {
+		text-align: center;
+		font-style: italic;
+		font-size: 90%;
+	}
+	p.caption:not(.no-marker)::before, figcaption:not(.no-marker)::before {
+		content: "Figure " counter(figure) ". ";
+	}
+	p.caption::before, figcaption::before, figcaption > .marker {
+		font-weight: bold;
+	}
+	p.caption, figcaption {
+		counter-increment: figure;
+	}
+
+	/* DL list is indented 2em, but figure inside it is not */
+	dd > div.figure, dd > figure { margin-left: -2em }
+
+	pre.ascii-art {
+		display: table; /* shrinkwrap */
+		margin: 1em auto;
+	}
+
+	/* Displaying the output of text layout, particularly when
+		 line-breaking is being invoked, and thus having a
+		 visible width is good. */
+	pre.output {
+		margin: 1em;
+		border: solid thin silver;
+		padding: 0.25em;
+		display: table;
+	}
+
+/******************************************************************************/
+/*                             Colored Boxes                                  */
+/******************************************************************************/
+
+	.issue, .note, .example, .why, .advisement, blockquote {
+		padding: .5em;
+		border: .5em;
+		border-left-style: solid;
+		page-break-inside: avoid;
+	}
+	span.issue, span.note {
+		padding: .1em .5em .15em;
+		border-right-style: solid;
+	}
+
+	div.issue,
+	div.note,
+	div.example,
+	details.why,
+	blockquote {
+		margin: 1em auto;
+	}
+	.note  > p:first-child,
+	.issue > p:first-child,
+	blockquote > :first-child {
+		margin-top: 0;
+	}
+	blockquote > :last-child {
+		margin-bottom: 0;
+	}
+
+/** Blockquotes ***************************************************************/
+
+	blockquote {
+		border-color: silver;
+	}
+
+/** Open issue ****************************************************************/
+	/* not intended for CR+ publication */
+
+	.issue {
+		border-color: #E05252;
+		background: #FBE9E9;
+		counter-increment: issue;
+		overflow: auto;
+	}
+	.issue:not(.no-marker)::before {
+		content: "ISSUE " counter(issue);
+		padding-right: 1em;
+	}
+	.issue::before, .issue > .marker {
+		color: #AE1E1E;
+	}
+
+/** Example *******************************************************************/
+
+	.example {
+		border-color: #E0CB52;
+		background: #FCFAEE;
+		counter-increment: exampleno;
+		overflow: auto;
+		clear: both;
+	}
+	.example::before, .example > .marker {
+		color: #827017;
+		font-family: sans-serif;
+		min-width: 7.5em;
+		display: block;
+	}
+	.example:not(.no-marker)::before {
+		content: "EXAMPLE";
+		content: "EXAMPLE " counter(exampleno);
+	}
+	.invalid.example::before, .invalid.example > .marker,
+	.illegal.example::before, .illegal.example > .marker {
+		color: red;
+	}
+	.invalid.example:not(.no-marker)::before,
+	.illegal.example:not(.no-marker)::before {
+		content: "INVALID EXAMPLE";
+		content: "INVALID EXAMPLE" counter(exampleno);
+	}
+
+/** Non-normative Note ********************************************************/
+
+	.note, .why {
+		border-color: #52E052;
+		background: #E9FBE9;
+		overflow: auto;
+	}
+	.note::before, .note > .marker {
+		display: block;
+		color: hsl(120, 70%, 30%);
+	}
+
+/** Advisement Box ************************************************************/
+	/*  for attention-grabbing normative statements */
+
+	.advisement {
+		border-color: orange;
+		border-style: none solid;
+		background: #FFEECC;
+		text-align: center;
+	}
+	strong.advisement {
+		display: block;
+	}
+	/*.advisement::before { color: #FF8800; } */
+
+/** ??? ***********************************************************************/
+
+	details.why {
+		border-color: #52E052;
+		background: #E9FBE9;
+		display: block;
+	}
+
+	details.why > summary {
+		font-style: italic;
+		display: block;
+	}
+
+	details.why[open] > summary {
+		border-bottom: 1px silver solid;
+	}
+
+/** Spec Obsoletion Notice ****************************************************/
+	/* obnoxious obsoletion notice for older/abandoned specs. */
+
+	details.annoying-warning {
+		display: block;
+	}
+
+	details.annoying-warning[open] {
+		background: #fdd;
+		color: red;
+		font-weight: bold;
+		text-align: center;
+		padding: .5em;
+		border: thick solid red;
+		border-radius: 1em;
+	}
+@media not print {
+	details.annoying-warning[open] {
+		position: fixed;
+		left: 1em;
+		right: 1em;
+		bottom: 1em;
+		z-index: 1000;
+	}
 }
 
+	details.annoying-warning:not([open]) > summary {
+		background: #fdd;
+		color: red;
+		font-weight: bold;
+		text-align: center;
+		padding: .5em;
+	}
 
-/* Style for At Risk features (intended as editorial aid, not intended for publishing) */
-.atrisk::before {
- position: absolute;
- margin-left: -5em;
- margin-top: -2px;
- padding: 4px;
- border: 1px solid;
- content: 'At risk';
- font-size: small;
- background-color: white;
- color: gray;
- border-radius: 1em;
- text-align: center;
-}
+/******************************************************************************/
+/*                                    Tables                                  */
+/******************************************************************************/
+
+/** Property/Descriptor Definition Tables *************************************/
+
+	table.propdef, table.propdef-extra,
+	table.descdef, table.definition-table {
+		page-break-inside: avoid;
+		width: 100%;
+		margin: 1.2em 0;
+		border-left: 0.5em solid #8CCBF2;
+		padding: 0.5em 1em;
+		background: #DEF;
+		border-spacing: 0;
+	}
+
+	table.propdef td, table.propdef-extra td,
+	table.descdef td, table.definition-table td,
+	table.propdef th, table.propdef-extra th,
+	table.descdef th, table.definition-table th {
+		padding: 0.5em;
+		vertical-align: baseline;
+		border-bottom: 1px solid #bbd7e9;
+	}
+	table.propdef > tbody > tr:last-child th,
+	table.propdef-extra > tbody > tr:last-child th,
+	table.descdef > tbody > tr:last-child th,
+	table.definition-table > tbody > tr:last-child th,
+	table.propdef > tbody > tr:last-child td,
+	table.propdef-extra > tbody > tr:last-child td,
+	table.descdef > tbody > tr:last-child td,
+	table.definition-table > tbody > tr:last-child td {
+		border-bottom: 0;
+	}
+
+	table.propdef th,
+	table.propdef-extra th,
+	table.descdef th,
+	table.definition-table th {
+		font-style: italic;
+		font-weight: normal;
+		width: 8.3em;
+		padding-left: 1em;
+	}
+
+	/* For when values are extra-complex and need formatting for readability */
+	table td.pre {
+		white-space: pre-wrap;
+	}
+
+	/* A footnote at the bottom of a propdef */
+	table.propdef td.footnote,
+	table.propdef-extra td.footnote,
+	table.descdef td.footnote,
+	table.definition-table td.footnote {
+		padding-top: 0.6em;
+	}
+	table.propdef td.footnote::before,
+	table.propdef-extra td.footnote::before,
+	table.descdef td.footnote::before,
+	table.definition-table td.footnote::before {
+		content: " ";
+		display: block;
+		height: 0.6em;
+		width: 4em;
+		border-top: thin solid;
+	}
+
+/** Profile Tables ************************************************************/
+	/* table of required features in a CSS profile */
+
+	table.features th {
+		background: #00589f;
+		color: #fff;
+		text-align: left;
+		padding: 0.2em 0.2em 0.2em 0.5em;
+	}
+	table.features td {
+		vertical-align: top;
+		border-bottom: 1px solid #ccc;
+		padding: 0.3em 0.3em 0.3em 0.7em;
+	}
+
+/** Data tables (and properly marked-up proptables) ***************************/
+	/*
+		 &lt;table class="data"> highlights structural relationships in a table
+		 when correct markup is used (e.g. thead/tbody, th vs. td, scope attribute)
+
+		 Use class="complex data" for particularly complicated tables --
+		 (This will draw more lines: busier, but clearer.)
+
+		 Use class="long" on table cells with paragraph-like contents
+		 (This will adjust text alignment accordingly.)
+	*/
+
+	.data, .proptable {
+		margin: 1em auto;
+		border-collapse: collapse;
+		width: 100%;
+		border: hidden;
+	}
+	.data {
+		text-align: center;
+		width: auto;
+	}
+	.data caption {
+		width: 100%;
+	}
+
+	.data td, .data th,
+	.proptable td, .proptable th {
+		padding: 0.5em;
+		border-width: 1px;
+		border-color: silver;
+		border-top-style: solid;
+	}
+
+	.data thead td:empty {
+		padding: 0;
+		border: 0;
+	}
+
+	.data thead th[scope="row"],
+	.proptable thead th[scope="row"] {
+		text-align: right;
+		color: inherit;
+	}
+
+	.data thead,
+	.proptable thead,
+	.data tbody,
+	.proptable tbody {
+		color: inherit;
+		border-bottom: 2px solid;
+	}
+
+	.data colgroup {
+		border-left: 2px solid;
+	}
+
+	.data tbody th:first-child,
+	.proptable tbody th:first-child ,
+	.data tbody td[scope="row"]:first-child,
+	.proptable tbody td[scope="row"]:first-child {
+		text-align: right;
+		color: inherit;
+		border-right: 2px solid;
+		border-top: 1px solid silver;
+		padding-right: 1em;
+	}
+	.data.define td:last-child {
+		text-align: left;
+	}
+
+	.data tbody th[rowspan],
+	.proptable tbody th[rowspan],
+	.data tbody td[rowspan],
+	.proptable tbody td[rowspan]{
+		border-left:  1px solid silver;
+		border-right: 1px solid silver;
+	}
+
+	.complex.data th,
+	.complex.data td {
+		border: 1px solid silver;
+	}
+
+	.data td.long {
+	 vertical-align: baseline;
+	 text-align: left;
+	}
+
+	.data img {
+		vertical-align: middle;
+	}
 
 
-/* Obsoletion notice */
-details.annoying-warning[open] {
-  background: #fdd;
-  color: red;
-  font-weight: bold;
-  text-align: center;
-  padding: .5em;
-  border: thick solid red;
-  border-radius: 1em;
-  position: fixed;
-  left: 1em;
-  right: 1em;
-  bottom: 1em;
-  z-index: 1000;
-}
-details.annoying-warning:not([open]) > summary {
-  background: #fdd;
-  color: red;
-  font-weight: bold;
-  text-align: center;
-  padding: .5em;
-}
+/******************************************************************************/
+/*                                  Indices                                   */
+/******************************************************************************/
 
 
-/* Examples */
+/** Table of Contents *********************************************************/
 
-.example {
-  counter-increment: exampleno;
-}
-.example::before {
-  content: "Example";
-  content: "Example " counter(exampleno);
-  min-width: 7.5em;
-  text-transform: uppercase;
-  display: block;
-}
-.illegal-example::before {
-  content: "Invalid Example";
-  content: "Invalid Example" counter(exampleno);
-}
-.example, .illegal-example, .html, .illegal-html, .xml, .illegal-xml {
-  padding: 0.5em;
-  margin: 1em 0;
-  position: relative;
-  clear: both;
-}
-pre.example, pre.illegal-example, pre.html,
-pre.illegal-html, pre.xml, pre.illegal-xml {
-  padding-top: 1.5em;
-}
-.illegal-example { color: red; }
-.illegal-example p { color: black; }
-.html { color: #600; }
-.illegal-html { color: red; }
-.illegal-html p { color: black; }
-.xml { color: #600; }
-.illegal-xml { color: red; }
-.illegal-xml p { color: black; }
-code.css { font-family: inherit; font-size: 100% }
-code.html { color: #600 } /* inline HTML */
-code.xml { color: #600 }  /* inline XML */
+	/* ToC not indented, but font style shows hierarchy */
+	ul.toc           { margin: 1em 0;     font-weight: bold; /*text-transform: uppercase;*/ }
+	ul.toc ul        { margin: 0;        font-weight: normal; text-transform: none; }
+	ul.toc ul ul     { margin: 0 0 0 2em; font-style: italic; }
+	ul.toc ul ul ul  { margin: 0; }
+	ul.toc > li      { margin: 1.5em 0; }
+	ul.toc ul.toc li { margin: 0.3em 0 0 0; }
 
+	ul.toc, ul.toc ul, ul.toc li { padding: 0; line-height: 1.3; }
+	ul.toc a { text-decoration: none; border-bottom-style: none; }
+	ul.toc a:hover, ul.toc a:focus  { border-bottom-style: solid; }
+	@supports (text-decoration-style: solid) {
+		ul.toc a:hover, ul.toc a:focus  {
+			border-bottom-style: none;
+			text-decoration-style: solid;
+		}
+	}
+	/*
+	ul.toc li li li, ul.toc li li li ul {margin-left: 0; display: inline}
+	ul.toc li li li ul, ul.toc li li li ul li {margin-left: 0; display: inline}
+	*/
 
-/* Issues */
+	/* Section numbers in a column of their own */
+	ul.toc {
+		margin-left: 5em
+	}
+	ul.toc span.secno {
+		float: left;
+		width: 4em;
+		margin-left: -5em;
+	}
+	ul.toc ul ul span.secno {
+		margin-left: -7em;
+	}
+	/*ul.toc span.secno {text-align: right}*/
+	ul.toc li {
+		clear: both;
+	}
+	/* If we had 'tab', floats would not be needed here:
+		 ul.toc span.secno {tab: 5em right; margin-right: 1em}
+		 ul.toc li {text-indent: 5em hanging}
+	 The second line in case items wrap
+	*/
 
-.issue {
-  border-color: #E05252;
-  background: #FBE9E9;
-  counter-increment: issue;
-}
-.issue:before {
-  content: "Issue " counter(issue);
-  padding-right: 1em;
-  text-transform: uppercase;
-  color: #E05252;
-}
+/** At-risk List **************************************************************/
+	/* Style for At Risk features (intended as editorial aid, not intended for publishing) */
 
+	.atrisk::before {
+	 float: right;
+	 margin-top: -0.25em;
+	 padding: 0.5em 1em 0.5em 0;
+	 text-indent: -0.9em;
+	 border: 1px solid;
+	 content: '\25C0    Not yet widely implemented';
+	 white-space: pre;
+	 font-size: small;
+	 background-color: white;
+	 color: gray;
+	 text-align: center;
+	}
 
-/* Whys */
+	.toc .atrisk::before { content:none }
 
-details.why > summary {
-  font-style: italic;
-}
-details.why[open] > summary {
-  border-bottom: 1px silver solid;
-}
+/** Index *********************************************************************/
 
+	/* Index Lists: Layout */
+	ul.indexlist       { margin-left: 0; columns: 15em; -webkit-columns: 15em; text-indent: 1em hanging; }
+	ul.indexlist li    { margin-left: 0; list-style: none; break-inside: avoid; word-break: break-word; }
+	ul.indexlist li li { margin-left: 1em }
+	ul.indexlist dl    { margin-top: 0; }
+	ul.indexlist dt    { margin: .2em 0 .2em 20px;}
+	ul.indexlist dd    { margin: .2em 0 .2em 40px;}
+	/* Index Lists: Typography */
+	ul.indexlist ul,
+	ul.indexlist dl { font-size: smaller; }
+	ul.indexlist li span {
+		white-space: nowrap;
+		position: absolute;
+		color: transparent; }
+	ul.indexlist li a:hover + span,
+	ul.indexlist li a:focus + span {
+		color: gray;
+	}
+	@media print {
+		ul.indexlist li span { color: gray; }
+	}
 
-/* All the blocks get similarly styled */
+/** Property Index Tables *****************************************************/
+	/* See also the data table styling section, which this effectively subclasses */
 
-table.definition, pre.idl, .example, .note, details.why, .issue {
-  border: none;
-  border-left: .5em solid black;
-  border-left: .5rem solid black;
-}
-.issue, .note, .example, .why {
-  padding: .5em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-table.definition, pre.idl {
-  background: hsl(210, 70%, 95%);
-  border-color: hsl(210, 80%, 75%);
-}
-.example {
-  background: hsl(50, 70%, 95%);
-  border-color: hsl(50, 70%, 60%);
-}
-.example::before,
-.example > .marker {
-  color: hsl(50, 70%, 60%);
-}
-.note, details.why {
-  background: hsl(120, 70%, 95%);
-  border-color: hsl(120, 70%, 60%);
-}
-.note::before,
-.note > .marker {
-  color: hsl(120, 70%, 60%);
-}
-.issue {
-  background: hsl(0, 70%, 95%);
-  border-color: hsl(0, 70%, 60%);
-}
-.issue::before,
-.issue > .marker {
-  color: hsl(0, 70%, 60%);
-}
-span.issue, span.note {
-  padding: .1em .5em .15em;
-  border-right-width: .5em;
-  border-right-style: solid;
-}
-.example.no-marker::before,
-.issue.no-marker::before,
-.note.no-marker::before,
-.no-marker::before {
-  content: none;
-}
+	table.proptable {
+		font-size: small;
+		border-collapse: collapse;
+		border-spacing: 0;
+		text-align: left;
+		margin: 1em 0;
+	}
 
-  </style>
-  
+	table.proptable td,
+	table.proptable th {
+		padding: 0.4em;
+		text-align: center;
+	}
 
+	table.proptable tr:hover td {
+		background: #DEF;
+	}
+	.propdef th {
+		font-style: italic;
+		font-weight: normal;
+		text-align: left;
+		width: 3em;
+	}
+	/* The link in the first column in the property table (formerly a TD) */
+	table.proptable td .property,
+	table.proptable th .property {
+		display: block;
+		text-align: left;
+		font-weight: bold;
+	}
+
+/******************************************************************************/
+/*                                    Print                                   */
+/******************************************************************************/
+
+	@media print {
+		html {
+			margin: 0 !important; }
+		body {
+			font-family: serif; }
+		th, td {
+			font-family: inherit; }
+		a {
+			color: inherit !important; }
+
+		a:link, a:visited {
+			text-decoration: none !important }
+		a:link::after, a:visited::after { /* create a cross-ref "see..." */ }
+		.example::before {
+			font-family: serif !important; }
+	}
+	@page {
+		margin: 1.5cm 1.1cm;
+	}
+
+</style>
   <meta content="Bikeshed 1.0.0" name="generator">
-  <style type="text/css">
+<style type="text/css">
 td, th { 
 vertical-align: top; 
 border: thin solid #aaa;
@@ -575,88 +1003,54 @@ table {
 border-collapse: collapse;
 }
 </style>
-  
-
-
  </head>
- 
-
  <body class="h-entry">
-
   <div class="head">
-  
    <p data-fill-with="logo"></p>
-  
    <h1 class="p-name no-ref" id="title">EPUB Zero</h1>
-  
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">A Collection of Interesting Ideas,
-    <time class="dt-updated" datetime="2015-06-22">22 June 2015</time></span></h2>
-  
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">A Collection of Interesting Ideas, <time class="dt-updated" datetime="2015-09-16">16 September 2015</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
      <dd><a class="u-url" href="http://dauwhe.github.io/epub-zero/">http://dauwhe.github.io/epub-zero/</a>
-     <dt>Issue Tracking:
-     <dd><a href="#issues-index">Inline In Spec</a>
      <dt class="editor">Editors:
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:tseigman@wiley.com">Tzviya Seigman</a> (<span class="p-org org">Wiley</span>)
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:dauwhe@gmail.com">Dave Cramer</a> (<span class="p-org org">Hachette Livre</span>)
     </dl>
    </div>
-  
    <div data-fill-with="warning"></div>
-  
-   <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/80x15.png"></a>
-To the extent possible under law, the editors have waived all copyright
+   <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/80x15.png"></a> To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 22 June 2015,
-the editors have made this specification available under the
-<a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
+In addition, as of 16 September 2015,
+the editors have made this specification available under the <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
-Parts of this work may be from another specification document.  If so, those parts are instead covered by the license of that specification document.
-</p>
-  
+Parts of this work may be from another specification document.  If so, those parts are instead covered by the license of that specification document. </p>
    <hr title="Separator for header">
-</div>
-
-
+  </div>
   <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-
   <div class="p-summary" data-fill-with="abstract">
    <p>A simple ebook format, as close to the Open Web Platform as possible.</p>
-
-</div>
-
+  </div>
   <div data-fill-with="at-risk"></div>
-
-
   <h2 class="no-num no-toc no-ref heading settled" id="contents"><span class="content">Table of Contents</span></h2>
-
   <div data-fill-with="table-of-contents" role="navigation">
    <ul class="toc" role="directory">
-    <li><a href="#introduction"><span class="secno"></span> <span class="content">
-Introduction
-</span></a>
-    <li><a href="#goals"><span class="secno">1</span> <span class="content">
-Design goals and rationale
-</span></a>
-    <li><a href="#overview"><span class="secno">2</span> <span class="content">Overview</span></a>
+    <li><a href="#introduction"><span class="secno"></span> <span class="content"> Introduction </span></a>
+    <li><a href="#goals"><span class="secno">1</span> <span class="content"> Design goals and rationale </span></a>
+    <li>
+     <a href="#overview"><span class="secno">2</span> <span class="content">Overview</span></a>
      <ul class="toc">
       <li><a href="#compare"><span class="secno">2.1</span> <span class="content">Comparison of EPUB 3 and EPUB Zero</span></a>
      </ul>
-    <li><a href="#e0-documents"><span class="secno">3</span> <span class="content">EPUB Zero documents</span></a>
+    <li>
+     <a href="#e0-documents"><span class="secno">3</span> <span class="content">EPUB Zero documents</span></a>
      <ul class="toc">
-      <li><a href="#content-docs"><span class="secno">3.1</span> <span class="content">
-Content documents
-</span></a>
-      <li><a href="#style"><span class="secno">3.2</span> <span class="content">Style</span></a>
+      <li><a href="#content-docs"><span class="secno">3.1</span> <span class="content"> Content documents </span></a>
+      <li>
+       <a href="#style"><span class="secno">3.2</span> <span class="content">Style</span></a>
        <ul class="toc">
-        <li><a href="#pagination"><span class="secno">3.2.1</span> <span class="content">
-Pagination
-</span></a>
-        <li><a href="#page-transitions"><span class="secno">3.2.2</span> <span class="content">
-Page Transitions
-</span></a>
+        <li><a href="#pagination"><span class="secno">3.2.1</span> <span class="content"> Pagination </span></a>
+        <li><a href="#page-transitions"><span class="secno">3.2.2</span> <span class="content"> Page Transitions </span></a>
        </ul>
       <li><a href="#interactivity"><span class="secno">3.3</span> <span class="content">Interactivity</span></a>
       <li><a href="#media-overlays"><span class="secno">3.4</span> <span class="content">Media Overlays</span></a>
@@ -666,454 +1060,208 @@ Page Transitions
       <li><a href="#a11y"><span class="secno">3.8</span> <span class="content">Accessibility</span></a>
      </ul>
     <li><a href="#installing"><span class="secno">4</span> <span class="content">Installing EPUB Zero publications</span></a>
-    <li><a href="#offline"><span class="secno">5</span> <span class="content">Offline reading</span></a>
+    <li>
+     <a href="#offline"><span class="secno">5</span> <span class="content">Offline reading</span></a>
      <ul class="toc">
-      <li><a href="#appcache"><span class="secno">5.1</span> <span class="content">
-AppCache
-</span></a>
-      <li><a href="#service-workers"><span class="secno">5.2</span> <span class="content">
-Service Workers
-
-
-
-
-</span></a>
+      <li><a href="#appcache"><span class="secno">5.1</span> <span class="content"> AppCache </span></a>
+      <li><a href="#service-workers"><span class="secno">5.2</span> <span class="content"> Service Workers </span></a>
      </ul>
-    <li><a href="#structure"><span class="secno">6</span> <span class="content">
-Publication structure and packaging
-</span></a>
-    <li><a href="#metadata"><span class="secno">7</span> <span class="content">
-Metadata
-</span></a>
-    <li><a href="#acknowledgments"><span class="secno"></span> <span class="content">
-Acknowledgments
-</span></a>
-    <li><a href="#appendix-1"><span class="secno"></span> <span class="content">
-Reading system behaviour
-</span></a>
-    <li><a href="#appendix-2"><span class="secno"></span> <span class="content">
-References and Further Reading
-</span></a>
-    <li><a href="#appendix-3"><span class="secno"></span> <span class="content">
-Functional requirements for books, and possible solutions
-</span></a>
-    <li><a href="#conformance"><span class="secno"></span> <span class="content">
-Conformance</span></a>
-    <li><a href="#references"><span class="secno"></span> <span class="content">References</span></a>
+    <li><a href="#structure"><span class="secno">6</span> <span class="content"> Publication structure and packaging </span></a>
+    <li><a href="#metadata"><span class="secno">7</span> <span class="content"> Metadata </span></a>
+    <li><a href="#acknowledgments"><span class="secno"></span> <span class="content"> Acknowledgments </span></a>
+    <li><a href="#appendix-1"><span class="secno"></span> <span class="content"> Reading system behaviour </span></a>
+    <li><a href="#appendix-2"><span class="secno"></span> <span class="content"> References and Further Reading </span></a>
+    <li><a href="#appendix-3"><span class="secno"></span> <span class="content"> Functional requirements for books, and possible solutions </span></a>
+    <li><a href="#conformance"><span class="secno"></span> <span class="content"> Conformance</span></a>
+    <li>
+     <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
      <ul class="toc">
       <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
       <li><a href="#informative"><span class="secno"></span> <span class="content">Informative References</span></a>
      </ul>
     <li><a href="#issues-index"><span class="secno"></span> <span class="content">Issues Index</span></a>
-   </ul></div>
-
+   </ul>
+  </div>
   <main>
-
-
-
-
-   <h2 class="no-num heading settled" id="introduction"><span class="content">
-Introduction
-</span></h2>
-
-
-
-   <p class="note" role="note">Note: This specification is only a thought experiment, inspired by the <a href="http://w3c.github.io/epubweb/">EPUB+WEB White Paper</a> (by the <a href="https://www.w3.org/dpub/IG/wiki/">W3C Digital Publishing Interest Group</a> and the <a href="idpf.org">IDPF</a>) and by concerns about the complexity of EPUB3. Please join the Digital Publishing Interest Group and IDPF to help bring about a better future for ebooks.</p>
-
-
-   <p>A book, in the digital world, is a reading mode, not a file format. The Open Web Platform provides us with most of what we need for the content, style, and behavior of a publication. EPUB Zero aims to make publications just another part of the web.</p>
-
-
-   <p>EPUB3 is complex. It requires numerous custom XML vocabularies, and massive repetition of content. Developing a reading system for EPUB3 is a herculean task, as evidenced by the slow progress of Readium. Our goal is to create a simpler publication format, easier to author, and easy to read in a browser with as little additional technology as possible.</p>
-
-
-   <p class="note" role="note">Note: EPUB Zero is not just for books, but any packaged web content. We will use the term <i>publication</i> to describe books, magazines, journals, manuals, reference documents, corporate documents, articles, etc.</p>
-
-
-   <h2 class="heading settled" data-level="1" id="goals"><span class="secno">1. </span><span class="content">
-Design goals and rationale
-</span><a class="self-link" href="#goals"></a></h2>
-
-
+   <h2 class="no-num heading settled" id="introduction"><span class="content"> Introduction </span></h2>
+   <p class="note" role="note">Note: This specification is only a thought experiment,
+inspired by the <a href="http://w3c.github.io/epubweb/">EPUB+WEB White Paper</a> (by the <a href="https://www.w3.org/dpub/IG/wiki/">W3C Digital Publishing Interest Group</a> and the <a href="idpf.org">IDPF</a>) and by concerns about the complexity of EPUB3. 
+Please join the Digital Publishing Interest Group and IDPF to help bring about a better future for ebooks.</p>
+   <p>A book, in the digital world, is a reading mode, not a file format.
+The Open Web Platform provides us with most of what we need for the content, 
+style, and behavior of a publication. 
+EPUB Zero aims to make publications just another part of the web.</p>
+   <p>EPUB3 is complex. It requires numerous custom XML vocabularies, and massive repetition of content.
+Developing a reading system for EPUB3 is a herculean task, as evidenced by the slow progress of Readium. 
+Our goal is to create a simpler publication format, easier to author, 
+and easy to read in a browser with as little additional technology as possible.</p>
+   <p class="note" role="note">Note: EPUB Zero is not just for books, but any packaged web content.
+We will use the term <i>publication</i> to describe books, magazines, 
+journals, manuals, reference documents, corporate documents, articles, etc.</p>
+   <h2 class="heading settled" data-level="1" id="goals"><span class="secno">1. </span><span class="content"> Design goals and rationale </span><a class="self-link" href="#goals"></a></h2>
    <p>EPUB Zero satisfies the following design goals:</p>
-
-
    <ol>
     <li data-md="">
      <p>Simplicity</p>
-     
-
     <li data-md="">
      <p>“Webbiness”</p>
-     
-
     <li data-md="">
      <p>Built from HTML and CSS and JSON as much as possible</p>
-     
-
     <li data-md="">
      <p>Uses existing, forward-looking standards whenever possible</p>
-     
-
     <li data-md="">
      <p>Don’t repeat yourself</p>
-     
-
     <li data-md="">
      <p>Easy to author</p>
-     
-
     <li data-md="">
      <p>Aims to use the browser as reading system</p>
-     
-</ol>
-
-   <p class="note" role="note">Note: The ultimate test of this specification is whether we can build a reading system on top of an ordinary browser with only a bit of JS.</p>
-
-
+   </ol>
+   <p class="note" role="note">Note: The ultimate test of this specification is whether we can build a reading system
+on top of an ordinary browser with only a bit of JS.</p>
    <h2 class="heading settled" data-level="2" id="overview"><span class="secno">2. </span><span class="content">Overview</span><a class="self-link" href="#overview"></a></h2>
-
-
-   <p>EPUB Zero is yet another ebook format, which isn’t just “based on” HTML like EPUB, but <em>is</em> HTML. Where possible, we use HTML solutions to achieve book-like functionality. It appears to be possible to do this using mostly-existing web technology:</p>
-
-
+   <p>EPUB Zero is yet another ebook format, which isn’t just “based on” HTML like EPUB,
+but <em>is</em> HTML. Where possible, we use HTML solutions to achieve book-like functionality. 
+It appears to be possible to do this using mostly-existing web technology:</p>
    <ol>
     <li data-md="">
-     <p>Online/offline reading via AppCache or Service Workers</p>
-     
-
+     <p>Online/offline reading via Service Workers</p>
     <li data-md="">
      <p>Pagination via prollyfills</p>
-     
-
     <li data-md="">
      <p>Installable via application manifest</p>
-     
-
     <li data-md="">
      <p>Access to navigation document via sidebar link relation</p>
-     
-</ol>
-
-   <p>But each of these features are problematic. As this document evolves, we hope to propose alternatives.</p>
-
-
+   </ol>
+   <p>But each of these features are problematic.
+As this document evolves, we hope to propose alternatives.</p>
    <figure>
-<img alt="screenshot of an epub zero in the Opera browser" src="images/reading-e0-opera.png" width="640">
-
+     <img alt="screenshot of an epub zero in the Opera browser" src="images/reading-e0-opera.png" width="640"> 
     <figcaption>Using Opera 12.16 as an EPUB Zero Reading system. </figcaption>
-</figure>
-
-
+   </figure>
    <figure>
-<img alt="folder structure of an EPUB Zero publication" src="images/e0-folder.png" width="640">
-
+     <img alt="folder structure of an EPUB Zero publication" src="images/e0-folder.png" width="640"> 
     <figcaption>Folder structure of an EPUB Zero publication</figcaption>
-</figure>
-
-
+   </figure>
    <h3 class="heading settled" data-level="2.1" id="compare"><span class="secno">2.1. </span><span class="content">Comparison of EPUB 3 and EPUB Zero</span><a class="self-link" href="#compare"></a></h3>
-
    <table>
-
     <thead>
-
      <tr>
-
       <th>Feature
-
       <th>EPUB 3
-
       <th>EPUB Zero
-
-
-
-
     <tbody>
-
-
      <tr>
-
       <td>Package Document
-
       <td>manifest, reading order, metadata in XML vocabulary
-
-      <td>TK
-
-
-
+      <td>nav + web app manifest
      <tr>
-
       <td>Reading Order
-
       <td>spine element in package file
-
       <td>link rel=next in HTML
-
-
-
      <tr>
-
       <td>Navigation Document
-
       <td>required nav, optional ncx
-
       <td>required nav
-
-
-
      <tr>
-
       <td>Linking
-
       <td>EPUB CFI
-
       <td>TK
-
-
-
-
      <tr>
-
       <td>Publication Metadata
-
       <td>custom XML format inside package file
-
       <td>external file in any vocabulary
-
-
-
-
-
      <tr>
-
       <td>Content Documents
-
       <td>XHTML5, SVG
-
       <td>HTML5, SVG
-
-
-
      <tr>
-
       <td>Fixed Layout
-
       <td>viewport in HTML + configuration in package
-
       <td>just don’t even
-
-
-
-
-
      <tr>
-
       <td>Style
-
       <td>subset of CSS
-
       <td>any CSS
-
-
-
      <tr>
-
       <td>Multimedia
-
       <td>html audio and video, mp3 and mp4 are core media types
-
       <td>Anything supported by the browser
-
-
-
-
      <tr>
-
       <td>Fonts
-
       <td>OTF and WOFF
-
       <td>Anything supported by the browser
-
-
-
      <tr>
-
       <td>Scripting
-
       <td>optional, recommend container constrained
-
-      <td>TK
-
-
-
+      <td>required for offline reading
      <tr>
-
       <td>Text-to-speech
-
       <td>TK
-
       <td>TK
-
-
-
      <tr>
-
       <td>Container
-
       <td>OCF
-
       <td>Implied by the domain
-
-
-
      <tr>
-
       <td>Manifest
-
       <td>OCF manifest
-
-      <td>TK
-
-
-
+      <td>nav + web app manifest
      <tr>
-
       <td>Offline reading
-
       <td>dependent on reading system
-
-      <td>AppCache or Service Workers
-
-
-
-
-
-</table>
-
-
+      <td>Service Workers
+   </table>
    <h2 class="heading settled" data-level="3" id="e0-documents"><span class="secno">3. </span><span class="content">EPUB Zero documents</span><a class="self-link" href="#e0-documents"></a></h2>
-
-
-
-   <h3 class="heading settled" data-level="3.1" id="content-docs"><span class="secno">3.1. </span><span class="content">
-Content documents
-</span><a class="self-link" href="#content-docs"></a></h3>
-
-
+   <h3 class="heading settled" data-level="3.1" id="content-docs"><span class="secno">3.1. </span><span class="content"> Content documents </span><a class="self-link" href="#content-docs"></a></h3>
    <p>An EPUB Zero content document is an HTML5 document.</p>
-
-
-   <p class="issue" id="issue-a7ffe277"><a class="self-link" href="#issue-a7ffe277"></a> Can SVG or raster images be a content document? Does <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> define required media types?
-Issue: Is question whether SVG can be embedded inline in HTML (yes, http://www.w3.org/html/wg/drafts/html/master/semantics.html#svg-0) or whether SVG can be first class citizen?</p>
-
-
+   <p class="issue" id="issue-46f5d1a4"><a class="self-link" href="#issue-46f5d1a4"></a> Can SVG or raster images be a content document? Does <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> define required media types?
+Issue: Is question whether SVG can be embedded inline in HTML (yes, http://www.w3.org/html/wg/drafts/html/master/semantics.html#svg-0) 
+or whether SVG can be first class citizen?</p>
    <h3 class="heading settled" data-level="3.2" id="style"><span class="secno">3.2. </span><span class="content">Style</span><a class="self-link" href="#style"></a></h3>
-
-
    <p>There are no restrictions on the use of CSS.</p>
-
-
-
-   <h4 class="heading settled" data-level="3.2.1" id="pagination"><span class="secno">3.2.1. </span><span class="content">
-Pagination
-</span><a class="self-link" href="#pagination"></a></h4>
-
-
-   <p>Pagination is essential for an optimum long-form reading experience. Several approaches to pagination may be possible:</p>
-
-
+   <h4 class="heading settled" data-level="3.2.1" id="pagination"><span class="secno">3.2.1. </span><span class="content"> Pagination </span><a class="self-link" href="#pagination"></a></h4>
+   <p>Pagination is essential for an optimum long-form reading experience.
+Several approaches to pagination may be possible:</p>
    <ol>
     <li data-md="">
      <p>Native support exists in Opera 12.16, via <code>overflow: paged</code>.</p>
-     
-
-
     <li data-md="">
      <p>Polyfills exist, based on either multicol or regions.</p>
-     
-
-
     <li data-md="">
-     <p>Project Houdini may expose primitives making prollyfills possible.</p>
-     
-
-</ol>
-
-   <p class="note" role="note">Note: Reading long-form content in paginated form often offers a better experience for readers. We encourage document authors to support pagination via CSS, polyfills, prollyfills, reading systems, and/or political action.</p>
-
-
-   <h4 class="heading settled" data-level="3.2.2" id="page-transitions"><span class="secno">3.2.2. </span><span class="content">
-Page Transitions
-</span><a class="self-link" href="#page-transitions"></a></h4>
-
-
-   <p>A book may consist of several HTML files. A user must be able to move from ch1.html to ch2.html as easily as moving from page 1 to page 2, and with the same action.</p>
-
-
+     <p>Project Houdini may expose primitives making prollyfills easier.</p>
+   </ol>
+   <p class="note" role="note">Note: Reading long-form content in paginated form often offers a better experience for readers.
+We encourage document authors to support pagination via CSS, polyfills, 
+prollyfills, reading systems, and/or political action.</p>
+   <h4 class="heading settled" data-level="3.2.2" id="page-transitions"><span class="secno">3.2.2. </span><span class="content"> Page Transitions </span><a class="self-link" href="#page-transitions"></a></h4>
+   <p>A book may consist of several HTML files. A user must be able to move
+from ch1.html to ch2.html as easily as moving from page 1 to page 2, and with the same action.</p>
    <p class="note" role="note">Note: discussed by CSSWG in thread starting at https://lists.w3.org/Archives/Public/www-style/2014Jan/0093.html</p>
-
-
    <p>HTML5 link relations support describing previous and next files.</p>
-
-
    <p class="issue" id="issue-4bbd800d"><a class="self-link" href="#issue-4bbd800d"></a> Opera and Firefox have UI for <code>link rel=prev|next</code>, but Safari, Chrome, and IE do not.</p>
-
-
+   <p class="issue" id="issue-fed5d916"><a class="self-link" href="#issue-fed5d916"></a> Using link relations introduces a burden on authoring that does not currently exist in EPUB3.</p>
    <h3 class="heading settled" data-level="3.3" id="interactivity"><span class="secno">3.3. </span><span class="content">Interactivity</span><a class="self-link" href="#interactivity"></a></h3>
-
-
-   <p class="issue" id="issue-7febe916"><a class="self-link" href="#issue-7febe916"></a> Security for downloaded publications. How is this handled with appcache and service workers?</p>
-
-
-
-
+   <p class="issue" id="issue-59615615"><a class="self-link" href="#issue-59615615"></a> Security for downloaded publications. How is this handled with service workers?</p>
    <h3 class="heading settled" data-level="3.4" id="media-overlays"><span class="secno">3.4. </span><span class="content">Media Overlays</span><a class="self-link" href="#media-overlays"></a></h3>
-
-
-   <p class="issue" id="issue-b731b978"><a class="self-link" href="#issue-b731b978"></a> Browsers (as far as we know) do not support SMIL. Are there polyfills that are “good enough?” Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?</p>
-
-
+   <p class="issue" id="issue-b0c9c246"><a class="self-link" href="#issue-b0c9c246"></a> Browsers (as far as we know) do not support SMIL.
+Are there polyfills that are “good enough?” 
+Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?</p>
    <h3 class="heading settled" data-level="3.5" id="global"><span class="secno">3.5. </span><span class="content">Global Language Support</span><a class="self-link" href="#global"></a></h3>
-
-
    <h3 class="heading settled" data-level="3.6" id="navigation"><span class="secno">3.6. </span><span class="content">Navigation</span><a class="self-link" href="#navigation"></a></h3>
-
-
    <p>Most reading systems provide a link to the navigation document as part of the reading system user interface.</p>
-
-
    <p class="note" role="note">Note: In Opera and Firefox, opening a link with <code>rel=sidebar</code> can open a navigation document in the "secondary browsing context", aka sidebar. This does not work in Safari, Chrome, or IE.</p>
-
-
    <h3 class="heading settled" data-level="3.7" id="fxl"><span class="secno">3.7. </span><span class="content">Fixed Layout</span><a class="self-link" href="#fxl"></a></h3>
-
-
    <p class="issue" id="issue-f427b169"><a class="self-link" href="#issue-f427b169"></a> FXL is often a bad idea</p>
-
-
    <h3 class="heading settled" data-level="3.8" id="a11y"><span class="secno">3.8. </span><span class="content">Accessibility</span><a class="self-link" href="#a11y"></a></h3>
-
-
    <p class="note" role="note">Note: Compliance with WCAG 2.0 and integration of ARIA 1.1 and the Digital Publishing module of ARIA will aid in creating accessible content.</p>
-
-
-   <p class="issue" id="issue-55fd4411"><a class="self-link" href="#issue-55fd4411"></a> How do we make EPUB Zero documents “born accessible?” EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> heading elements.</p>
-
-
+   <p class="issue" id="issue-39257783"><a class="self-link" href="#issue-39257783"></a> How do we make EPUB Zero documents “born accessible?”
+EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> heading elements.</p>
    <p class="issue" id="issue-11482919"><a class="self-link" href="#issue-11482919"></a> What’s the state of text-to-speech support in browsers?</p>
-
-
    <h2 class="heading settled" data-level="4" id="installing"><span class="secno">4. </span><span class="content">Installing EPUB Zero publications</span><a class="self-link" href="#installing"></a></h2>
-
-
    <p>EPUB Zero uses the web manifest specification https://w3c.github.io/manifest/ to facilitate installation as a webapp on user devices.</p>
-
-
-   <div class="example" id="example-996cf67d"><a class="self-link" href="#example-996cf67d"></a>
-
-    <pre>{  "name": "Moby-Dick",
+   <div class="example" id="example-996cf67d">
+    <a class="self-link" href="#example-996cf67d"></a> 
+<pre>{  "name": "Moby-Dick",
   "short_name": "Moby-Dick",
   "icons": [{
         "src": "icons/moby-dick-icon.webp",
@@ -1123,121 +1271,53 @@ Page Transitions
   "start_url": "title-page.html",
   "display": "minimal-ui",
 }</pre>
-</div>
-
-
-   <p class="issue" id="issue-00d55662"><a class="self-link" href="#issue-00d55662"></a> the <code>display</code> property is interesting. Adding an additional value <code>"display": "book"</code> might be a good way of indicating to the browser that it should display the content with a UI optimized for long-form content.</p>
-
-
-
-
+   </div>
+   <p class="issue" id="issue-c55976b3"><a class="self-link" href="#issue-c55976b3"></a> the <code>display</code> property is interesting. Adding an additional
+value <code>"display": "book"</code> might be a good way of indicating to the browser 
+that it should display the content with a UI optimized for long-form content.</p>
+   <p class="issue" id="issue-b6c84697"><a class="self-link" href="#issue-b6c84697"></a> there seems to be some pushback against the web manifest specification.</p>
+   <p class="issue" id="issue-131844c3"><a class="self-link" href="#issue-131844c3"></a> How might a web manifest fulfill the function of an EPUB manifest?</p>
    <h2 class="heading settled" data-level="5" id="offline"><span class="secno">5. </span><span class="content">Offline reading</span><a class="self-link" href="#offline"></a></h2>
-
-
    <p>Books must be readable offline and online.</p>
-
-
    <p class="issue" id="issue-05f7ae63"><a class="self-link" href="#issue-05f7ae63"></a> Is offline reading really the same question as packaging/archiving?</p>
-
-
    <p>Browsers currently offer ways of accessing web content while offline:</p>
-
-
-
-   <h3 class="heading settled" data-level="5.1" id="appcache"><span class="secno">5.1. </span><span class="content">
-AppCache
-</span><a class="self-link" href="#appcache"></a></h3>
-
-
+   <h3 class="heading settled" data-level="5.1" id="appcache"><span class="secno">5.1. </span><span class="content"> AppCache </span><a class="self-link" href="#appcache"></a></h3>
    <p>Cache manifests allow offline access to web content: https://html.spec.whatwg.org/multipage/browsers.html#offline</p>
-
-
-
-   <div class="example" id="example-ffd63990"><a class="self-link" href="#example-ffd63990"></a>
-
-    <pre>CACHE MANIFEST
-#v3 2015-06-05
-css/mobydick.css
-metadata.json
-manifest.json
-title-page.html
-copyright.html
-introduction.html
-epigraph.html
-c001.html
-c002.html
-...
-</pre>
-</div>
-
-
-   <p class="note" role="note">Note: this seems to handle the issue of updating ebooks—make a change to the cache manifest on the server and new files will be uploaded the next time the reader is online.</p>
-
-
-   <p class="issue" id="issue-34e7e5c6"><a class="self-link" href="#issue-34e7e5c6"></a> AppCache sucks. Can we replace it with Service Workers?</p>
-
-
-   <h3 class="heading settled" data-level="5.2" id="service-workers"><span class="secno">5.2. </span><span class="content">
-Service Workers
-
-
-
-
-</span><a class="self-link" href="#service-workers"></a></h3>
-   <h2 class="heading settled" data-level="6" id="structure"><span class="secno">6. </span><span class="content">
-Publication structure and packaging
-</span><a class="self-link" href="#structure"></a></h2>
-
-
-   <p class="issue" id="issue-90232d73"><a class="self-link" href="#issue-90232d73"></a> the EPUB+WEB White Paper discusses offline access together with packaging. Are these in fact the same issue?</p>
-
-
-   <p>An EPUB Zero publication is a collection of files, which must be collected inside a folder or directory. The top level of the directory should contain the web manifest and cache manifest. No other restrictions exist on the directory structure.</p>
-
-
+   <p class="issue" id="issue-a906c2e2"><a class="self-link" href="#issue-a906c2e2"></a> AppCache will likely be removed from browsers in favor of Service Workers.</p>
+   <h3 class="heading settled" data-level="5.2" id="service-workers"><span class="secno">5.2. </span><span class="content"> Service Workers </span><a class="self-link" href="#service-workers"></a></h3>
+   <p>Service Workers are the preferred way of implementing offline viewing for web content.</p>
+   <p class="note" role="note">Note: A service worker should be declared in <code>start_url</code>.</p>
+   <h2 class="heading settled" data-level="6" id="structure"><span class="secno">6. </span><span class="content"> Publication structure and packaging </span><a class="self-link" href="#structure"></a></h2>
+   <p class="issue" id="issue-22720ea0"><a class="self-link" href="#issue-22720ea0"></a> the EPUB+WEB White Paper discusses offline access together with packaging.
+Are these in fact the same issue?</p>
+   <p>An EPUB Zero publication is a collection of files, which must be collected inside a folder or directory.
+The top level of the directory should contain the web manifest and cache manifest. 
+No other restrictions exist on the directory structure.</p>
    <p>Compressing or otherwise packaging this directory may be required for many reasons, including</p>
-
-
    <ol>
     <li data-md="">
      <p>reduction of file size</p>
-     
-
     <li data-md="">
      <p>creating a single “blob” that can be easily transmitted</p>
-     
-
     <li data-md="">
      <p>allowing for a digital signature</p>
-     
-
     <li data-md="">
      <p>allowing for digital rights management</p>
-     
-
     <li data-md="">
      <p>allowing for streaming of the publication</p>
-     
-</ol>
-
-   <p>In simple cases, using ZIP may be sufficient. The W3C WebApps Packaging format may prove useful as well http://w3ctag.github.io/packaging-on-the-web/</p>
-
-
-   <p class="issue" id="issue-b4bfdeef"><a class="self-link" href="#issue-b4bfdeef"></a> how about using presence of manifest.json as trigger, as what defines a publication as something different than an ordinary bundle of web content? Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”</p>
-
-
-
-   <h2 class="heading settled" data-level="7" id="metadata"><span class="secno">7. </span><span class="content">
-Metadata
-</span><a class="self-link" href="#metadata"></a></h2>
-
-
-   <p>Publication-level metadata can be stored in the publication folder. We recommend the use of JSON-LD as a metadata format, but different communities may use other formats such as RDF, Turtle, or ONIX.</p>
-
-
-   <div class="example" id="example-5f6f7746"><a class="self-link" href="#example-5f6f7746"></a>
-
-    <pre>{
+   </ol>
+   <p>In simple cases, using ZIP may be sufficient. The W3C WebApps Packaging format
+may prove useful as well http://w3ctag.github.io/packaging-on-the-web/</p>
+   <p class="issue" id="issue-ffea1c5e"><a class="self-link" href="#issue-ffea1c5e"></a> how about using presence of manifest.json as trigger, as what defines a publication
+as something different than an ordinary bundle of web content? 
+Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”</p>
+   <h2 class="heading settled" data-level="7" id="metadata"><span class="secno">7. </span><span class="content"> Metadata </span><a class="self-link" href="#metadata"></a></h2>
+   <p>Publication-level metadata can be stored in the publication folder.
+We recommend the use of JSON-LD as a metadata format, but different communities may use 
+other formats such as RDF, Turtle, or ONIX.</p>
+   <div class="example" id="example-5f6f7746">
+    <a class="self-link" href="#example-5f6f7746"></a> 
+<pre>{
   "@context": "http://schema.org",
   "@type": "Book",
   "accessibilityAPI": "ARIA",
@@ -1289,123 +1369,53 @@ Metadata
 
 
 </pre>
-</div>
-
-
-
-   <h2 class="no-num heading settled" id="acknowledgments"><span class="content">
-Acknowledgments
-</span><a class="self-link" href="#acknowledgments"></a></h2>
-
-
+   </div>
+   <h2 class="no-num heading settled" id="acknowledgments"><span class="content"> Acknowledgments </span><a class="self-link" href="#acknowledgments"></a></h2>
    <p>EPUB Zero was originally inspired by a series of posts on EPUB3 by Daniel Glazman.</p>
-
-
-
-
-
-   <h2 class="no-num appendix heading settled" id="appendix-1"><span class="content">
-Reading system behaviour
-</span><a class="self-link" href="#appendix-1"></a></h2>
-
-
+   <h2 class="no-num appendix heading settled" id="appendix-1"><span class="content"> Reading system behaviour </span><a class="self-link" href="#appendix-1"></a></h2>
    <ol>
     <li data-md="">
      <p>a user agent receives an http request</p>
-     
-
-
-     <pre>GET /urn:isbn:9780316123456
+<pre>GET /urn:isbn:9780316123456
 Host: http://www.hachettebookgroup.com
 Accept: ????
 </pre>
-     
-</ol>
-
+   </ol>
    <p class="issue" id="issue-22f0ee80"><a class="self-link" href="#issue-22f0ee80"></a> what if there’s a zip (or any compressed file) or .e0 there?</p>
-
-
    <ol>
     <li data-md="">
      <p>If manifest.json exists, read manifest.json; open start_url</p>
-     
-
-
     <li data-md="">
      <p>If manifest.json does not exist
 a. if index.html exists open that
 b. if index.html doesn’t exist open first html file 
 c. if there are no html files open the first supported format 
 d. otherwise error "there is not a book here"</p>
-     
-
-</ol>
-
-   <h2 class="no-num appendix heading settled" id="appendix-2"><span class="content">
-References and Further Reading
-</span><a class="self-link" href="#appendix-2"></a></h2>
-
-
+   </ol>
+   <h2 class="no-num appendix heading settled" id="appendix-2"><span class="content"> References and Further Reading </span><a class="self-link" href="#appendix-2"></a></h2>
    <ul>
     <li data-md="">
      <p>http://manu.sporny.org/2014/json-ld-origins-2/</p>
-     
-
     <li data-md="">
      <p>https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/</p>
-     
-</ul>
-
-   <h2 class="no-num appendix heading settled" id="appendix-3"><span class="content">
-Functional requirements for books, and possible solutions
-</span><a class="self-link" href="#appendix-3"></a></h2>
-
-
-
-
-
-
-</main>
-
-  <h2 class="no-ref no-num heading settled" id="conformance"><span class="content">
-Conformance</span><a class="self-link" href="#conformance"></a></h2>
-
-    
-  <p>
-        Conformance requirements are expressed with a combination of descriptive assertions and RFC 2119 terminology.
+   </ul>
+   <h2 class="no-num appendix heading settled" id="appendix-3"><span class="content"> Functional requirements for books, and possible solutions </span><a class="self-link" href="#appendix-3"></a></h2>
+  </main>
+  <h2 class="no-ref no-num heading settled" id="conformance"><span class="content"> Conformance</span><a class="self-link" href="#conformance"></a></h2>
+  <p> Conformance requirements are expressed with a combination of descriptive assertions and RFC 2119 terminology.
         The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL”
         in the normative parts of this document
         are to be interpreted as described in RFC 2119.
         However, for readability,
-        these words do not appear in all uppercase letters in this specification.
-
-    </p>
-  <p>
-        All of the text of this specification is normative
-        except sections explicitly marked as non-normative, examples, and notes. <a data-link-type="biblio" href="#biblio-rfc2119">[RFC2119]</a>
-
-    </p>
-  <p>
-        Examples in this specification are introduced with the words “for example”
-        or are set apart from the normative text with <code>class="example"</code>, like this:
-
-    </p>
-  <div class="example" id="example-ae2b6bc0"><a class="self-link" href="#example-ae2b6bc0"></a>
-        This is an example of an informative example.
-    </div>
-
-    
-  <p>
-        Informative notes begin with the word “Note”
-        and are set apart from the normative text with <code>class="note"</code>, like this:
-
-    </p>
-  <p class="note" role="note">
-        Note, this is an informative note.
-
-
-
-</p>
+        these words do not appear in all uppercase letters in this specification. </p>
+  <p> All of the text of this specification is normative
+        except sections explicitly marked as non-normative, examples, and notes. <a data-link-type="biblio" href="#biblio-rfc2119">[RFC2119]</a> </p>
+  <p> Examples in this specification are introduced with the words “for example”
+        or are set apart from the normative text with <code>class="example"</code>, like this: </p>
+  <div class="example" id="example-ae2b6bc0"><a class="self-link" href="#example-ae2b6bc0"></a> This is an example of an informative example. </div>
+  <p> Informative notes begin with the word “Note”
+        and are set apart from the normative text with <code>class="note"</code>, like this: </p>
+  <p class="note" role="note"> Note, this is an informative note. </p>
   <h2 class="no-num heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="no-num heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
@@ -1420,18 +1430,31 @@ Conformance</span><a class="self-link" href="#conformance"></a></h2>
   <h2 class="no-num heading settled" id="issues-index"><span class="content">Issues Index</span><a class="self-link" href="#issues-index"></a></h2>
   <div style="counter-reset:issue">
    <div class="issue"> Can SVG or raster images be a content document? Does <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> define required media types?
-Issue: Is question whether SVG can be embedded inline in HTML (yes, http://www.w3.org/html/wg/drafts/html/master/semantics.html#svg-0) or whether SVG can be first class citizen?<a href="#issue-a7ffe277"> ↵ </a></div>
+Issue: Is question whether SVG can be embedded inline in HTML (yes, http://www.w3.org/html/wg/drafts/html/master/semantics.html#svg-0) 
+or whether SVG can be first class citizen?<a href="#issue-46f5d1a4"> ↵ </a></div>
    <div class="issue"> Opera and Firefox have UI for <code>link rel=prev|next</code>, but Safari, Chrome, and IE do not.<a href="#issue-4bbd800d"> ↵ </a></div>
-   <div class="issue"> Security for downloaded publications. How is this handled with appcache and service workers?<a href="#issue-7febe916"> ↵ </a></div>
-   <div class="issue"> Browsers (as far as we know) do not support SMIL. Are there polyfills that are “good enough?” Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?<a href="#issue-b731b978"> ↵ </a></div>
+   <div class="issue"> Using link relations introduces a burden on authoring that does not currently exist in EPUB3.<a href="#issue-fed5d916"> ↵ </a></div>
+   <div class="issue"> Security for downloaded publications. How is this handled with service workers?<a href="#issue-59615615"> ↵ </a></div>
+   <div class="issue"> Browsers (as far as we know) do not support SMIL.
+Are there polyfills that are “good enough?” 
+Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?<a href="#issue-b0c9c246"> ↵ </a></div>
    <div class="issue"> FXL is often a bad idea<a href="#issue-f427b169"> ↵ </a></div>
-   <div class="issue"> How do we make EPUB Zero documents “born accessible?” EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> heading elements.<a href="#issue-55fd4411"> ↵ </a></div>
+   <div class="issue"> How do we make EPUB Zero documents “born accessible?”
+EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> heading elements.<a href="#issue-39257783"> ↵ </a></div>
    <div class="issue"> What’s the state of text-to-speech support in browsers?<a href="#issue-11482919"> ↵ </a></div>
-   <div class="issue"> the <code>display</code> property is interesting. Adding an additional value <code>"display": "book"</code> might be a good way of indicating to the browser that it should display the content with a UI optimized for long-form content.<a href="#issue-00d55662"> ↵ </a></div>
+   <div class="issue"> the <code>display</code> property is interesting. Adding an additional
+value <code>"display": "book"</code> might be a good way of indicating to the browser 
+that it should display the content with a UI optimized for long-form content.<a href="#issue-c55976b3"> ↵ </a></div>
+   <div class="issue"> there seems to be some pushback against the web manifest specification.<a href="#issue-b6c84697"> ↵ </a></div>
+   <div class="issue"> How might a web manifest fulfill the function of an EPUB manifest?<a href="#issue-131844c3"> ↵ </a></div>
    <div class="issue"> Is offline reading really the same question as packaging/archiving?<a href="#issue-05f7ae63"> ↵ </a></div>
-   <div class="issue"> AppCache sucks. Can we replace it with Service Workers?<a href="#issue-34e7e5c6"> ↵ </a></div>
-   <div class="issue"> the EPUB+WEB White Paper discusses offline access together with packaging. Are these in fact the same issue?<a href="#issue-90232d73"> ↵ </a></div>
-   <div class="issue"> how about using presence of manifest.json as trigger, as what defines a publication as something different than an ordinary bundle of web content? Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”<a href="#issue-b4bfdeef"> ↵ </a></div>
+   <div class="issue"> AppCache will likely be removed from browsers in favor of Service Workers.<a href="#issue-a906c2e2"> ↵ </a></div>
+   <div class="issue"> the EPUB+WEB White Paper discusses offline access together with packaging.
+Are these in fact the same issue?<a href="#issue-22720ea0"> ↵ </a></div>
+   <div class="issue"> how about using presence of manifest.json as trigger, as what defines a publication
+as something different than an ordinary bundle of web content? 
+Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”<a href="#issue-ffea1c5e"> ↵ </a></div>
    <div class="issue"> what if there’s a zip (or any compressed file) or .e0 there?<a href="#issue-22f0ee80"> ↵ </a></div>
-  </div></body>
+  </div>
+ </body>
 </html>
