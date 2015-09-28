@@ -30,7 +30,7 @@ color: black;
 
 
 
-@supports (-webkit-initial-letter) {
+@supports (-webkit-initial-letter: 3) {
     div.title-block-rw + p::first-letter {
 -webkit-initial-letter: 3 3;
 color: red;
