@@ -1,0 +1,617 @@
+
+
+
+{
+    "metadata": {
+        "title": "Moby Dick",
+        "identifier": {
+            "type": "unique-identifier",
+            "value": "9780000000000"
+        },
+        "language": "en",
+        "link": {
+            "rel": "schema.org-record",
+            "href": "metadata.json"
+        }
+    },
+    
+    "manifest": {
+        "link": [
+            {
+                "type": "text/html",
+                "href": "html/cover.xhtml"
+            },
+            {
+                "rel": "cover",
+                "href": "images/9780000000000.jpg",
+                "type": "image/jpeg"
+            },
+            {
+                "rel": "nav",
+                "type": "text/html",
+                "href": "html/toc.xhtml"
+            },
+            
+
+   
+{
+"type": "text/html",
+"href": "html/title-page.html"
+},
+{
+"type": "text/html",
+"href": "html/copyright.html"
+},
+{
+"type": "text/html",
+"href": "html/introduction.html"
+},
+{
+"type": "text/html",
+"href": "html/epigraph.html"
+},
+{
+"type": "text/html",
+"href": "html/c001.html"
+},
+{
+"type": "text/html",
+"href": "html/c002.html"
+},
+{
+"type": "text/html",
+"href": "html/c003.html"
+},
+{
+"type": "text/html",
+"href": "html/c004.html"
+},
+{
+"type": "text/html",
+"href": "html/c005.html"
+},
+{
+"type": "text/html",
+"href": "html/c006.html"
+},
+{
+"type": "text/html",
+"href": "html/c007.html"
+},
+{
+"type": "text/html",
+"href": "html/c008.html"
+},
+{
+"type": "text/html",
+"href": "html/c009.html"
+},
+{
+"type": "text/html",
+"href": "html/c010.html"
+},
+{
+"type": "text/html",
+"href": "html/c011.html"
+},
+{
+"type": "text/html",
+"href": "html/c012.html"
+},
+{
+"type": "text/html",
+"href": "html/c013.html"
+},
+{
+"type": "text/html",
+"href": "html/c014.html"
+},
+{
+"type": "text/html",
+"href": "html/c015.html"
+},
+{
+"type": "text/html",
+"href": "html/c016.html"
+},
+{
+"type": "text/html",
+"href": "html/c017.html"
+},
+{
+"type": "text/html",
+"href": "html/c018.html"
+},
+{
+"type": "text/html",
+"href": "html/c019.html"
+},
+{
+"type": "text/html",
+"href": "html/c020.html"
+},
+{
+"type": "text/html",
+"href": "html/c021.html"
+},
+{
+"type": "text/html",
+"href": "html/c022.html"
+},
+{
+"type": "text/html",
+"href": "html/c023.html"
+},
+{
+"type": "text/html",
+"href": "html/c024.html"
+},
+{
+"type": "text/html",
+"href": "html/c025.html"
+},
+{
+"type": "text/html",
+"href": "html/c026.html"
+},
+{
+"type": "text/html",
+"href": "html/c027.html"
+},
+{
+"type": "text/html",
+"href": "html/c028.html"
+},
+{
+"type": "text/html",
+"href": "html/c029.html"
+},
+{
+"type": "text/html",
+"href": "html/c030.html"
+},
+{
+"type": "text/html",
+"href": "html/c031.html"
+},
+{
+"type": "text/html",
+"href": "html/c032.html"
+},
+{
+"type": "text/html",
+"href": "html/c033.html"
+},
+{
+"type": "text/html",
+"href": "html/c034.html"
+},
+{
+"type": "text/html",
+"href": "html/c035.html"
+},
+{
+"type": "text/html",
+"href": "html/c036.html"
+},
+{
+"type": "text/html",
+"href": "html/c037.html"
+},
+{
+"type": "text/html",
+"href": "html/c038.html"
+},
+{
+"type": "text/html",
+"href": "html/c039.html"
+},
+{
+"type": "text/html",
+"href": "html/c040.html"
+},
+{
+"type": "text/html",
+"href": "html/c041.html"
+},
+{
+"type": "text/html",
+"href": "html/c042.html"
+},
+{
+"type": "text/html",
+"href": "html/c043.html"
+},
+{
+"type": "text/html",
+"href": "html/c044.html"
+},
+{
+"type": "text/html",
+"href": "html/c045.html"
+},
+{
+"type": "text/html",
+"href": "html/c046.html"
+},
+{
+"type": "text/html",
+"href": "html/c047.html"
+},
+{
+"type": "text/html",
+"href": "html/c048.html"
+},
+{
+"type": "text/html",
+"href": "html/c049.html"
+},
+{
+"type": "text/html",
+"href": "html/c050.html"
+},
+{
+"type": "text/html",
+"href": "html/c051.html"
+},
+{
+"type": "text/html",
+"href": "html/c052.html"
+},
+{
+"type": "text/html",
+"href": "html/c053.html"
+},
+{
+"type": "text/html",
+"href": "html/c054.html"
+},
+{
+"type": "text/html",
+"href": "html/c055.html"
+},
+{
+"type": "text/html",
+"href": "html/c056.html"
+},
+{
+"type": "text/html",
+"href": "html/c057.html"
+},
+{
+"type": "text/html",
+"href": "html/c058.html"
+},
+{
+"type": "text/html",
+"href": "html/c059.html"
+},
+{
+"type": "text/html",
+"href": "html/c060.html"
+},
+{
+"type": "text/html",
+"href": "html/c061.html"
+},
+{
+"type": "text/html",
+"href": "html/c062.html"
+},
+{
+"type": "text/html",
+"href": "html/c063.html"
+},
+{
+"type": "text/html",
+"href": "html/c064.html"
+},
+{
+"type": "text/html",
+"href": "html/c065.html"
+},
+{
+"type": "text/html",
+"href": "html/c066.html"
+},
+{
+"type": "text/html",
+"href": "html/c067.html"
+},
+{
+"type": "text/html",
+"href": "html/c068.html"
+},
+{
+"type": "text/html",
+"href": "html/c069.html"
+},
+{
+"type": "text/html",
+"href": "html/c070.html"
+},
+{
+"type": "text/html",
+"href": "html/c071.html"
+},
+{
+"type": "text/html",
+"href": "html/c072.html"
+},
+{
+"type": "text/html",
+"href": "html/c073.html"
+},
+{
+"type": "text/html",
+"href": "html/c074.html"
+},
+{
+"type": "text/html",
+"href": "html/c075.html"
+},
+{
+"type": "text/html",
+"href": "html/c076.html"
+},
+{
+"type": "text/html",
+"href": "html/c077.html"
+},
+{
+"type": "text/html",
+"href": "html/c078.html"
+},
+{
+"type": "text/html",
+"href": "html/c079.html"
+},
+{
+"type": "text/html",
+"href": "html/c080.html"
+},
+{
+"type": "text/html",
+"href": "html/c081.html"
+},
+{
+"type": "text/html",
+"href": "html/c082.html"
+},
+{
+"type": "text/html",
+"href": "html/c083.html"
+},
+{
+"type": "text/html",
+"href": "html/c084.html"
+},
+{
+"type": "text/html",
+"href": "html/c085.html"
+},
+{
+"type": "text/html",
+"href": "html/c086.html"
+},
+{
+"type": "text/html",
+"href": "html/c087.html"
+},
+{
+"type": "text/html",
+"href": "html/c088.html"
+},
+{
+"type": "text/html",
+"href": "html/c089.html"
+},
+{
+"type": "text/html",
+"href": "html/c090.html"
+},
+{
+"type": "text/html",
+"href": "html/c091.html"
+},
+{
+"type": "text/html",
+"href": "html/c092.html"
+},
+{
+"type": "text/html",
+"href": "html/c093.html"
+},
+{
+"type": "text/html",
+"href": "html/c094.html"
+},
+{
+"type": "text/html",
+"href": "html/c095.html"
+},
+{
+"type": "text/html",
+"href": "html/c096.html"
+},
+{
+"type": "text/html",
+"href": "html/c097.html"
+},
+{
+"type": "text/html",
+"href": "html/c098.html"
+},
+{
+"type": "text/html",
+"href": "html/c099.html"
+},
+{
+"type": "text/html",
+"href": "html/c100.html"
+},
+{
+"type": "text/html",
+"href": "html/c101.html"
+},
+{
+"type": "text/html",
+"href": "html/c102.html"
+},
+{
+"type": "text/html",
+"href": "html/c103.html"
+},
+{
+"type": "text/html",
+"href": "html/c104.html"
+},
+{
+"type": "text/html",
+"href": "html/c105.html"
+},
+{
+"type": "text/html",
+"href": "html/c106.html"
+},
+{
+"type": "text/html",
+"href": "html/c107.html"
+},
+{
+"type": "text/html",
+"href": "html/c108.html"
+},
+{
+"type": "text/html",
+"href": "html/c109.html"
+},
+{
+"type": "text/html",
+"href": "html/c110.html"
+},
+{
+"type": "text/html",
+"href": "html/c111.html"
+},
+{
+"type": "text/html",
+"href": "html/c112.html"
+},
+{
+"type": "text/html",
+"href": "html/c113.html"
+},
+{
+"type": "text/html",
+"href": "html/c114.html"
+},
+{
+"type": "text/html",
+"href": "html/c115.html"
+},
+{
+"type": "text/html",
+"href": "html/c116.html"
+},
+{
+"type": "text/html",
+"href": "html/c117.html"
+},
+{
+"type": "text/html",
+"href": "html/c118.html"
+},
+{
+"type": "text/html",
+"href": "html/c119.html"
+},
+{
+"type": "text/html",
+"href": "html/c120.html"
+},
+{
+"type": "text/html",
+"href": "html/c121.html"
+},
+{
+"type": "text/html",
+"href": "html/c122.html"
+},
+{
+"type": "text/html",
+"href": "html/c123.html"
+},
+{
+"type": "text/html",
+"href": "html/c124.html"
+},
+{
+"type": "text/html",
+"href": "html/c125.html"
+},
+{
+"type": "text/html",
+"href": "html/c126.html"
+},
+{
+"type": "text/html",
+"href": "html/c127.html"
+},
+{
+"type": "text/html",
+"href": "html/c128.html"
+},
+{
+"type": "text/html",
+"href": "html/c129.html"
+},
+{
+"type": "text/html",
+"href": "html/c130.html"
+},
+{
+"type": "text/html",
+"href": "html/c131.html"
+},
+{
+"type": "text/html",
+"href": "html/c132.html"
+},
+{
+"type": "text/html",
+"href": "html/c133.html"
+},
+{
+"type": "text/html",
+"href": "html/c134.html"
+},
+{
+"type": "text/html",
+"href": "html/c135.html"
+},
+{
+"type": "text/html",
+"href": "html/c136.html"
+},
+
+{
+"type": "text/css",
+"href": "css/mobydick.css"
+}]
+},
+    
+    "spine": {
+            "link": [ 
+
+
+
+{"href": "cover.xhtml"}, 
+
+{"href": "html/title-page.html" },{"href": "html/copyright.html" },{"href": "html/introduction.html" },{"href": "html/epigraph.html" },{"href": "html/c001.html" },{"href": "html/c002.html" },{"href": "html/c003.html" },{"href": "html/c004.html" },{"href": "html/c005.html" },{"href": "html/c006.html" },{"href": "html/c007.html" },{"href": "html/c008.html" },{"href": "html/c009.html" },{"href": "html/c010.html" },{"href": "html/c011.html" },{"href": "html/c012.html" },{"href": "html/c013.html" },{"href": "html/c014.html" },{"href": "html/c015.html" },{"href": "html/c016.html" },{"href": "html/c017.html" },{"href": "html/c018.html" },{"href": "html/c019.html" },{"href": "html/c020.html" },{"href": "html/c021.html" },{"href": "html/c022.html" },{"href": "html/c023.html" },{"href": "html/c024.html" },{"href": "html/c025.html" },{"href": "html/c026.html" },{"href": "html/c027.html" },{"href": "html/c028.html" },{"href": "html/c029.html" },{"href": "html/c030.html" },{"href": "html/c031.html" },{"href": "html/c032.html" },{"href": "html/c033.html" },{"href": "html/c034.html" },{"href": "html/c035.html" },{"href": "html/c036.html" },{"href": "html/c037.html" },{"href": "html/c038.html" },{"href": "html/c039.html" },{"href": "html/c040.html" },{"href": "html/c041.html" },{"href": "html/c042.html" },{"href": "html/c043.html" },{"href": "html/c044.html" },{"href": "html/c045.html" },{"href": "html/c046.html" },{"href": "html/c047.html" },{"href": "html/c048.html" },{"href": "html/c049.html" },{"href": "html/c050.html" },{"href": "html/c051.html" },{"href": "html/c052.html" },{"href": "html/c053.html" },{"href": "html/c054.html" },{"href": "html/c055.html" },{"href": "html/c056.html" },{"href": "html/c057.html" },{"href": "html/c058.html" },{"href": "html/c059.html" },{"href": "html/c060.html" },{"href": "html/c061.html" },{"href": "html/c062.html" },{"href": "html/c063.html" },{"href": "html/c064.html" },{"href": "html/c065.html" },{"href": "html/c066.html" },{"href": "html/c067.html" },{"href": "html/c068.html" },{"href": "html/c069.html" },{"href": "html/c070.html" },{"href": "html/c071.html" },{"href": "html/c072.html" },{"href": "html/c073.html" },{"href": "html/c074.html" },{"href": "html/c075.html" },{"href": "html/c076.html" },{"href": "html/c077.html" },{"href": "html/c078.html" },{"href": "html/c079.html" },{"href": "html/c080.html" },{"href": "html/c081.html" },{"href": "html/c082.html" },{"href": "html/c083.html" },{"href": "html/c084.html" },{"href": "html/c085.html" },{"href": "html/c086.html" },{"href": "html/c087.html" },{"href": "html/c088.html" },{"href": "html/c089.html" },{"href": "html/c090.html" },{"href": "html/c091.html" },{"href": "html/c092.html" },{"href": "html/c093.html" },{"href": "html/c094.html" },{"href": "html/c095.html" },{"href": "html/c096.html" },{"href": "html/c097.html" },{"href": "html/c098.html" },{"href": "html/c099.html" },{"href": "html/c100.html" },{"href": "html/c101.html" },{"href": "html/c102.html" },{"href": "html/c103.html" },{"href": "html/c104.html" },{"href": "html/c105.html" },{"href": "html/c106.html" },{"href": "html/c107.html" },{"href": "html/c108.html" },{"href": "html/c109.html" },{"href": "html/c110.html" },{"href": "html/c111.html" },{"href": "html/c112.html" },{"href": "html/c113.html" },{"href": "html/c114.html" },{"href": "html/c115.html" },{"href": "html/c116.html" },{"href": "html/c117.html" },{"href": "html/c118.html" },{"href": "html/c119.html" },{"href": "html/c120.html" },{"href": "html/c121.html" },{"href": "html/c122.html" },{"href": "html/c123.html" },{"href": "html/c124.html" },{"href": "html/c125.html" },{"href": "html/c126.html" },{"href": "html/c127.html" },{"href": "html/c128.html" },{"href": "html/c129.html" },{"href": "html/c130.html" },{"href": "html/c131.html" },{"href": "html/c132.html" },{"href": "html/c133.html" },{"href": "html/c134.html" },{"href": "html/c135.html" },{"href": "html/c136.html" }
+
+
+]
+    }    
+}
+
