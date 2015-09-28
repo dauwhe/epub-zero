@@ -27,6 +27,16 @@ text-decoration: none;
 color: black;
 }
 
+
+
+
+@supports (-webkit-initial-letter) {
+    div.title-block-rw + p::first-letter {
+-webkit-initial-letter: 3 3;
+color: red;
+}
+}
+
 .title-num-rw {
 text-align: center;
 text-indent: 0;

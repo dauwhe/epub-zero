@@ -1008,7 +1008,7 @@ border-collapse: collapse;
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">EPUB Zero</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">A Collection of Interesting Ideas, <time class="dt-updated" datetime="2015-09-16">16 September 2015</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">A Collection of Interesting Ideas, <time class="dt-updated" datetime="2015-09-28">28 September 2015</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1021,7 +1021,7 @@ border-collapse: collapse;
    <div data-fill-with="warning"></div>
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/80x15.png"></a> To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 16 September 2015,
+In addition, as of 28 September 2015,
 the editors have made this specification available under the <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
 Parts of this work may be from another specification document.  If so, those parts are instead covered by the license of that specification document. </p>
@@ -1059,15 +1059,16 @@ Parts of this work may be from another specification document.  If so, those par
       <li><a href="#fxl"><span class="secno">3.7</span> <span class="content">Fixed Layout</span></a>
       <li><a href="#a11y"><span class="secno">3.8</span> <span class="content">Accessibility</span></a>
      </ul>
-    <li><a href="#installing"><span class="secno">4</span> <span class="content">Installing EPUB Zero publications</span></a>
+    <li><a href="#packaging"><span class="secno">4</span> <span class="content"> Packaging </span></a>
+    <li><a href="#installing"><span class="secno">5</span> <span class="content">Installing EPUB Zero publications</span></a>
     <li>
-     <a href="#offline"><span class="secno">5</span> <span class="content">Offline reading</span></a>
+     <a href="#offline"><span class="secno">6</span> <span class="content">Offline reading</span></a>
      <ul class="toc">
-      <li><a href="#appcache"><span class="secno">5.1</span> <span class="content"> AppCache </span></a>
-      <li><a href="#service-workers"><span class="secno">5.2</span> <span class="content"> Service Workers </span></a>
+      <li><a href="#appcache"><span class="secno">6.1</span> <span class="content"> AppCache </span></a>
+      <li><a href="#service-workers"><span class="secno">6.2</span> <span class="content"> Service Workers </span></a>
      </ul>
-    <li><a href="#structure"><span class="secno">6</span> <span class="content"> Publication structure and packaging </span></a>
-    <li><a href="#metadata"><span class="secno">7</span> <span class="content"> Metadata </span></a>
+    <li><a href="#structure"><span class="secno">7</span> <span class="content"> Publication structure and packaging </span></a>
+    <li><a href="#metadata"><span class="secno">8</span> <span class="content"> Metadata </span></a>
     <li><a href="#acknowledgments"><span class="secno"></span> <span class="content"> Acknowledgments </span></a>
     <li><a href="#appendix-1"><span class="secno"></span> <span class="content"> Reading system behaviour </span></a>
     <li><a href="#appendix-2"><span class="secno"></span> <span class="content"> References and Further Reading </span></a>
@@ -1098,6 +1099,7 @@ and easy to read in a browser with as little additional technology as possible.<
    <p class="note" role="note">Note: EPUB Zero is not just for books, but any packaged web content.
 We will use the term <i>publication</i> to describe books, magazines, 
 journals, manuals, reference documents, corporate documents, articles, etc.</p>
+   <p class="note" role="note">Note: Any discussion of the definitions of <i>packaged</i>, <i>web</i>, <i>content</i>, <i>book</i>, or <i>document</i> will not be tolerated :)</p>
    <h2 class="heading settled" data-level="1" id="goals"><span class="secno">1. </span><span class="content"> Design goals and rationale </span><a class="self-link" href="#goals"></a></h2>
    <p>EPUB Zero satisfies the following design goals:</p>
    <ol>
@@ -1112,7 +1114,7 @@ journals, manuals, reference documents, corporate documents, articles, etc.</p>
     <li data-md="">
      <p>Don’t repeat yourself</p>
     <li data-md="">
-     <p>Easy to author</p>
+     <p>Built for the convenience of the author and reader rather than the implementor</p>
     <li data-md="">
      <p>Aims to use the browser as reading system</p>
    </ol>
@@ -1148,66 +1150,82 @@ As this document evolves, we hope to propose alternatives.</p>
      <tr>
       <th>Feature
       <th>EPUB 3
+      <th>EPUB+WEB
       <th>EPUB Zero
     <tbody>
      <tr>
       <td>Package Document
       <td>manifest, reading order, metadata in XML vocabulary
-      <td>nav + web app manifest
+      <td>simplified JSON package file
+      <td>unnecessary?
      <tr>
       <td>Reading Order
       <td>spine element in package file
+      <td>JSON spine
       <td>link rel=next in HTML
      <tr>
       <td>Navigation Document
       <td>required nav, optional ncx
       <td>required nav
+      <td>required nav
      <tr>
       <td>Linking
       <td>EPUB CFI
+      <td>EPUB CFI?
       <td>TK
      <tr>
       <td>Publication Metadata
       <td>custom XML format inside package file
+      <td>JSON package + external file in any vocabulary
       <td>external file in any vocabulary
      <tr>
       <td>Content Documents
       <td>XHTML5, SVG
       <td>HTML5, SVG
+      <td>HTML5, SVG
      <tr>
       <td>Fixed Layout
       <td>viewport in HTML + configuration in package
+      <td>?
       <td>just don’t even
      <tr>
       <td>Style
       <td>subset of CSS
       <td>any CSS
+      <td>any CSS
      <tr>
       <td>Multimedia
       <td>html audio and video, mp3 and mp4 are core media types
+      <td>?
       <td>Anything supported by the browser
      <tr>
       <td>Fonts
       <td>OTF and WOFF
+      <td>?
       <td>Anything supported by the browser
      <tr>
       <td>Scripting
       <td>optional, recommend container constrained
+      <td>?
       <td>required for offline reading
      <tr>
       <td>Text-to-speech
+      <td>Media overlays/SMIL
       <td>TK
       <td>TK
      <tr>
       <td>Container
       <td>OCF
-      <td>Implied by the domain
+      <td>?
+      <td>?
      <tr>
       <td>Manifest
       <td>OCF manifest
-      <td>nav + web app manifest
+      <td>JSON manifest
+      <td>nav + web app manifest?
      <tr>
       <td>Offline reading
+      <td>dependent on reading system
       <td>dependent on reading system
       <td>Service Workers
    </table>
@@ -1243,9 +1261,9 @@ from ch1.html to ch2.html as easily as moving from page 1 to page 2, and with th
    <h3 class="heading settled" data-level="3.3" id="interactivity"><span class="secno">3.3. </span><span class="content">Interactivity</span><a class="self-link" href="#interactivity"></a></h3>
    <p class="issue" id="issue-59615615"><a class="self-link" href="#issue-59615615"></a> Security for downloaded publications. How is this handled with service workers?</p>
    <h3 class="heading settled" data-level="3.4" id="media-overlays"><span class="secno">3.4. </span><span class="content">Media Overlays</span><a class="self-link" href="#media-overlays"></a></h3>
-   <p class="issue" id="issue-b0c9c246"><a class="self-link" href="#issue-b0c9c246"></a> Browsers (as far as we know) do not support SMIL.
-Are there polyfills that are “good enough?” 
-Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?</p>
+   <p class="issue" id="issue-c1ac0d27"><a class="self-link" href="#issue-c1ac0d27"></a> Browsers (as far as we know) do not support SMIL.</p>
+   <p class="note" role="note">Note: See https://github.com/timesheets/timesheets.js for a JS implementation of SMIL</p>
+   <p>Are there polyfills that are “good enough?” Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?</p>
    <h3 class="heading settled" data-level="3.5" id="global"><span class="secno">3.5. </span><span class="content">Global Language Support</span><a class="self-link" href="#global"></a></h3>
    <h3 class="heading settled" data-level="3.6" id="navigation"><span class="secno">3.6. </span><span class="content">Navigation</span><a class="self-link" href="#navigation"></a></h3>
    <p>Most reading systems provide a link to the navigation document as part of the reading system user interface.</p>
@@ -1254,10 +1272,12 @@ Is there a better approach for synchronizing <a data-link-type="biblio" href="#b
    <p class="issue" id="issue-f427b169"><a class="self-link" href="#issue-f427b169"></a> FXL is often a bad idea</p>
    <h3 class="heading settled" data-level="3.8" id="a11y"><span class="secno">3.8. </span><span class="content">Accessibility</span><a class="self-link" href="#a11y"></a></h3>
    <p class="note" role="note">Note: Compliance with WCAG 2.0 and integration of ARIA 1.1 and the Digital Publishing module of ARIA will aid in creating accessible content.</p>
-   <p class="issue" id="issue-39257783"><a class="self-link" href="#issue-39257783"></a> How do we make EPUB Zero documents “born accessible?”
-EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> heading elements.</p>
+   <p class="issue" id="issue-eaa788e8"><a class="self-link" href="#issue-eaa788e8"></a> How do we make EPUB Zero documents “born accessible?”
+EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, 
+and proper use of <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> heading elements.</p>
    <p class="issue" id="issue-11482919"><a class="self-link" href="#issue-11482919"></a> What’s the state of text-to-speech support in browsers?</p>
-   <h2 class="heading settled" data-level="4" id="installing"><span class="secno">4. </span><span class="content">Installing EPUB Zero publications</span><a class="self-link" href="#installing"></a></h2>
+   <h2 class="heading settled" data-level="4" id="packaging"><span class="secno">4. </span><span class="content"> Packaging </span><a class="self-link" href="#packaging"></a></h2>
+   <h2 class="heading settled" data-level="5" id="installing"><span class="secno">5. </span><span class="content">Installing EPUB Zero publications</span><a class="self-link" href="#installing"></a></h2>
    <p>EPUB Zero uses the web manifest specification https://w3c.github.io/manifest/ to facilitate installation as a webapp on user devices.</p>
    <div class="example" id="example-996cf67d">
     <a class="self-link" href="#example-996cf67d"></a> 
@@ -1277,21 +1297,21 @@ value <code>"display": "book"</code> might be a good way of indicating to the br
 that it should display the content with a UI optimized for long-form content.</p>
    <p class="issue" id="issue-b6c84697"><a class="self-link" href="#issue-b6c84697"></a> there seems to be some pushback against the web manifest specification.</p>
    <p class="issue" id="issue-131844c3"><a class="self-link" href="#issue-131844c3"></a> How might a web manifest fulfill the function of an EPUB manifest?</p>
-   <h2 class="heading settled" data-level="5" id="offline"><span class="secno">5. </span><span class="content">Offline reading</span><a class="self-link" href="#offline"></a></h2>
+   <h2 class="heading settled" data-level="6" id="offline"><span class="secno">6. </span><span class="content">Offline reading</span><a class="self-link" href="#offline"></a></h2>
    <p>Books must be readable offline and online.</p>
    <p class="issue" id="issue-05f7ae63"><a class="self-link" href="#issue-05f7ae63"></a> Is offline reading really the same question as packaging/archiving?</p>
    <p>Browsers currently offer ways of accessing web content while offline:</p>
-   <h3 class="heading settled" data-level="5.1" id="appcache"><span class="secno">5.1. </span><span class="content"> AppCache </span><a class="self-link" href="#appcache"></a></h3>
+   <h3 class="heading settled" data-level="6.1" id="appcache"><span class="secno">6.1. </span><span class="content"> AppCache </span><a class="self-link" href="#appcache"></a></h3>
    <p>Cache manifests allow offline access to web content: https://html.spec.whatwg.org/multipage/browsers.html#offline</p>
    <p class="issue" id="issue-a906c2e2"><a class="self-link" href="#issue-a906c2e2"></a> AppCache will likely be removed from browsers in favor of Service Workers.</p>
-   <h3 class="heading settled" data-level="5.2" id="service-workers"><span class="secno">5.2. </span><span class="content"> Service Workers </span><a class="self-link" href="#service-workers"></a></h3>
+   <h3 class="heading settled" data-level="6.2" id="service-workers"><span class="secno">6.2. </span><span class="content"> Service Workers </span><a class="self-link" href="#service-workers"></a></h3>
    <p>Service Workers are the preferred way of implementing offline viewing for web content.</p>
    <p class="note" role="note">Note: A service worker should be declared in <code>start_url</code>.</p>
-   <h2 class="heading settled" data-level="6" id="structure"><span class="secno">6. </span><span class="content"> Publication structure and packaging </span><a class="self-link" href="#structure"></a></h2>
+   <h2 class="heading settled" data-level="7" id="structure"><span class="secno">7. </span><span class="content"> Publication structure and packaging </span><a class="self-link" href="#structure"></a></h2>
    <p class="issue" id="issue-22720ea0"><a class="self-link" href="#issue-22720ea0"></a> the EPUB+WEB White Paper discusses offline access together with packaging.
 Are these in fact the same issue?</p>
-   <p>An EPUB Zero publication is a collection of files, which must be collected inside a folder or directory.
-The top level of the directory should contain the web manifest and cache manifest. 
+   <p>An EPUB Zero publication is a collection of files, which should be collected inside a folder or directory.
+The top level of the directory should contain the package file. 
 No other restrictions exist on the directory structure.</p>
    <p>Compressing or otherwise packaging this directory may be required for many reasons, including</p>
    <ol>
@@ -1308,10 +1328,10 @@ No other restrictions exist on the directory structure.</p>
    </ol>
    <p>In simple cases, using ZIP may be sufficient. The W3C WebApps Packaging format
 may prove useful as well http://w3ctag.github.io/packaging-on-the-web/</p>
-   <p class="issue" id="issue-ffea1c5e"><a class="self-link" href="#issue-ffea1c5e"></a> how about using presence of manifest.json as trigger, as what defines a publication
+   <p class="issue" id="issue-7b2cf197"><a class="self-link" href="#issue-7b2cf197"></a> how about using presence of package.json as trigger, as what defines a publication
 as something different than an ordinary bundle of web content? 
 Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”</p>
-   <h2 class="heading settled" data-level="7" id="metadata"><span class="secno">7. </span><span class="content"> Metadata </span><a class="self-link" href="#metadata"></a></h2>
+   <h2 class="heading settled" data-level="8" id="metadata"><span class="secno">8. </span><span class="content"> Metadata </span><a class="self-link" href="#metadata"></a></h2>
    <p>Publication-level metadata can be stored in the publication folder.
 We recommend the use of JSON-LD as a metadata format, but different communities may use 
 other formats such as RDF, Turtle, or ONIX.</p>
@@ -1370,8 +1390,10 @@ other formats such as RDF, Turtle, or ONIX.</p>
 
 </pre>
    </div>
+   <p class="issue" id="issue-d41d8cd9"><a class="self-link" href="#issue-d41d8cd9"></a></p>
    <h2 class="no-num heading settled" id="acknowledgments"><span class="content"> Acknowledgments </span><a class="self-link" href="#acknowledgments"></a></h2>
    <p>EPUB Zero was originally inspired by a series of posts on EPUB3 by Daniel Glazman.</p>
+   <p>Many thanks to Hadrien Gardeur for the structure of the JSON Package file.</p>
    <h2 class="no-num appendix heading settled" id="appendix-1"><span class="content"> Reading system behaviour </span><a class="self-link" href="#appendix-1"></a></h2>
    <ol>
     <li data-md="">
@@ -1435,12 +1457,11 @@ or whether SVG can be first class citizen?<a href="#issue-46f5d1a4"> ↵ </a></d
    <div class="issue"> Opera and Firefox have UI for <code>link rel=prev|next</code>, but Safari, Chrome, and IE do not.<a href="#issue-4bbd800d"> ↵ </a></div>
    <div class="issue"> Using link relations introduces a burden on authoring that does not currently exist in EPUB3.<a href="#issue-fed5d916"> ↵ </a></div>
    <div class="issue"> Security for downloaded publications. How is this handled with service workers?<a href="#issue-59615615"> ↵ </a></div>
-   <div class="issue"> Browsers (as far as we know) do not support SMIL.
-Are there polyfills that are “good enough?” 
-Is there a better approach for synchronizing <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> with multimedia?<a href="#issue-b0c9c246"> ↵ </a></div>
+   <div class="issue"> Browsers (as far as we know) do not support SMIL.<a href="#issue-c1ac0d27"> ↵ </a></div>
    <div class="issue"> FXL is often a bad idea<a href="#issue-f427b169"> ↵ </a></div>
    <div class="issue"> How do we make EPUB Zero documents “born accessible?”
-EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> heading elements.<a href="#issue-39257783"> ↵ </a></div>
+EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, 
+and proper use of <a data-link-type="biblio" href="#biblio-html5">[HTML5]</a> heading elements.<a href="#issue-eaa788e8"> ↵ </a></div>
    <div class="issue"> What’s the state of text-to-speech support in browsers?<a href="#issue-11482919"> ↵ </a></div>
    <div class="issue"> the <code>display</code> property is interesting. Adding an additional
 value <code>"display": "book"</code> might be a good way of indicating to the browser 
@@ -1451,9 +1472,10 @@ that it should display the content with a UI optimized for long-form content.<a 
    <div class="issue"> AppCache will likely be removed from browsers in favor of Service Workers.<a href="#issue-a906c2e2"> ↵ </a></div>
    <div class="issue"> the EPUB+WEB White Paper discusses offline access together with packaging.
 Are these in fact the same issue?<a href="#issue-22720ea0"> ↵ </a></div>
-   <div class="issue"> how about using presence of manifest.json as trigger, as what defines a publication
+   <div class="issue"> how about using presence of package.json as trigger, as what defines a publication
 as something different than an ordinary bundle of web content? 
-Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”<a href="#issue-ffea1c5e"> ↵ </a></div>
+Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”<a href="#issue-7b2cf197"> ↵ </a></div>
+   <div class="issue"><a href="#issue-d41d8cd9"> ↵ </a></div>
    <div class="issue"> what if there’s a zip (or any compressed file) or .e0 there?<a href="#issue-22f0ee80"> ↵ </a></div>
   </div>
  </body>

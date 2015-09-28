@@ -50,6 +50,8 @@ Note: EPUB Zero is not just for books, but any packaged web content.
 We will use the term <i>publication</i> to describe books, magazines, 
 journals, manuals, reference documents, corporate documents, articles, etc.
 
+Note: Any discussion of the definitions of <i>packaged</i>, <i>web</i>, <i>content</i>, <i>book</i>, or <i>document</i> will not be tolerated :)
+
 <h2 id="goals">
 Design goals and rationale
 </h2>
@@ -61,7 +63,7 @@ EPUB Zero satisfies the following design goals:
 3. Built from HTML and CSS and JSON as much as possible
 4. Uses existing, forward-looking standards whenever possible
 5. Don't repeat yourself
-6. Easy to author
+6. Built for the convenience of the author and reader rather than the implementor
 7. Aims to use the browser as reading system
 
 Note: The ultimate test of this specification is whether we can build a reading system 
@@ -97,6 +99,7 @@ As this document evolves, we hope to propose alternatives.
 <tr>
 <th>Feature</th>
 <th>EPUB 3</th>
+<th>EPUB+WEB</th>
 <th>EPUB Zero</th>
 </tr>
 </thead>
@@ -106,12 +109,14 @@ As this document evolves, we hope to propose alternatives.
 <tr>
 <td>Package Document</td>
 <td>manifest, reading order, metadata in XML vocabulary</td>
-<td>nav + web app manifest</td>
+<td>simplified JSON package file</td>
+<td>unnecessary?</td>
 </tr>
 
 <tr>
 <td>Reading Order</td>
 <td>spine element in package file</td>
+<td>JSON spine</td>
 <td>link rel=next in HTML</td>
 </tr>
 
@@ -119,11 +124,13 @@ As this document evolves, we hope to propose alternatives.
 <td>Navigation Document</td>
 <td>required nav, optional ncx</td>
 <td>required nav</td>
+<td>required nav</td>
 </tr>
 
 <tr>
 <td>Linking</td>
 <td>EPUB CFI</td>
+<td>EPUB CFI?</td>
 <td>TK</td>
 </tr>
 
@@ -131,6 +138,7 @@ As this document evolves, we hope to propose alternatives.
 <tr>
 <td>Publication Metadata</td>
 <td>custom XML format inside package file</td>
+<td>JSON package + external file in any vocabulary</td>
 <td>external file in any vocabulary</td>
 </tr>
 
@@ -140,11 +148,13 @@ As this document evolves, we hope to propose alternatives.
 <td>Content Documents</td>
 <td>XHTML5, SVG</td>
 <td>HTML5, SVG</td>
+<td>HTML5, SVG</td>
 </tr>
 
 <tr>
 <td>Fixed Layout</td>
 <td>viewport in HTML + configuration in package</td>
+<td>?</td>
 <td>just don't even</td>
 </tr>
 
@@ -154,11 +164,13 @@ As this document evolves, we hope to propose alternatives.
 <td>Style</td>
 <td>subset of CSS</td>
 <td>any CSS</td>
+<td>any CSS</td>
 </tr>
 
 <tr>
 <td>Multimedia</td>
 <td>html audio and video, mp3 and mp4 are core media types</td>
+<td>?</td>
 <td>Anything supported by the browser</td>
 </tr>
 
@@ -166,17 +178,20 @@ As this document evolves, we hope to propose alternatives.
 <tr>
 <td>Fonts</td>
 <td>OTF and WOFF</td>
+<td>?</td>
 <td>Anything supported by the browser</td>
 </tr>
 
 <tr>
 <td>Scripting</td>
 <td>optional, recommend container constrained</td>
+<td>?</td>
 <td>required for offline reading</td>
 </tr>
 
 <tr>
 <td>Text-to-speech</td>
+<td>Media overlays/SMIL</td>
 <td>TK</td>
 <td>TK</td>
 </tr>
@@ -184,17 +199,20 @@ As this document evolves, we hope to propose alternatives.
 <tr>
 <td>Container</td>
 <td>OCF</td>
-<td>Implied by the domain</td>
+<td>?</td>
+<td>?</td>
 </tr>
 
 <tr>
 <td>Manifest</td>
 <td>OCF manifest</td>
-<td>nav + web app manifest</td>
+<td>JSON manifest</td>
+<td>nav + web app manifest?</td>
 </tr>
 
 <tr>
 <td>Offline reading</td>
+<td>dependent on reading system</td>
 <td>dependent on reading system</td>
 <td>Service Workers</td>
 </tr>
@@ -266,8 +284,10 @@ Issue: Security for downloaded publications. How is this handled with service wo
 <h3 id="media-overlays">Media Overlays</h3>
 
 Issue: Browsers (as far as we know) do not support SMIL. 
-Are there polyfills that are “good enough?” 
-Is there a better approach for synchronizing [[HTML5]] with multimedia?
+
+Note: See https://github.com/timesheets/timesheets.js for a JS implementation of SMIL
+
+Are there polyfills that are “good enough?” Is there a better approach for synchronizing [[HTML5]] with multimedia?
 
 <h3 id="global">Global Language Support</h3>
 
@@ -286,9 +306,17 @@ Issue: FXL is often a bad idea
 Note: Compliance with WCAG 2.0 and integration of ARIA 1.1 and the Digital Publishing module of ARIA will aid in creating accessible content.
 
 Issue: How do we make EPUB Zero documents “born accessible?” 
-EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, and proper use of [[HTML5]] heading elements. 
+EPUB 3.0 requires a <code>nav</code> document. EDUPUB requires the <code>section</code> element, 
+and proper use of [[HTML5]] heading elements. 
 
 Issue: What's the state of text-to-speech support in browsers? 
+
+
+<h2 id="packaging">
+Packaging
+</h2>
+
+
 
 <h2 id="installing">Installing EPUB Zero publications</h2>
 
@@ -373,8 +401,8 @@ Publication structure and packaging
 Issue: the EPUB+WEB White Paper discusses offline access together with packaging. 
 Are these in fact the same issue? 
 
-An EPUB Zero publication is a collection of files, which must be collected inside a folder or directory. 
-The top level of the directory should contain the web manifest and cache manifest. 
+An EPUB Zero publication is a collection of files, which should be collected inside a folder or directory. 
+The top level of the directory should contain the package file. 
 No other restrictions exist on the directory structure. 
 
 Compressing or otherwise packaging this directory may be required for many reasons, including
@@ -388,7 +416,7 @@ Compressing or otherwise packaging this directory may be required for many reaso
 In simple cases, using ZIP may be sufficient. The W3C WebApps Packaging format 
 may prove useful as well http://w3ctag.github.io/packaging-on-the-web/
 
-Issue: how about using presence of manifest.json as trigger, as what defines a publication 
+Issue: how about using presence of package.json as trigger, as what defines a publication 
 as something different than an ordinary bundle of web content? 
 Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”
 
@@ -457,12 +485,16 @@ other formats such as RDF, Turtle, or ONIX.
 </pre>
 </div>
 
+Issue: 
+
 
 <h2 class="no-num" id="acknowledgments">
 Acknowledgments
 </h2>
 
 EPUB Zero was originally inspired by a series of posts on EPUB3 by Daniel Glazman.
+
+Many thanks to Hadrien Gardeur for the structure of the JSON Package file.
 
 
 
