@@ -33,7 +33,7 @@
   "image": "moby-dick-book-cover.jpg",
   "offers": {
     "@type": "Offer",
-    "availability": "https://hachettebookgroup.biz/BuyMe?isbn=9780316123456",
+    "availability": "https://hachettebookgroup.biz/BuyMe?isbn=9780000000000",
     "price": "6.99",
     "priceCurrency": "USD"
   },

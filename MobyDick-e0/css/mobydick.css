@@ -219,6 +219,12 @@ text-align: left;
 text-indent: 0;
 }
 
+.cover-rw {
+margin: 0 auto;
+}
 
+.cover-rw img {
+width: 100%;
+}
 
 
