@@ -60,14 +60,14 @@ EPUB Zero satisfies the following design goals:
 
 1. Simplicity
 2. “Webbiness”
-3. Built from HTML and CSS and JSON as much as possible
+3. Built from HTML and CSS as much as possible
 4. Uses existing, forward-looking standards whenever possible
 5. Don't repeat yourself
 6. Built for the convenience of the author and reader rather than the implementor
 7. Aims to use the browser as reading system
 
 Note: The ultimate test of this specification is whether we can build a reading system 
-on top of an ordinary browser with only a bit of JS.
+on top of an ordinary browser with little or no Javascript. 
 
 <h2 id="overview">Overview</h2>
 
