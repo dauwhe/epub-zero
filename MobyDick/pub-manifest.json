@@ -1,0 +1,19 @@
+{
+  "title": "Moby-Dick",
+  "edition": 1,
+  "assets": [
+    "",
+    "index.html",
+    "html/cover.html",
+    "html/title-page.html",
+    "css/mobydick.css",
+    "html/mobydick.css",
+    "images/moby-dick-book-cover.jpg",
+    "html/copyright.html",
+    "html/introduction.html",
+    "html/epigraph.html",
+    "html/c001.html",
+    "html/c002.html",
+    "html/c003.html"
+  ]
+}
