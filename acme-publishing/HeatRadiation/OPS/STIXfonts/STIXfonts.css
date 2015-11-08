@@ -1,0 +1,39 @@
+/* short MathML fonts */
+@font-face {
+  font-family: "STIXGeneral"; 
+  font-weight: normal; 
+  font-style: normal; 
+  src: url('STIXGeneral.otf');
+  }
+@font-face {
+  font-family: "STIXGeneral"; 
+  font-weight: bold; 
+  font-style: normal; 
+  src: url('STIXGeneralBol.otf');
+  }
+@font-face {
+  font-family: "STIXGeneral"; 
+  font-weight: bold; 
+  font-style: italic; 
+  src: url('STIXGeneralBolIta.otf');
+  }
+@font-face {
+  font-family: "STIXGeneral;"; 
+  font-weight: normal; 
+  font-style: italic; 
+  src: url('STIXGeneralItalic.otf');
+  }
+/* extended mathml fonts*/
+@font-face {
+  font-family: "STIXGeneral"; 
+  font-weight: normal; 
+  font-style: normal; 
+  src: url('STIXIntDis.otf');
+  }
+@font-face {
+  font-family: "STIXGeneral"; 
+  font-weight: bold; 
+  font-style: normal; 
+  src: url('STIXIntDisBol.otf');
+  }
+math {font-family: "STIXGeneral";}

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="en" unique-identifier="pub-id">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:title id="title">The Theory of Heat Radiation</dc:title>
+    <dc:creator id="creator">Dr. Max Planck</dc:creator>
+    <dc:language>en</dc:language>
+    <dc:identifier id="pub-id">igp-ttohr-math</dc:identifier>
+    <dc:source>http://books.sayahna.org/</dc:source>
+    <meta property="dcterms:modified">2013-10-09T01:01:35Z</meta>
+    <dc:date>2013</dc:date>
+    <dc:publisher>Infogrid Pacific Pte. Ltd.</dc:publisher>
+    <dc:contributor id="contrib1">Project Gutenberg EBook </dc:contributor>
+    <dc:rights>Infogrid Pacific Pte. Ltd.</dc:rights>
+    <dc:description>The Project Gutenberg EBook of The Theory of Heat Radiation, by Dr. Max
+Planck.
+This eBook is for the use of anyone anywhere at no cost and with almost no
+restrictions whatsoever. You may copy it, give it away or re-use it under the
+terms of the Project Gutenberg License included with this eBook or online at
+Gutenberg.</dc:description>
+    <dc:subject>MathML</dc:subject>
+</metadata>
+<manifest>
+    <item id="toc" properties="nav" href="TOC.xhtml" media-type="application/xhtml+xml" />
+    <item id="cover"  href="cover.xhtml" media-type="application/xhtml+xml" />
+    <item id="cover-image" properties="cover-image" href="images/igp-ttohr-math_cover_epub.jpg" media-type="image/jpeg" />
+    <item id="s001"  href="s001-BookTitlePage-01.xhtml" media-type="application/xhtml+xml" />
+    <item id="s002"  href="s002-Copyright-01.xhtml" media-type="application/xhtml+xml" />
+    <item id="s004"  href="s004-TableOfContents-01.xhtml" media-type="application/xhtml+xml" />
+    <item id="s005"  href="s005-Preface-01.xhtml" media-type="application/xhtml+xml" />
+    <item id="s006" properties="mathml" href="s006-Preface-02.xhtml" media-type="application/xhtml+xml" />
+    <item id="s007"  href="s007-Preface-03.xhtml" media-type="application/xhtml+xml" />
+    <item id="s008"  href="s008-Part-001.xhtml" media-type="application/xhtml+xml" />
+    <item id="s009" properties="mathml" href="s009-Chapter-001.xhtml" media-type="application/xhtml+xml" />
+    <item id="s010" properties="mathml" href="s010-Chapter-002.xhtml" media-type="application/xhtml+xml" />
+    <item id="s011"  href="s011-Part-002.xhtml" media-type="application/xhtml+xml" />
+    <item id="s012" properties="mathml" href="s012-Chapter-003.xhtml" media-type="application/xhtml+xml" />
+    <item id="s013" properties="mathml" href="s013-Chapter-004.xhtml" media-type="application/xhtml+xml" />
+    <item id="s014" properties="mathml" href="s014-Chapter-005.xhtml" media-type="application/xhtml+xml" />
+    <item id="s015" properties="mathml" href="s015-Chapter-006.xhtml" media-type="application/xhtml+xml" />
+    <item id="s016" properties="mathml" href="s016-Chapter-007.xhtml" media-type="application/xhtml+xml" />
+    <item id="s017"  href="s017-Part-003.xhtml" media-type="application/xhtml+xml" />
+    <item id="s018" properties="mathml" href="s018-Chapter-008.xhtml" media-type="application/xhtml+xml" />
+    <item id="s019" properties="mathml" href="s019-Chapter-009.xhtml" media-type="application/xhtml+xml" />
+    <item id="s020" properties="mathml" href="s020-Chapter-010.xhtml" media-type="application/xhtml+xml" />
+    <item id="s021" properties="mathml" href="s021-Chapter-011.xhtml" media-type="application/xhtml+xml" />
+    <item id="s022"  href="s022-Part-004.xhtml" media-type="application/xhtml+xml" />
+    <item id="s023" properties="mathml" href="s023-Chapter-012.xhtml" media-type="application/xhtml+xml" />
+    <item id="s024" properties="mathml" href="s024-Chapter-013.xhtml" media-type="application/xhtml+xml" />
+    <item id="s025" properties="mathml" href="s025-Chapter-014.xhtml" media-type="application/xhtml+xml" />
+    <item id="s026" properties="mathml" href="s026-Chapter-015.xhtml" media-type="application/xhtml+xml" />
+    <item id="s027"  href="s027-Part-005.xhtml" media-type="application/xhtml+xml" />
+    <item id="s028" properties="mathml" href="s028-Chapter-016.xhtml" media-type="application/xhtml+xml" />
+    <item id="s029" properties="mathml" href="s029-Chapter-017.xhtml" media-type="application/xhtml+xml" />
+    <item id="s030" properties="mathml" href="s030-Chapter-018.xhtml" media-type="application/xhtml+xml" />
+    <item id="s031" properties="mathml" href="s031-Chapter-019.xhtml" media-type="application/xhtml+xml" />
+    <item id="s033"  href="s033-Bibliography-01.xhtml" media-type="application/xhtml+xml" />
+    <item id="s034" properties="mathml" href="s034-Appendix-01.xhtml" media-type="application/xhtml+xml" />
+    <item id="s035" properties="mathml" href="s035-Appendix-02.xhtml" media-type="application/xhtml+xml" />
+    <item id="images-001"  href="images/fig1_online.png" media-type="image/png" />
+    <item id="images-002"  href="images/fig2_online.png" media-type="image/png" />
+    <item id="images-003"  href="images/fig3_online.png" media-type="image/png" />
+    <item id="images-004"  href="images/fig4_online.png" media-type="image/png" />
+    <item id="images-005"  href="images/fig5_online.png" media-type="image/png" />
+    <item id="images-006"  href="images/fig6_online.png" media-type="image/png" />
+    <item id="images-007"  href="images/fig7_online.png" media-type="image/png" />
+    <item id="css-001"  href="css/igp-ttohr-math.css" media-type="text/css" />
+    <item id="fonts-001"  href="fonts/STIXGeneral.otf" media-type="application/vnd.ms-opentype" />
+    <item id="fonts-002"  href="fonts/STIXGeneralBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="fonts-003"  href="fonts/STIXGeneralBolIta.otf" media-type="application/vnd.ms-opentype" />
+    <item id="fonts-004"  href="fonts/STIXGeneralItalic.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-001"  href="STIXfonts/STIXFontLicense2010.txt" media-type="text/plain" />
+    <item id="STIXfonts-002"  href="STIXfonts/STIXGeneral.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-003"  href="STIXfonts/STIXGeneralBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-004"  href="STIXfonts/STIXGeneralBolIta.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-005"  href="STIXfonts/STIXGeneralItalic.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-006"  href="STIXfonts/STIXIntDBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-007"  href="STIXfonts/STIXIntDReg.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-008"  href="STIXfonts/STIXIntDis.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-009"  href="STIXfonts/STIXIntDisBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-010"  href="STIXfonts/STIXIntSmBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-011"  href="STIXfonts/STIXIntSmReg.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-012"  href="STIXfonts/STIXIntSma.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-013"  href="STIXfonts/STIXIntSmaBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-014"  href="STIXfonts/STIXIntUp.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-015"  href="STIXfonts/STIXIntUpBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-016"  href="STIXfonts/STIXIntUpDBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-017"  href="STIXfonts/STIXIntUpDReg.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-018"  href="STIXfonts/STIXIntUpDis.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-019"  href="STIXfonts/STIXIntUpDisBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-020"  href="STIXfonts/STIXIntUpReg.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-021"  href="STIXfonts/STIXIntUpSmBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-022"  href="STIXfonts/STIXIntUpSmReg.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-023"  href="STIXfonts/STIXIntUpSma.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-024"  href="STIXfonts/STIXIntUpSmaBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-025"  href="STIXfonts/STIXNonUni.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-026"  href="STIXfonts/STIXNonUniBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-027"  href="STIXfonts/STIXNonUniBolIta.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-028"  href="STIXfonts/STIXNonUniIta.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-029"  href="STIXfonts/STIXSiz1Sym.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-030"  href="STIXfonts/STIXSiz1SymBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-031"  href="STIXfonts/STIXSiz2Sym.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-032"  href="STIXfonts/STIXSiz2SymBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-033"  href="STIXfonts/STIXSiz3Sym.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-034"  href="STIXfonts/STIXSiz3SymBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-035"  href="STIXfonts/STIXSiz4Sym.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-036"  href="STIXfonts/STIXSiz4SymBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-037"  href="STIXfonts/STIXSiz5Sym.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-038"  href="STIXfonts/STIXSizFiveSymReg.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-039"  href="STIXfonts/STIXSizFourSymBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-040"  href="STIXfonts/STIXSizFourSymReg.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-041"  href="STIXfonts/STIXSizOneSymBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-042"  href="STIXfonts/STIXSizOneSymReg.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-043"  href="STIXfonts/STIXSizThreeSymBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-044"  href="STIXfonts/STIXSizThreeSymReg.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-045"  href="STIXfonts/STIXSizTwoSymBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-046"  href="STIXfonts/STIXSizTwoSymReg.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-047"  href="STIXfonts/STIXVar.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-048"  href="STIXfonts/STIXVarBol.otf" media-type="application/vnd.ms-opentype" />
+    <item id="STIXfonts-049"  href="STIXfonts/STIXfonts.css" media-type="text/css" />
+</manifest>
+<spine page-progression-direction="ltr">
+    <itemref idref="s001" linear="yes" />
+    <itemref idref="s002" linear="yes" />
+    <itemref idref="s004" linear="yes" />
+    <itemref idref="s005" linear="yes" />
+    <itemref idref="s006" linear="yes" />
+    <itemref idref="s007" linear="yes" />
+    <itemref idref="s008" linear="yes" />
+    <itemref idref="s009" linear="yes" />
+    <itemref idref="s010" linear="yes" />
+    <itemref idref="s011" linear="yes" />
+    <itemref idref="s012" linear="yes" />
+    <itemref idref="s013" linear="yes" />
+    <itemref idref="s014" linear="yes" />
+    <itemref idref="s015" linear="yes" />
+    <itemref idref="s016" linear="yes" />
+    <itemref idref="s017" linear="yes" />
+    <itemref idref="s018" linear="yes" />
+    <itemref idref="s019" linear="yes" />
+    <itemref idref="s020" linear="yes" />
+    <itemref idref="s021" linear="yes" />
+    <itemref idref="s022" linear="yes" />
+    <itemref idref="s023" linear="yes" />
+    <itemref idref="s024" linear="yes" />
+    <itemref idref="s025" linear="yes" />
+    <itemref idref="s026" linear="yes" />
+    <itemref idref="s027" linear="yes" />
+    <itemref idref="s028" linear="yes" />
+    <itemref idref="s029" linear="yes" />
+    <itemref idref="s030" linear="yes" />
+    <itemref idref="s031" linear="yes" />
+    <itemref idref="s033" linear="yes" />
+    <itemref idref="s034" linear="yes" />
+    <itemref idref="s035" linear="yes" />
+</spine>
+</package>

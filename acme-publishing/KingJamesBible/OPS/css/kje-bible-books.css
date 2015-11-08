@@ -1,0 +1,100 @@
+/*DESIGN PROFILE - Default */
+/* Copyright 2013 Infogrid Pacific Pte. Ltd. All rights reserved. */
+/* Profile Name: CSS Minification */
+/* Created By: Infogrid Pacific */
+/* Creation Date: 2013-12-21 */
+/* Modified By: Infogrid Pacific */
+body, section, div, table, thead, tbody, tfoot, th, td, p, pre, ul, ol, dl, dt, dd, li, span, nav, header, footer { margin: 0; padding: 0; }
+body { margin: 0; padding: 0; }
+div, section { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; }
+.galley-rw { word-spacing: 0; font-size: 1.0em; font-weight: normal; text-align: justify; letter-spacing: 0; line-height: 1.2em; }
+p { text-indent: 0; padding-bottom: 0; }
+.firstpara-rw { text-indent: 0; }
+div+p { text-indent: 0; }
+h2+p { text-indent: 0; }
+h4+p { text-indent: 0; }
+.block-rw p:first-child { text-indent: 0; }
+ol+p { text-indent: 0; }
+div.alt-rw { margin-top: 1em; margin-right: 1em; margin-bottom: 1em; margin-left: 1em; }
+div.alt-rw p { font-size: 0.9em; }
+.Chapter-rw p .num-verse-rw { display: inline-block; font-family: sans-serif; font-size: 0.8em; color: rgb(0, 100, 50); font-weight: bold; text-align: right; padding-right: 0.2em; }
+a:link { color: rgb(0, 100, 150); text-decoration: none; }
+a:visited { color: rgb(0, 100, 150); }
+a:hover { color: rgb(0, 100, 150); text-decoration: underline; }
+a:active { color: rgb(0, 100, 150); }
+.-epub-media-overlay-active, .-readium-epub-media-overlay-active { color: red; background-color: inherit; }
+.galley-rw h2 {font-size: 1em; line-height: 1em; color: rgb(0, 0, 0); margin-top: 2em; margin-bottom: 1em; page-break-after: avoid; font-weight: normal; text-transform: uppercase; font-style: normal; text-align: center; }
+.galley-rw h4 {font-size: 1em; line-height: 1em; color: rgb(0, 0, 0); margin-top: 1.5em; margin-bottom: 0.5em; page-break-after: avoid; font-weight: bold; text-transform: none; font-style: italic; text-align: center; }
+.galley-rw h2+div { margin-top: 0; }
+.galley-rw h4+div { margin-top: 0; }
+h2 { hyphens: none; -webkit-hyphens: none; -moz-hyphens: none; -o-hyphens: none; }
+h4 { hyphens: none; -webkit-hyphens: none; -moz-hyphens: none; -o-hyphens: none; }
+.Part-rw .title-block-rw p { text-indent: 0; }
+.Chapter-rw .title-block-rw p { text-indent: 0; }
+.frontmatter-rw .title-block-rw p { text-indent: 0; }
+.frontmatter-rw .title-block-rw { padding-right: 1em; margin-bottom: 1em; padding-bottom: 0em; padding-top: 2em; padding-left: 1em; text-align: center; }
+.frontmatter-rw .title-block-rw h1 { font-size: 2em; font-weight: normal; color: rgb(0, 100, 150); line-height: 1.2em; text-align: inherit; }
+.frontmatter-rw .title-block-rw .title-sub-rw { font-size: 1.5em; line-height: 1em; text-align: inherit; }
+.Part-rw .title-block-rw { padding-right: 1em; margin-bottom: 1em; padding-bottom: 0em; padding-top: 2em; font-family: sans-serif; padding-left: 1em; text-align: center; }
+.Part-rw .title-block-rw .title-num-rw { font-size: 2.00em; font-weight: normal; padding-bottom: 1em; color: rgb(0, 0, 0); line-height: 1em; text-align: inherit; }
+.Part-rw .title-block-rw h1 { font-size: 2.00em; font-weight: normal; padding-bottom: 0.5em; color: rgb(0, 100, 150); line-height: 1.2em; text-align: inherit; }
+.Part-rw .title-block-rw .title-sub-rw { font-size: 1.4em; line-height: 1em; text-align: inherit; }
+.Chapter-rw .title-block-rw { padding-right: 1em; margin-bottom: 1em; padding-bottom: 0em; padding-top: 2em; padding-left: 1em; text-align: center; }
+.Chapter-rw .title-block-rw .title-num-rw { font-size: 1.6em; font-weight: normal; padding-bottom: 0.5em; text-align: inherit; font-style: normal; line-height: 1em; }
+.Chapter-rw .title-block-rw h1 { font-size: 2em; font-weight: normal; color: rgb(0, 100, 150); line-height: 1.2em; padding-bottom: 0.5em; font-style: normal; text-align: inherit; }
+.Chapter-rw .title-block-rw .title-sub-rw { text-align: inherit; font-size: 1.5em; line-height: 1em; padding-bottom: 0.5em; }
+.title-block-book-rw { font-size: 1em; line-height: 1em; padding-top: 4em; text-align: center; }
+.title-block-book-rw h1 { font-size: 2.5em; font-weight: normal; color: rgb(0, 100, 150); line-height: 1em; padding-bottom: 0.5em; font-style: normal; text-align: inherit; }
+.title-block-book-rw .title-sub-rw { font-size: 1.8em; font-weight: normal; color: rgb(80, 80, 80); text-indent: 0; line-height: 1em; padding-bottom: 1.5em; font-style: normal; text-align: inherit; }
+.imprint-rw { margin-bottom: 0.5em; border-top: 1px solid rgb(0, 100, 150); border-bottom: 1px solid rgb(0, 100, 150); margin-top: 2.00em; padding-bottom: 0.5em; padding-top: 0.5em; text-align: center; }
+.imprint-rw p { font-family: sans-serif; font-size: 0.9em; color: rgb(50, 50, 50); font-style: normal; font-weight: normal; line-height: 1em; text-indent: 0; }
+.imprint-rw p.alt-rw { font-family: sans-serif; font-size: 1.1em; font-weight: normal; color: rgb(0, 100, 150); font-style: normal; font-weight: normal; line-height: 1.1em; text-indent: 0; }
+.title-block-book-rw p {font-size: 1em; line-height: 1em; padding-bottom: 0.5em; text-align: inherit; font-weight: normal; font-style: normal; text-indent: 0em; }
+.title-block-book-rw p+p { text-indent: 0em; }
+.galley-rw ol { text-align: left; margin-top: 0.55em; margin-right: 0; margin-bottom: 0.55em; margin-left: 1.64em }
+.galley-rw li { padding-top: 0; padding-bottom: 0em; }
+.galley-rw ol li { list-style: decimal; }
+.galley-rw ol ol li { list-style: upper-latin; margin-left: 1.64em; }
+.galley-rw ol ol ol li { list-style: lower-latin; margin-left: 1.64em; }
+.galley-rw ol ol ol ol li { list-style: upper-roman; margin-left: 1.64em; }
+.galley-rw ol ol ol ol ol li { list-style: lower-roman; margin-left: 1.64em; }
+.galley-rw ol+p { text-indent: 0; }
+.galley-rw div+ol { margin-top: 0; }
+.galley-rw ol+div { margin-top: 0; }
+.list-named-rw { position: relative; padding: 0; margin: 0; }
+.list-named-rw ol { list-style-type: none; }
+.list-named-rw ol li { list-style-type: none; }
+.list-named-rw p { text-indent: 0; }
+.list-named-rw p+p { text-indent: 0; }
+.named-lists-rw { margin-top: 1em; margin-bottom: 1em; }
+.list-toc-rw ol { line-height: 1.2em; margin-left: 0em; }
+li.toc-chapter-rw { font-size: 1em; font-style: normal; font-weight: normal; padding-top: 0; padding-bottom: 0.25em; margin-right: 2em; margin-left: 2em !important; }
+p.toc-chapter-rw { font-size: 1em; font-style: normal; font-weight: normal; text-indent: -2em; padding-top: 0; padding-bottom: 0.25em; margin-right: 2em; margin-left: 4em !important; }
+.toc-lists-rw h4 { text-align: left; font-style: normal; font-size: 1.3em; border-top: 1px solid rgb(0, 100, 150); border-bottom: 1px solid rgb(0, 100, 150); padding: 0.5em 0 0.5em 0; margin: 0.5em 0 0.5em 0; }
+.block-rw h4 { font-size: 0.9em; line-height: 1.2em; text-align: left; text-indent: 0; font-style: normal; font-weight: bold; margin-top: 1em; margin-right: 0; margin-bottom: 1em; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; }
+.block-rw h5 { font-size: 0.9em; line-height: 1.2em; text-align: left; text-indent: 0; font-style: italic; font-weight: bold; margin-top: 1em; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; }
+.block-rw h6 { font-size: 0.9em; line-height: 1.2em; font-style: italic; text-align: left; margin-top: 0.5em; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; }
+.copyright-center-rw { font-size: 0.9em; line-height: 1.2em; padding-top: 1em; padding-right: 1em; padding-left: 1em; }
+.copyright-center-rw p { text-align: center; text-indent: 0; margin-bottom: 0; padding-bottom: 0.5em; }
+.arrow-up-rw { top: 50px; left: 50px; }
+.arrow-right-rw { top: 50px; left: 150px; }
+.arrow-down-rw { top: 50px; left: 250px; }
+.arrow-left-rw { top: 50px; left: 350px; }
+.qaa-rw .option-source li:hover { cursor:pointer; background-color: rgba(230, 180, 0, 1); }
+.qaa-rw .option-source li.selected-aie { background-color: rgba(250, 200, 0, 1); }
+.qaa-rw .option-source li.correct { background-color: rgba(0, 180, 0, 1); }
+.qaa-rw .option-source li.wrong { background-color: rgba(220, 0, 0, 1); }
+.textmatch-rw [contenteditable]:hover, .textmatch-rw input:hover { background-color: rgba(230, 180, 0, 1); cursor:text; }
+.textmatch-rw [contenteditable]:focus, .textmatch-rw input:focus { outline: none; border:2px inset rgb(127, 157, 185); background-color: rgba(250, 200, 0, 1); }
+.textmatch-rw .option-source li .correct { background-color: rgba(0, 180, 0, 1); border:2px inset rgb(127, 157, 185); }
+.textmatch-rw .option-source li .wrong { background-color: rgba(220, 0, 0, 1); border:2px inset rgb(127, 157, 185); }
+.Chapter-rw { counter-reset: ahead; }
+.Chapter-rw h2 { counter-increment: ahead; visibility: hidden; margin: 0 0 0 0; }
+.Chapter-rw h2+p:before { content: counter(ahead); font-weight: normal; float: left; font-size: 3em; line-height: 0.75em; color: rgb(0, 100, 150); margin-top: -0; margin-right: 0.1em; }
+.Chapter-rw h2+p .num-verse-rw { display: none; }
+p.alt-rw { font-family: sans-serif; }
+.running-header-rw { position: absolute; top: 0; left: 0; width: 100%; height: 30px; }
+.header-left-rw { font-style: italic; }
+.header-right-rw { font-style: normal; }
+.folio-left-rw { display: block; text-align: center; }
+.folio-left-rw { display: block; text-align: center; }

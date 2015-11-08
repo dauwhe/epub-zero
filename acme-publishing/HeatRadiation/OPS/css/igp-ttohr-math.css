@@ -1,0 +1,199 @@
+/*DESIGN PROFILE - Default */
+/* Copyright 2013 Infogrid Pacific Pte. Ltd. All rights reserved. */
+/* Profile Name: CSS Minification */
+/* Created By: Infogrid Pacific */
+/* Creation Date: 2013-10-09 */
+/* Modified By: Infogrid Pacific */
+@font-face { font-family: "STIXGeneral"; font-weight: 700; font-style: italic; src: url("../fonts/STIXGeneralBolIta.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 700; font-style: normal; src: url("../fonts/STIXGeneralBol.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 400; font-style: normal; src: url("../fonts/STIXGeneral.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 400; font-style: italic; src: url("../fonts/STIXGeneralItalic.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 700; font-style: normal; src: url("../fonts/STIXGeneralBol.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 400; font-style: italic; src: url("../fonts/STIXGeneralItalic.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 700; font-style: italic; src: url("../fonts/STIXGeneralBolIta.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 400; font-style: normal; src: url("../fonts/STIXGeneral.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 400; font-style: normal; font-stretch: normal; font-variant: normal; src: url("../fonts/STIXGeneralBol.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 400; font-style: normal; font-stretch: normal; font-variant: normal; src: url("../fonts/STIXGeneralBolIta.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 400; font-style: normal; font-stretch: normal; font-variant: normal; src: url("../fonts/STIXGeneralItalic.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 400; font-style: normal; font-stretch: normal; font-variant: normal; src: url("../fonts/STIXGeneral.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 400; font-style: normal; font-stretch: normal; font-variant: normal; src: url("../fonts/STIXGeneralBol.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 400; font-style: normal; font-stretch: normal; font-variant: normal; src: url("../fonts/STIXGeneralBolIta.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 400; font-style: normal; font-stretch: normal; font-variant: normal; src: url("../fonts/STIXGeneralItalic.otf"); }
+@font-face { font-family: "STIXGeneral"; font-weight: 400; font-style: normal; font-stretch: normal; font-variant: normal; src: url("../fonts/STIXGeneral.otf"); }
+math { font-family: "STIXGeneral"; }
+p.caption-rw { font-family: Caption, NamedPara, Galley; }
+ol { font-family: NumberList, Galley; }
+.list-toc-rw { font-family: TableOfContents, NamedLists, Galley; }
+.frontmatter-rw .title-block-rw .title-num-rw { font-family: FrontmatterTitleNumber, FrontmatterTitleBlock, TitleBlock, Galley; }
+body, section, div, table, thead, tbody, tfoot, th, td, p, pre, ul, ol, dl, dt, dd, li, span, nav, header, footer { margin: 0; padding: 0; }
+body { margin: 0; padding: 0; }
+div, section { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; }
+.copyright-rw {font-size: 0.9em; padding-right: 1em; padding-top: 1em; font-family: Copyright, TextBlock, Galley; line-height: 1.2em; padding-left: 1em; }
+.copyright-rw p { text-align: left; text-indent: 0; margin-bottom: 0; padding-bottom: 0.5em; }
+.galley-rw {word-spacing: 0; font-size: 1.0em; font-weight: normal; text-align: justify; font-family: Galley, STIXGeneral; letter-spacing: 0; line-height: 1.35em; }
+.galley-rw { -moz-hyphens: none; -webkit-hyphens: none; hyphens: none; }
+.title-block-rw, .title-block-book-rw { -moz-hyphens: none; -webkit-hyphens: none; hyphens: none; }
+h1, h2, h3, h4, h5, h6, li { -moz-hyphens: none; -webkit-hyphens: none; hyphens: none; }
+p { text-indent: 0; padding-bottom: 0; }
+p+p { text-indent: 1.3em; }
+.align-center-rw { text-align: center; text-indent: 0; }
+.firstpara-rw { text-indent: 0; }
+.caption-rw { font-size: 0.9em; font-style: italic; line-height: 1.2em; text-indent: 0; margin-top: 0.25em; margin-bottom: 0; }
+p.date-rw {font-family: Date, NamedPara, Galley; font-style: italic; text-align: right; }
+div+p { text-indent: 0; }
+h2+p { text-indent: 0; }
+h4+p { text-indent: 0; }
+.block-rw p:first-child { text-indent: 0; }
+.media-rw p:first-child { text-indent: 0; }
+ol+p { text-indent: 0; }
+span.date-rw {font-family: Date, Galley; font-style: italic; }
+span.equation-rw {margin-right: 0.25em; font-family: Equation, Galley; margin-left: 0.25em; }
+span.mathml-rw { font-size: 1em; }
+span.num-seetarget-rw { font-style: normal; font-weight: bold; }
+span.ref-seetarget-rw { font-style: normal; font-weight: bold; }
+.num-equation-rw { float: right; }
+.num-note-rw { line-height: 1em; width: 1em; margin-right: 0.25em; text-align: right; }
+.ref-equation-rw { border-bottom: 1px dotted rgb(0, 128, 0); }
+.ref-figure-rw { border-bottom: 1px dotted rgb(0, 128, 0); }
+.ref-note-rw { font-size: 75%; line-height: 1em; vertical-align: super; }
+a:link { color: rgb(0, 100, 150); text-decoration: none; }
+a:visited { color: rgb(0, 100, 150); }
+a:hover { color: rgb(0, 100, 150); text-decoration: underline; }
+a:active { color: rgb(0, 100, 150); }
+.-epub-media-overlay-active, .-readium-epub-media-overlay-active { color: red; background-color: inherit; }
+span.mathml-rw { display: inline; }
+.variable-rw { display: inline; }
+.galley-rw h2 {font-size: 1em; line-height: 1em; color: rgb(0, 0, 0); margin-top: 2em; margin-bottom: 1em; page-break-after: avoid; font-weight: normal; text-transform: uppercase; font-style: normal; text-align: center; }
+.galley-rw h4 {font-size: 1em; line-height: 1em; color: rgb(0, 0, 0); margin-top: 1.5em; margin-bottom: 0.5em; page-break-after: avoid; font-weight: bold; text-transform: none; font-style: italic; text-align: center; }
+.galley-rw h2+div { margin-top: 0; }
+.galley-rw h4+div { margin-top: 0; }
+h2 {hyphens: none; font-family: Heading2, Heading, Galley; -webkit-hyphens: none; -moz-hyphens: none; -o-hyphens: none; }
+h4 {hyphens: none; font-family: Heading4, Heading, Galley; -webkit-hyphens: none; -moz-hyphens: none; -o-hyphens: none; }
+.Part-rw .title-block-rw p { text-indent: 0; }
+.Chapter-rw .title-block-rw p { text-indent: 0; }
+.frontmatter-rw .title-block-rw p { text-indent: 0; }
+.backmatter-rw .title-block-rw p { text-indent: 0; }
+.frontmatter-rw .title-block-rw {padding-right: 1em; margin-bottom: 1em; padding-bottom: 0em; padding-top: 2em; font-family: FrontmatterTitleBlock, TitleBlock, Galley; padding-left: 1em; text-align: center; }
+.frontmatter-rw .title-block-rw h1 {font-size: 2em; font-weight: normal; color: rgb(0, 0, 0); font-family: FrontmatterTitle, TitleBlock, Galley; line-height: 1.2em; text-align: inherit; }
+.frontmatter-rw .title-block-rw .title-author-rw {line-height: 1em; font-family: FrontmatterTitleAuthor, FrontmatterTitleBlock, TitleBlock, Galley; font-style: italic; text-align: inherit; }
+.frontmatter-rw .title-block-rw .title-other-rw {font-size: 1em; font-family: FrontmatterTitleOther, FrontmatterTitleBlock, TitleBlock, Galley; text-align: inherit; }
+.Part-rw .title-block-rw {padding-right: 1em; margin-bottom: 1em; padding-bottom: 0em; padding-top: 2em; font-family: PartTitleBlock, TitleBlock, Galley, sans-serif; padding-left: 1em; text-align: center; }
+.Part-rw .title-block-rw .title-num-rw {font-size: 2.00em; font-weight: normal; padding-bottom: 1em; color: rgb(0, 0, 0); font-family: PartTitleNumber, PartTitleBlock, TitleBlock, Galley; line-height: 1em; text-align: inherit; }
+.Part-rw .title-block-rw h1 {font-size: 2.00em; font-weight: normal; padding-bottom: 0.5em; color: rgb(0, 0, 0); font-family: PartTitle, PartTitleBlock, TitleBlock, Galley; line-height: 1.2em; text-align: inherit; }
+.Part-rw .title-block-rw .title-author-rw {font-style: italic; font-size: 1.1em; font-family: PartTitleAuthor, PartTitleBlock, TitleBlock, Galley; line-height: 1em; text-align: inherit; }
+.Part-rw .title-block-rw .title-other-rw {font-style: italic; font-size: 1em; font-family: PartTitleOther, PartTitleBlock, TitleBlock, Galley; line-height: 1em; text-align: inherit; }
+.Chapter-rw .title-block-rw {padding-right: 1em; margin-bottom: 1em; padding-bottom: 0em; padding-top: 2em; font-family: ChapterTitleBlock, TitleBlock, Galley; padding-left: 1em; text-align: center; }
+.Chapter-rw .title-block-rw .title-num-rw {font-size: 1.6em; font-weight: normal; padding-bottom: 0.5em; text-align: inherit; font-family: ChapterTitleNumber, ChapterTitleBlock, TitleBlock, Galley; font-style: normal; line-height: 1em; }
+.Chapter-rw .title-block-rw h1 {font-size: 2em; font-weight: normal; color: rgb(0, 0, 0); line-height: 1.2em; padding-bottom: 0.5em; font-family: ChapterTitle, ChapterTitleBlock, TitleBlock, Galley; font-style: normal; text-align: inherit; }
+.Chapter-rw .title-block-rw .title-author-rw {font-size: 1.1em; font-weight: normal; color: rgb(0, 0, 0); text-indent: 0; line-height: 1em; padding-bottom: 1em; font-family: ChapterTitleAuthor, ChapterTitleBlock, TitleBlock, Galley; font-style: italic; text-align: inherit; }
+.Chapter-rw .title-block-rw .title-other-rw {font-size: 1em; font-weight: normal; color: rgb(0, 0, 0); line-height: 1em; padding-bottom: 1em; font-family: ChapterTitleOther, ChapterTitleBlock, TitleBlock, Galley; font-style: normal; text-align: inherit; }
+.backmatter-rw .title-block-rw {padding-right: 1em; margin-bottom: 1em; padding-bottom: 0em; padding-top: 2em; font-family: BackmatterTitleBlock, TitleBlock, Galley; padding-left: 1em; text-align: center; }
+.backmatter-rw .title-block-rw .title-num-rw {font-size: 1.5em; font-weight: normal; color: rgb(0, 0, 0); line-height: 1em; padding-bottom: 0.5em; font-family: BackmatterTitleNumber, BackmatterTitleBlock, TitleBlock, Galley; font-style: normal; text-align: inherit; }
+.backmatter-rw .title-block-rw h1 {font-size: 1.6em; font-weight: normal; color: rgb(0, 0, 0); line-height: 1.2em; padding-bottom: 0.5em; font-family: BackmatterTitle, BackmatterTitleBlock, TitleBlock, Galley; font-style: normal; text-align: inherit; }
+.backmatter-rw .title-block-rw .title-author-rw {font-size: 1.1em; font-weight: normal; line-height: 1em; padding-bottom: 0.5em; font-family: BackmatterTitleAuthor, BackmatterTitleBlock, TitleBlock, Galley; margin: 1em 0 0 0; font-style: italic; text-align: inherit; }
+.backmatter-rw .title-block-rw .title-other-rw {font-size: 1em; font-weight: normal; line-height: 1em; padding-bottom: 0.5em; font-family: BackmatterTitleOther, BackmatterTitleBlock, TitleBlock, Galley; margin: 1em 0 0 0; font-style: italic; text-align: inherit; }
+.title-block-book-rw {font-size: 1em; font-family: BookTitlePage, Galley; line-height: 1em; padding-top: 4em; text-align: center; }
+.title-block-book-rw h1 {font-size: 3em; font-weight: bold; color: rgb(0, 100, 150); line-height: 1em; text-shadow: 3px 3px 5px rgb(0, 0, 0); padding-bottom: 0.5em; font-family: BookTitle, BookTitlePage, Galley; font-style: normal; text-align: inherit; }
+.title-block-book-rw .title-author-rw {font-size: 1.7em; font-weight: normal; color: rgb(0, 140, 200); text-indent: 0; text-shadow: 3px 3px 5px rgb(0, 0, 0); line-height: 1em; padding-bottom: 1.5em; font-family: BookTitleAuthor, BookTitlePage, Galley; font-style: normal; text-align: inherit; }
+.title-block-book-rw .title-other-rw {font-size: 1em; font-weight: normal; text-indent: 0; line-height: 1em; padding-bottom: 1em; font-family: BookTitleOther, BookTitlePage, Galley; font-style: normal; text-align: inherit; }
+.imprint-rw {margin-bottom: 0.5em; border-top: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); margin-top: 2.00em; padding-bottom: 0.5em; padding-top: 0.5em; font-family: Imprint, BookTitlePage, Galley; text-align: center; }
+.imprint-rw p { font-size: 0.9em; font-style: normal; font-weight: normal; line-height: 1em; text-indent: 0; color: rgba(0, 100, 150, 0.9); }
+.title-block-book-rw p {font-size: 1em; line-height: 1em; padding-bottom: 0.5em; text-align: inherit; font-weight: normal; font-style: normal; text-indent: 0em; }
+.title-block-book-rw p+p { text-indent: 0em; }
+.galley-rw ol { text-align: left; margin-top: 0.55em; margin-right: 0; margin-bottom: 0.55em; margin-left: 1.64em }
+.galley-rw li { padding-top: 0; padding-bottom: 0em; }
+.galley-rw ol li { list-style: decimal; }
+.galley-rw ol ol li { list-style: upper-latin; margin-left: 1.64em; }
+.galley-rw ol ol ol li { list-style: lower-latin; margin-left: 1.64em; }
+.galley-rw ol ol ol ol li { list-style: upper-roman; margin-left: 1.64em; }
+.galley-rw ol ol ol ol ol li { list-style: lower-roman; margin-left: 1.64em; }
+.galley-rw ol+p { text-indent: 0; }
+.galley-rw div+ol { margin-top: 0; }
+.galley-rw ol+div { margin-top: 0; }
+.list-named-rw { position: relative; padding: 0; margin: 0; }
+.list-named-rw ol { list-style-type: none; }
+.list-named-rw ol li { list-style-type: none; }
+.list-named-rw p { text-indent: 0; }
+.list-named-rw p+p { text-indent: 0; }
+.named-lists-rw { margin-top: 1em; margin-bottom: 1em; }
+.list-notes-rw {padding: 0; font-family: NotesList, NotesLists, Galley; margin: 1em 0 1em 0; }
+.list-notes-rw p { font-size: 0.9em; line-height: 1.2em; text-indent: -2.5em; margin-left: 2.5em; }
+.list-notes-rw p+p { text-indent: -2.5em; margin-left: 2.5em; }
+.list-notes-rw span.num-note-rw { display: inline-block; width: 2em; float: none; font-size: 0.8em; text-align: right; text-indent: 0; font-weight: normal; margin-left: 0em; margin-right: 1em; padding-right: 0; }
+.list-references-rw p { font-size: 1em; line-height: 1.2em; text-indent: -2em; margin-left: 2em; text-align: left; }
+.list-references-rw {padding: 0 0 1em 0; font-size: 0.9em; font-family: ReferencesList, NamedLists, Galley, STIXGeneral; }
+div.list-references-rw p { text-indent: -1.3em; margin-left: 1.3em; }
+div.list-references-rw p+p { text-indent: -1.3em; margin-left: 1.3em; }
+div.list-references-rw ol { margin-bottom: 0.25em; }
+div.list-references-rw ol li { list-style-type: decimal; }
+.list-toc-rw ol { line-height: 1.2em; margin-left: 0em; }
+li.toc-fm-rw { font-size: 1em; font-style: italic; font-weight: normal; text-indent: -2em; padding-top: 0; padding-bottom: 0em; margin-right: 2em; margin-bottom: 0.25em; margin-left: 4em !important; }
+li.toc-bm-rw { font-size: 1em; font-style: italic; font-weight: normal; text-indent: -2em; padding-top: 0; padding-bottom: 0em; margin-right: 2em; margin-bottom: 0.25em; margin-left: 4em !important; }
+li.toc-part-rw { font-size: 1em; font-style: normal; font-weight: normal; text-transform: uppercase; padding-top: 0; padding-bottom: 0em; margin-left: 0 !important; }
+.toc-part-rw .toc-num-rw { font-size: 1em; font-style: normal; font-weight: normal; padding-top: 0em; padding-bottom: 0em; margin-left: 0; }
+li.toc-chapter-rw { font-size: 1em; font-style: normal; font-weight: normal; padding-top: 0; padding-bottom: 0.25em; margin-right: 2em; margin-left: 2em !important; }
+.toc-chapter-rw .toc-num-rw { display: inline-block; float: none; min-width: 2em; font-size: 1em; font-style: normal; font-weight: normal; text-indent: 0; padding-top: 0em; padding-bottom: 0em; margin-left: 0; margin-right: 0.5em; }
+li.toc-fm-rw+li.toc-part-rw { padding-top: 0.5em; }
+li.toc-fm-rw+li.toc-chapter-rw { padding-top: 0.5em; }
+li.toc-part-rw+li.toc-bm-rw { padding-top: 0.5em; }
+li.toc-chapter-rw+li.toc-bm-rw { padding-top: 0.5em; }
+li.toc-part-rw+li.toc-chapter-rw { padding-top: 0.5em; }
+li.toc-chapter-rw+li.toc-part-rw { padding-top: 0.5em; }
+p.toc-fm-rw { font-size: 1em; font-style: italic; font-weight: normal; text-indent: -2em; padding-top: 0; padding-bottom: 0em; margin-right: 2em; margin-bottom: 0.25em; margin-left: 4em !important; }
+p.toc-bm-rw { font-size: 1em; font-style: italic; font-weight: normal; text-indent: -2em; padding-top: 0; padding-bottom: 0em; margin-right: 2em; margin-bottom: 0.25em; margin-left: 4em !important; }
+p.toc-part-rw { font-size: 1em; font-style: normal; font-weight: normal; text-transform: uppercase; padding-top: 0; padding-bottom: 0em; margin-left: 0 !important; }
+p.toc-part-rw .toc-num-rw { font-size: 1em; font-style: normal; font-weight: normal; text-indent: -2em; padding-top: 0em; padding-bottom: 0em; margin-left: 2em; }
+p.toc-chapter-rw { font-size: 1em; font-style: normal; font-weight: normal; text-indent: -2em; padding-top: 0; padding-bottom: 0.25em; margin-right: 2em; margin-left: 4em !important; }
+p.toc-chapter-rw .toc-num-rw { display: inline-block; float: none; min-width: 2em; font-size: 1em; font-style: normal; font-weight: normal; text-indent: 0; padding-top: 0em; padding-bottom: 0em; margin-left: 0; margin-right: 0.5em; }
+p.toc-fm-rw+p.toc-part-rw { padding-top: 0.5em; }
+p.toc-fm-rw+p.toc-chapter-rw { padding-top: 0.5em; }
+p.toc-part-rw+p.toc-bm-rw { padding-top: 0.5em; }
+p.toc-chapter-rw+p.toc-bm-rw { padding-top: 0.5em; }
+p.toc-part-rw+p.toc-chapter-rw { padding-top: 0.5em; }
+p.toc-chapter-rw+p.toc-part-rw { padding-top: 0.5em; }
+.block-rw h4 { font-size: 0.9em; line-height: 1.2em; text-align: left; text-indent: 0; font-style: normal; font-weight: bold; margin-top: 1em; margin-right: 0; margin-bottom: 1em; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; }
+.block-rw h5 { font-size: 0.9em; line-height: 1.2em; text-align: left; text-indent: 0; font-style: italic; font-weight: bold; margin-top: 1em; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; }
+.block-rw h6 { font-size: 0.9em; line-height: 1.2em; font-style: italic; text-align: left; margin-top: 0.5em; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; }
+.boxed-rw {padding-bottom: 0.5em; margin-left: 0; margin-bottom: 1em; margin-top: 1em; padding-right: 1em; margin-right: 0; padding-top: 0.5em; font-family: BoxedText, TextBlock, Galley; border: 1px solid rgb(0, 0, 0); padding-left: 1em; }
+.equation-rw {margin-right: 1em; margin-top: 1em; font-family: Equation, TextBlock, Galley; margin-left: 1em; margin-bottom: 1em; }
+.mathml-rw { margin-top: 1em; margin-right: 0em; margin-bottom: 1em; margin-left: 0em; }
+.media-rw { page-break-inside: avoid; text-indent: 0; text-align: left; }
+.media-rw h4 { font-size: 1em; font-weight: bold; padding: 0.5em 0 0.5em 0; text-align: left; }
+.media-rw h5 { font-size: 1em; font-weight: bold; padding: 0.75em 0 0.25em 0; }
+.media-rw h6 { font-size: 1em; font-style: italic; padding: 0.75em 0 0.5em 0; }
+.media-rw p { text-indent: 0; text-align: left; }
+.media-rw p.caption-rw { font-size: 0.9em; font-style: italic; text-indent: 0; text-align: left; padding-top: 0.25em; }
+.figure-rw { margin-top: 0.5em; margin-right: 0; margin-bottom: 0.5em; padding: 0; }
+.width-fixed-rw .pc-rw { width: auto; }
+.width-fixed-rw .pc-rw img { width: auto; }
+.pc-rw { margin: 0; padding: 0; }
+.pc-rw img { width: 100%; margin: 0; padding: 0; }
+.pc-rw table { width: 100%; margin: 0; padding: 0; }
+.pc-rw p { text-align: left; }
+div.pc-rw>:first-child { margin-top: 0; padding-top: 0; }
+div.pc-rw>:last-child { margin-bottom: 0; padding-top: 0; }
+div.align-center-rw { display: block; text-align:center; margin-left: auto; margin-right: auto; }
+.align-center-rw table { margin: 0 auto 0 auto; }
+.align-center-rw .pc-rw { margin: 0 auto 0 auto; }
+.align-center-rw .pc-rw img { margin: 0 auto 0 auto; }
+.align-center-rw .pc-rw object { margin: 0 auto 0 auto; }
+.arrow-up-rw { top: 50px; left: 50px; }
+.arrow-right-rw { top: 50px; left: 150px; }
+.arrow-down-rw { top: 50px; left: 250px; }
+.arrow-left-rw { top: 50px; left: 350px; }
+.qaa-rw .option-source li:hover { cursor:pointer; background-color: rgba(230, 180, 0, 1); }
+.qaa-rw .option-source li.selected-aie { background-color: rgba(250, 200, 0, 1); }
+.qaa-rw .option-source li.correct { background-color: rgba(0, 180, 0, 1); }
+.qaa-rw .option-source li.wrong { background-color: rgba(220, 0, 0, 1); }
+.textmatch-rw [contenteditable]:hover, .textmatch-rw input:hover { background-color: rgba(230, 180, 0, 1); cursor:text; }
+.textmatch-rw [contenteditable]:focus, .textmatch-rw input:focus { outline: none; border:2px inset rgb(127, 157, 185); background-color: rgba(250, 200, 0, 1); }
+.textmatch-rw .option-source li .correct { background-color: rgba(0, 180, 0, 1); border:2px inset rgb(127, 157, 185); }
+.textmatch-rw .option-source li .wrong { background-color: rgba(220, 0, 0, 1); border:2px inset rgb(127, 157, 185); }
+.section-break { font-size: 12px; font-weight: bold; font-family: Arial, sans-serif; text-align: center; background-color: rgb(220, 220, 220); border-top: 1px solid rgb(120, 120, 120); border-bottom: 1px solid rgb(120, 120, 120); padding-top: 15px; }
+math { font-family: 'STIXGeneral';  }
+p.alt-rw { font-family: sans-serif; }
+.running-header-rw { position: absolute; top: 0; left: 0; width: 100%; height: 30px; }
+.header-left-rw { font-style: italic; }
+.header-right-rw { font-style: normal; }
+.folio-left-rw { display: block; text-align: center; }
+.folio-left-rw { display: block; text-align: center; }

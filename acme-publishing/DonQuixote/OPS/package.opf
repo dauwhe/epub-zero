@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="es" unique-identifier="pub-id">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:title id="title">Don Quijote</dc:title>
+    <dc:creator id="creator">Miguel de Cervantes Saavedra</dc:creator>
+    <dc:language>es</dc:language>
+    <dc:identifier id="pub-id">don-quijoti-epub3</dc:identifier>
+    <dc:source>don-quijoti-pdf</dc:source>
+    <meta property="dcterms:modified">2013-08-25T10:23:49Z</meta>
+    <dc:date>2013</dc:date>
+    <dc:publisher>Infogrid Pacific Pte. Ltd.</dc:publisher>
+    <dc:rights>Infogrid Pacific Pte. Ltd.</dc:rights>
+    <dc:description>A Spanish novel by Miguel de Cervantes Saavedra. It follows the adventures of Alonso Quijano, a hidalgo who reads so many chivalric novels that he decides to set out to revive chivalry, under the name Don Quixote. He recruits a simple farmer, Sancho Panza, as his squire, who often employs a unique, earthly wit in dealing with Don Quixote's rhetorical orations on antiquated knighthood. Don Quixote is met by the world as it is, initiating such themes as intertextuality, realism, metatheatre, and literary representation.</dc:description>
+    <dc:type>Classic Fiction</dc:type>
+</metadata>
+<manifest>
+    <item id="toc" properties="nav" href="TOC.xhtml" media-type="application/xhtml+xml" />
+    <item id="cover"  href="cover.xhtml" media-type="application/xhtml+xml" />
+    <item id="cover-image" properties="cover-image" href="images/don-quijoti-epub3_cover_epub.jpg" media-type="image/jpeg" />
+    <item id="s001"  href="s001-BookTitlePage-01.xhtml" media-type="application/xhtml+xml" />
+    <item id="s002"  href="s002-Copyright-01.xhtml" media-type="application/xhtml+xml" />
+    <item id="s004"  href="s004-Part-001.xhtml" media-type="application/xhtml+xml" />
+    <item id="s005"  href="s005-Chapter-001.xhtml" media-type="application/xhtml+xml" />
+    <item id="s006"  href="s006-Chapter-002.xhtml" media-type="application/xhtml+xml" />
+    <item id="s007"  href="s007-Chapter-003.xhtml" media-type="application/xhtml+xml" />
+    <item id="s008"  href="s008-Chapter-004.xhtml" media-type="application/xhtml+xml" />
+    <item id="s009"  href="s009-Chapter-005.xhtml" media-type="application/xhtml+xml" />
+    <item id="s010"  href="s010-Chapter-006.xhtml" media-type="application/xhtml+xml" />
+    <item id="s011"  href="s011-Chapter-007.xhtml" media-type="application/xhtml+xml" />
+    <item id="s012"  href="s012-Chapter-008.xhtml" media-type="application/xhtml+xml" />
+    <item id="s013"  href="s013-Chapter-009.xhtml" media-type="application/xhtml+xml" />
+    <item id="s014"  href="s014-Chapter-010.xhtml" media-type="application/xhtml+xml" />
+    <item id="s015"  href="s015-Chapter-011.xhtml" media-type="application/xhtml+xml" />
+    <item id="s016"  href="s016-Chapter-012.xhtml" media-type="application/xhtml+xml" />
+    <item id="s017"  href="s017-Chapter-013.xhtml" media-type="application/xhtml+xml" />
+    <item id="s018"  href="s018-Chapter-014.xhtml" media-type="application/xhtml+xml" />
+    <item id="s019"  href="s019-Chapter-015.xhtml" media-type="application/xhtml+xml" />
+    <item id="s020"  href="s020-Chapter-016.xhtml" media-type="application/xhtml+xml" />
+    <item id="s021"  href="s021-Chapter-017.xhtml" media-type="application/xhtml+xml" />
+    <item id="s022"  href="s022-Chapter-018.xhtml" media-type="application/xhtml+xml" />
+    <item id="s023"  href="s023-Chapter-019.xhtml" media-type="application/xhtml+xml" />
+    <item id="s024"  href="s024-Chapter-020.xhtml" media-type="application/xhtml+xml" />
+    <item id="s025"  href="s025-Chapter-021.xhtml" media-type="application/xhtml+xml" />
+    <item id="s026"  href="s026-Chapter-022.xhtml" media-type="application/xhtml+xml" />
+    <item id="s027"  href="s027-Chapter-023.xhtml" media-type="application/xhtml+xml" />
+    <item id="s028"  href="s028-Chapter-024.xhtml" media-type="application/xhtml+xml" />
+    <item id="s029"  href="s029-Chapter-025.xhtml" media-type="application/xhtml+xml" />
+    <item id="s030"  href="s030-Chapter-026.xhtml" media-type="application/xhtml+xml" />
+    <item id="s031"  href="s031-Chapter-027.xhtml" media-type="application/xhtml+xml" />
+    <item id="s032"  href="s032-Chapter-028.xhtml" media-type="application/xhtml+xml" />
+    <item id="s033"  href="s033-Chapter-029.xhtml" media-type="application/xhtml+xml" />
+    <item id="s034"  href="s034-Chapter-030.xhtml" media-type="application/xhtml+xml" />
+    <item id="s035"  href="s035-Chapter-031.xhtml" media-type="application/xhtml+xml" />
+    <item id="s036"  href="s036-Chapter-032.xhtml" media-type="application/xhtml+xml" />
+    <item id="s037"  href="s037-Chapter-033.xhtml" media-type="application/xhtml+xml" />
+    <item id="s038"  href="s038-Chapter-034.xhtml" media-type="application/xhtml+xml" />
+    <item id="s039"  href="s039-Chapter-035.xhtml" media-type="application/xhtml+xml" />
+    <item id="s040"  href="s040-Chapter-036.xhtml" media-type="application/xhtml+xml" />
+    <item id="s041"  href="s041-Chapter-037.xhtml" media-type="application/xhtml+xml" />
+    <item id="s042"  href="s042-Chapter-038.xhtml" media-type="application/xhtml+xml" />
+    <item id="s043"  href="s043-Chapter-039.xhtml" media-type="application/xhtml+xml" />
+    <item id="s044"  href="s044-Chapter-040.xhtml" media-type="application/xhtml+xml" />
+    <item id="s045"  href="s045-Chapter-041.xhtml" media-type="application/xhtml+xml" />
+    <item id="s046"  href="s046-Chapter-042.xhtml" media-type="application/xhtml+xml" />
+    <item id="s047"  href="s047-Chapter-043.xhtml" media-type="application/xhtml+xml" />
+    <item id="s048"  href="s048-Chapter-044.xhtml" media-type="application/xhtml+xml" />
+    <item id="s049"  href="s049-Chapter-045.xhtml" media-type="application/xhtml+xml" />
+    <item id="s050"  href="s050-Chapter-046.xhtml" media-type="application/xhtml+xml" />
+    <item id="s051"  href="s051-Chapter-047.xhtml" media-type="application/xhtml+xml" />
+    <item id="s052"  href="s052-Chapter-048.xhtml" media-type="application/xhtml+xml" />
+    <item id="s053"  href="s053-Chapter-049.xhtml" media-type="application/xhtml+xml" />
+    <item id="s054"  href="s054-Chapter-050.xhtml" media-type="application/xhtml+xml" />
+    <item id="s055"  href="s055-Chapter-051.xhtml" media-type="application/xhtml+xml" />
+    <item id="s056"  href="s056-Chapter-052.xhtml" media-type="application/xhtml+xml" />
+    <item id="s057"  href="s057-Chapter-053.xhtml" media-type="application/xhtml+xml" />
+    <item id="s058"  href="s058-Part-002.xhtml" media-type="application/xhtml+xml" />
+    <item id="s059"  href="s059-Chapter-054.xhtml" media-type="application/xhtml+xml" />
+    <item id="s060"  href="s060-Chapter-055.xhtml" media-type="application/xhtml+xml" />
+    <item id="s061"  href="s061-Chapter-056.xhtml" media-type="application/xhtml+xml" />
+    <item id="s062"  href="s062-Chapter-057.xhtml" media-type="application/xhtml+xml" />
+    <item id="s063"  href="s063-Chapter-058.xhtml" media-type="application/xhtml+xml" />
+    <item id="s064"  href="s064-Chapter-059.xhtml" media-type="application/xhtml+xml" />
+    <item id="s065"  href="s065-Chapter-060.xhtml" media-type="application/xhtml+xml" />
+    <item id="s066"  href="s066-Chapter-061.xhtml" media-type="application/xhtml+xml" />
+    <item id="s067"  href="s067-Chapter-062.xhtml" media-type="application/xhtml+xml" />
+    <item id="s068"  href="s068-Chapter-063.xhtml" media-type="application/xhtml+xml" />
+    <item id="s069"  href="s069-Chapter-064.xhtml" media-type="application/xhtml+xml" />
+    <item id="s070"  href="s070-Chapter-065.xhtml" media-type="application/xhtml+xml" />
+    <item id="s071"  href="s071-Chapter-066.xhtml" media-type="application/xhtml+xml" />
+    <item id="s072"  href="s072-Chapter-067.xhtml" media-type="application/xhtml+xml" />
+    <item id="s073"  href="s073-Chapter-068.xhtml" media-type="application/xhtml+xml" />
+    <item id="s074"  href="s074-Chapter-069.xhtml" media-type="application/xhtml+xml" />
+    <item id="s075"  href="s075-Chapter-070.xhtml" media-type="application/xhtml+xml" />
+    <item id="s076"  href="s076-Chapter-071.xhtml" media-type="application/xhtml+xml" />
+    <item id="s077"  href="s077-Chapter-072.xhtml" media-type="application/xhtml+xml" />
+    <item id="s078"  href="s078-Chapter-073.xhtml" media-type="application/xhtml+xml" />
+    <item id="s079"  href="s079-Chapter-074.xhtml" media-type="application/xhtml+xml" />
+    <item id="s080"  href="s080-Chapter-075.xhtml" media-type="application/xhtml+xml" />
+    <item id="s081"  href="s081-Chapter-076.xhtml" media-type="application/xhtml+xml" />
+    <item id="s082"  href="s082-Chapter-077.xhtml" media-type="application/xhtml+xml" />
+    <item id="s083"  href="s083-Chapter-078.xhtml" media-type="application/xhtml+xml" />
+    <item id="s084"  href="s084-Chapter-079.xhtml" media-type="application/xhtml+xml" />
+    <item id="s085"  href="s085-Chapter-080.xhtml" media-type="application/xhtml+xml" />
+    <item id="s086"  href="s086-Chapter-081.xhtml" media-type="application/xhtml+xml" />
+    <item id="s087"  href="s087-Chapter-082.xhtml" media-type="application/xhtml+xml" />
+    <item id="s088"  href="s088-Chapter-083.xhtml" media-type="application/xhtml+xml" />
+    <item id="s089"  href="s089-Chapter-084.xhtml" media-type="application/xhtml+xml" />
+    <item id="s090"  href="s090-Chapter-085.xhtml" media-type="application/xhtml+xml" />
+    <item id="s091"  href="s091-Chapter-086.xhtml" media-type="application/xhtml+xml" />
+    <item id="s092"  href="s092-Chapter-087.xhtml" media-type="application/xhtml+xml" />
+    <item id="s093"  href="s093-Chapter-088.xhtml" media-type="application/xhtml+xml" />
+    <item id="s094"  href="s094-Chapter-089.xhtml" media-type="application/xhtml+xml" />
+    <item id="s095"  href="s095-Chapter-090.xhtml" media-type="application/xhtml+xml" />
+    <item id="s096"  href="s096-Chapter-091.xhtml" media-type="application/xhtml+xml" />
+    <item id="s097"  href="s097-Chapter-092.xhtml" media-type="application/xhtml+xml" />
+    <item id="s098"  href="s098-Chapter-093.xhtml" media-type="application/xhtml+xml" />
+    <item id="s099"  href="s099-Chapter-094.xhtml" media-type="application/xhtml+xml" />
+    <item id="s100"  href="s100-Chapter-095.xhtml" media-type="application/xhtml+xml" />
+    <item id="s101"  href="s101-Chapter-096.xhtml" media-type="application/xhtml+xml" />
+    <item id="s102"  href="s102-Chapter-097.xhtml" media-type="application/xhtml+xml" />
+    <item id="s103"  href="s103-Chapter-098.xhtml" media-type="application/xhtml+xml" />
+    <item id="s104"  href="s104-Chapter-099.xhtml" media-type="application/xhtml+xml" />
+    <item id="s105"  href="s105-Chapter-100.xhtml" media-type="application/xhtml+xml" />
+    <item id="s106"  href="s106-Chapter-101.xhtml" media-type="application/xhtml+xml" />
+    <item id="s107"  href="s107-Chapter-102.xhtml" media-type="application/xhtml+xml" />
+    <item id="s108"  href="s108-Chapter-103.xhtml" media-type="application/xhtml+xml" />
+    <item id="s109"  href="s109-Chapter-104.xhtml" media-type="application/xhtml+xml" />
+    <item id="s110"  href="s110-Chapter-105.xhtml" media-type="application/xhtml+xml" />
+    <item id="s111"  href="s111-Chapter-106.xhtml" media-type="application/xhtml+xml" />
+    <item id="s112"  href="s112-Chapter-107.xhtml" media-type="application/xhtml+xml" />
+    <item id="s113"  href="s113-Chapter-108.xhtml" media-type="application/xhtml+xml" />
+    <item id="s114"  href="s114-Chapter-109.xhtml" media-type="application/xhtml+xml" />
+    <item id="s115"  href="s115-Chapter-110.xhtml" media-type="application/xhtml+xml" />
+    <item id="s116"  href="s116-Chapter-111.xhtml" media-type="application/xhtml+xml" />
+    <item id="s117"  href="s117-Chapter-112.xhtml" media-type="application/xhtml+xml" />
+    <item id="s118"  href="s118-Chapter-113.xhtml" media-type="application/xhtml+xml" />
+    <item id="s119"  href="s119-Chapter-114.xhtml" media-type="application/xhtml+xml" />
+    <item id="s120"  href="s120-Chapter-115.xhtml" media-type="application/xhtml+xml" />
+    <item id="s121"  href="s121-Chapter-116.xhtml" media-type="application/xhtml+xml" />
+    <item id="s122"  href="s122-Chapter-117.xhtml" media-type="application/xhtml+xml" />
+    <item id="s123"  href="s123-Chapter-118.xhtml" media-type="application/xhtml+xml" />
+    <item id="s124"  href="s124-Chapter-119.xhtml" media-type="application/xhtml+xml" />
+    <item id="s125"  href="s125-Chapter-120.xhtml" media-type="application/xhtml+xml" />
+    <item id="s126"  href="s126-Chapter-121.xhtml" media-type="application/xhtml+xml" />
+    <item id="s127"  href="s127-Chapter-122.xhtml" media-type="application/xhtml+xml" />
+    <item id="s128"  href="s128-Chapter-123.xhtml" media-type="application/xhtml+xml" />
+    <item id="s129"  href="s129-Chapter-124.xhtml" media-type="application/xhtml+xml" />
+    <item id="s130"  href="s130-Chapter-125.xhtml" media-type="application/xhtml+xml" />
+    <item id="s131"  href="s131-Chapter-126.xhtml" media-type="application/xhtml+xml" />
+    <item id="s132"  href="s132-Chapter-127.xhtml" media-type="application/xhtml+xml" />
+    <item id="s133"  href="s133-Chapter-128.xhtml" media-type="application/xhtml+xml" />
+    <item id="s134"  href="s134-Chapter-129.xhtml" media-type="application/xhtml+xml" />
+    <item id="images-001"  href="images/igp_logo_300.png" media-type="image/png" />
+    <item id="css-001"  href="css/don-quijoti-epub3.css" media-type="text/css" />
+</manifest>
+<spine page-progression-direction="ltr">
+    <itemref idref="s001" linear="yes" />
+    <itemref idref="s002" linear="yes" />
+    <itemref idref="s004" linear="yes" />
+    <itemref idref="s005" linear="yes" />
+    <itemref idref="s006" linear="yes" />
+    <itemref idref="s007" linear="yes" />
+    <itemref idref="s008" linear="yes" />
+    <itemref idref="s009" linear="yes" />
+    <itemref idref="s010" linear="yes" />
+    <itemref idref="s011" linear="yes" />
+    <itemref idref="s012" linear="yes" />
+    <itemref idref="s013" linear="yes" />
+    <itemref idref="s014" linear="yes" />
+    <itemref idref="s015" linear="yes" />
+    <itemref idref="s016" linear="yes" />
+    <itemref idref="s017" linear="yes" />
+    <itemref idref="s018" linear="yes" />
+    <itemref idref="s019" linear="yes" />
+    <itemref idref="s020" linear="yes" />
+    <itemref idref="s021" linear="yes" />
+    <itemref idref="s022" linear="yes" />
+    <itemref idref="s023" linear="yes" />
+    <itemref idref="s024" linear="yes" />
+    <itemref idref="s025" linear="yes" />
+    <itemref idref="s026" linear="yes" />
+    <itemref idref="s027" linear="yes" />
+    <itemref idref="s028" linear="yes" />
+    <itemref idref="s029" linear="yes" />
+    <itemref idref="s030" linear="yes" />
+    <itemref idref="s031" linear="yes" />
+    <itemref idref="s032" linear="yes" />
+    <itemref idref="s033" linear="yes" />
+    <itemref idref="s034" linear="yes" />
+    <itemref idref="s035" linear="yes" />
+    <itemref idref="s036" linear="yes" />
+    <itemref idref="s037" linear="yes" />
+    <itemref idref="s038" linear="yes" />
+    <itemref idref="s039" linear="yes" />
+    <itemref idref="s040" linear="yes" />
+    <itemref idref="s041" linear="yes" />
+    <itemref idref="s042" linear="yes" />
+    <itemref idref="s043" linear="yes" />
+    <itemref idref="s044" linear="yes" />
+    <itemref idref="s045" linear="yes" />
+    <itemref idref="s046" linear="yes" />
+    <itemref idref="s047" linear="yes" />
+    <itemref idref="s048" linear="yes" />
+    <itemref idref="s049" linear="yes" />
+    <itemref idref="s050" linear="yes" />
+    <itemref idref="s051" linear="yes" />
+    <itemref idref="s052" linear="yes" />
+    <itemref idref="s053" linear="yes" />
+    <itemref idref="s054" linear="yes" />
+    <itemref idref="s055" linear="yes" />
+    <itemref idref="s056" linear="yes" />
+    <itemref idref="s057" linear="yes" />
+    <itemref idref="s058" linear="yes" />
+    <itemref idref="s059" linear="yes" />
+    <itemref idref="s060" linear="yes" />
+    <itemref idref="s061" linear="yes" />
+    <itemref idref="s062" linear="yes" />
+    <itemref idref="s063" linear="yes" />
+    <itemref idref="s064" linear="yes" />
+    <itemref idref="s065" linear="yes" />
+    <itemref idref="s066" linear="yes" />
+    <itemref idref="s067" linear="yes" />
+    <itemref idref="s068" linear="yes" />
+    <itemref idref="s069" linear="yes" />
+    <itemref idref="s070" linear="yes" />
+    <itemref idref="s071" linear="yes" />
+    <itemref idref="s072" linear="yes" />
+    <itemref idref="s073" linear="yes" />
+    <itemref idref="s074" linear="yes" />
+    <itemref idref="s075" linear="yes" />
+    <itemref idref="s076" linear="yes" />
+    <itemref idref="s077" linear="yes" />
+    <itemref idref="s078" linear="yes" />
+    <itemref idref="s079" linear="yes" />
+    <itemref idref="s080" linear="yes" />
+    <itemref idref="s081" linear="yes" />
+    <itemref idref="s082" linear="yes" />
+    <itemref idref="s083" linear="yes" />
+    <itemref idref="s084" linear="yes" />
+    <itemref idref="s085" linear="yes" />
+    <itemref idref="s086" linear="yes" />
+    <itemref idref="s087" linear="yes" />
+    <itemref idref="s088" linear="yes" />
+    <itemref idref="s089" linear="yes" />
+    <itemref idref="s090" linear="yes" />
+    <itemref idref="s091" linear="yes" />
+    <itemref idref="s092" linear="yes" />
+    <itemref idref="s093" linear="yes" />
+    <itemref idref="s094" linear="yes" />
+    <itemref idref="s095" linear="yes" />
+    <itemref idref="s096" linear="yes" />
+    <itemref idref="s097" linear="yes" />
+    <itemref idref="s098" linear="yes" />
+    <itemref idref="s099" linear="yes" />
+    <itemref idref="s100" linear="yes" />
+    <itemref idref="s101" linear="yes" />
+    <itemref idref="s102" linear="yes" />
+    <itemref idref="s103" linear="yes" />
+    <itemref idref="s104" linear="yes" />
+    <itemref idref="s105" linear="yes" />
+    <itemref idref="s106" linear="yes" />
+    <itemref idref="s107" linear="yes" />
+    <itemref idref="s108" linear="yes" />
+    <itemref idref="s109" linear="yes" />
+    <itemref idref="s110" linear="yes" />
+    <itemref idref="s111" linear="yes" />
+    <itemref idref="s112" linear="yes" />
+    <itemref idref="s113" linear="yes" />
+    <itemref idref="s114" linear="yes" />
+    <itemref idref="s115" linear="yes" />
+    <itemref idref="s116" linear="yes" />
+    <itemref idref="s117" linear="yes" />
+    <itemref idref="s118" linear="yes" />
+    <itemref idref="s119" linear="yes" />
+    <itemref idref="s120" linear="yes" />
+    <itemref idref="s121" linear="yes" />
+    <itemref idref="s122" linear="yes" />
+    <itemref idref="s123" linear="yes" />
+    <itemref idref="s124" linear="yes" />
+    <itemref idref="s125" linear="yes" />
+    <itemref idref="s126" linear="yes" />
+    <itemref idref="s127" linear="yes" />
+    <itemref idref="s128" linear="yes" />
+    <itemref idref="s129" linear="yes" />
+    <itemref idref="s130" linear="yes" />
+    <itemref idref="s131" linear="yes" />
+    <itemref idref="s132" linear="yes" />
+    <itemref idref="s133" linear="yes" />
+    <itemref idref="s134" linear="yes" />
+</spine>
+</package>
