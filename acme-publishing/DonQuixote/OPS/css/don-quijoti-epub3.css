@@ -4,6 +4,47 @@
 /* Created By: Infogrid Pacific */
 /* Creation Date: 2013-08-25 */
 /* Modified By: Infogrid Pacific */
+div.galley-rw {
+width: 30em;
+background-color: white;
+padding: 2em;
+margin: 0 auto 0 auto;
+}
+
+div.controls {
+position: fixed;
+display: flex;
+height: 30px;
+top: 0;
+right: 0;
+left: 0;
+background-color: #ddd;
+}
+
+div.controls p {
+flex: 1;
+border: 2px solid #ddd;
+text-align: center;
+margin: 0;
+padding: 0;
+}
+
+iframe {
+position: fixed;
+			top: 30px; bottom: 0;
+			left: 0;
+			width: 10em;
+			overflow: none;
+			margin: 0;
+			padding: 0em;
+			padding-left: 42px;
+			padding-left: calc(1em + 26px);
+			background: inherit;
+			background-color: #F8F8F8;
+			z-index: 1;
+border: 0;
+height: 100vh;
+}
 .date-rw { font-family: Date, NamedPara, Galley; }
 .list-toc-rw { font-family: TableOfContents, NamedLists, Galley; }
 .frontmatter-rw .title-block-rw .title-num-rw { font-family: FrontmatterTitleNumber, FrontmatterTitleBlock, TitleBlock, Galley; }
