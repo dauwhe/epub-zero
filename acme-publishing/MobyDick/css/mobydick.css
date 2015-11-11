@@ -1,5 +1,6 @@
 
 
+/*
 div.galley-rw {
 width: 30em;
 background-color: white;
@@ -46,6 +47,7 @@ body {
 overflow: -o-paged-x;
 background-color: #F8F8F8;
 }
+*/
 
 @page {
 size: 100vh 100vh;
