@@ -102,7 +102,7 @@
             return cache.put('pub/' + stub + '/' + urlPath, new Response(zip.files[path].asArrayBuffer(), {
               headers: {
                 "Content-Type": types[path],
-                "Content-Security-Policy": "script-src 'none'"
+                "Content-Security-Policy": "script-src 'self'"
               }
             }));
           })

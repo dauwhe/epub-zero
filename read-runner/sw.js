@@ -6,7 +6,8 @@ self.addEventListener('install', event => {
     caches.open('reader-static-v1').then(c => c.addAll([
       'sw-index.html',
       'page.js',
-      'jszip.js'
+      'jszip.js',
+      'acme.js'
     ]))
   );
 });
