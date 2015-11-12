@@ -1,3 +1,5 @@
+// use arrow keys to navigate from chapter to chapter
+
    document.onkeyup = function(e) { // key pressed
     if(document.activeElement.nodeName === "INPUT"
     || document.activeElement.nodeName === "TEXTAREA") {
@@ -24,7 +26,7 @@
 };
 
 
-
+// create control block for book pages
 
 var controlBlock = document.createElement("div");
 controlBlock.className="controls";
@@ -35,65 +37,65 @@ controlBlock.style.right = 0;
 controlBlock.style.left = 0;
 controlBlock.style.backgroundColor = "#ddd";
 controlBlock.style.height = "30px";
-var prevwrapper = document.createElement("p");
+var prevWrapper = document.createElement("p");
 var prevlink = document.createElement("a");
 
-var nextwrapper = document.createElement("p");
+var nextWrapper = document.createElement("p");
 var nextlink = document.createElement("a");
 
-var tocwrapper = document.createElement("p");
+var tocWrapper = document.createElement("p");
 var toclink = document.createElement("a");
 
-var librarywrapper = document.createElement("p");
+var libraryWrapper = document.createElement("p");
 var librarylink = document.createElement("a");
 
-prevwrapper.appendChild(prevlink);
-nextwrapper.appendChild(nextlink);
-tocwrapper.appendChild(toclink);
-librarywrapper.appendChild(librarylink);
+prevWrapper.appendChild(prevlink);
+nextWrapper.appendChild(nextlink);
+tocWrapper.appendChild(toclink);
+libraryWrapper.appendChild(librarylink);
 
 // style p inside div.controls using flexbox
 
-prevwrapper.style.flex = 1;
-prevwrapper.style.textAlign = "center";
-prevwrapper.style.margin = 0;
-prevwrapper.style.padding = 0;
-prevwrapper.style.border = "2px solid #ddd";
-nextwrapper.style.flex = 1;
-nextwrapper.style.textAlign = "center";
-nextwrapper.style.margin = 0;
-nextwrapper.style.padding = 0;
-nextwrapper.style.border = "2px solid #ddd";
+prevWrapper.style.flex = 1;
+prevWrapper.style.textAlign = "center";
+prevWrapper.style.margin = 0;
+prevWrapper.style.padding = 0;
+prevWrapper.style.border = "2px solid #ddd";
+nextWrapper.style.flex = 1;
+nextWrapper.style.textAlign = "center";
+nextWrapper.style.margin = 0;
+nextWrapper.style.padding = 0;
+nextWrapper.style.border = "2px solid #ddd";
 
 
-tocwrapper.style.flex = 1;
-tocwrapper.style.textAlign = "center";
-tocwrapper.style.margin = 0;
-tocwrapper.style.padding = 0;
-tocwrapper.style.border = "2px solid #ddd";
+tocWrapper.style.flex = 1;
+tocWrapper.style.textAlign = "center";
+tocWrapper.style.margin = 0;
+tocWrapper.style.padding = 0;
+tocWrapper.style.border = "2px solid #ddd";
 
-librarywrapper.style.flex = 1;
-librarywrapper.style.textAlign = "center";
-librarywrapper.style.margin = 0;
-librarywrapper.style.padding = 0;
-librarywrapper.style.border = "2px solid #ddd";
+libraryWrapper.style.flex = 1;
+libraryWrapper.style.textAlign = "center";
+libraryWrapper.style.margin = 0;
+libraryWrapper.style.padding = 0;
+libraryWrapper.style.border = "2px solid #ddd";
 
 
 librarylink.textContent = "Library";
 librarylink.href = "../../index.html";
-controlBlock.appendChild(librarywrapper);
+controlBlock.appendChild(libraryWrapper);
 
 prevlink.textContent = "Prev";
 prevlink.href = document.querySelector('link[rel="prev"]').href
-controlBlock.appendChild(prevwrapper);
+controlBlock.appendChild(prevWrapper);
 
 nextlink.textContent = "Next";
 nextlink.href = document.querySelector('link[rel="next"]').href
-controlBlock.appendChild(nextwrapper);
+controlBlock.appendChild(nextWrapper);
 
 toclink.textContent = "Contents";
 toclink.href = "../index.html";
-controlBlock.appendChild(tocwrapper);
+controlBlock.appendChild(tocWrapper);
 
 
 
