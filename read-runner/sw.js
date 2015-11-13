@@ -7,7 +7,7 @@ self.addEventListener('install', event => {
       'sw-index.html',
       'page.js',
       'jszip.js',
-      'acme.js'
+      '/pub/acme.js'
     ]))
   );
 });
