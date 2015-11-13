@@ -110,3 +110,6 @@ document.getElementsByClassName("galley-rw")[0].style.backgroundColor = "white";
 document.getElementsByClassName("galley-rw")[0].style.width = "30em";
 document.getElementsByClassName("galley-rw")[0].style.margin = "0 auto 0 auto";
 document.getElementsByClassName("galley-rw")[0].style.padding = "30px 2em 2em 2em";
+
+
+document.getElementsByClassName("page-controls")[0].style.padding = "30px 0 0 0";
