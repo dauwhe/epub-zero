@@ -30,8 +30,12 @@ Introduction
 </h2>
 
 
+EPUB Zero is web content, progressively enhanced to support long-form reading and portable web publications.
+
+
+
 Note: This specification is only a thought experiment, 
-inspired by the <a href="http://w3c.github.io/epubweb/">EPUB+WEB White Paper</a> 
+inspired by the <a href="http://w3c.github.io/pwp/">Portable Web Publications White Paper</a> 
 (by the <a href="https://www.w3.org/dpub/IG/wiki/">W3C Digital Publishing Interest Group</a> 
 and the <a href="idpf.org">IDPF</a>) and by concerns about the complexity of EPUB3. 
 Please join the Digital Publishing Interest Group and IDPF to help bring about a better future for ebooks. 
@@ -58,13 +62,17 @@ Design goals and rationale
 
 EPUB Zero satisfies the following design goals:
 
-1. Simplicity
-2. “Webbiness”
-3. Built from HTML and CSS as much as possible
-4. Uses existing, forward-looking standards whenever possible
-5. Don't repeat yourself
-6. Built for the convenience of the author and reader rather than the implementor
-7. Aims to use the browser as reading system
+1. Close to the web
+2. Basically functional using browser as reading system
+3. Simpler than EPUB 3.X
+4. All publication content accessible via URI
+5. There should be an object model/API
+
+And these principles:
+
+1. Convention over configuration
+2. Don't repeat yourself
+3. "In case of conflict, consider users over authors over implementors over specifiers over theoretical purity."
 
 Note: The ultimate test of this specification is whether we can build a reading system 
 on top of an ordinary browser with little or no Javascript. 
@@ -73,194 +81,28 @@ on top of an ordinary browser with little or no Javascript.
 
 EPUB Zero is yet another ebook format, which isn't just “based on” HTML like EPUB, 
 but <em>is</em> HTML. Where possible, we use HTML solutions to achieve book-like functionality. 
-It appears to be possible to do this using mostly-existing web technology:
+It appears to be possible to do this using mostly-existing web technology.
 
-1. Online/offline reading via Service Workers
-2. Pagination via prollyfills
-3. Installable via application manifest
-4. Access to navigation document via sidebar link relation
-
-But each of these features are problematic. 
-As this document evolves, we hope to propose alternatives. 
 
 <figure>
 <img src="images/reading-e0-opera.png" alt="screenshot of an epub zero in the Opera browser" width="640"/>
 <figcaption>Using Opera 12.16 as an EPUB Zero Reading system. </figcaption>
 </figure>
 
-<figure>
-<img src="images/e0-folder.png" alt="folder structure of an EPUB Zero publication" width="640"/>
-<figcaption>Folder structure of an EPUB Zero publication</figcaption>
-</figure>
 
-<h3 id="compare">Comparison of EPUB 3 and EPUB Zero</h3>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>EPUB 3</th>
-<th>EPUB+WEB</th>
-<th>EPUB Zero</th>
-</tr>
-</thead>
+<h2 id="content">
+Content
+</h2>
 
-<tbody>
+EPUB Zero is a collection of web content. 
 
-<tr>
-<td>Package Document</td>
-<td>manifest, reading order, metadata in XML vocabulary</td>
-<td>simplified JSON package file</td>
-<td>unnecessary?</td>
-</tr>
+<h2 id="nav">
+Navigation
+</h2>
 
-<tr>
-<td>Reading Order</td>
-<td>spine element in package file</td>
-<td>JSON spine</td>
-<td>link rel=next in HTML</td>
-</tr>
-
-<tr>
-<td>Navigation Document</td>
-<td>required nav, optional ncx</td>
-<td>required nav</td>
-<td>required nav</td>
-</tr>
-
-<tr>
-<td>Linking</td>
-<td>EPUB CFI</td>
-<td>EPUB CFI?</td>
-<td>TK</td>
-</tr>
-
-
-<tr>
-<td>Publication Metadata</td>
-<td>custom XML format inside package file</td>
-<td>JSON package + external file in any vocabulary</td>
-<td>external file in any vocabulary</td>
-</tr>
-
-
-
-<tr>
-<td>Content Documents</td>
-<td>XHTML5, SVG</td>
-<td>HTML5, SVG</td>
-<td>HTML5, SVG</td>
-</tr>
-
-<tr>
-<td>Fixed Layout</td>
-<td>viewport in HTML + configuration in package</td>
-<td>?</td>
-<td>just don't even</td>
-</tr>
-
-
-
-<tr>
-<td>Style</td>
-<td>subset of CSS</td>
-<td>any CSS</td>
-<td>any CSS</td>
-</tr>
-
-<tr>
-<td>Multimedia</td>
-<td>html audio and video, mp3 and mp4 are core media types</td>
-<td>?</td>
-<td>Anything supported by the browser</td>
-</tr>
-
-
-<tr>
-<td>Fonts</td>
-<td>OTF and WOFF</td>
-<td>?</td>
-<td>Anything supported by the browser</td>
-</tr>
-
-<tr>
-<td>Scripting</td>
-<td>optional, recommend container constrained</td>
-<td>?</td>
-<td>required for offline reading</td>
-</tr>
-
-<tr>
-<td>Text-to-speech</td>
-<td>Media overlays/SMIL</td>
-<td>TK</td>
-<td>TK</td>
-</tr>
-
-<tr>
-<td>Container</td>
-<td>OCF</td>
-<td>?</td>
-<td>?</td>
-</tr>
-
-<tr>
-<td>Manifest</td>
-<td>OCF manifest</td>
-<td>JSON manifest</td>
-<td>nav + web app manifest?</td>
-</tr>
-
-<tr>
-<td>Offline reading</td>
-<td>dependent on reading system</td>
-<td>dependent on reading system</td>
-<td>Service Workers</td>
-</tr>
-
-</tbody>
-
-
-</table>
-
-<h2 id="e0-documents">EPUB Zero documents</h2>
-
-
-<h3 id="content-docs">
-Content documents
-</h3>
-
-An EPUB Zero content document is an HTML5 document.
-
-Issue: Can SVG or raster images be a content document? Does [[HTML5]] define required media types? 
-Issue: Is question whether SVG can be embedded inline in HTML (yes, http://www.w3.org/html/wg/drafts/html/master/semantics.html#svg-0) 
-or whether SVG can be first class citizen? 
-
-<h3 id="style">Style</h3>
-
-There are no restrictions on the use of CSS. 
-
-
-<h4 id="pagination">
-Pagination
-</h4>
-
-Pagination is essential for an optimum long-form reading experience. 
-Several approaches to pagination may be possible:
-
-1. Native support exists in Opera 12.16, via <code>overflow: paged</code>. 
-
-2. Polyfills exist, based on either multicol or regions. 
-
-3. Project Houdini may expose primitives making prollyfills easier.
-
-
-Note: Reading long-form content in paginated form often offers a better experience for readers. 
-We encourage document authors to support pagination via CSS, polyfills, 
-prollyfills, reading systems, and/or political action. 
-
-<h4 id="page-transitions">
-Page Transitions
-</h4>
+<h2 id="nav">
+Sequence
+</h2>
 
 A book may consist of several HTML files. A user must be able to move 
 from ch1.html to ch2.html as easily as moving from page 1 to page 2, and with the same action. 
@@ -277,9 +119,7 @@ Issue: Using link relations introduces a burden on authoring that does not curre
 
 Issue: Security for downloaded publications. How is this handled with service workers?
 
-<!--<h3 id="fonts">Fonts</h3>
 
-<h3 id="flow">Document Flow</h3>-->
 
 <h3 id="media-overlays">Media Overlays</h3>
 
@@ -287,7 +127,7 @@ Issue: Browsers (as far as we know) do not support SMIL.
 
 Note: See https://github.com/timesheets/timesheets.js for a JS implementation of SMIL
 
-Are there polyfills that are “good enough?” Is there a better approach for synchronizing [[HTML5]] with multimedia?
+Issue: Are there polyfills that are “good enough?” Is there a better approach for synchronizing [[HTML5]] with multimedia?
 
 <h3 id="global">Global Language Support</h3>
 
@@ -352,37 +192,9 @@ Books must be readable offline and online.
 
 Issue: Is offline reading really the same question as packaging/archiving? 
 
-Browsers currently offer ways of accessing web content while offline:
 
 
-<h3 id="appcache">
-AppCache
-</h3>
 
-Cache manifests allow offline access to web content: https://html.spec.whatwg.org/multipage/browsers.html#offline
-
-
-<!-- 
-<div class="example">
-<pre>
-CACHE MANIFEST
-#v3 2015-06-05
-css/mobydick.css
-metadata.json
-manifest.json
-title-page.html
-copyright.html
-introduction.html
-epigraph.html
-c001.html
-c002.html
-...
-</pre>
-</div>
- -->
-
-
-Issue: AppCache will likely be removed from browsers in favor of Service Workers.
 
 <h3 id="service-workers">
 Service Workers
@@ -398,8 +210,6 @@ Note: A service worker should be declared in <code>start_url</code>.
 Publication structure and packaging
 </h2>
 
-Issue: the EPUB+WEB White Paper discusses offline access together with packaging. 
-Are these in fact the same issue? 
 
 An EPUB Zero publication is a collection of files, which should be collected inside a folder or directory. 
 The top level of the directory should contain the package file. 
@@ -418,6 +228,10 @@ may prove useful as well http://w3ctag.github.io/packaging-on-the-web/
 
 Issue: how about using presence of package.json as trigger, as what defines a publication 
 as something different than an ordinary bundle of web content? 
+
+Issue: does the above issue make sense in the context of EPUB Zero?
+
+
 Properties in manifest.json can act as hints to UA/Browsing Context that the thing is “bookish”
 
 
@@ -481,11 +295,12 @@ other formats such as RDF, Turtle, or ONIX.
   }
 }
 
+Issue: External metadata must be linked to. How?
+
 
 </pre>
 </div>
 
-Issue: 
 
 
 <h2 class="no-num" id="acknowledgments">
@@ -494,7 +309,7 @@ Acknowledgments
 
 EPUB Zero was originally inspired by a series of posts on EPUB3 by Daniel Glazman.
 
-Many thanks to Hadrien Gardeur for the structure of the JSON Package file.
+Many thanks to Hadrien Gardeur, Bill McCoy, Markus Gylling, 
 
 
 
@@ -502,6 +317,8 @@ Many thanks to Hadrien Gardeur for the structure of the JSON Package file.
 <h2 class="no-num appendix" id="appendix-1">
 Reading system behaviour
 </h2>
+
+Issue: this doesn't make much sense, yet.
 
 1. a user agent receives an http request 
 
@@ -513,7 +330,7 @@ Accept: ????
 
 Issue: what if there's a zip (or any compressed file) or .e0 there?
 
-2. If manifest.json exists, read manifest.json; open start_url
+2. If manifest.json exists, consume manifest.json; open start_url
 
 3. If manifest.json does not exist
     a. if index.html exists open that
