@@ -72,4 +72,13 @@ Drop this in a web server, and anyone who has the URI of the folder can read eve
 
 * ZIP or otherwise package the EPUB Zero to facilitate portability.
 
+##Examples
+
+See https://dauwhe.github.io/epub-zero/acme-publishing for a small website for viewing books in browsers. 
+
+##Further Reading
+
+* http://vernacular.io
+https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/
+
  
