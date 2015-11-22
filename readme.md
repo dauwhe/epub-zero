@@ -57,14 +57,8 @@ Drop this in a web server, and anyone who has the URI of the folder can read eve
   "assets": [
     "",
     "index.html",
-    "html/cover.html",
-    "html/title-page.html",
     "css/mobydick.css",
-    "html/mobydick.css",
     "images/moby-dick-book-cover.jpg",
-    "html/copyright.html",
-    "html/introduction.html",
-    "html/epigraph.html",
     "html/c001.html",
     "html/c002.html",
     "html/c003.html"
