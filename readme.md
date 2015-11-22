@@ -50,6 +50,28 @@ Drop this in a web server, and anyone who has the URI of the folder can read eve
 
 * include a manifest to facilitate offline reading, caching, or other useful behaviors. In the future we hope to align with the web application manifest spec.
 
+```json
+{
+  "title": "Moby-Dick",
+  "edition": 1,
+  "assets": [
+    "",
+    "index.html",
+    "html/cover.html",
+    "html/title-page.html",
+    "css/mobydick.css",
+    "html/mobydick.css",
+    "images/moby-dick-book-cover.jpg",
+    "html/copyright.html",
+    "html/introduction.html",
+    "html/epigraph.html",
+    "html/c001.html",
+    "html/c002.html",
+    "html/c003.html"
+  ]
+}
+```
+
 * include metadata inside or outside content files. By convention, metadata expressed in `index.html` is assumed to apply to the entire publication. Metadata expressed in other content files applies only to those files.
 
 * include EPUB 3.X components like package and container files, so an EPUB Zero can also function as an EPUB 3.X document. This may require some compromises, like using the XML serialization of HTML5 and having to ZIP in strange ways.
