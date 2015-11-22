@@ -7,6 +7,20 @@ In a nutshell, EPUB Zero is:
 * a folder
 * of well structured, semantic, accessible OWP content (HTML5, CSS, SVG, MathML, images, audio, video)
 * with a navigation file called `index.html` in the top level of the folder
+
+```
+MobyDick/
+  index.html
+  html/
+    c001.html
+    c002.html
+    c003.html
+  css/
+    mobydick.css
+  images/
+    moby-dick-book-cover.jpg
+```
+
 * which includes a `nav` element listing all the content documents in a default sequence, with links and link text.
 
 ```html
