@@ -78,6 +78,8 @@ See https://dauwhe.github.io/epub-zero/acme-publishing for a small website for v
 
 ##Further Reading
 
+* https://github.com/jakearchibald/ebook-demo
+
 * http://vernacular.io
 
 * https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/
