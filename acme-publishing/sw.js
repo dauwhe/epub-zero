@@ -41,12 +41,12 @@ function packagePublication(request) {
   return caches.has(publicationName).then(isCached => {
     return isCached ? caches.open(publicationName).then(c => c.match.bind(c)) : fetch;
   }).then(fetchingMethod => {
-    return fetchingMethod(publicationBaseURL + 'pub-manifest.json').then(r => r.json()).then(data => {
+    return fetchingMethod(publicationBaseURL + 'manifest.webmanifest').then(r => r.json()).then(data => {
       const zip = new JSZip();
       const types = {};
 
       // I should reuse the asset I just downloaded but I'm lazy
-      data.assets.push('pub-manifest.json');
+      data.assets.push('manifest.webmanifest');
 
       return Promise.all(
         data.assets.map(path => {
