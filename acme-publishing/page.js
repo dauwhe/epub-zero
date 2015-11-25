@@ -44,10 +44,10 @@
         else {
           status.textContent = "Offlinifying…";
 
-          fetch(publicationBaseURL + 'manifest.webmanifest').then(function(response) {
+          fetch(publicationBaseURL + 'manifest.json').then(function(response) {
             return response.json();
           }).then(function(data) {
-            data.assets.push('manifest.webmanifest');
+            data.assets.push('manifest.json');
             
             return caches.open(publicationName).then(function(cache) {
               return cache.addAll(data.assets.map(function(url) {
