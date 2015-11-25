@@ -1,6 +1,8 @@
 #EPUB Zero
 
-EPUB Zero is a portable web publication format created from existing Web specifications. Think of it as a vernacular. Think of it as progressive enhancement for books. Think of it as books in browsers.
+EPUB Zero is a portable web publication format created from existing Web specifications. Think of it as a [vernacular](http://vernacular.io). Think of it as progressive enhancement for books. Think of it as [books in browsers](http://booksinbrowsers.org).
+
+EPUB Zero attempts to fulfill the vision of "Portable Web Publications" as defined in the Digital Publishing Interest Group's [white paper](http://w3c.github.io/dpub-pwp/).
 
 In a nutshell, EPUB Zero is:
 
@@ -74,7 +76,11 @@ Drop this in a web server, and anyone who has the URI of the folder can read eve
 
 ##Examples
 
-See https://dauwhe.github.io/epub-zero/acme-publishing for a small website for viewing books in browsers. 
+[Acme Publishing](https://dauwhe.github.io/epub-zero/acme-publishing) is an attempt to prototype some of these ideas, allowing for online and offline reading of book content in web browsers. The offline functionality of this site depends on Service Workers, and so works best in recent versions of Chrome.
+
+
+
+
 
 ##Further Reading
 
