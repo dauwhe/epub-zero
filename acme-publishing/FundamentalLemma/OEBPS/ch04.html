@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>4. Cartan subgroups</title>
+</head>
+
+<body data-type="book">
+  <link rel="prev" href="ch03.html" />
+  <link rel="next" href="ch05.html" />
+  <div class="galley-rw">
+    <div class="body-rw Chapter-rw">
+      <div class="title-block-rw">
+        <script src="../../acme.js"></script>
+        <section data-type="chapter" epub:type="chapter" data-pdf-bookmark=" 4. Cartan subgroups">
+          <div class="chapter" id="ltxid39">
+
+            <h1>
+              <span class="label"> </span>4. Cartan subgroups</h1>
+            <p>All unramified reductive groups are classified by their root data. This includes the classification of unramified tori
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>T</mi>
+                  <annotation encoding="application/x-tex">T</annotation>
+                </semantics>
+              </math> as a special case (in this case, the set of roots and the set of coroots are empty):</p>
+
+
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <semantics>
+                <mrow>
+                  <mo stretchy="false">(</mo>
+                  <msup>
+                    <mi>X</mi>
+                    <mo>∗
+                      <!-- ∗ -->
+                    </mo>
+                  </msup>
+                  <mo stretchy="false">(</mo>
+                  <mi>T</mi>
+                  <mo stretchy="false">)</mo>
+                  <mo>,</mo>
+                  <msub>
+                    <mi>X</mi>
+                    <mo>∗
+                      <!-- ∗ -->
+                    </mo>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>T</mi>
+                  <mo stretchy="false">)</mo>
+                  <mo>,</mo>
+                  <mi mathvariant="normal">∅
+                    <!-- ∅ -->
+                  </mi>
+                  <mo>,</mo>
+                  <mi mathvariant="normal">∅
+                    <!-- ∅ -->
+                  </mi>
+                  <mo>,</mo>
+                  <mi>σ
+                    <!-- σ -->
+                  </mi>
+                  <mo stretchy="false">)</mo>
+                  <mo>.</mo>
+                </mrow>
+                <annotation encoding="application/x-tex"> (X^*(T),X_*(T),\emptyset ,\emptyset ,\sigma ). </annotation>
+              </semantics>
+            </math>
+            <p>We can extend this classification to ramified tori. If
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>T</mi>
+                  <annotation encoding="application/x-tex">T</annotation>
+                </semantics>
+              </math> is any torus over
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>F</mi>
+                  <annotation encoding="application/x-tex">F</annotation>
+                </semantics>
+              </math>, it is classified by</p>
+
+
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <semantics>
+                <mrow>
+                  <mo stretchy="false">(</mo>
+                  <msup>
+                    <mi>X</mi>
+                    <mo>∗
+                      <!-- ∗ -->
+                    </mo>
+                  </msup>
+                  <mo stretchy="false">(</mo>
+                  <mi>T</mi>
+                  <mo stretchy="false">)</mo>
+                  <mo>,</mo>
+                  <msub>
+                    <mi>X</mi>
+                    <mo>∗
+                      <!-- ∗ -->
+                    </mo>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>T</mi>
+                  <mo stretchy="false">)</mo>
+                  <mo>,</mo>
+                  <mi>ρ
+                    <!-- ρ -->
+                  </mi>
+                  <mo stretchy="false">)</mo>
+                  <mo>,</mo>
+                </mrow>
+                <annotation encoding="application/x-tex"> (X^*(T),X_*(T),\rho ), </annotation>
+              </semantics>
+            </math>
+            <p>where
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>ρ
+                    <!-- ρ -->
+                  </mi>
+                  <annotation encoding="application/x-tex">\rho </annotation>
+                </semantics>
+              </math> is now allowed to be any homomorphism</p>
+
+
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <semantics>
+                <mrow>
+                  <mi>ρ
+                    <!-- ρ -->
+                  </mi>
+                  <mo>:</mo>
+                  <mi>Gal</mi>
+                  <mo>⁡
+                    <!-- ⁡ -->
+                  </mo>
+                  <mo stretchy="false">(</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mover>
+                      <mi>F</mi>
+                      <mo stretchy="false">¯
+                        <!-- ¯ -->
+                      </mo>
+                    </mover>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>/</mo>
+                  </mrow>
+                  <mi>F</mi>
+                  <mo stretchy="false">)</mo>
+                  <mo stretchy="false">→
+                    <!-- → -->
+                  </mo>
+                  <mi>Aut</mi>
+                  <mo>⁡
+                    <!-- ⁡ -->
+                  </mo>
+                  <mo stretchy="false">(</mo>
+                  <msup>
+                    <mi>X</mi>
+                    <mo>∗
+                      <!-- ∗ -->
+                    </mo>
+                  </msup>
+                  <mo stretchy="false">(</mo>
+                  <mi>T</mi>
+                  <mo stretchy="false">)</mo>
+                  <mo stretchy="false">)</mo>
+                </mrow>
+                <annotation encoding="application/x-tex">\rho :\operatorname {Gal}(\bar F/F)\to \operatorname {Aut}(X^*(T))</annotation>
+              </semantics>
+            </math>
+            <p>with finite image.</p>
+            <p>A basic fact is that
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>T</mi>
+                  <annotation encoding="application/x-tex">T</annotation>
+                </semantics>
+              </math> embeds over
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>F</mi>
+                  <annotation encoding="application/x-tex">F</annotation>
+                </semantics>
+              </math> as a Cartan subgroup in a given unramified reductive group
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>G</mi>
+                  <annotation encoding="application/x-tex">G</annotation>
+                </semantics>
+              </math> if and only if the following two conditions hold.</p>
+            <dl>
+              <dt id="ltxid40">
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mo>∙
+                      <!-- ∙ -->
+                    </mo>
+                    <annotation encoding="application/x-tex">\bullet </annotation>
+                  </semantics>
+                </math>
+              </dt>
+              <dd>
+                <p>The image of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>ρ
+                        <!-- ρ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\rho </annotation>
+                    </semantics>
+                  </math> in
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>Aut</mi>
+                        <mo>⁡
+                          <!-- ⁡ -->
+                        </mo>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                          <mi>X</mi>
+                          <mo>∗
+                            <!-- ∗ -->
+                          </mo>
+                        </msup>
+                        <mo stretchy="false">(</mo>
+                        <mi>T</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\operatorname {Aut}(X^*(T))</annotation>
+                    </semantics>
+                  </math> is contained in
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>W</mi>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi mathvariant="normal">Φ
+                            <!-- Φ -->
+                          </mi>
+                          <mi>G</mi>
+                        </msub>
+                        <mo stretchy="false">)</mo>
+                        <mo>⋊
+                          <!-- ⋊ -->
+                        </mo>
+                        <mo fence="false" stretchy="false">⟨
+                          <!-- ⟨ -->
+                        </mo>
+                        <msub>
+                          <mi>σ
+                            <!-- σ -->
+                          </mi>
+                          <mi>G</mi>
+                        </msub>
+                        <mo fence="false" stretchy="false">⟩
+                          <!-- ⟩ -->
+                        </mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">W(\Phi _G)\rtimes \langle \sigma _G\rangle </annotation>
+                    </semantics>
+                  </math>.</p>
+              </dd>
+              <dt id="ltxid41">
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mo>∙
+                      <!-- ∙ -->
+                    </mo>
+                    <annotation encoding="application/x-tex">\bullet </annotation>
+                  </semantics>
+                </math>
+              </dt>
+              <dd>
+                <p>There is a commutative diagram:</p>
+              </dd>
+            </dl>
+            <p>
+
+
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <semantics>
+                  <mtable rowspacing="5pt" columnspacing="5pt" displaystyle="true">
+                    <mtr>
+                      <mtd>
+                        <mi>Gal</mi>
+                        <mo>⁡
+                          <!-- ⁡ -->
+                        </mo>
+                        <mo stretchy="false">(</mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mover>
+                            <mi>F</mi>
+                            <mo stretchy="false">¯
+                              <!-- ¯ -->
+                            </mo>
+                          </mover>
+                        </mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo>/</mo>
+                        </mrow>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                        <mpadded height="8.5pt" depth="2pt" />
+                      </mtd>
+                      <mtd>
+                        <mover>
+                          <mo minsize="2.75em">→</mo>
+                          <mpadded width="+0.611em" lspace="0.333em" voffset=".1em">
+                            <mspace width="2.75em" />
+                          </mpadded>
+                        </mover>
+                      </mtd>
+                      <mtd>
+                        <mi>Gal</mi>
+                        <mo>⁡
+                          <!-- ⁡ -->
+                        </mo>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                          <mi>F</mi>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi>u</mi>
+                            <mi>n</mi>
+                          </mrow>
+                        </msup>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo>/</mo>
+                        </mrow>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mtd>
+                    </mtr>
+                    <mtr>
+                      <mtd>
+                        <mrow>
+                          <mstyle displaystyle="false" scriptlevel="1">
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mpadded width="0" lspace="-1width">
+                                <mi>ρ
+                                  <!-- ρ -->
+                                </mi>
+                              </mpadded>
+                            </mrow>
+                          </mstyle>
+                          <mo lspace="0" rspace="0" symmetric="true" minsize="1.75em">↓</mo>
+                        </mrow>
+                      </mtd>
+                      <mtd/>
+                      <mtd>
+                        <mrow>
+                          <mo lspace="0" rspace="0" symmetric="true" minsize="1.75em">↓</mo>
+                          <mstyle displaystyle="false" scriptlevel="1">
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mpadded width="0">
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mi>Frob</mi>
+                                  <mo stretchy="false">↦
+                                    <!-- ↦ -->
+                                  </mo>
+                                  <msub>
+                                    <mi>σ
+                                      <!-- σ -->
+                                    </mi>
+                                    <mi>G</mi>
+                                  </msub>
+                                </mrow>
+                              </mpadded>
+                            </mrow>
+                          </mstyle>
+                        </mrow>
+                      </mtd>
+                      <mtd/>
+                    </mtr>
+                    <mtr>
+                      <mtd>
+                        <mi>W</mi>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi mathvariant="normal">Φ
+                            <!-- Φ -->
+                          </mi>
+                          <mi>G</mi>
+                        </msub>
+                        <mo stretchy="false">)</mo>
+                        <mo>⋊
+                          <!-- ⋊ -->
+                        </mo>
+                        <mo fence="false" stretchy="false">⟨
+                          <!-- ⟨ -->
+                        </mo>
+                        <msub>
+                          <mi>σ
+                            <!-- σ -->
+                          </mi>
+                          <mi>G</mi>
+                        </msub>
+                        <mo fence="false" stretchy="false">⟩
+                          <!-- ⟩ -->
+                        </mo>
+                        <mpadded height="8.5pt" depth="2pt" />
+                      </mtd>
+                      <mtd>
+                        <munderover>
+                          <mo minsize="2.75em">→</mo>
+                          <mpadded width="+0.611em" lspace="0.333em">
+                            <mi>w</mi>
+                            <mo>⋊
+                              <!-- ⋊ -->
+                            </mo>
+                            <mi>τ
+                              <!-- τ -->
+                            </mi>
+                            <mo stretchy="false">↦
+                              <!-- ↦ -->
+                            </mo>
+                            <mi>τ
+                              <!-- τ -->
+                            </mi>
+                          </mpadded>
+                          <mpadded width="+0.611em" lspace="0.333em" voffset=".1em">
+                            <mspace width="2.75em" />
+                          </mpadded>
+                        </munderover>
+                      </mtd>
+                      <mtd>
+                        <mo fence="false" stretchy="false">⟨
+                          <!-- ⟨ -->
+                        </mo>
+                        <msub>
+                          <mi>σ
+                            <!-- σ -->
+                          </mi>
+                          <mi>G</mi>
+                        </msub>
+                        <mo fence="false" stretchy="false">⟩
+                          <!-- ⟩ -->
+                        </mo>
+                        <mo>.</mo>
+                      </mtd>
+                    </mtr>
+                  </mtable>
+                  <annotation encoding="application/x-tex">\begin{equation*} \begin{CD} \operatorname {Gal}(\bar F/F)@&gt;&gt;&gt;\operatorname {Gal}(F^{un}/F)\\@V\rho VV @VV{\operatorname {Frob}\mapsto \sigma _G}V\\W(\Phi _G)\rtimes \langle \sigma _G\rangle @&gt;&gt;w\rtimes \tau \mapsto \tau
+                    &gt; \langle \sigma _G\rangle . \end{CD} \end{equation*}
+                  </annotation>
+                </semantics>
+              </math>
+            </p>
+            <p>It follows that every Cartan subgroup
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <msub>
+                    <mi>T</mi>
+                    <mi>H</mi>
+                  </msub>
+                  <annotation encoding="application/x-tex">T_H</annotation>
+                </semantics>
+              </math> of
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>H</mi>
+                  <annotation encoding="application/x-tex">H</annotation>
+                </semantics>
+              </math> is isomorphic over
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>F</mi>
+                  <annotation encoding="application/x-tex">F</annotation>
+                </semantics>
+              </math> with a Cartan subgroup
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <msub>
+                    <mi>T</mi>
+                    <mi>G</mi>
+                  </msub>
+                  <annotation encoding="application/x-tex">T_G</annotation>
+                </semantics>
+              </math> of
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>G</mi>
+                  <annotation encoding="application/x-tex">G</annotation>
+                </semantics>
+              </math>. (To check this, simply observe that these two conditions are more restrictive for
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>H</mi>
+                  <annotation encoding="application/x-tex">H</annotation>
+                </semantics>
+              </math> than the corresponding conditions for
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>G</mi>
+                  <annotation encoding="application/x-tex">G</annotation>
+                </semantics>
+              </math>.) The isomorphism can be chosen to induce an isomorphism of Galois modules between the character group (and cocharacter group) of
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <msub>
+                    <mi>T</mi>
+                    <mi>H</mi>
+                  </msub>
+                  <annotation encoding="application/x-tex">T_H</annotation>
+                </semantics>
+              </math> and that of
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <msub>
+                    <mi>T</mi>
+                    <mi>G</mi>
+                  </msub>
+                  <annotation encoding="application/x-tex">T_G</annotation>
+                </semantics>
+              </math>.</p>
+            <p>We say that a semisimple element in a reductive group is
+              <em>strongly regular</em>, if its centralizer is a Cartan subgroup. If
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>γ
+                      <!-- γ -->
+                    </mi>
+                    <mo>∈
+                      <!-- ∈ -->
+                    </mo>
+                    <mi>H</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>F</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\gamma \in H(F)</annotation>
+                </semantics>
+              </math> is strongly regular semisimple, then its centralizer
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <msub>
+                    <mi>T</mi>
+                    <mi>H</mi>
+                  </msub>
+                  <annotation encoding="application/x-tex">T_H</annotation>
+                </semantics>
+              </math> is isomorphic to some
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <msub>
+                      <mi>T</mi>
+                      <mi>G</mi>
+                    </msub>
+                    <mo>⊂
+                      <!-- ⊂ -->
+                    </mo>
+                    <mi>G</mi>
+                  </mrow>
+                  <annotation encoding="application/x-tex">T_G\subset G</annotation>
+                </semantics>
+              </math>. Let
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <msub>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <mn>0</mn>
+                    </msub>
+                    <mo>∈
+                      <!-- ∈ -->
+                    </mo>
+                    <msub>
+                      <mi>T</mi>
+                      <mi>G</mi>
+                    </msub>
+                    <mo stretchy="false">(</mo>
+                    <mi>F</mi>
+                    <mo stretchy="false">)</mo>
+                    <mo>⊂
+                      <!-- ⊂ -->
+                    </mo>
+                    <mi>G</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>F</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\gamma _0\in T_G(F)\subset G(F)</annotation>
+                </semantics>
+              </math> be the element in
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>G</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>F</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">G(F)</annotation>
+                </semantics>
+              </math> corresponding to
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>γ
+                      <!-- γ -->
+                    </mi>
+                    <mo>∈
+                      <!-- ∈ -->
+                    </mo>
+                    <msub>
+                      <mi>T</mi>
+                      <mi>H</mi>
+                    </msub>
+                    <mo stretchy="false">(</mo>
+                    <mi>F</mi>
+                    <mo stretchy="false">)</mo>
+                    <mo>⊂
+                      <!-- ⊂ -->
+                    </mo>
+                    <mi>H</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>F</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\gamma \in T_H(F)\subset H(F)</annotation>
+                </semantics>
+              </math>, under this isomorphism.</p>
+            <div data-type="sect3" data-jats="statement" data-jats-content-type="theorem" class="theorem thmremark">
+              <h3>Remark 4.1</h3>
+              <p class="noindent">The element
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <msub>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <mn>0</mn>
+                    </msub>
+                    <annotation encoding="application/x-tex">\gamma _0</annotation>
+                  </semantics>
+                </math> is not uniquely determined by
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mi>γ
+                      <!-- γ -->
+                    </mi>
+                    <annotation encoding="application/x-tex">\gamma </annotation>
+                  </semantics>
+                </math>. The Cartan subgroup
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <msub>
+                      <mi>T</mi>
+                      <mi>G</mi>
+                    </msub>
+                    <annotation encoding="application/x-tex">T_G</annotation>
+                  </semantics>
+                </math> can always be replaced with a conjugate
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <msup>
+                        <mi>g</mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo>−
+                            <!-- − -->
+                          </mo>
+                          <mn>1</mn>
+                        </mrow>
+                      </msup>
+                      <mspace width="thinmathspace" />
+                      <msub>
+                        <mi>T</mi>
+                        <mi>G</mi>
+                      </msub>
+                      <mspace width="thinmathspace" />
+                      <mi>g</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">g^{-1}\,T_G\,g</annotation>
+                  </semantics>
+                </math>,
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>g</mi>
+                      <mo>∈
+                        <!-- ∈ -->
+                      </mo>
+                      <mi>G</mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>F</mi>
+                      <mo stretchy="false">)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">g\in G(F)</annotation>
+                  </semantics>
+                </math>, without altering the root data. However, the non-uniqueness runs deeper than this. An example will be worked in Section <a href="ch08.html#ltxid60">8.1</a> to show how to deal with the problem of non-uniqueness. Non-uniqueness of
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <msub>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <mn>0</mn>
+                    </msub>
+                    <annotation encoding="application/x-tex">\gamma _0</annotation>
+                  </semantics>
+                </math> is related to stable conjugacy, which is our next topic.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+  <script src="MathJax.js"></script>
+</body>
+
+</html>

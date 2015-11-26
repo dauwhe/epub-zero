@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>8. The problem of base points</title>
+</head>
+
+<body data-type="book">
+  <link rel="prev" href="ch07.html" />
+  <link rel="next" href="ch09.html" />
+  <div class="galley-rw">
+    <div class="body-rw Chapter-rw">
+      <div class="title-block-rw">
+        <script src="../../acme.js"></script>
+        <section data-type="chapter" epub:type="chapter" data-pdf-bookmark="8. The problem of base points">
+          <div class="chapter" id="ltxid59">
+
+            <h1>
+              <span class="label"></span>8. The problem of base points</h1>
+            <p>The fundamental lemma was formulated above with one omission: we never made precise how to fix an isomorphism
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <msub>
+                      <mi>T</mi>
+                      <mi>H</mi>
+                    </msub>
+                    <mo stretchy="false">↔
+                      <!-- ↔ -->
+                    </mo>
+                    <msub>
+                      <mi>T</mi>
+                      <mi>G</mi>
+                    </msub>
+                  </mrow>
+                  <annotation encoding="application/x-tex">T_H\leftrightarrow T_G</annotation>
+                </semantics>
+              </math> between Cartan subgroups in
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>H</mi>
+                  <annotation encoding="application/x-tex">H</annotation>
+                </semantics>
+              </math> and
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>G</mi>
+                  <annotation encoding="application/x-tex">G</annotation>
+                </semantics>
+              </math>. Such isomorphisms exist, because the two Cartan subgroups have the same root data. But the statement of the fundamental lemma is sensitive to how an isomorphism is selected between
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <msub>
+                    <mi>T</mi>
+                    <mi>H</mi>
+                  </msub>
+                  <annotation encoding="application/x-tex">T_H</annotation>
+                </semantics>
+              </math> and a Cartan subgroup of
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>G</mi>
+                  <annotation encoding="application/x-tex">G</annotation>
+                </semantics>
+              </math>. If we change the isomorphism, we change the
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>κ
+                    <!-- κ -->
+                  </mi>
+                  <annotation encoding="application/x-tex">\kappa </annotation>
+                </semantics>
+              </math>-orbital integral by a root of unity
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>ζ
+                      <!-- ζ -->
+                    </mi>
+                    <mo>∈
+                      <!-- ∈ -->
+                    </mo>
+                    <msup>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi mathvariant="double-struck">C</mi>
+                      </mrow>
+                      <mo>×
+                        <!-- × -->
+                      </mo>
+                    </msup>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\zeta \in \mathbb {C}^\times </annotation>
+                </semantics>
+              </math>. The correctly chosen isomorphism will depend on the element
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>γ
+                      <!-- γ -->
+                    </mi>
+                    <mo>∈
+                      <!-- ∈ -->
+                    </mo>
+                    <mi>H</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>F</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\gamma \in H(F)</annotation>
+                </semantics>
+              </math>.</p>
+            <p>The ambiguity of isomorphism was removed by Langlands and Shelstad in [
+              <cite><a href="ch10.html#LS">19</a></cite>]. They define a
+              <em>transfer factor</em>
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi mathvariant="normal">Δ
+                      <!-- Δ -->
+                    </mi>
+                    <mo stretchy="false">(</mo>
+                    <msub>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <mi>H</mi>
+                    </msub>
+                    <mo>,</mo>
+                    <msub>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <mi>G</mi>
+                    </msub>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\Delta (\gamma _H,\gamma _G)</annotation>
+                </semantics>
+              </math>, which is a complex valued function on
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <mi>H</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>F</mi>
+                    <mo stretchy="false">)</mo>
+                    <mo>×
+                      <!-- × -->
+                    </mo>
+                    <mi>G</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>F</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">H(F)\times G(F)</annotation>
+                </semantics>
+              </math>. The transfer factor can be defined to have the property that it is zero unless
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <msub>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <mi>H</mi>
+                    </msub>
+                    <mo>∈
+                      <!-- ∈ -->
+                    </mo>
+                    <mi>H</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>F</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\gamma _H\in H(F)</annotation>
+                </semantics>
+              </math> is strongly regular semisimple,
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <msub>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <mi>G</mi>
+                    </msub>
+                    <mo>∈
+                      <!-- ∈ -->
+                    </mo>
+                    <mi>G</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>F</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\gamma _G\in G(F)</annotation>
+                </semantics>
+              </math> is strongly regular semisimple, and there exists an isomorphism (preserving character groups) from the centralizer of
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <msub>
+                    <mi>γ
+                      <!-- γ -->
+                    </mi>
+                    <mi>H</mi>
+                  </msub>
+                  <annotation encoding="application/x-tex">\gamma _H</annotation>
+                </semantics>
+              </math> to the centralizer of
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <msub>
+                    <mi>γ
+                      <!-- γ -->
+                    </mi>
+                    <mi>G</mi>
+                  </msub>
+                  <annotation encoding="application/x-tex">\gamma _G</annotation>
+                </semantics>
+              </math>. There exists
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <msub>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <mn>0</mn>
+                    </msub>
+                    <mo>∈
+                      <!-- ∈ -->
+                    </mo>
+                    <mi>G</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>F</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\gamma _0\in G(F)</annotation>
+                </semantics>
+              </math> such that</p>
+
+
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <semantics>
+                <mtable columnalign="left" width="100%" displaystyle="true">
+                  <mlabeledtr>
+                    <mtd id="mjx-eqn-8.0.1">
+                      <mtext>(8.0.1)</mtext>
+                    </mtd>
+                    <mtd>
+                      <mi mathvariant="normal">Δ
+                        <!-- Δ -->
+                      </mi>
+                      <mo stretchy="false">(</mo>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mi>H</mi>
+                      </msub>
+                      <mo>,</mo>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mn>0</mn>
+                      </msub>
+                      <mo stretchy="false">)</mo>
+                      <mo>=</mo>
+                      <mn>1.</mn>
+                      <mrow id="eqn:delta" />
+                    </mtd>
+                  </mlabeledtr>
+                </mtable>
+                <annotation encoding="application/x-tex">\begin{equation} \Delta (\gamma _H,\gamma _0)=1. \tag{8.0.1}\cssId{eqn:delta}{} \end{equation}
+                </annotation>
+              </semantics>
+            </math>
+            <p>The correct formulation of the fundamental lemma is to pick the base point
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <msub>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <mn>0</mn>
+                    </msub>
+                    <mo>∈
+                      <!-- ∈ -->
+                    </mo>
+                    <mi>G</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>F</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\gamma _0\in G(F)</annotation>
+                </semantics>
+              </math> so that Condition <a href="#eqn:delta">8.0.1</a> holds.</p>
+            <p>For classical groups, Waldspurger gives a simplified formula for the transfer factor
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi mathvariant="normal">Δ
+                    <!-- Δ -->
+                  </mi>
+                  <annotation encoding="application/x-tex">\Delta </annotation>
+                </semantics>
+              </math> in [
+              <cite><a href="ch10.html#WA">31</a></cite>]. Furthermore, because of the reduction of the fundamental lemma to the Lie algebra (Section <a href="ch07.html#ltxid58">7.2</a>), the transfer factor may be expressed as a function on the Lie algebras
+              of
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>G</mi>
+                  <annotation encoding="application/x-tex">G</annotation>
+                </semantics>
+              </math> and
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>H</mi>
+                  <annotation encoding="application/x-tex">H</annotation>
+                </semantics>
+              </math>, rather than as a function on the group.</p>
+            <section data-type="sect1" class="sect1" data-pdf-bookmark="8.1. Base points for unitary groups">
+              <div class="sect1" id="ltxid60">
+
+                <header>
+                  <h1 class="sectionhead">8.1. Base points for unitary groups</h1>
+                </header>
+                <p>More recently, Laumon (while working on the fundamental lemma for unitary groups) observed a similarity between Waldspurger's simplified formula for the transfer factor and the explicit formula for differents that is found in [
+                  <cite><a href="ch10.html#SLF">27</a></cite>]. In this way, Laumon found a simple description of the matching condition
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo stretchy="false">↔
+                          <!-- ↔ -->
+                        </mo>
+                        <msub>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                          <mn>0</mn>
+                        </msub>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\gamma \leftrightarrow \gamma _0</annotation>
+                    </semantics>
+                  </math> implicit in the statement of the fundamental lemma.</p>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="MathJax.js"></script>
+
+</body>
+
+</html>
