@@ -76,7 +76,7 @@ Drop this in a web server, and anyone who has the URI of the folder can read eve
 
 ##Examples
 
-[Acme Publishing](https://dauwhe.github.io/epub-zero/acme-publishing) is an attempt to prototype some of these ideas, allowing for online and offline reading of book content in web browsers. The offline functionality of this site depends on Service Workers, and so works best in recent versions of Chrome.
+[Acme Publishing](https://dauwhe.github.io/epub-zero/acme-publishing) is an attempt to prototype some of these ideas, allowing for online and offline reading of book content in web browsers. The offline functionality of this site depends on Service Workers, and so works best in recent versions of Chrome (tested in 46) or Firefox Nightly (tested in 45.0a1 (2015-11-25)).
 
 
 
