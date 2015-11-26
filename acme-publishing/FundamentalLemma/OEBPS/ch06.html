@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>6. Statement of the Fundamental Lemma</title>
+</head>
+
+<body data-type="book">
+  <link rel="prev" href="ch05.html" />
+  <link rel="next" href="ch07.html" />
+  <div class="galley-rw">
+    <div class="body-rw Chapter-rw">
+      <div class="title-block-rw">
+        <script src="../../acme.js"></script>
+        <section data-type="chapter" epub:type="chapter" data-pdf-bookmark="6. Statement of the Fundamental Lemma">
+          <div class="chapter" id="ltxid50">
+
+            <h1>
+              <span class="label"></span>6. Statement of the Fundamental Lemma</h1>
+            <section data-type="sect1" class="sect1" data-pdf-bookmark="6.1. Context">
+              <div class="sect1" id="ltxid51">
+
+                <header>
+                  <h1 class="sectionhead">6.1. Context</h1>
+                </header>
+                <p>Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math> be an unramified connected reductive group over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>F</mi>
+                      <annotation encoding="application/x-tex">F</annotation>
+                    </semantics>
+                  </math>. Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>H</mi>
+                      <annotation encoding="application/x-tex">H</annotation>
+                    </semantics>
+                  </math> be an unramified endoscopic group of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math>. Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <mi>H</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\gamma \in H(F)</annotation>
+                    </semantics>
+                  </math> be a strongly regular semisimple element. Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>T</mi>
+                          <mi>H</mi>
+                        </msub>
+                        <mo>=</mo>
+                        <msub>
+                          <mi>C</mi>
+                          <mi>H</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">T_H = C_H(\gamma )</annotation>
+                    </semantics>
+                  </math>, and let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>T</mi>
+                        <mi>G</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">T_G</annotation>
+                    </semantics>
+                  </math> be a Cartan subgroup of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math> that is isomorphic to it. More details will be given below about how to choose
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>T</mi>
+                        <mi>G</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">T_G</annotation>
+                    </semantics>
+                  </math>. The choice of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>T</mi>
+                        <mi>G</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">T_G</annotation>
+                    </semantics>
+                  </math> matters! Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <msub>
+                          <mi>T</mi>
+                          <mi>H</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\gamma \in T_H(F)</annotation>
+                    </semantics>
+                  </math> map to
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                          <mn>0</mn>
+                        </msub>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <msub>
+                          <mi>T</mi>
+                          <mi>G</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\gamma _0\in T_G(F)</annotation>
+                    </semantics>
+                  </math> under this isomorphism.</p>
+                <p>By construction,
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mn>0</mn>
+                      </msub>
+                      <annotation encoding="application/x-tex">\gamma _0</annotation>
+                    </semantics>
+                  </math> is semisimple. However, as
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math> may have more roots than
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>H</mi>
+                      <annotation encoding="application/x-tex">H</annotation>
+                    </semantics>
+                  </math>, it is possible for
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mn>0</mn>
+                      </msub>
+                      <annotation encoding="application/x-tex">\gamma _0</annotation>
+                    </semantics>
+                  </math> to be singular, even when
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\gamma </annotation>
+                    </semantics>
+                  </math> is strongly regular. If
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <mi>H</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\gamma \in H(F)</annotation>
+                    </semantics>
+                  </math> is a strongly regular semisimple element with the property that
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mn>0</mn>
+                      </msub>
+                      <annotation encoding="application/x-tex">\gamma _0</annotation>
+                    </semantics>
+                  </math> is also strongly regular, then we will call
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\gamma </annotation>
+                    </semantics>
+                  </math> a
+                  <em>strongly
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <semantics>
+                        <mi>G</mi>
+                        <annotation encoding="application/x-tex">G</annotation>
+                      </semantics>
+                    </math>-regular</em> element of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>H</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">H(F)</annotation>
+                    </semantics>
+                  </math>.</p>
+                <p>If
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msup>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo>′</mo>
+                      </msup>
+                      <annotation encoding="application/x-tex">\gamma '</annotation>
+                    </semantics>
+                  </math> is stably conjugate to
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mn>0</mn>
+                      </msub>
+                      <annotation encoding="application/x-tex">\gamma _0</annotation>
+                    </semantics>
+                  </math> with cocycle
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>a</mi>
+                        <mi>τ
+                          <!-- τ -->
+                        </mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">a_\tau </annotation>
+                    </semantics>
+                  </math>, then
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>s</mi>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <mi>Hom</mi>
+                        <mo>⁡
+                          <!-- ⁡ -->
+                        </mo>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi>X</mi>
+                          <mo>∗
+                            <!-- ∗ -->
+                          </mo>
+                        </msub>
+                        <mo>,</mo>
+                        <msup>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi mathvariant="double-struck">C</mi>
+                          </mrow>
+                          <mo>×
+                            <!-- × -->
+                          </mo>
+                        </msup>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">s\in \operatorname {Hom}(X_*,\mathbb {C}^\times )</annotation>
+                    </semantics>
+                  </math> gives
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>κ
+                          <!-- κ -->
+                        </mi>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi>a</mi>
+                          <mi>τ
+                            <!-- τ -->
+                          </mi>
+                        </msub>
+                        <mo stretchy="false">)</mo>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <msup>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi mathvariant="double-struck">C</mi>
+                          </mrow>
+                          <mo>×
+                            <!-- × -->
+                          </mo>
+                        </msup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\kappa (a_\tau )\in \mathbb {C}^\times </annotation>
+                    </semantics>
+                  </math>.</p>
+                <p>Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>K</mi>
+                        <mi>G</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">K_G</annotation>
+                    </semantics>
+                  </math> and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>K</mi>
+                        <mi>H</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">K_H</annotation>
+                    </semantics>
+                  </math> be hyperspecial maximal compact subgroups of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math> and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>H</mi>
+                      <annotation encoding="application/x-tex">H</annotation>
+                    </semantics>
+                  </math>. Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>χ
+                          <!-- χ -->
+                        </mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi>G</mi>
+                          <mo>,</mo>
+                          <mi>K</mi>
+                        </mrow>
+                      </msub>
+                      <annotation encoding="application/x-tex">\chi _{G,K}</annotation>
+                    </semantics>
+                  </math> and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>χ
+                          <!-- χ -->
+                        </mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi>H</mi>
+                          <mo>,</mo>
+                          <mi>K</mi>
+                        </mrow>
+                      </msub>
+                      <annotation encoding="application/x-tex">\chi _{H,K}</annotation>
+                    </semantics>
+                  </math> be the characteristic functions of these hyperspecial subgroups. Set</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mtable side="left"  width="100%" displaystyle="true">
+                      <mlabeledtr>
+                        <mtd id="mjx-eqn-6.0.1">
+                          <mtext>(6.0.1)</mtext>
+                        </mtd>
+                        <mtd>
+                          <msub>
+                            <mi mathvariant="normal">Λ
+                              <!-- Λ -->
+                            </mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>G</mi>
+                              <mo>,</mo>
+                              <mi>H</mi>
+                            </mrow>
+                          </msub>
+                          <mo stretchy="false">(</mo>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                          <mo stretchy="false">)</mo>
+                          <mo>=</mo>
+                          <mrow>
+                            <mo>(</mo>
+                            <munder>
+                              <mo>∏
+                                <!-- ∏ -->
+                              </mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi>α
+                                  <!-- α -->
+                                </mi>
+                                <mo>∈
+                                  <!-- ∈ -->
+                                </mo>
+                                <msub>
+                                  <mi mathvariant="normal">Φ
+                                    <!-- Φ -->
+                                  </mi>
+                                  <mi>G</mi>
+                                </msub>
+                              </mrow>
+                            </munder>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mo stretchy="false">|</mo>
+                            </mrow>
+                            <mi>α
+                              <!-- α -->
+                            </mi>
+                            <mo stretchy="false">(</mo>
+                            <msub>
+                              <mi>γ
+                                <!-- γ -->
+                              </mi>
+                              <mn>0</mn>
+                            </msub>
+                            <mo stretchy="false">)</mo>
+                            <mo>−
+                              <!-- − -->
+                            </mo>
+                            <mn>1</mn>
+                            <msup>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mo stretchy="false">|</mo>
+                              </mrow>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mn>1</mn>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mo>/</mo>
+                                </mrow>
+                                <mn>2</mn>
+                              </mrow>
+                            </msup>
+                            <mo>)</mo>
+                          </mrow>
+                          <mrow>
+                            <mo>[</mo>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mfrac>
+                                <mrow>
+                                  <mi>vol</mi>
+                                  <mo>⁡
+                                    <!-- ⁡ -->
+                                  </mo>
+                                  <mo stretchy="false">(</mo>
+                                  <msub>
+                                    <mi>K</mi>
+                                    <mi>T</mi>
+                                  </msub>
+                                  <mo>,</mo>
+                                  <mi>d</mi>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                                <mrow>
+                                  <mi>vol</mi>
+                                  <mo>⁡
+                                    <!-- ⁡ -->
+                                  </mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>K</mi>
+                                  <mo>,</mo>
+                                  <mi>d</mi>
+                                  <mi>g</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </mfrac>
+                            </mrow>
+                            <mo>]</mo>
+                          </mrow>
+                          <munder>
+                            <mo>∑
+                              <!-- ∑ -->
+                            </mo>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <msup>
+                                <mi>γ
+                                  <!-- γ -->
+                                </mi>
+                                <mo>′</mo>
+                              </msup>
+                              <mo>∼
+                                <!-- ∼ -->
+                              </mo>
+                              <msub>
+                                <mi>γ
+                                  <!-- γ -->
+                                </mi>
+                                <mn>0</mn>
+                              </msub>
+                            </mrow>
+                          </munder>
+                          <mi>κ
+                            <!-- κ -->
+                          </mi>
+                          <mo stretchy="false">(</mo>
+                          <msub>
+                            <mi>a</mi>
+                            <mi>τ
+                              <!-- τ -->
+                            </mi>
+                          </msub>
+                          <mo stretchy="false">)</mo>
+                          <msub>
+                            <mo>∫
+                              <!-- ∫ -->
+                            </mo>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <msub>
+                                <mi>C</mi>
+                                <mi>G</mi>
+                              </msub>
+                              <mo stretchy="false">(</mo>
+                              <msup>
+                                <mi>γ
+                                  <!-- γ -->
+                                </mi>
+                                <mo>′</mo>
+                              </msup>
+                              <mo>,</mo>
+                              <mi>F</mi>
+                              <mo stretchy="false">)</mo>
+                              <mi mathvariant="normal">∖
+                                <!-- ∖ -->
+                              </mi>
+                              <mi>G</mi>
+                              <mo stretchy="false">(</mo>
+                              <mi>F</mi>
+                              <mo stretchy="false">)</mo>
+                            </mrow>
+                          </msub>
+                          <msub>
+                            <mi>χ
+                              <!-- χ -->
+                            </mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>G</mi>
+                              <mo>,</mo>
+                              <mi>K</mi>
+                            </mrow>
+                          </msub>
+                          <mo stretchy="false">(</mo>
+                          <msup>
+                            <mi>g</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mo>−
+                                <!-- − -->
+                              </mo>
+                              <mn>1</mn>
+                            </mrow>
+                          </msup>
+                          <msup>
+                            <mi>γ
+                              <!-- γ -->
+                            </mi>
+                            <mo>′</mo>
+                          </msup>
+                          <mi>g</mi>
+                          <mo stretchy="false">)</mo>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mfrac>
+                              <mrow>
+                                <mi>d</mi>
+                                <mi>g</mi>
+                              </mrow>
+                              <mrow>
+                                <mi>d</mi>
+                                <msup>
+                                  <mi>t</mi>
+                                  <mo>′</mo>
+                                </msup>
+                              </mrow>
+                            </mfrac>
+                          </mrow>
+                          <mo>.</mo>
+                          <mrow id="eqn:kappa" />
+                        </mtd>
+                      </mlabeledtr>
+                    </mtable>
+                    <annotation encoding="application/x-tex">\begin{equation} \Lambda _{G,H}(\gamma ) = \left (\prod _{\alpha \in \Phi _G} |\alpha (\gamma _0)-1|^{1/2}\right ) \left [{\frac {\operatorname {vol}(K_T,dt)}{\operatorname {vol}(K,dg)}}\right ] \sum _{\gamma '\sim \gamma _0} \kappa
+                      (a_\tau ) \int _{C_G(\gamma ',F)\backslash G(F)}\chi _{G,K} (g^{-1}\gamma ' g) {\frac {dg}{dt'}}. \tag{6.0.1}\cssId{eqn:kappa}{} \end{equation}
+                    </annotation>
+                  </semantics>
+                </math>
+                <p>The set of roots
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi mathvariant="normal">Φ
+                          <!-- Φ -->
+                        </mi>
+                        <mi>G</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">\Phi _G</annotation>
+                    </semantics>
+                  </math> are taken to be those relative to
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>T</mi>
+                        <mi>G</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">T_G</annotation>
+                    </semantics>
+                  </math>. The sum runs over all stable conjugates
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msup>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo>′</mo>
+                      </msup>
+                      <annotation encoding="application/x-tex">\gamma '</annotation>
+                    </semantics>
+                  </math> of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mn>0</mn>
+                      </msub>
+                      <annotation encoding="application/x-tex">\gamma _0</annotation>
+                    </semantics>
+                  </math>, up to conjugacy. This is a finite sum. The group
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>K</mi>
+                        <mi>T</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">K_T</annotation>
+                    </semantics>
+                  </math> is defined to be the maximal compact subgroup of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>T</mi>
+                        <mi>G</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">T_G</annotation>
+                    </semantics>
+                  </math>. Equation <a href="#eqn:kappa">6.0.1</a> is a finite linear combination of orbital integrals (that is, integrals over conjugacy classes in the group with respect to an invariant measure). The Haar measures
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>d</mi>
+                        <msup>
+                          <mi>t</mi>
+                          <mo>′</mo>
+                        </msup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">dt'</annotation>
+                    </semantics>
+                  </math> on
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>C</mi>
+                          <mi>G</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                          <mo>′</mo>
+                        </msup>
+                        <mo>,</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">C_G(\gamma ',F)</annotation>
+                    </semantics>
+                  </math> and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>d</mi>
+                        <mi>t</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">dt</annotation>
+                    </semantics>
+                  </math> on
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>T</mi>
+                          <mi>G</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">T_G(F)</annotation>
+                    </semantics>
+                  </math> are chosen so that stable conjugacy between the two groups is measure preserving. This particular linear combination of integrals is called a
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>κ
+                        <!-- κ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\kappa </annotation>
+                    </semantics>
+                  </math>-orbital integral because of the term
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>κ
+                          <!-- κ -->
+                        </mi>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi>a</mi>
+                          <mi>τ
+                            <!-- τ -->
+                          </mi>
+                        </msub>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\kappa (a_\tau )</annotation>
+                    </semantics>
+                  </math> that gives the coefficients of the linear combination. Note that the integration takes place in the group
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math>, and yet the parameter
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\gamma </annotation>
+                    </semantics>
+                  </math> is an element of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>H</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">H(F)</annotation>
+                    </semantics>
+                  </math>.</p>
+                <p>The volume terms
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>vol</mi>
+                        <mo>⁡
+                          <!-- ⁡ -->
+                        </mo>
+                        <mo stretchy="false">(</mo>
+                        <mi>K</mi>
+                        <mo>,</mo>
+                        <mi>d</mi>
+                        <mi>g</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\operatorname {vol}(K,dg)</annotation>
+                    </semantics>
+                  </math> and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>vol</mi>
+                        <mo>⁡
+                          <!-- ⁡ -->
+                        </mo>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi>K</mi>
+                          <mi>T</mi>
+                        </msub>
+                        <mo>,</mo>
+                        <mi>d</mi>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\operatorname {vol}(K_T,dt)</annotation>
+                    </semantics>
+                  </math> serve no purpose other than to make the entire expression independent of the choice of Haar measures
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>d</mi>
+                        <mi>g</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">dg</annotation>
+                    </semantics>
+                  </math> and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>d</mi>
+                        <mi>t</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">dt</annotation>
+                    </semantics>
+                  </math>, which are only defined up to a scalar multiple.</p>
+                <p>We can form an analogous linear combination of orbital integrals on the group
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>H</mi>
+                      <annotation encoding="application/x-tex">H</annotation>
+                    </semantics>
+                  </math>. Set</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mtable side="left" width="100%" displaystyle="true">
+                      <mlabeledtr>
+                        <mtd id="mjx-eqn-6.0.2">
+                          <mtext>(6.0.2)</mtext>
+                        </mtd>
+                        <mtd>
+                          <msubsup>
+                            <mi mathvariant="normal">Λ
+                              <!-- Λ -->
+                            </mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>H</mi>
+                            </mrow>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>s</mi>
+                              <mi>t</mi>
+                            </mrow>
+                          </msubsup>
+                          <mo stretchy="false">(</mo>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                          <mo stretchy="false">)</mo>
+                          <mo>=</mo>
+                          <mrow>
+                            <mo>(</mo>
+                            <munder>
+                              <mo>∏
+                                <!-- ∏ -->
+                              </mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi>α
+                                  <!-- α -->
+                                </mi>
+                                <mo>∈
+                                  <!-- ∈ -->
+                                </mo>
+                                <msub>
+                                  <mi mathvariant="normal">Φ
+                                    <!-- Φ -->
+                                  </mi>
+                                  <mi>H</mi>
+                                </msub>
+                              </mrow>
+                            </munder>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mo stretchy="false">|</mo>
+                            </mrow>
+                            <mi>α
+                              <!-- α -->
+                            </mi>
+                            <mo stretchy="false">(</mo>
+                            <mi>γ
+                              <!-- γ -->
+                            </mi>
+                            <mo stretchy="false">)</mo>
+                            <mo>−
+                              <!-- − -->
+                            </mo>
+                            <mn>1</mn>
+                            <msup>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mo stretchy="false">|</mo>
+                              </mrow>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mn>1</mn>
+                                <mrow class="MJX-TeXAtom-ORD">
+                                  <mo>/</mo>
+                                </mrow>
+                                <mn>2</mn>
+                              </mrow>
+                            </msup>
+                            <mo>)</mo>
+                          </mrow>
+                          <mrow>
+                            <mo>[</mo>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mfrac>
+                                <mrow>
+                                  <mi>vol</mi>
+                                  <mo>⁡
+                                    <!-- ⁡ -->
+                                  </mo>
+                                  <mo stretchy="false">(</mo>
+                                  <msub>
+                                    <mi>K</mi>
+                                    <mi>T</mi>
+                                  </msub>
+                                  <mo>,</mo>
+                                  <mi>d</mi>
+                                  <mi>t</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                                <mrow>
+                                  <mi>vol</mi>
+                                  <mo>⁡
+                                    <!-- ⁡ -->
+                                  </mo>
+                                  <mo stretchy="false">(</mo>
+                                  <msub>
+                                    <mi>K</mi>
+                                    <mi>H</mi>
+                                  </msub>
+                                  <mo>,</mo>
+                                  <mi>d</mi>
+                                  <mi>h</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mrow>
+                              </mfrac>
+                            </mrow>
+                            <mo>]</mo>
+                          </mrow>
+                          <munder>
+                            <mo>∑
+                              <!-- ∑ -->
+                            </mo>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <msup>
+                                <mi>γ
+                                  <!-- γ -->
+                                </mi>
+                                <mo>′</mo>
+                              </msup>
+                              <mo>∼
+                                <!-- ∼ -->
+                              </mo>
+                              <mi>γ
+                                <!-- γ -->
+                              </mi>
+                            </mrow>
+                          </munder>
+                          <msub>
+                            <mo>∫
+                              <!-- ∫ -->
+                            </mo>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <msub>
+                                <mi>C</mi>
+                                <mi>H</mi>
+                              </msub>
+                              <mo stretchy="false">(</mo>
+                              <msup>
+                                <mi>γ
+                                  <!-- γ -->
+                                </mi>
+                                <mo>′</mo>
+                              </msup>
+                              <mo>,</mo>
+                              <mi>F</mi>
+                              <mo stretchy="false">)</mo>
+                              <mi mathvariant="normal">∖
+                                <!-- ∖ -->
+                              </mi>
+                              <mi>H</mi>
+                              <mo stretchy="false">(</mo>
+                              <mi>F</mi>
+                              <mo stretchy="false">)</mo>
+                            </mrow>
+                          </msub>
+                          <msub>
+                            <mi>χ
+                              <!-- χ -->
+                            </mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>H</mi>
+                              <mo>,</mo>
+                              <mi>K</mi>
+                            </mrow>
+                          </msub>
+                          <mo stretchy="false">(</mo>
+                          <msup>
+                            <mi>h</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mo>−
+                                <!-- − -->
+                              </mo>
+                              <mn>1</mn>
+                            </mrow>
+                          </msup>
+                          <msup>
+                            <mi>γ
+                              <!-- γ -->
+                            </mi>
+                            <mo>′</mo>
+                          </msup>
+                          <mi>h</mi>
+                          <mo stretchy="false">)</mo>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mfrac>
+                              <mrow>
+                                <mi>d</mi>
+                                <mi>h</mi>
+                              </mrow>
+                              <mrow>
+                                <mi>d</mi>
+                                <msup>
+                                  <mi>t</mi>
+                                  <mo>′</mo>
+                                </msup>
+                              </mrow>
+                            </mfrac>
+                          </mrow>
+                          <mo>.</mo>
+                          <mrow id="eqn:stable" />
+                        </mtd>
+                      </mlabeledtr>
+                    </mtable>
+                    <annotation encoding="application/x-tex">\begin{equation} \Lambda ^{st}_{H}(\gamma ) = \left (\prod _{\alpha \in \Phi _H} |\alpha (\gamma )-1|^{1/2}\right ) \left [{\frac {\operatorname {vol}(K_T,dt)}{\operatorname {vol}(K_H,dh)}}\right ] \sum _{\gamma '\sim \gamma } \int
+                      _{C_H(\gamma ',F)\backslash H(F)}\chi _{H,K} (h^{-1}\gamma ' h) {\frac {dh}{dt'}}. \tag{6.0.2}\cssId{eqn:stable}{} \end{equation}
+                    </annotation>
+                  </semantics>
+                </math>
+                <p>This linear combination of integrals is like
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi mathvariant="normal">Λ
+                            <!-- Λ -->
+                          </mi>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi>G</mi>
+                            <mo>,</mo>
+                            <mi>H</mi>
+                          </mrow>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\Lambda _{G,H}(\gamma )</annotation>
+                    </semantics>
+                  </math>, except that
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>H</mi>
+                      <annotation encoding="application/x-tex">H</annotation>
+                    </semantics>
+                  </math> replaces
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math>,
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>K</mi>
+                        <mi>H</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">K_H</annotation>
+                    </semantics>
+                  </math> replaces
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>K</mi>
+                        <mi>G</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">K_G</annotation>
+                    </semantics>
+                  </math>,
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi mathvariant="normal">Φ
+                          <!-- Φ -->
+                        </mi>
+                        <mi>H</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">\Phi _H</annotation>
+                    </semantics>
+                  </math> (taken relative to
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>T</mi>
+                        <mi>H</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">T_H</annotation>
+                    </semantics>
+                  </math>) replaces
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi mathvariant="normal">Φ
+                          <!-- Φ -->
+                        </mi>
+                        <mi>G</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">\Phi _G</annotation>
+                    </semantics>
+                  </math>, and so forth. Also, the factor
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>κ
+                          <!-- κ -->
+                        </mi>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi>a</mi>
+                          <mi>τ
+                            <!-- τ -->
+                          </mi>
+                        </msub>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\kappa (a_\tau )</annotation>
+                    </semantics>
+                  </math> has been dropped. The linear combination of Equation <a href="#eqn:stable">6.0.2</a> is called a stable orbital integral, because it extends over all stable conjugates of the element
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\gamma </annotation>
+                    </semantics>
+                  </math> without the factor
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>κ
+                        <!-- κ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\kappa </annotation>
+                    </semantics>
+                  </math>. The superscript
+                  <em>st</em> in the notation is for `stable.'</p>
+                <div data-type="sect2" data-jats="statement" data-jats-content-type="theorem" class="theorem thmplain">
+                  <h2>Conjecture 6.1</h2>
+                  <p class="noindent">(The fundamental lemma) For every
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <semantics>
+                        <mrow>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                          <mo>∈
+                            <!-- ∈ -->
+                          </mo>
+                          <mi>H</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>F</mi>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                        <annotation encoding="application/x-tex">\gamma \in H(F)</annotation>
+                      </semantics>
+                    </math> that is strongly
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <semantics>
+                        <mi>G</mi>
+                        <annotation encoding="application/x-tex">G</annotation>
+                      </semantics>
+                    </math>-regular semisimple,</p>
+
+
+                  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi mathvariant="normal">Λ
+                            <!-- Λ -->
+                          </mi>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi>G</mi>
+                            <mo>,</mo>
+                            <mi>H</mi>
+                          </mrow>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <msubsup>
+                          <mi mathvariant="normal">Λ
+                            <!-- Λ -->
+                          </mi>
+                          <mi>H</mi>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi>s</mi>
+                            <mi>t</mi>
+                          </mrow>
+                        </msubsup>
+                        <mo stretchy="false">(</mo>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>.</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex"> \Lambda _{G,H}(\gamma ) = \Lambda ^{st}_H(\gamma ). </annotation>
+                    </semantics>
+                  </math>
+                </div>
+                <div data-type="sect2" data-jats="statement" data-jats-content-type="theorem" class="theorem thmremark">
+                  <h2>Remark 6.2</h2>
+                  <p class="noindent">There have been serious efforts over the past twenty years to prove the fundamental lemma. These efforts have not yet led to a proof. Thus, the fundamental lemma is not a lemma; it is a conjecture with a misleading name. Its name leads
+                    one to speculate that the authors of the conjecture may have severely underestimated the difficulty of the conjecture.</p>
+                </div>
+                <div data-type="sect2" data-jats="statement" data-jats-content-type="theorem" class="theorem thmremark">
+                  <h2>Remark 6.3</h2>
+                  <p class="noindent">Special cases of the fundamental lemma have been proved. The case
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <semantics>
+                        <mrow>
+                          <mi>G</mi>
+                          <mo>=</mo>
+                          <mi>S</mi>
+                          <mi>L</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                        <annotation encoding="application/x-tex">G=SL(n)</annotation>
+                      </semantics>
+                    </math> was proved by Waldspurger [
+                    <cite><a href="ch10.html#Wal">28</a></cite>]. Building on the work of [
+                    <cite><a href="ch10.html#GKM1">5</a></cite>], Laumon has proved that the fundamental lemma for
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <semantics>
+                        <mrow>
+                          <mi>G</mi>
+                          <mo>=</mo>
+                          <mi>U</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                        <annotation encoding="application/x-tex">G=U(n)</annotation>
+                      </semantics>
+                    </math> follows from a purity conjecture [
+                    <cite><a href="ch10.html#Lau1">21</a></cite>]. The fundamental lemma has not been proved for any other general families of groups. The fundamental lemma has been proved for some groups
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <semantics>
+                        <mi>G</mi>
+                        <annotation encoding="application/x-tex">G</annotation>
+                      </semantics>
+                    </math> of small rank, such as
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <semantics>
+                        <mrow>
+                          <mi>S</mi>
+                          <mi>U</mi>
+                          <mo stretchy="false">(</mo>
+                          <mn>3</mn>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                        <annotation encoding="application/x-tex">SU(3)</annotation>
+                      </semantics>
+                    </math> and
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <semantics>
+                        <mrow>
+                          <mi>S</mi>
+                          <mi>p</mi>
+                          <mo stretchy="false">(</mo>
+                          <mn>4</mn>
+                          <mo stretchy="false">)</mo>
+                        </mrow>
+                        <annotation encoding="application/x-tex">Sp(4)</annotation>
+                      </semantics>
+                    </math>. See [
+                    <cite><a href="ch10.html#BR">2</a></cite>], [
+                    <cite><a href="ch10.html#Ha1">7</a></cite>], [
+                    <cite><a href="ch10.html#Ha4">10</a></cite>].</p>
+                </div>
+              </div>
+            </section>
+            <section data-type="sect1" class="sect1" data-pdf-bookmark="6.2. The significance of the fundamental lemma">
+              <div class="sect1" id="ltxid55">
+
+                <header>
+                  <h1 class="sectionhead">6.2. The significance of the fundamental lemma</h1>
+                </header>
+                <p>The Langlands program predicts correspondences
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>π
+                          <!-- π -->
+                        </mi>
+                        <mo stretchy="false">↔
+                          <!-- ↔ -->
+                        </mo>
+                        <msup>
+                          <mi>π
+                            <!-- π -->
+                          </mi>
+                          <mo>′</mo>
+                        </msup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\pi \leftrightarrow \pi '</annotation>
+                    </semantics>
+                  </math> between the representation theory of different reductive groups. There is a local program for the representation theory of reductive groups over locally compact fields, and a global program for
+                  <em>automorphic</em> representations of reductive groups over the adele rings of global fields.</p>
+                <p>The Arthur-Selberg trace formula has emerged as a powerful tool in the Langlands program. In crude terms, one side of the trace formula contains terms related to the characters of automorphic representations. The other side contains terms
+                  such as orbital integrals.
+                  <em>Thanks to the trace formula, identities between orbital integrals on different groups imply identities between the representations of the two groups.</em>
+                </p>
+                <p>It is possible to work backwards: from an analysis of the terms in the trace formula and a precise conjecture in representation theory, it is possible to make precise conjectures about identities of orbital integrals. The most basic identity
+                  that appears in this way is the fundamental lemma, articulated above.</p>
+                <p>The proofs of many major theorems in automorphic representation theory depend in one way or another on the proof of a fundamental lemma. For example, the proof of Fermat's Last Theorem depends on Base Change for
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>G</mi>
+                        <mi>L</mi>
+                        <mo stretchy="false">(</mo>
+                        <mn>2</mn>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">GL(2)</annotation>
+                    </semantics>
+                  </math>, which in turn depends on the fundamental lemma for cyclic base change [
+                  <cite><a href="ch10.html#Lan1">17</a></cite>]. The proof of the local Langlands conjecture for
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>G</mi>
+                        <mi>L</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">GL(n)</annotation>
+                    </semantics>
+                  </math> depends on automorphic induction, which in turn depends on the fundamental lemma for
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>S</mi>
+                        <mi>L</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">SL(n)</annotation>
+                    </semantics>
+                  </math> [
+                  <cite><a href="ch10.html#HT">11</a></cite>], [
+                  <cite><a href="ch10.html#HH">12</a></cite>], [
+                  <cite><a href="ch10.html#Wal">28</a></cite>]. Properties of the zeta function of Picard modular varieties depend on the fundamental lemma for
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>U</mi>
+                        <mo stretchy="false">(</mo>
+                        <mn>3</mn>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">U(3)</annotation>
+                    </semantics>
+                  </math> [
+                  <cite><a href="ch10.html#R">26</a></cite>], [
+                  <cite><a href="ch10.html#BR">2</a></cite>]. Normally, the dependence of a major theorem on a particular lemma would not be noteworthy. It is only because the fundamental lemma has not been proved in general, and because the lack of proof has
+                  become a serious impediment to progress in the field, that the conjecture has become the subject of increased scrutiny.</p>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="MathJax.js"></script>
+
+</body>
+
+</html>

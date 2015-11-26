@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1. Introduction</title>
+  </head>
+
+  <body data-type="book">
+    <link rel="prev" href="titlepage01.html" />
+    <link rel="next" href="ch02.html" />
+    <div class="galley-rw">
+      <div class="body-rw Chapter-rw">
+        <div class="title-block-rw">
+          <script src="../../acme.js"></script>
+          <section data-type="chapter" epub:type="chapter" data-pdf-bookmark="1. Introduction">
+            <div class="chapter" id="ltxid1">
+              <h1>
+                <span class="label" </span>1. Introduction</h1>
+              <p>
+                <strong>Notation.</strong> Let
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mi>F</mi>
+                    <annotation encoding="application/x-tex">F</annotation>
+                  </semantics>
+                </math> be a
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mi>p</mi>
+                    <annotation encoding="application/x-tex">p</annotation>
+                  </semantics>
+                </math>-adic field, given either as a finite field extension of
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <msub>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi mathvariant="double-struck">Q</mi>
+                      </mrow>
+                      <mi>p</mi>
+                    </msub>
+                    <annotation encoding="application/x-tex">\mathbb {Q}_p</annotation>
+                  </semantics>
+                </math>, or as the field
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>F</mi>
+                      <mo>=</mo>
+                      <msub>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi mathvariant="double-struck">F</mi>
+                        </mrow>
+                        <mi>q</mi>
+                      </msub>
+                      <mo stretchy="false">(</mo>
+                      <mo stretchy="false">(</mo>
+                      <mi>t</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo stretchy="false">)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">F=\mathbb {F}_q((t))</annotation>
+                  </semantics>
+                </math>. Let
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <msub>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi mathvariant="double-struck">F</mi>
+                      </mrow>
+                      <mi>q</mi>
+                    </msub>
+                    <annotation encoding="application/x-tex">\mathbb {F}_q</annotation>
+                  </semantics>
+                </math> (a finite field with
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mi>q</mi>
+                    <annotation encoding="application/x-tex">q</annotation>
+                  </semantics>
+                </math> elements and characteristic
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mi>p</mi>
+                    <annotation encoding="application/x-tex">p</annotation>
+                  </semantics>
+                </math>) be the residue field of
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mi>F</mi>
+                    <annotation encoding="application/x-tex">F</annotation>
+                  </semantics>
+                </math>. Let
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mover>
+                        <mi>F</mi>
+                        <mo stretchy="false">¯
+                          <!-- ¯ -->
+                        </mo>
+                      </mover>
+                    </mrow>
+                    <annotation encoding="application/x-tex">\bar F</annotation>
+                  </semantics>
+                </math> be a fixed algebraic closure of
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mi>F</mi>
+                    <annotation encoding="application/x-tex">F</annotation>
+                  </semantics>
+                </math>. Let
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <msup>
+                      <mi>F</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi>u</mi>
+                        <mi>n</mi>
+                      </mrow>
+                    </msup>
+                    <annotation encoding="application/x-tex">F^{un}</annotation>
+                  </semantics>
+                </math> be the maximal unramified extension of
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mi>F</mi>
+                    <annotation encoding="application/x-tex">F</annotation>
+                  </semantics>
+                </math> in
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mover>
+                        <mi>F</mi>
+                        <mo stretchy="false">¯
+                          <!-- ¯ -->
+                        </mo>
+                      </mover>
+                    </mrow>
+                    <annotation encoding="application/x-tex">\bar F</annotation>
+                  </semantics>
+                </math>. For simplicity, we also assume that the characteristic of
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mi>F</mi>
+                    <annotation encoding="application/x-tex">F</annotation>
+                  </semantics>
+                </math> is not
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mn>2</mn>
+                    <annotation encoding="application/x-tex">2</annotation>
+                  </semantics>
+                </math>.</p>
+              <p>The fundamental lemma pertains to groups that satisfy a series of hypotheses. Here is the first.</p>
+              <div data-type="sect3" data-jats="statement" data-jats-content-type="theorem" class="theorem thmplain" id="ltxid2">
+                <h3>Assumption 1.1</h3>
+                <p class="noindent">
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math> is a connected reductive linear algebraic group that is defined over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>F</mi>
+                      <annotation encoding="application/x-tex">F</annotation>
+                    </semantics>
+                  </math>.</p>
+              </div>
+              <p>The following examples give the
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mi>F</mi>
+                    <annotation encoding="application/x-tex">F</annotation>
+                  </semantics>
+                </math>-points of three different families of connected reductive linear algebraic groups: orthogonal, symplectic, and unitary groups.</p>
+              <div data-type="sect3" data-jats="statement" data-jats-content-type="theorem" class="theorem thmdefinition">
+                <h3>Example 1.2</h3>
+                <p class="noindent">Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>M</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo>,</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">M(n,F)</annotation>
+                    </semantics>
+                  </math> be the algebra of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>n</mi>
+                      <annotation encoding="application/x-tex">n</annotation>
+                    </semantics>
+                  </math> by
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>n</mi>
+                      <annotation encoding="application/x-tex">n</annotation>
+                    </semantics>
+                  </math> matrices with coefficients in
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>F</mi>
+                      <annotation encoding="application/x-tex">F</annotation>
+                    </semantics>
+                  </math>. Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>J</mi>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <mi>M</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo>,</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">J\in M(n,F)</annotation>
+                    </semantics>
+                  </math> be a symmetric matrix with nonzero determinant. The special orthogonal group with respect to the matrix
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>J</mi>
+                      <annotation encoding="application/x-tex">J</annotation>
+                    </semantics>
+                  </math> is</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mrow>
+                      <mi>SO</mi>
+                      <mo>⁡
+                        <!-- ⁡ -->
+                      </mo>
+                      <mo stretchy="false">(</mo>
+                      <mi>n</mi>
+                      <mo>,</mo>
+                      <mi>J</mi>
+                      <mo>,</mo>
+                      <mi>F</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>=</mo>
+                      <mo fence="false" stretchy="false">{</mo>
+                      <mi>X</mi>
+                      <mo>∈
+                        <!-- ∈ -->
+                      </mo>
+                      <mi>M</mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>n</mi>
+                      <mo>,</mo>
+                      <mi>F</mi>
+                      <mo stretchy="false">)</mo>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mtext> </mtext>
+                        <mo fence="false" stretchy="false">|</mo>
+                        <mtext> </mtext>
+                      </mrow>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <msup>
+                          <mrow class="MJX-TeXAtom-ORD">
+
+                          </mrow>
+                          <mi>t</mi>
+                        </msup>
+                      </mrow>
+                      <mi>X</mi>
+                      <mi>J</mi>
+                      <mi>X</mi>
+                      <mo>=</mo>
+                      <mi>J</mi>
+                      <mo>,</mo>
+                      <mspace width="1em" />
+                      <mi>det</mi>
+                      <mo>⁡
+                        <!-- ⁡ -->
+                      </mo>
+                      <mo stretchy="false">(</mo>
+                      <mi>X</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>=</mo>
+                      <mn>1</mn>
+                      <mo fence="false" stretchy="false">}</mo>
+                      <mo>.</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex"> \operatorname {SO}(n,J,F) = \{ X \in M(n,F) {\ \vert \ }{{}^t}X J X = J,\quad \operatorname {det}(X)=1\}. </annotation>
+                  </semantics>
+                </math>
+              </div>
+              <div data-type="sect3" data-jats="statement" data-jats-content-type="theorem" class="theorem thmdefinition">
+                <h3>Example 1.3</h3>
+                <p class="noindent">Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>J</mi>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <mi>M</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo>,</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">J\in M(n,F)</annotation>
+                    </semantics>
+                  </math>, with
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>n</mi>
+                        <mo>=</mo>
+                        <mn>2</mn>
+                        <mi>k</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">n=2k</annotation>
+                    </semantics>
+                  </math>, be a skew-symmetric matrix
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <msup>
+                            <mrow class="MJX-TeXAtom-ORD">
+
+                            </mrow>
+                            <mi>t</mi>
+                          </msup>
+                        </mrow>
+                        <mi>J</mi>
+                        <mo>=</mo>
+                        <mo>−
+                          <!-- − -->
+                        </mo>
+                        <mi>J</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">{{}^t}J = -J</annotation>
+                    </semantics>
+                  </math> with nonzero determinant. The symplectic group with respect to
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>J</mi>
+                      <annotation encoding="application/x-tex">J</annotation>
+                    </semantics>
+                  </math> is defined in a similar manner:</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mrow>
+                      <mi>Sp</mi>
+                      <mo>⁡
+                        <!-- ⁡ -->
+                      </mo>
+                      <mo stretchy="false">(</mo>
+                      <mn>2</mn>
+                      <mi>k</mi>
+                      <mo>,</mo>
+                      <mi>J</mi>
+                      <mo>,</mo>
+                      <mi>F</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>=</mo>
+                      <mo fence="false" stretchy="false">{</mo>
+                      <mi>X</mi>
+                      <mo>∈
+                        <!-- ∈ -->
+                      </mo>
+                      <mi>M</mi>
+                      <mo stretchy="false">(</mo>
+                      <mn>2</mn>
+                      <mi>k</mi>
+                      <mo>,</mo>
+                      <mi>F</mi>
+                      <mo stretchy="false">)</mo>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mtext> </mtext>
+                        <mo fence="false" stretchy="false">|</mo>
+                        <mtext> </mtext>
+                      </mrow>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <msup>
+                          <mrow class="MJX-TeXAtom-ORD">
+
+                          </mrow>
+                          <mi>t</mi>
+                        </msup>
+                      </mrow>
+                      <mi>X</mi>
+                      <mi>J</mi>
+                      <mi>X</mi>
+                      <mo>=</mo>
+                      <mi>J</mi>
+                      <mo fence="false" stretchy="false">}</mo>
+                      <mo>.</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex"> \operatorname {Sp}(2k,J,F) = \{ X \in M(2k,F) {\ \vert \ }{{}^t}X J X = J \}. </annotation>
+                  </semantics>
+                </math>
+              </div>
+              <div data-type="sect3" data-jats="statement" data-jats-content-type="theorem" class="theorem thmdefinition">
+                <h3>Example 1.4</h3>
+                <p class="noindent">Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>E</mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo>/</mo>
+                        </mrow>
+                        <mi>F</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">E/F</annotation>
+                    </semantics>
+                  </math> be a separable quadratic extension. Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mover>
+                          <mi>x</mi>
+                          <mo stretchy="false">¯
+                            <!-- ¯ -->
+                          </mo>
+                        </mover>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\bar x</annotation>
+                    </semantics>
+                  </math> be the Galois conjugate of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>x</mi>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <mi>E</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">x\in E</annotation>
+                    </semantics>
+                  </math> with respect to the nontrivial automorphism of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>E</mi>
+                      <annotation encoding="application/x-tex">E</annotation>
+                    </semantics>
+                  </math> fixing
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>F</mi>
+                      <annotation encoding="application/x-tex">F</annotation>
+                    </semantics>
+                  </math>. For any
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>A</mi>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <mi>M</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo>,</mo>
+                        <mi>E</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">A\in M(n,E)</annotation>
+                    </semantics>
+                  </math>, let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mover>
+                          <mi>A</mi>
+                          <mo stretchy="false">¯
+                            <!-- ¯ -->
+                          </mo>
+                        </mover>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\bar A</annotation>
+                    </semantics>
+                  </math> be the matrix obtained by taking the Galois conjugate of each coefficient of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>A</mi>
+                      <annotation encoding="application/x-tex">A</annotation>
+                    </semantics>
+                  </math>. Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>J</mi>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <mi>M</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo>,</mo>
+                        <mi>E</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">J\in M(n,E)</annotation>
+                    </semantics>
+                  </math> satisfy
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <msup>
+                            <mrow class="MJX-TeXAtom-ORD">
+
+                            </mrow>
+                            <mi>t</mi>
+                          </msup>
+                        </mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mover>
+                              <mi>J</mi>
+                              <mo stretchy="false">¯
+                                <!-- ¯ -->
+                              </mo>
+                            </mover>
+                          </mrow>
+                        </mrow>
+                        <mo>=</mo>
+                        <mi>J</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">{{}^t}{\bar J} = J</annotation>
+                    </semantics>
+                  </math> and have a nonzero determinant. The unitary group with respect to
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>J</mi>
+                      <annotation encoding="application/x-tex">J</annotation>
+                    </semantics>
+                  </math> and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>E</mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo>/</mo>
+                        </mrow>
+                        <mi>F</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">E/F</annotation>
+                    </semantics>
+                  </math> is</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mrow>
+                      <mi>U</mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>n</mi>
+                      <mo>,</mo>
+                      <mi>J</mi>
+                      <mo>,</mo>
+                      <mi>F</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>=</mo>
+                      <mo fence="false" stretchy="false">{</mo>
+                      <mi>X</mi>
+                      <mo>∈
+                        <!-- ∈ -->
+                      </mo>
+                      <mi>M</mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>n</mi>
+                      <mo>,</mo>
+                      <mi>E</mi>
+                      <mo stretchy="false">)</mo>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mtext> </mtext>
+                        <mo fence="false" stretchy="false">|</mo>
+                        <mtext> </mtext>
+                      </mrow>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <msup>
+                          <mrow class="MJX-TeXAtom-ORD">
+
+                          </mrow>
+                          <mi>t</mi>
+                        </msup>
+                      </mrow>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mover>
+                            <mi>X</mi>
+                            <mo stretchy="false">¯
+                              <!-- ¯ -->
+                            </mo>
+                          </mover>
+                        </mrow>
+                      </mrow>
+                      <mi>J</mi>
+                      <mi>X</mi>
+                      <mo>=</mo>
+                      <mi>J</mi>
+                      <mo fence="false" stretchy="false">}</mo>
+                      <mo>.</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex"> U(n,J,F) = \{X \in M(n,E) {\ \vert \ }{{}^t}{\bar X} J X = J\}. </annotation>
+                  </semantics>
+                </math>
+              </div>
+              <p>The algebraic groups
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>S</mi>
+                      <mi>O</mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>n</mi>
+                      <mo>,</mo>
+                      <mi>J</mi>
+                      <mo stretchy="false">)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">SO(n,J)</annotation>
+                  </semantics>
+                </math>,
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>S</mi>
+                      <mi>p</mi>
+                      <mo stretchy="false">(</mo>
+                      <mn>2</mn>
+                      <mi>k</mi>
+                      <mo>,</mo>
+                      <mi>J</mi>
+                      <mo stretchy="false">)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">Sp(2k,J)</annotation>
+                  </semantics>
+                </math>, and
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>U</mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>n</mi>
+                      <mo>,</mo>
+                      <mi>J</mi>
+                      <mo stretchy="false">)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex">U(n,J)</annotation>
+                  </semantics>
+                </math> satisfy Assumption <a href="#ltxid2">1.1</a>.</p>
+              <div data-type="sect3" data-jats="statement" data-jats-content-type="theorem" class="theorem thmplain" id="ltxid6">
+                <h3>Assumption 1.5</h3>
+                <p class="noindent">
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math> splits over an unramified field extension.</p>
+              </div>
+              <p>That is, there is an unramified extension
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <msub>
+                        <mi>F</mi>
+                        <mn>1</mn>
+                      </msub>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mo>/</mo>
+                      </mrow>
+                      <mi>F</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">F_1/F</annotation>
+                  </semantics>
+                </math> such that
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>G</mi>
+                      <msub>
+                        <mo>×
+                          <!-- × -->
+                        </mo>
+                        <mi>F</mi>
+                      </msub>
+                      <msub>
+                        <mi>F</mi>
+                        <mn>1</mn>
+                      </msub>
+                    </mrow>
+                    <annotation encoding="application/x-tex">G\times _F F_1</annotation>
+                  </semantics>
+                </math> is split.</p>
+              <div data-type="sect3" data-jats="statement" data-jats-content-type="theorem" class="theorem thmdefinition" id="ltxid7">
+                <h3>Example 1.6</h3>
+                <p class="noindent">In the first two examples above (orthogonal and symplectic), if we take
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>J</mi>
+                      <annotation encoding="application/x-tex">J</annotation>
+                    </semantics>
+                  </math> to have the special form</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mtable side="left" width="100%" displaystyle="true">
+                      <mlabeledtr>
+                        <mtd id="mjx-eqn-1.6.1">
+                          <mtext>(1.6.1)</mtext>
+                        </mtd>
+                        <mtd>
+                          <mi>J</mi>
+                          <mo>=</mo>
+                          <mrow>
+                            <mo>(</mo>
+                            <mtable side="left" rowspacing="4pt" columnspacing="1em">
+                              <mtr>
+                                <mtd>
+                                  <mn>0</mn>
+                                </mtd>
+                                <mtd>
+                                  <mn>0</mn>
+                                </mtd>
+                                <mtd>
+                                  <mo>∗
+                                    <!-- ∗ -->
+                                  </mo>
+                                </mtd>
+                              </mtr>
+                              <mtr>
+                                <mtd>
+                                  <mn>0</mn>
+                                </mtd>
+                                <mtd>
+                                  <mo>∗
+                                    <!-- ∗ -->
+                                  </mo>
+                                </mtd>
+                                <mtd>
+                                  <mn>0</mn>
+                                </mtd>
+                              </mtr>
+                              <mtr>
+                                <mtd>
+                                  <mrow class="MJX-TeXAtom-ORD">
+                                    <mo>∗
+                                      <!-- ∗ -->
+                                    </mo>
+                                  </mrow>
+                                </mtd>
+                                <mtd>
+                                  <mn>0</mn>
+                                </mtd>
+                                <mtd>
+                                  <mn>0</mn>
+                                </mtd>
+                              </mtr>
+                            </mtable>
+                            <mo>)</mo>
+                          </mrow>
+                          <mrow id="eqn:cross" />
+                        </mtd>
+                      </mlabeledtr>
+                    </mtable>
+                    <annotation encoding="application/x-tex">\begin{equation} J = \begin{pmatrix} 0&amp;0&amp;*\\ 0&amp;*&amp;0\\ {*}&amp;0&amp;0 \end{pmatrix} \tag{1.6.1}\cssId{eqn:cross}{} \end{equation}
+                    </annotation>
+                  </semantics>
+                </math>
+                <p>(that is, nonzero entries from
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>F</mi>
+                      <annotation encoding="application/x-tex">F</annotation>
+                    </semantics>
+                  </math> along the cross-diagonal and zeros elsewhere), then
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math> splits over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>F</mi>
+                      <annotation encoding="application/x-tex">F</annotation>
+                    </semantics>
+                  </math>. In the third example (unitary), if
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>J</mi>
+                      <annotation encoding="application/x-tex">J</annotation>
+                    </semantics>
+                  </math> has this same form and if
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>E</mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo>/</mo>
+                        </mrow>
+                        <mi>F</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">E/F</annotation>
+                    </semantics>
+                  </math> is unramified, then the unitary group splits over the unramified extension
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>E</mi>
+                      <annotation encoding="application/x-tex">E</annotation>
+                    </semantics>
+                  </math> of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>F</mi>
+                      <annotation encoding="application/x-tex">F</annotation>
+                    </semantics>
+                  </math>.</p>
+              </div>
+              <div data-type="sect3" data-jats="statement" data-jats-content-type="theorem" class="theorem thmplain" id="ltxid6">
+                <h3>Assumption 1.7</h3>
+                <p class="noindent">
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math> is quasi-split.</p>
+              </div>
+              <p>This means that there is an
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mi>F</mi>
+                    <annotation encoding="application/x-tex">F</annotation>
+                  </semantics>
+                </math>-subgroup
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>B</mi>
+                      <mo>⊂
+                        <!-- ⊂ -->
+                      </mo>
+                      <mi>G</mi>
+                    </mrow>
+                    <annotation encoding="application/x-tex">B\subset G</annotation>
+                  </semantics>
+                </math> such that
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>B</mi>
+                      <msub>
+                        <mo>×
+                          <!-- × -->
+                        </mo>
+                        <mi>F</mi>
+                      </msub>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mover>
+                          <mi>F</mi>
+                          <mo stretchy="false">¯
+                            <!-- ¯ -->
+                          </mo>
+                        </mover>
+                      </mrow>
+                    </mrow>
+                    <annotation encoding="application/x-tex">B\times _F\bar F</annotation>
+                  </semantics>
+                </math> is a Borel subgroup of
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                  <semantics>
+                    <mrow>
+                      <mi>G</mi>
+                      <msub>
+                        <mo>×
+                          <!-- × -->
+                        </mo>
+                        <mi>F</mi>
+                      </msub>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mover>
+                          <mi>F</mi>
+                          <mo stretchy="false">¯
+                            <!-- ¯ -->
+                          </mo>
+                        </mover>
+                      </mrow>
+                    </mrow>
+                    <annotation encoding="application/x-tex">G\times _F\bar F</annotation>
+                  </semantics>
+                </math>.</p>
+              <div data-type="sect3" data-jats="statement" data-jats-content-type="theorem" class="theorem thmdefinition">
+                <h3>Example 1.8</h3>
+                <p class="noindent">In all three cases (orthogonal, symplectic, and unitary), if
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>J</mi>
+                      <annotation encoding="application/x-tex">J</annotation>
+                    </semantics>
+                  </math> has the cross-diagonal form <a href="#eqn:cross">1.6.1</a>, then
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math> is quasi-split. In fact, we can take the points of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>B</mi>
+                      <annotation encoding="application/x-tex">B</annotation>
+                    </semantics>
+                  </math> to be the set of upper triangular matrices in
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>G</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">G(F)</annotation>
+                    </semantics>
+                  </math>.</p>
+              </div>
+              <div data-type="sect3" data-jats="statement" data-jats-content-type="theorem" class="theorem thmplain">
+                <h3>Assumption 1.9</h3>
+                <p class="noindent">
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>K</mi>
+                      <annotation encoding="application/x-tex">K</annotation>
+                    </semantics>
+                  </math> is a hyperspecial maximal compact subgroup of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>G</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">G(F)</annotation>
+                    </semantics>
+                  </math>, in the sense of Definition <a href="#ltxid12">1.11</a>.</p>
+              </div>
+              <div data-type="sect3" data-jats="statement" data-jats-content-type="theorem" class="theorem thmdefinition">
+                <h3>Example 1.10</h3>
+                <p class="noindent">Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>O</mi>
+                        <mi>F</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">O_F</annotation>
+                    </semantics>
+                  </math> be the ring of integers of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>F</mi>
+                      <annotation encoding="application/x-tex">F</annotation>
+                    </semantics>
+                  </math> and let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>K</mi>
+                        <mo>=</mo>
+                        <mi>G</mi>
+                        <mi>L</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo>,</mo>
+                        <msub>
+                          <mi>O</mi>
+                          <mi>F</mi>
+                        </msub>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">K = GL(n,O_F)</annotation>
+                    </semantics>
+                  </math>. This is a hyperspecial maximal compact subgroup of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>G</mi>
+                        <mi>L</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>n</mi>
+                        <mo>,</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">GL(n,F)</annotation>
+                    </semantics>
+                  </math>.</p>
+              </div>
+              <div data-type="sect3" data-jats="statement" data-jats-content-type="theorem" class="theorem thmdefinition" id="ltxid12">
+                <h3>Definition 1.11</h3>
+                <p class="noindent">
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>K</mi>
+                      <annotation encoding="application/x-tex">K</annotation>
+                    </semantics>
+                  </math> is
+                  <em>hyperspecial</em> if there exists
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi class="MJX-tex-caligraphic" mathvariant="script">G</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\mathcal {G}</annotation>
+                    </semantics>
+                  </math> such that the following conditions are satisfied.</p>
+                <ul>
+
+                  <li>
+                    <p>
+                      <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi class="MJX-tex-caligraphic" mathvariant="script">G</mi>
+                          </mrow>
+                          <annotation encoding="application/x-tex">\mathcal {G}</annotation>
+                        </semantics>
+                      </math> is a smooth group scheme over
+                      <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <msub>
+                            <mi>O</mi>
+                            <mi>F</mi>
+                          </msub>
+                          <annotation encoding="application/x-tex">O_F</annotation>
+                        </semantics>
+                      </math>,</p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow>
+                            <mi>G</mi>
+                            <mo>=</mo>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi class="MJX-tex-caligraphic" mathvariant="script">G</mi>
+                            </mrow>
+                            <msub>
+                              <mo>×
+                                <!-- × -->
+                              </mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <msub>
+                                  <mi>O</mi>
+                                  <mi>F</mi>
+                                </msub>
+                              </mrow>
+                            </msub>
+                            <mi>F</mi>
+                          </mrow>
+                          <annotation encoding="application/x-tex">G = \mathcal {G}\times _{O_F} F</annotation>
+                        </semantics>
+                      </math>,</p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi class="MJX-tex-caligraphic" mathvariant="script">G</mi>
+                            </mrow>
+                            <msub>
+                              <mo>×
+                                <!-- × -->
+                              </mo>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <msub>
+                                  <mi>O</mi>
+                                  <mi>F</mi>
+                                </msub>
+                              </mrow>
+                            </msub>
+                            <msub>
+                              <mrow class="MJX-TeXAtom-ORD">
+                                <mi mathvariant="double-struck">F</mi>
+                              </mrow>
+                              <mi>q</mi>
+                            </msub>
+                          </mrow>
+                          <annotation encoding="application/x-tex">\mathcal {G}\times _{O_F} \mathbb {F}_q</annotation>
+                        </semantics>
+                      </math> is reductive,</p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                          <mrow>
+                            <mi>K</mi>
+                            <mo>=</mo>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi class="MJX-tex-caligraphic" mathvariant="script">G</mi>
+                            </mrow>
+                            <mo stretchy="false">(</mo>
+                            <msub>
+                              <mi>O</mi>
+                              <mi>F</mi>
+                            </msub>
+                            <mo stretchy="false">)</mo>
+                          </mrow>
+                          <annotation encoding="application/x-tex">K = \mathcal {G}(O_F)</annotation>
+                        </semantics>
+                      </math>.</p>
+                  </li>
+                </ul>
+              </div>
+              <div data-type="sect3" data-jats="statement" data-jats-content-type="theorem" class="theorem thmdefinition">
+                <h3>Example 1.12</h3>
+                <p class="noindent">In all three examples (orthogonal, symplectic, and unitary), take
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math> to have the form of Example <a href="#ltxid7">1.6</a>. Assume that each cross-diagonal entry is a
+                  <em>unit</em> in the ring of integers. Assume further that the residual characteristic is not
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mn>2</mn>
+                      <annotation encoding="application/x-tex">2</annotation>
+                    </semantics>
+                  </math>. Then the equations</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mrow>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <msup>
+                          <mrow class="MJX-TeXAtom-ORD">
+
+                          </mrow>
+                          <mi>t</mi>
+                        </msup>
+                      </mrow>
+                      <mi>X</mi>
+                      <mi>J</mi>
+                      <mi>X</mi>
+                      <mo>=</mo>
+                      <mi>J</mi>
+                      <mspace width="1em" />
+                      <mo stretchy="false">(</mo>
+                      <mtext>or in the unitary case </mtext>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <msup>
+                          <mrow class="MJX-TeXAtom-ORD">
+
+                          </mrow>
+                          <mi>t</mi>
+                        </msup>
+                      </mrow>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mover>
+                            <mi>X</mi>
+                            <mo stretchy="false">¯
+                              <!-- ¯ -->
+                            </mo>
+                          </mover>
+                        </mrow>
+                      </mrow>
+                      <mi>J</mi>
+                      <mi>X</mi>
+                      <mo>=</mo>
+                      <mi>J</mi>
+                      <mo stretchy="false">)</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex"> {{}^t}X J X = J\quad (\text{or in the unitary case } {{}^t}{\bar X} J X = J) </annotation>
+                  </semantics>
+                </math>
+                <p>define a group scheme
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi class="MJX-tex-caligraphic" mathvariant="script">G</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\mathcal {G}</annotation>
+                    </semantics>
+                  </math> over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>O</mi>
+                        <mi>F</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">O_F</annotation>
+                    </semantics>
+                  </math>, and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi class="MJX-tex-caligraphic" mathvariant="script">G</mi>
+                        </mrow>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi>O</mi>
+                          <mi>F</mi>
+                        </msub>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\mathcal {G}(O_F)</annotation>
+                    </semantics>
+                  </math> is hyperspecial.</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+    <script src="MathJax.js"></script>
+
+
+  </body>
+
+  </html>

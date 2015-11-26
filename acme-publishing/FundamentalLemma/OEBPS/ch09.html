@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>9. Geometric Reformulations of the Fundamental Lemma</title>
+</head>
+
+<body data-type="book">
+  <link rel="prev" href="ch08.html" />
+  <link rel="next" href="ch10.html" />
+  <div class="galley-rw">
+    <div class="body-rw Chapter-rw">
+      <div class="title-block-rw">
+        <script src="../../acme.js"></script>
+        <section data-type="chapter" epub:type="chapter" data-pdf-bookmark="9. Geometric Reformulations of the Fundamental Lemma">
+          <div class="chapter" id="ltxid61">
+
+            <h1>
+              <span class="label"></span>9. Geometric Reformulations of the Fundamental Lemma</h1>
+            <p>From early on, those trying to prove the fundamental lemma have sought geometric interpretations of the identities of orbital integrals. Initially these geometric interpretations were rather crude. In the hands of Goresky, Kottwitz, MacPherson,
+              and Laumon these geometric interpretations have become increasingly sophisticated. [
+              <cite><a href="ch10.html#GKM1">5</a></cite>], [
+              <cite><a href="ch10.html#GKM2">6</a></cite>], [
+              <cite><a href="ch10.html#Lau1">21</a></cite>], [
+              <cite><a href="ch10.html#Lau2">22</a></cite>].</p>
+            <p>This paper is intended to give an introduction to the fundamental lemma, and the papers giving a geometric interpretation of the fundamental lemma do not qualify as introductory material. In this section, we will be content to describe the
+              geometric interpretation in broad terms.</p>
+            <section data-type="sect1" class="sect1" data-pdf-bookmark="9.1. Old-style geometric interpretations: buildings">
+              <div class="sect1" id="ltxid62">
+
+                <header>
+                  <h1 class="sectionhead">9.1. Old-style geometric interpretations: buildings</h1>
+                </header>
+                <p>We begin with a geometric interpretation of the fundamental lemma that was popular in the late seventies and early eighties. It was eventually discarded in favor of other approaches when the combinatorial difficulties became too great.</p>
+                <p>This approach is to use the geometry of the Bruhat-Tits building to understand orbital integrals. We illustrate the approach with the group
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>G</mi>
+                        <mo>=</mo>
+                        <mi>S</mi>
+                        <mi>L</mi>
+                        <mo stretchy="false">(</mo>
+                        <mn>2</mn>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">G=SL(2)</annotation>
+                    </semantics>
+                  </math>. The term
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>χ
+                            <!-- χ -->
+                          </mi>
+                          <mrow >
+                            <mi>G</mi>
+                            <mo>,</mo>
+                            <mi>K</mi>
+                          </mrow>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                          <mi>g</mi>
+                          <mrow >
+                            <mo>−
+                              <!-- − -->
+                            </mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </msup>
+                        <msup>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                          <mo>′</mo>
+                        </msup>
+                        <mi>g</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\chi _{G,K}(g^{-1}\gamma ' g)</annotation>
+                    </semantics>
+                  </math> that appears in the fundamental lemma can be manipulated as follows:</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mtable side="left" columnalign="left left left" rowspacing="4pt" columnspacing="1em">
+                      <mtr>
+                        <mtd>
+                          <msub>
+                            <mi>χ
+                              <!-- χ -->
+                            </mi>
+                            <mrow >
+                              <mi>G</mi>
+                              <mo>,</mo>
+                              <mi>K</mi>
+                            </mrow>
+                          </msub>
+                          <mo stretchy="false">(</mo>
+                          <msup>
+                            <mi>g</mi>
+                            <mrow >
+                              <mo>−
+                                <!-- − -->
+                              </mo>
+                              <mn>1</mn>
+                            </mrow>
+                          </msup>
+                          <msup>
+                            <mi>γ
+                              <!-- γ -->
+                            </mi>
+                            <mo>′</mo>
+                          </msup>
+                          <mi>g</mi>
+                          <mo stretchy="false">)</mo>
+                          <mo>≠
+                            <!-- ≠ -->
+                          </mo>
+                          <mn>0</mn>
+                        </mtd>
+                        <mtd>
+                          <mo stretchy="false">⇔
+                            <!-- ⇔ -->
+                          </mo>
+                          <msup>
+                            <mi>g</mi>
+                            <mrow >
+                              <mo>−
+                                <!-- − -->
+                              </mo>
+                              <mn>1</mn>
+                            </mrow>
+                          </msup>
+                          <msup>
+                            <mi>γ
+                              <!-- γ -->
+                            </mi>
+                            <mo>′</mo>
+                          </msup>
+                          <mi>g</mi>
+                          <mo>∈
+                            <!-- ∈ -->
+                          </mo>
+                          <mi>K</mi>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd/>
+                        <mtd>
+                          <mo stretchy="false">⇔
+                            <!-- ⇔ -->
+                          </mo>
+                          <msup>
+                            <mi>γ
+                              <!-- γ -->
+                            </mi>
+                            <mo>′</mo>
+                          </msup>
+                          <mi>g</mi>
+                          <mo>∈
+                            <!-- ∈ -->
+                          </mo>
+                          <mi>g</mi>
+                          <mi>K</mi>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd/>
+                        <mtd>
+                          <mo stretchy="false">⇔
+                            <!-- ⇔ -->
+                          </mo>
+                          <msup>
+                            <mi>γ
+                              <!-- γ -->
+                            </mi>
+                            <mo>′</mo>
+                          </msup>
+                          <mo stretchy="false">(</mo>
+                          <mi>g</mi>
+                          <mi>K</mi>
+                          <mo stretchy="false">)</mo>
+                          <mo>=</mo>
+                          <mo stretchy="false">(</mo>
+                          <mi>g</mi>
+                          <mi>K</mi>
+                          <mo stretchy="false">)</mo>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd/>
+                        <mtd>
+                          <mo stretchy="false">⇔
+                            <!-- ⇔ -->
+                          </mo>
+                          <mi>g</mi>
+                          <mi>K</mi>
+                          <mtext> is a fixed point of </mtext>
+                          <msup>
+                            <mi>γ
+                              <!-- γ -->
+                            </mi>
+                            <mo>′</mo>
+                          </msup>
+                          <mtext> on </mtext>
+                          <mi>G</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>F</mi>
+                          <mo stretchy="false">)</mo>
+                          <mrow >
+                            <mo>/</mo>
+                          </mrow>
+                          <mi>K</mi>
+                          <mo>.</mo>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                    <annotation encoding="application/x-tex"> \begin{array}{lll} \chi _{G,K}(g^{-1}\gamma ' g)\ne 0 &amp;\Leftrightarrow g^{-1}\gamma ' g\in K\\&amp;\Leftrightarrow \gamma ' g\in g K\\&amp;\Leftrightarrow \gamma ' (g K) = (g K)\\&amp;\Leftrightarrow g K \text{ is a fixed point
+                      of } \gamma ' \text{ on } G(F)/K. \end{array} </annotation>
+                  </semantics>
+                </math>
+                <p>The set
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>G</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                        <mrow >
+                          <mo>/</mo>
+                        </mrow>
+                        <mi>K</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">G(F)/K</annotation>
+                    </semantics>
+                  </math> is in bijective correspondence with a set of vertices in the Bruhat-Tits building of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>S</mi>
+                        <mi>L</mi>
+                        <mo stretchy="false">(</mo>
+                        <mn>2</mn>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">SL(2)</annotation>
+                    </semantics>
+                  </math>. Thus, we may interpret the orbital integral geometrically as the number of fixed points of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msup>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo>′</mo>
+                      </msup>
+                      <annotation encoding="application/x-tex">\gamma '</annotation>
+                    </semantics>
+                  </math> in the building that are vertices of a given type.</p>
+                <p>Under this interpretation, it is possible to use counting arguments to obtain explicit formulas for orbital integrals as a function of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msup>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo>′</mo>
+                      </msup>
+                      <annotation encoding="application/x-tex">\gamma '</annotation>
+                    </semantics>
+                  </math>. In this way, the fundamental lemma was directly verified for a few groups of small rank such as
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>S</mi>
+                        <mi>L</mi>
+                        <mo stretchy="false">(</mo>
+                        <mn>2</mn>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">SL(2)</annotation>
+                    </semantics>
+                  </math> and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>U</mi>
+                        <mo stretchy="false">(</mo>
+                        <mn>3</mn>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">U(3)</annotation>
+                    </semantics>
+                  </math>.</p>
+              </div>
+            </section>
+            <section data-type="sect1" class="sect1" data-pdf-bookmark="9.2. Affine grassmannians">
+              <div class="sect1" id="ltxid63">
+
+                <header>
+                  <h1 class="sectionhead">9.2. Affine grassmannians</h1>
+                </header>
+                <p>Until the end of Section <a href="#ltxid61">9</a>, let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>F</mi>
+                        <mo>=</mo>
+                        <mi>k</mi>
+                        <mo stretchy="false">(</mo>
+                        <mo stretchy="false">(</mo>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">F = k((t))</annotation>
+                    </semantics>
+                  </math>, a field of formal Laurent series. Except for the discussion of the results of Kazhdan and Lusztig, the field
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>k</mi>
+                      <annotation encoding="application/x-tex">k</annotation>
+                    </semantics>
+                  </math> will be taken to be a finite field:
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>k</mi>
+                        <mo>=</mo>
+                        <msub>
+                          <mrow >
+                            <mi mathvariant="double-struck">F</mi>
+                          </mrow>
+                          <mi>q</mi>
+                        </msub>
+                      </mrow>
+                      <annotation encoding="application/x-tex">k=\mathbb {F}_q</annotation>
+                    </semantics>
+                  </math>.</p>
+                <p>In 1988, Kazhdan and Lusztig showed that if
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>F</mi>
+                        <mo>=</mo>
+                        <mrow >
+                          <mi mathvariant="double-struck">C</mi>
+                        </mrow>
+                        <mo stretchy="false">(</mo>
+                        <mo stretchy="false">(</mo>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">F=\mathbb {C}((t))</annotation>
+                    </semantics>
+                  </math>, then
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>G</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                        <mrow >
+                          <mo>/</mo>
+                        </mrow>
+                        <mi>K</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">G(F)/K</annotation>
+                    </semantics>
+                  </math> can be identified with the points of an ind-scheme (that is, an inductive limit of schemes) [
+                  <cite><a href="ch10.html#KL">15</a></cite>]. This ind-scheme is called the affine Grassmannian. The set of fixed points of an element
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\gamma </annotation>
+                    </semantics>
+                  </math> can be identified with the set of points of a scheme over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow >
+                        <mi mathvariant="double-struck">C</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\mathbb {C}</annotation>
+                    </semantics>
+                  </math>, known as the affine Springer fiber. The corresponding construction over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mrow >
+                            <mi mathvariant="double-struck">F</mi>
+                          </mrow>
+                          <mi>q</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mo stretchy="false">(</mo>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\mathbb {F}_q((t))</annotation>
+                    </semantics>
+                  </math> is mentioned briefly in the final paragraphs of their paper. Rather than counting fixed points in the building, orbital integral can be computed by counting the number of points on a scheme over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mrow >
+                          <mi mathvariant="double-struck">F</mi>
+                        </mrow>
+                        <mi>q</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">\mathbb {F}_q</annotation>
+                    </semantics>
+                  </math>.</p>
+                <p>Based on a description of orbital integrals as the number of points on schemes over finite fields, Kottwitz, Goresky, and MacPherson give a geometrical formulation of the fundamental lemma. Furthermore, by making a thorough investigation
+                  of the equivariant cohomology of these schemes, they prove the geometrical conjecture when
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\gamma </annotation>
+                    </semantics>
+                  </math> comes from an unramified Cartan subgroup [
+                  <cite><a href="ch10.html#GKM1">5</a></cite>].</p>
+              </div>
+            </section>
+            <section data-type="sect1" class="sect1" data-pdf-bookmark="9.3. Geometric interpretations">
+              <div class="sect1" id="ltxid64">
+
+                <header>
+                  <h1 class="sectionhead">9.3. Geometric interpretations</h1>
+                </header>
+                <p>Each of the terms in the fundamental lemma has a nice geometric interpretation. Let us give a brief description of the geometrical counterpart of each term in the fundamental lemma. We work with the unitary group, so that we may include
+                  various insights of Laumon.</p>
+                <p>The geometrical counterpart of cosets
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>g</mi>
+                        <mi>K</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">gK</annotation>
+                    </semantics>
+                  </math> are self-dual lattices in a vector space
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>V</mi>
+                      <annotation encoding="application/x-tex">V</annotation>
+                    </semantics>
+                  </math> over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>F</mi>
+                      <annotation encoding="application/x-tex">F</annotation>
+                    </semantics>
+                  </math>.</p>
+                <p>The counterpart of the support set,
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>SUP</mi>
+                        <mo>=</mo>
+                        <mo fence="false" stretchy="false">{</mo>
+                        <mi>g</mi>
+                        <mrow >
+                          <mtext> </mtext>
+                          <mo fence="false" stretchy="false">|</mo>
+                          <mtext> </mtext>
+                        </mrow>
+                        <msup>
+                          <mi>g</mi>
+                          <mrow >
+                            <mo>−
+                              <!-- − -->
+                            </mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </msup>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mi>g</mi>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <mi>K</mi>
+                        <mo fence="false" stretchy="false">}</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\operatorname {SUP}=\{g{\ \vert \ }g^{-1}\gamma g \in K\}</annotation>
+                    </semantics>
+                  </math>, is the affine Springer fiber
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>X</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">X_\gamma </annotation>
+                    </semantics>
+                  </math>.</p>
+                <p>The counterpart of the integral of the support set
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>SUP</mi>
+                      <annotation encoding="application/x-tex">\operatorname {SUP}</annotation>
+                    </semantics>
+                  </math> over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math> is counting points on the scheme
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>X</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">X_\gamma </annotation>
+                    </semantics>
+                  </math>. The integral over all of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math> diverges and the number of fixed points on the scheme is infinite. For that reason the orbital integral is an integral over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>T</mi>
+                        <mi mathvariant="normal">∖
+                          <!-- ∖ -->
+                        </mi>
+                        <mi>G</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">T\backslash G</annotation>
+                    </semantics>
+                  </math>, where
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>T</mi>
+                      <annotation encoding="application/x-tex">T</annotation>
+                    </semantics>
+                  </math> is the centralizer of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\gamma </annotation>
+                    </semantics>
+                  </math>, rather than over all of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math>.</p>
+                <p>The counterpart of the integral over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>T</mi>
+                        <mi mathvariant="normal">∖
+                          <!-- ∖ -->
+                        </mi>
+                        <mi>G</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">T\backslash G</annotation>
+                    </semantics>
+                  </math> is counting points on a quotient space
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>Z</mi>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                        </msub>
+                        <mo>=</mo>
+                        <msub>
+                          <mi>X</mi>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                        </msub>
+                        <mrow >
+                          <mo>/</mo>
+                        </mrow>
+                        <msup>
+                          <mrow >
+                            <mi mathvariant="double-struck">Z</mi>
+                          </mrow>
+                          <mi>ℓ
+                            <!-- ℓ -->
+                          </mi>
+                        </msup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">Z_\gamma = X_\gamma /\mathbb {Z}^\ell </annotation>
+                    </semantics>
+                  </math>. (There is a free action of a group
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msup>
+                        <mrow >
+                          <mi mathvariant="double-struck">Z</mi>
+                        </mrow>
+                        <mi>ℓ
+                          <!-- ℓ -->
+                        </mi>
+                      </msup>
+                      <annotation encoding="application/x-tex">\mathbb {Z}^\ell </annotation>
+                    </semantics>
+                  </math> on
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>X</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">X_\gamma </annotation>
+                    </semantics>
+                  </math>, and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>Z</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">Z_\gamma </annotation>
+                    </semantics>
+                  </math> is the quotient.)</p>
+                <p>The geometric counterpart of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>κ
+                          <!-- κ -->
+                        </mi>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi>a</mi>
+                          <mi>τ
+                            <!-- τ -->
+                          </mi>
+                        </msub>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\kappa (a_\tau )</annotation>
+                    </semantics>
+                  </math> is somewhat more involved. For elliptic endoscopic groups of unitary groups
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>κ
+                        <!-- κ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\kappa </annotation>
+                    </semantics>
+                  </math> has order
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mn>2</mn>
+                      <annotation encoding="application/x-tex">2</annotation>
+                    </semantics>
+                  </math>. The character
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>κ
+                        <!-- κ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\kappa </annotation>
+                    </semantics>
+                  </math> has the form.</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mrow>
+                      <mi>κ
+                        <!-- κ -->
+                      </mi>
+                      <mo>:</mo>
+                      <msup>
+                        <mi>H</mi>
+                        <mn>1</mn>
+                      </msup>
+                      <mo stretchy="false">(</mo>
+                      <mi>Gal</mi>
+                      <mo>⁡
+                        <!-- ⁡ -->
+                      </mo>
+                      <mo stretchy="false">(</mo>
+                      <mrow >
+                        <mover>
+                          <mi>F</mi>
+                          <mo stretchy="false">¯
+                            <!-- ¯ -->
+                          </mo>
+                        </mover>
+                      </mrow>
+                      <mrow >
+                        <mo>/</mo>
+                      </mrow>
+                      <mi>F</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>,</mo>
+                      <mi>T</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>≅
+                        <!-- ≅ -->
+                      </mo>
+                      <mo stretchy="false">(</mo>
+                      <mrow >
+                        <mi mathvariant="double-struck">Z</mi>
+                      </mrow>
+                      <mrow >
+                        <mo>/</mo>
+                      </mrow>
+                      <mn>2</mn>
+                      <mrow >
+                        <mi mathvariant="double-struck">Z</mi>
+                      </mrow>
+                      <msup>
+                        <mo stretchy="false">)</mo>
+                        <mi>ℓ
+                          <!-- ℓ -->
+                        </mi>
+                      </msup>
+                      <mo stretchy="false">→
+                        <!-- → -->
+                      </mo>
+                      <mo fence="false" stretchy="false">{</mo>
+                      <mo>±
+                        <!-- ± -->
+                      </mo>
+                      <mn>1</mn>
+                      <mo fence="false" stretchy="false">}</mo>
+                      <mo>.</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex"> \kappa :H^1(\operatorname {Gal}(\bar F/F),T)\cong (\mathbb {Z}/2\mathbb {Z})^\ell \to \{\pm 1\}. </annotation>
+                  </semantics>
+                </math>
+                <p>The character
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>κ
+                        <!-- κ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\kappa </annotation>
+                    </semantics>
+                  </math> pulls back to a character of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msup>
+                        <mrow >
+                          <mi mathvariant="double-struck">Z</mi>
+                        </mrow>
+                        <mi>ℓ
+                          <!-- ℓ -->
+                        </mi>
+                      </msup>
+                      <annotation encoding="application/x-tex">\mathbb {Z}^\ell </annotation>
+                    </semantics>
+                  </math>. The rational points of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>X</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">X_\gamma </annotation>
+                    </semantics>
+                  </math> are identified with self-dual lattices:
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msup>
+                          <mi>A</mi>
+                          <mrow >
+                            <mo>⊥
+                              <!-- ⊥ -->
+                            </mo>
+                          </mrow>
+                        </msup>
+                        <mo>=</mo>
+                        <mi>A</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">A^{\perp } = A</annotation>
+                    </semantics>
+                  </math>. The points of the quotient space
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>Z</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">Z_\gamma </annotation>
+                    </semantics>
+                  </math> are lattices that are self-dual modulo the group action:
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msup>
+                          <mi>A</mi>
+                          <mrow >
+                            <mo>⊥
+                              <!-- ⊥ -->
+                            </mo>
+                          </mrow>
+                        </msup>
+                        <mo>=</mo>
+                        <mi>λ
+                          <!-- λ -->
+                        </mi>
+                        <mo>⋅
+                          <!-- ⋅ -->
+                        </mo>
+                        <mi>A</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">A^{\perp } =\lambda \cdot A</annotation>
+                    </semantics>
+                  </math>, for some
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>λ
+                          <!-- λ -->
+                        </mi>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <msup>
+                          <mrow >
+                            <mi mathvariant="double-struck">Z</mi>
+                          </mrow>
+                          <mi>ℓ
+                            <!-- ℓ -->
+                          </mi>
+                        </msup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\lambda \in \mathbb {Z}^\ell </annotation>
+                    </semantics>
+                  </math>. The character
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>κ
+                        <!-- κ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\kappa </annotation>
+                    </semantics>
+                  </math> then partitions the points of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>Z</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">Z_\gamma </annotation>
+                    </semantics>
+                  </math> into two sets, depending on the sign of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>κ
+                          <!-- κ -->
+                        </mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>λ
+                          <!-- λ -->
+                        </mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\kappa (\lambda )</annotation>
+                    </semantics>
+                  </math>:</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mrow>
+                      <msubsup>
+                        <mi>Z</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mrow >
+                          <mo>±
+                            <!-- ± -->
+                          </mo>
+                        </mrow>
+                      </msubsup>
+                      <mo>=</mo>
+                      <mo fence="false" stretchy="false">{</mo>
+                      <mi>A</mi>
+                      <mtext> </mtext>
+                      <mrow >
+                        <mo stretchy="false">|</mo>
+                      </mrow>
+                      <mtext> </mtext>
+                      <msup>
+                        <mi>A</mi>
+                        <mrow >
+                          <mo>⊥
+                            <!-- ⊥ -->
+                          </mo>
+                        </mrow>
+                      </msup>
+                      <mo>=</mo>
+                      <mi>λ
+                        <!-- λ -->
+                      </mi>
+                      <mi>A</mi>
+                      <mo>;</mo>
+                      <mspace width="1em" />
+                      <mi>κ
+                        <!-- κ -->
+                      </mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>λ
+                        <!-- λ -->
+                      </mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>=</mo>
+                      <mo>±
+                        <!-- ± -->
+                      </mo>
+                      <mn>1</mn>
+                      <mo fence="false" stretchy="false">}</mo>
+                      <mo>.</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex"> Z_\gamma ^{\pm } = \{A \ |\ A^{\perp } = \lambda A;\quad \kappa (\lambda ) = \pm 1\}. </annotation>
+                  </semantics>
+                </math>
+                <p>(In a more sophisticated treatment of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>κ
+                          <!-- κ -->
+                        </mi>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi>a</mi>
+                          <mi>τ
+                            <!-- τ -->
+                          </mi>
+                        </msub>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\kappa (a_\tau )</annotation>
+                    </semantics>
+                  </math>, it gives rise to a local system on
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>Z</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">Z_\gamma </annotation>
+                    </semantics>
+                  </math>; and counting points on varieties gives way to Grothendieck's trace formula.)</p>
+                <p>The counterpart of the
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>κ
+                        <!-- κ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\kappa </annotation>
+                    </semantics>
+                  </math>-orbital integral
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi mathvariant="normal">Λ
+                            <!-- Λ -->
+                          </mi>
+                          <mrow >
+                            <mi>G</mi>
+                            <mo>,</mo>
+                            <mi>H</mi>
+                          </mrow>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\Lambda _{G,H}(\gamma )</annotation>
+                    </semantics>
+                  </math> is the number</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mrow>
+                      <mi mathvariant="normal">#
+                        <!-- # -->
+                      </mi>
+                      <msubsup>
+                        <mi>Z</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo>+</mo>
+                      </msubsup>
+                      <mo>−
+                        <!-- − -->
+                      </mo>
+                      <mi mathvariant="normal">#
+                        <!-- # -->
+                      </mi>
+                      <msubsup>
+                        <mi>Z</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo>−
+                          <!-- − -->
+                        </mo>
+                      </msubsup>
+                      <mo>.</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex"> \#Z_\gamma ^+ - \#Z_\gamma ^-. </annotation>
+                  </semantics>
+                </math>
+                <p>The counterpart of the stable-orbital integral
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msubsup>
+                          <mi mathvariant="normal">Λ
+                            <!-- Λ -->
+                          </mi>
+                          <mi>H</mi>
+                          <mrow >
+                            <mi>s</mi>
+                            <mi>t</mi>
+                          </mrow>
+                        </msubsup>
+                        <mo stretchy="false">(</mo>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\Lambda _H^{st}(\gamma )</annotation>
+                    </semantics>
+                  </math> is the number</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mrow>
+                      <mi mathvariant="normal">#
+                        <!-- # -->
+                      </mi>
+                      <msubsup>
+                        <mi>Z</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mrow >
+                          <mi>H</mi>
+                          <mo>,</mo>
+                          <mi>s</mi>
+                          <mi>t</mi>
+                        </mrow>
+                      </msubsup>
+                    </mrow>
+                    <annotation encoding="application/x-tex"> \#Z_\gamma ^{H,st} </annotation>
+                  </semantics>
+                </math>
+                <p>for a corresponding variety constructed from the endoscopic group.</p>
+                <p>The factors
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <munder>
+                          <mo>∏
+                            <!-- ∏ -->
+                          </mo>
+                          <mrow >
+                            <mi mathvariant="normal">Φ
+                              <!-- Φ -->
+                            </mi>
+                          </mrow>
+                        </munder>
+                        <mrow >
+                          <mo stretchy="false">|</mo>
+                        </mrow>
+                        <mi>α
+                          <!-- α -->
+                        </mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>−
+                          <!-- − -->
+                        </mo>
+                        <mn>1</mn>
+                        <msup>
+                          <mrow >
+                            <mo stretchy="false">|</mo>
+                          </mrow>
+                          <mrow >
+                            <mn>1</mn>
+                            <mrow >
+                              <mo>/</mo>
+                            </mrow>
+                            <mn>2</mn>
+                          </mrow>
+                        </msup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\prod _{\Phi } |\alpha (\gamma )-1|^{1/2}</annotation>
+                    </semantics>
+                  </math> that appear on the two sides of the fundamental lemma can be combined into a single term</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mrow>
+                      <munder>
+                        <mo>∏
+                          <!-- ∏ -->
+                        </mo>
+                        <mrow >
+                          <mi>α
+                            <!-- α -->
+                          </mi>
+                          <mo>∈
+                            <!-- ∈ -->
+                          </mo>
+                          <msub>
+                            <mi mathvariant="normal">Φ
+                              <!-- Φ -->
+                            </mi>
+                            <mi>G</mi>
+                          </msub>
+                          <mo >∖
+                            <!-- ∖ -->
+                          </mo>
+                          <msub>
+                            <mi mathvariant="normal">Φ
+                              <!-- Φ -->
+                            </mi>
+                            <mi>H</mi>
+                          </msub>
+                        </mrow>
+                      </munder>
+                      <mrow >
+                        <mo stretchy="false">|</mo>
+                      </mrow>
+                      <mi>α
+                        <!-- α -->
+                      </mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>−
+                        <!-- − -->
+                      </mo>
+                      <mn>1</mn>
+                      <msup>
+                        <mrow >
+                          <mo stretchy="false">|</mo>
+                        </mrow>
+                        <mrow >
+                          <mn>1</mn>
+                          <mrow >
+                            <mo>/</mo>
+                          </mrow>
+                          <mn>2</mn>
+                        </mrow>
+                      </msup>
+                      <mo>.</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex"> \prod _{\alpha \in \Phi _G\setminus \Phi _H}|\alpha (\gamma )-1|^{1/2}. </annotation>
+                  </semantics>
+                </math>
+                <p>This has the form
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msup>
+                        <mi>q</mi>
+                        <mrow >
+                          <mo>−
+                            <!-- − -->
+                          </mo>
+                          <mi>d</mi>
+                        </mrow>
+                      </msup>
+                      <annotation encoding="application/x-tex">q^{-d}</annotation>
+                    </semantics>
+                  </math> for some value
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>d</mi>
+                        <mo>=</mo>
+                        <mi>d</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">d=d(\gamma )</annotation>
+                    </semantics>
+                  </math>. The factor
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msup>
+                        <mi>q</mi>
+                        <mrow >
+                          <mo>−
+                            <!-- − -->
+                          </mo>
+                          <mi>d</mi>
+                        </mrow>
+                      </msup>
+                      <annotation encoding="application/x-tex">q^{-d}</annotation>
+                    </semantics>
+                  </math> has been interpreted in various ways. We mention that [
+                  <cite><a href="ch10.html#LR">24</a></cite>] interprets
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msup>
+                        <mi>q</mi>
+                        <mi>d</mi>
+                      </msup>
+                      <annotation encoding="application/x-tex">q^d</annotation>
+                    </semantics>
+                  </math> as the points on an affine space of dimension
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>d</mi>
+                      <annotation encoding="application/x-tex">d</annotation>
+                    </semantics>
+                  </math>. That paper expresses the hope that it might be possible to find an embedding
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msubsup>
+                          <mi>Z</mi>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                          <mo>−
+                            <!-- − -->
+                          </mo>
+                        </msubsup>
+                        <mo stretchy="false">→
+                          <!-- → -->
+                        </mo>
+                        <msubsup>
+                          <mi>Z</mi>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                          <mo>+</mo>
+                        </msubsup>
+                      </mrow>
+                      <annotation encoding="application/x-tex">Z_\gamma ^-\to Z_\gamma ^+</annotation>
+                    </semantics>
+                  </math> such that the complement of the embedded
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msubsup>
+                        <mi>Z</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo>−
+                          <!-- − -->
+                        </mo>
+                      </msubsup>
+                      <annotation encoding="application/x-tex">Z_\gamma ^-</annotation>
+                    </semantics>
+                  </math> in
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msubsup>
+                        <mi>Z</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo>+</mo>
+                      </msubsup>
+                      <annotation encoding="application/x-tex">Z_\gamma ^+</annotation>
+                    </semantics>
+                  </math> is a rank
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>d</mi>
+                      <annotation encoding="application/x-tex">d</annotation>
+                    </semantics>
+                  </math> fiber bundle over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msubsup>
+                        <mi>Z</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mrow >
+                          <mi>H</mi>
+                          <mo>,</mo>
+                          <mi>s</mi>
+                          <mi>t</mi>
+                        </mrow>
+                      </msubsup>
+                      <annotation encoding="application/x-tex">Z_\gamma ^{H,st}</annotation>
+                    </semantics>
+                  </math>. The realization of this hope would give an entirely geometric interpretation of the fundamental lemma. Laumon and Rapoport found that this construction works over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mrow >
+                            <mi mathvariant="double-struck">F</mi>
+                          </mrow>
+                          <mrow >
+                            <msup>
+                              <mi>q</mi>
+                              <mn>2</mn>
+                            </msup>
+                          </mrow>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mo stretchy="false">(</mo>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\mathbb {F}_{q^2}((t))</annotation>
+                    </semantics>
+                  </math>, but not over
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mrow >
+                            <mi mathvariant="double-struck">F</mi>
+                          </mrow>
+                          <mi>q</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mo stretchy="false">(</mo>
+                        <mi>t</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\mathbb {F}_q((t))</annotation>
+                    </semantics>
+                  </math>. In more recent work of Laumon, the constant
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>d</mi>
+                      <annotation encoding="application/x-tex">d</annotation>
+                    </semantics>
+                  </math> is interpreted geometrically as the intersection multiplicity of two singular curves.</p>
+              </div>
+            </section>
+            <section data-type="sect1" class="sect1" data-pdf-bookmark="9.4. Compactified Jacobians">
+              <div class="sect1" id="ltxid65">
+
+                <header>
+                  <h1 class="sectionhead">9.4. Compactified Jacobians</h1>
+                </header>
+                <p>Laumon, in the case of unitary groups, has made the splendid discovery that the orbital integrals – as they appear in the fundamental lemma – count points on the compactification of the Jacobians of a singular curve associated with the
+                  semisimple element
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\gamma </annotation>
+                    </semantics>
+                  </math>. (In fact,
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>Z</mi>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">Z_\gamma </annotation>
+                    </semantics>
+                  </math> is homeomorphic to and can be replaced with the compactification of a Jacobian.) Thus, the fundamental lemma may be reformulated as a relation between the compactified Jacobians of these curves. By showing that the singular curve for
+                  the endoscopic group
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>H</mi>
+                      <annotation encoding="application/x-tex">H</annotation>
+                    </semantics>
+                  </math> is a perturbation of the singular curve for the group
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math>, he is able relate the compactified Jacobians of the two curves, and prove the fundamental lemma for unitary groups (assuming a purity hypothesis related to the cohomology of the schemes).</p>
+                <figure>
+                  <div id="ltxid66" class="figure">
+
+                    <h6>
+                      <span class="label">Figure 9-1. </span>
+                      <strong>Figure 1. </strong>
+                      <p>The singular curve on the left can be deformed into the singular curve on the right by pulling up on the center ring. The curve on the left controls
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <semantics>
+                            <mrow>
+                              <msubsup>
+                                <mi mathvariant="normal">Λ
+                                  <!-- Λ -->
+                                </mi>
+                                <mi>H</mi>
+                                <mrow >
+                                  <mi>s</mi>
+                                  <mi>t</mi>
+                                </mrow>
+                              </msubsup>
+                              <mo stretchy="false">(</mo>
+                              <mi>γ
+                                <!-- γ -->
+                              </mi>
+                              <mo stretchy="false">)</mo>
+                            </mrow>
+                            <annotation encoding="application/x-tex">\Lambda ^{st}_H(\gamma )</annotation>
+                          </semantics>
+                        </math>, and the curve on the right controls
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <semantics>
+                            <mrow>
+                              <msub>
+                                <mi mathvariant="normal">Λ
+                                  <!-- Λ -->
+                                </mi>
+                                <mrow >
+                                  <mi>G</mi>
+                                  <mo>,</mo>
+                                  <mi>H</mi>
+                                </mrow>
+                              </msub>
+                              <mo stretchy="false">(</mo>
+                              <mi>γ
+                                <!-- γ -->
+                              </mi>
+                              <mo stretchy="false">)</mo>
+                            </mrow>
+                            <annotation encoding="application/x-tex">\Lambda _{G,H}(\gamma )</annotation>
+                          </semantics>
+                        </math>. This deformation relating the two curves is a key part of Laumon's work on the fundamental lemma for unitary groups.</p>
+                    </h6>
+                    <img src="arxiv-0312227-figure1.svg" />
+                  </div>
+                </figure>
+                <p>The origin of the curve
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>C</mi>
+                      <annotation encoding="application/x-tex">C</annotation>
+                    </semantics>
+                  </math> is the following. The ring
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>O</mi>
+                          <mi>F</mi>
+                        </msub>
+                        <mo stretchy="false">[</mo>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo stretchy="false">]</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">O_F[\gamma ]</annotation>
+                    </semantics>
+                  </math> is the completion at a point of the local ring of a curve
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>C</mi>
+                      <annotation encoding="application/x-tex">C</annotation>
+                    </semantics>
+                  </math>. In the interpretation in terms of Jacobians, the self-dual lattices
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msup>
+                          <mi>A</mi>
+                          <mrow >
+                            <mo>⊥
+                              <!-- ⊥ -->
+                            </mo>
+                          </mrow>
+                        </msup>
+                        <mo>=</mo>
+                        <mi>A</mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">A^{\perp } = A</annotation>
+                    </semantics>
+                  </math> that appear in the geometric interpretation above are replaced with
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>O</mi>
+                        <mi>C</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">O_C</annotation>
+                    </semantics>
+                  </math>-modules, where
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>O</mi>
+                        <mi>C</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">O_C</annotation>
+                    </semantics>
+                  </math> is the structure sheaf of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>C</mi>
+                      <annotation encoding="application/x-tex">C</annotation>
+                    </semantics>
+                  </math>.</p>
+                <p>The audio recording of Laumon's lecture at the Fields Institute on this research is highly recommended [
+                  <cite><a href="ch10.html#Lau3">23</a></cite>].</p>
+              </div>
+            </section>
+            <section data-type="sect1" class="sect1" data-pdf-bookmark="9.5. Final remarks">
+              <div class="sect1" id="ltxid67">
+
+                <header>
+                  <h1 class="sectionhead">9.5. Final remarks</h1>
+                </header>
+                <div data-type="sect2" data-jats="statement" data-jats-content-type="theorem" class="theorem thmremark">
+                  <h2>Remark 9.1</h2>
+                  <p class="noindent">The fundamental lemma is an open ended problem, in the sense that as researchers develop new trace formulas (the symmetric space trace formula [
+                    <cite><a href="ch10.html#Jac">14</a></cite>], the twisted trace formula [
+                    <cite><a href="ch10.html#KS">16</a></cite>], and so forth) and as they compare trace formulas for different groups, it will be necessary to formulate and prove generalized versions of the fundamental lemma. The version of the fundamental
+                    lemma stated in this paper should be viewed as a template that should be adapted according to an evolving context.</p>
+                </div>
+                <div data-type="sect2" data-jats="statement" data-jats-content-type="theorem" class="theorem thmremark">
+                  <h2>Remark 9.2</h2>
+                  <p class="noindent">The methods of Goresky, Kottwitz, MacPherson, and Laumon are limited to fields of positive characteristic. This may at first seem to be a limitation of their method. However, there are ideas about how to use motivic integration to lift
+                    their results from positive characteristic to characteristic zero (see [
+                    <cite><a href="ch10.html#CH">3</a></cite>]). Waldspurger also has results about lifting to characteristic zero that were presented at the Labesse conference, but I have not seen a preprint [
+                    <cite><a href="ch10.html#CL">32</a></cite>].</p>
+                </div>
+                <div data-type="sect2" data-jats="statement" data-jats-content-type="theorem" class="theorem thmremark">
+                  <h2>Remark 9.3</h2>
+                  <p class="noindent">In some cases, it is now known how to deduce stronger forms of the fundamental lemma from weaker versions. For example, it is known how to go from the characteristic function of the hyperspecial maximal compact groups to the full Hecke
+                    algebra [
+                    <cite><a href="ch10.html#Ha3">9</a></cite>]. A descent argument replaces twisted orbital integrals by ordinary orbital integrals. However, relations between weighted orbital integrals remain a serious challenge.</p>
+                </div>
+                <div data-type="sect2" data-jats="statement" data-jats-content-type="theorem" class="theorem thmremark">
+                  <h2>Remark 9.4</h2>
+                  <p class="noindent">There has been much research on the fundamental lemma that has not been discussed in detail in this paper, including other forms of the fundamental lemma. For just one example, see [
+                    <cite><a href="ch10.html#Ngo">25</a></cite>] for the fundamental lemma of Jacquet and Ye. Other helpful references include [
+                    <cite><a href="ch10.html#LD">18</a></cite>] and [
+                    <cite><a href="ch10.html#WICM">30</a></cite>].</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="MathJax.js"></script>
+
+</body>
+
+</html>

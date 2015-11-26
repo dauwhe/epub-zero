@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>7. Reductions</title>
+</head>
+
+<body data-type="book">
+  <link rel="prev" href="ch06.html" />
+  <link rel="next" href="ch08.html" />
+  <div class="galley-rw">
+    <div class="body-rw Chapter-rw">
+      <div class="title-block-rw">
+        <script src="../../acme.js"></script>
+        <section data-type="chapter" epub:type="chapter" data-pdf-bookmark="7. Reductions">
+          <div class="chapter" id="ltxid56">
+
+            <h1>
+              <span class="label"></span>7. Reductions</h1>
+            <p>To give a trivial example of the fundamental lemma, if
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>γ
+                    <!-- γ -->
+                  </mi>
+                  <annotation encoding="application/x-tex">\gamma </annotation>
+                </semantics>
+              </math> and
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <msub>
+                    <mi>γ
+                      <!-- γ -->
+                    </mi>
+                    <mn>0</mn>
+                  </msub>
+                  <annotation encoding="application/x-tex">\gamma _0</annotation>
+                </semantics>
+              </math> and their stable conjugates are not in any compact subgroup, then</p>
+
+
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <semantics>
+                <mrow>
+                  <msub>
+                    <mi>χ
+                      <!-- χ -->
+                    </mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>G</mi>
+                      <mo>,</mo>
+                      <mi>K</mi>
+                    </mrow>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <msup>
+                    <mi>g</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mo>−
+                        <!-- − -->
+                      </mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                  <msup>
+                    <mi>γ
+                      <!-- γ -->
+                    </mi>
+                    <mo>′</mo>
+                  </msup>
+                  <mi>g</mi>
+                  <mo stretchy="false">)</mo>
+                  <mo>=</mo>
+                  <mn>0</mn>
+                  <mtext> and </mtext>
+                  <msub>
+                    <mi>χ
+                      <!-- χ -->
+                    </mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>H</mi>
+                      <mo>,</mo>
+                      <mi>K</mi>
+                    </mrow>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <msup>
+                    <mi>h</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mo>−
+                        <!-- − -->
+                      </mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                  <msup>
+                    <mi>γ
+                      <!-- γ -->
+                    </mi>
+                    <mo>′</mo>
+                  </msup>
+                  <mi>h</mi>
+                  <mo stretchy="false">)</mo>
+                  <mo>=</mo>
+                  <mn>0</mn>
+                </mrow>
+                <annotation encoding="application/x-tex">\chi _{G,K}(g^{-1}\gamma ' g) = 0 \text{ and } \chi _{H,K}(h^{-1}\gamma ' h) = 0 </annotation>
+              </semantics>
+            </math>
+            <p>so that both
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <msub>
+                      <mi mathvariant="normal">Λ
+                        <!-- Λ -->
+                      </mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi>G</mi>
+                        <mo>,</mo>
+                        <mi>H</mi>
+                      </mrow>
+                    </msub>
+                    <mo stretchy="false">(</mo>
+                    <mi>γ
+                      <!-- γ -->
+                    </mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\Lambda _{G,H}(\gamma )</annotation>
+                </semantics>
+              </math> and
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mrow>
+                    <msubsup>
+                      <mi mathvariant="normal">Λ
+                        <!-- Λ -->
+                      </mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi>H</mi>
+                      </mrow>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi>s</mi>
+                        <mi>t</mi>
+                      </mrow>
+                    </msubsup>
+                    <mo stretchy="false">(</mo>
+                    <mi>γ
+                      <!-- γ -->
+                    </mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <annotation encoding="application/x-tex">\Lambda _{H}^{st}(\gamma )</annotation>
+                </semantics>
+              </math> are zero. Thus, the fundamental lemma holds for trivial reasons for such
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <semantics>
+                  <mi>γ
+                    <!-- γ -->
+                  </mi>
+                  <annotation encoding="application/x-tex">\gamma </annotation>
+                </semantics>
+              </math>.</p>
+            <section data-type="sect1" class="sect1" data-pdf-bookmark="7.1. Topological Jordan decomposition">
+              <div class="sect1" id="ltxid57">
+
+                <header>
+                  <h1 class="sectionhead">7.1. Topological Jordan decomposition</h1>
+                </header>
+                <p>A somewhat less trivial reduction of the problem is provided by the topological Jordan decomposition. Suppose that
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\gamma </annotation>
+                    </semantics>
+                  </math> lies in a compact subgroup. It can be written uniquely as a product</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mrow>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <mo>=</mo>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mi>s</mi>
+                      </msub>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mi>u</mi>
+                      </msub>
+                      <mo>=</mo>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mi>u</mi>
+                      </msub>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mi>s</mi>
+                      </msub>
+                      <mo>,</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex"> \gamma = \gamma _s \gamma _u = \gamma _u\gamma _s, </annotation>
+                  </semantics>
+                </math>
+                <p>where
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mi>s</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">\gamma _s</annotation>
+                    </semantics>
+                  </math> has finite order, of order prime to the residue field characteristic
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>p</mi>
+                      <annotation encoding="application/x-tex">p</annotation>
+                    </semantics>
+                  </math>, and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mi>u</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">\gamma _u</annotation>
+                    </semantics>
+                  </math> is topologically unipotent. That is,</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mrow>
+                      <munder>
+                        <mo movablelimits="true" form="prefix">lim</mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi>n</mi>
+                          <mo stretchy="false">→
+                            <!-- → -->
+                          </mo>
+                          <mi mathvariant="normal">∞
+                            <!-- ∞ -->
+                          </mi>
+                        </mrow>
+                      </munder>
+                      <msubsup>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mi>u</mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <msup>
+                            <mi>p</mi>
+                            <mi>n</mi>
+                          </msup>
+                        </mrow>
+                      </msubsup>
+                      <mo>=</mo>
+                      <mn>1.</mn>
+                    </mrow>
+                    <annotation encoding="application/x-tex"> \lim _{n\to \infty } \gamma _u^{p^n} = 1. </annotation>
+                  </semantics>
+                </math>
+                <p>The limit is with respect to the
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>p</mi>
+                      <annotation encoding="application/x-tex">p</annotation>
+                    </semantics>
+                  </math>-adic topology. A special case of the topological Jordan decomposition
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo>∈
+                          <!-- ∈ -->
+                        </mo>
+                        <msubsup>
+                          <mi>O</mi>
+                          <mi>F</mi>
+                          <mo>×
+                            <!-- × -->
+                          </mo>
+                        </msubsup>
+                        <mo>⊂
+                          <!-- ⊂ -->
+                        </mo>
+                        <msub>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi mathvariant="double-struck">G</mi>
+                          </mrow>
+                          <mi>m</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>F</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\gamma \in O_F^\times \subset \mathbb {G}_m(F)</annotation>
+                    </semantics>
+                  </math> is treated in [
+                  <cite><a href="ch10.html#Iw">13</a></cite>, p20]. In that case,
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mi>s</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">\gamma _s</annotation>
+                    </semantics>
+                  </math> is defined by the formula</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mrow>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mi>s</mi>
+                      </msub>
+                      <mo>=</mo>
+                      <munder>
+                        <mo movablelimits="true" form="prefix">lim</mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi>n</mi>
+                          <mo stretchy="false">→
+                            <!-- → -->
+                          </mo>
+                          <mi mathvariant="normal">∞
+                            <!-- ∞ -->
+                          </mi>
+                        </mrow>
+                      </munder>
+                      <msup>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <msup>
+                            <mi>q</mi>
+                            <mi>n</mi>
+                          </msup>
+                        </mrow>
+                      </msup>
+                      <mo>.</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex"> \gamma _s = \lim _{n\to \infty } \gamma ^{q^n}. </annotation>
+                  </semantics>
+                </math>
+                <p>Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\gamma </annotation>
+                    </semantics>
+                  </math>,
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mn>0</mn>
+                      </msub>
+                      <annotation encoding="application/x-tex">\gamma _0</annotation>
+                    </semantics>
+                  </math>, and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msup>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mo>′</mo>
+                      </msup>
+                      <annotation encoding="application/x-tex">\gamma '</annotation>
+                    </semantics>
+                  </math> be chosen as in Section <a href="ch06.html#ltxid51">6.1</a>. Each of these elements has a topological Jordan decomposition. Let
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>G</mi>
+                          <mi>s</mi>
+                        </msub>
+                        <mo>=</mo>
+                        <msub>
+                          <mi>C</mi>
+                          <mi>G</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mn>0</mn>
+                            <mi>s</mi>
+                          </mrow>
+                        </msub>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">G_s = C_G(\gamma _{0 s})</annotation>
+                    </semantics>
+                  </math> and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <msub>
+                          <mi>H</mi>
+                          <mi>s</mi>
+                        </msub>
+                        <mo>=</mo>
+                        <msub>
+                          <mi>C</mi>
+                          <mi>H</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <msub>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                          <mi>s</mi>
+                        </msub>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">H_s = C_H(\gamma _s)</annotation>
+                    </semantics>
+                  </math>. It turns out that
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>G</mi>
+                        <mi>s</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">G_s</annotation>
+                    </semantics>
+                  </math> is an unramified reductive group with unramified endoscopic group
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>H</mi>
+                        <mi>s</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">H_s</annotation>
+                    </semantics>
+                  </math>. Descent for orbital integrals gives the formulas [
+                  <cite><a href="ch10.html#LSD">20</a></cite>] [
+                  <cite><a href="ch10.html#Ha2">8</a></cite>]</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mtable side="left" columnalign="left left left" rowspacing="4pt" columnspacing="1em">
+                      <mtr>
+                        <mtd>
+                          <msub>
+                            <mi mathvariant="normal">Λ
+                              <!-- Λ -->
+                            </mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>G</mi>
+                              <mo>,</mo>
+                              <mi>H</mi>
+                            </mrow>
+                          </msub>
+                          <mo stretchy="false">(</mo>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                          <mo stretchy="false">)</mo>
+                        </mtd>
+                        <mtd>
+                          <mo>=</mo>
+                          <msub>
+                            <mi mathvariant="normal">Λ
+                              <!-- Λ -->
+                            </mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <msub>
+                                <mi>G</mi>
+                                <mi>s</mi>
+                              </msub>
+                              <mo>,</mo>
+                              <msub>
+                                <mi>H</mi>
+                                <mi>s</mi>
+                              </msub>
+                            </mrow>
+                          </msub>
+                          <mo stretchy="false">(</mo>
+                          <msub>
+                            <mi>γ
+                              <!-- γ -->
+                            </mi>
+                            <mi>u</mi>
+                          </msub>
+                          <mo stretchy="false">)</mo>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd/>
+                        <mtd/>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <msubsup>
+                            <mi mathvariant="normal">Λ
+                              <!-- Λ -->
+                            </mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>H</mi>
+                            </mrow>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>s</mi>
+                              <mi>t</mi>
+                            </mrow>
+                          </msubsup>
+                          <mo stretchy="false">(</mo>
+                          <mi>γ
+                            <!-- γ -->
+                          </mi>
+                          <mo stretchy="false">)</mo>
+                        </mtd>
+                        <mtd>
+                          <mo>=</mo>
+                          <msubsup>
+                            <mi mathvariant="normal">Λ
+                              <!-- Λ -->
+                            </mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <msub>
+                                <mi>H</mi>
+                                <mi>s</mi>
+                              </msub>
+                            </mrow>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>s</mi>
+                              <mi>t</mi>
+                            </mrow>
+                          </msubsup>
+                          <mo stretchy="false">(</mo>
+                          <msub>
+                            <mi>γ
+                              <!-- γ -->
+                            </mi>
+                            <mi>u</mi>
+                          </msub>
+                          <mo stretchy="false">)</mo>
+                          <mo>.</mo>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                    <annotation encoding="application/x-tex"> \begin{array}{lll} \Lambda _{G,H}(\gamma ) &amp;= \Lambda _{G_s,H_s}(\gamma _u)\\&amp;\\\Lambda _{H}^{st}(\gamma ) &amp;=\Lambda _{H_s}^{st}(\gamma _u). \end{array} </annotation>
+                  </semantics>
+                </math>
+                <p>This reduces the fundamental lemma to the case that
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>γ
+                        <!-- γ -->
+                      </mi>
+                      <annotation encoding="application/x-tex">\gamma </annotation>
+                    </semantics>
+                  </math> is a topologically unipotent elements.</p>
+              </div>
+            </section>
+            <section data-type="sect1" class="sect1" data-pdf-bookmark="7.2. Lie algebras">
+              <div class="sect1" id="ltxid58">
+
+                <header>
+                  <h1 class="sectionhead">7.2. Lie algebras</h1>
+                </header>
+                <p>It is known (at least when the
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>p</mi>
+                      <annotation encoding="application/x-tex">p</annotation>
+                    </semantics>
+                  </math>-adic field
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>F</mi>
+                      <annotation encoding="application/x-tex">F</annotation>
+                    </semantics>
+                  </math> has characteristic zero), that the fundamental lemma holds for fields of arbitrary residual characteristic provided that it holds when the
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>p</mi>
+                      <annotation encoding="application/x-tex">p</annotation>
+                    </semantics>
+                  </math>-adic field has sufficiently large residual characteristic [
+                  <cite><a href="ch10.html#Ha3">9</a></cite>]. Thus, if we are willing to restrict our attention to fields of characteristic zero, we may assume that the residual characteristic of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>F</mi>
+                      <annotation encoding="application/x-tex">F</annotation>
+                    </semantics>
+                  </math> is large. In fact, in our discussion of a reduction to Lie algebras in this section, we simply assume that the characteristic of
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>F</mi>
+                      <annotation encoding="application/x-tex">F</annotation>
+                    </semantics>
+                  </math> is zero.</p>
+                <p>A second reduction is based on Waldspurger's homogeneity results for classical groups. (Homogeneity results have since been reworked and extended to arbitrary reductive groups by DeBacker, again assuming mild restrictions on
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>G</mi>
+                      <annotation encoding="application/x-tex">G</annotation>
+                    </semantics>
+                  </math> and
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>F</mi>
+                      <annotation encoding="application/x-tex">F</annotation>
+                    </semantics>
+                  </math>.)</p>
+                <p>When the residual characteristic is sufficiently large, there is an exponential map from the Lie algebra to the group that has every topologically unipotent element in its image. Write</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mrow>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mi>u</mi>
+                      </msub>
+                      <mo>=</mo>
+                      <mi>exp</mi>
+                      <mo>⁡
+                        <!-- ⁡ -->
+                      </mo>
+                      <mo stretchy="false">(</mo>
+                      <mi>X</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>,</mo>
+                    </mrow>
+                    <annotation encoding="application/x-tex"> \gamma _u = \exp ( X), </annotation>
+                  </semantics>
+                </math>
+                <p>for some element
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mi>X</mi>
+                      <annotation encoding="application/x-tex">X</annotation>
+                    </semantics>
+                  </math> in the Lie algebra. We may then consider the behavior of orbital integrals along the curve
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>exp</mi>
+                        <mo>⁡
+                          <!-- ⁡ -->
+                        </mo>
+                        <mo stretchy="false">(</mo>
+                        <msup>
+                          <mi>λ
+                            <!-- λ -->
+                          </mi>
+                          <mn>2</mn>
+                        </msup>
+                        <mi>X</mi>
+                        <mo stretchy="false">)</mo>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\exp (\lambda ^2 X)</annotation>
+                    </semantics>
+                  </math>. A difficult result of Waldspurger for classical groups states that if
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo stretchy="false">|</mo>
+                        </mrow>
+                        <mi>λ
+                          <!-- λ -->
+                        </mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo stretchy="false">|</mo>
+                        </mrow>
+                        <mo>≤
+                          <!-- ≤ -->
+                        </mo>
+                        <mn>1</mn>
+                      </mrow>
+                      <annotation encoding="application/x-tex">|\lambda |\le 1</annotation>
+                    </semantics>
+                  </math>, then</p>
+
+
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <semantics>
+                    <mtable side="left" columnalign="left left left" rowspacing="4pt" columnspacing="1em">
+                      <mtr>
+                        <mtd>
+                          <msub>
+                            <mi mathvariant="normal">Λ
+                              <!-- Λ -->
+                            </mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>G</mi>
+                              <mo>,</mo>
+                              <mi>H</mi>
+                            </mrow>
+                          </msub>
+                          <mo stretchy="false">(</mo>
+                          <mi>exp</mi>
+                          <mo>⁡
+                            <!-- ⁡ -->
+                          </mo>
+                          <mo stretchy="false">(</mo>
+                          <msup>
+                            <mi>λ
+                              <!-- λ -->
+                            </mi>
+                            <mn>2</mn>
+                          </msup>
+                          <mi>X</mi>
+                          <mo stretchy="false">)</mo>
+                          <mo stretchy="false">)</mo>
+                        </mtd>
+                        <mtd>
+                          <mo>=</mo>
+                          <mo>∑
+                            <!-- ∑ -->
+                          </mo>
+                          <msub>
+                            <mi>a</mi>
+                            <mi>i</mi>
+                          </msub>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mo stretchy="false">|</mo>
+                          </mrow>
+                          <mi>λ
+                            <!-- λ -->
+                          </mi>
+                          <msup>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mo stretchy="false">|</mo>
+                            </mrow>
+                            <mi>i</mi>
+                          </msup>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <msubsup>
+                            <mi mathvariant="normal">Λ
+                              <!-- Λ -->
+                            </mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>H</mi>
+                            </mrow>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>s</mi>
+                              <mi>t</mi>
+                            </mrow>
+                          </msubsup>
+                          <mo stretchy="false">(</mo>
+                          <mi>exp</mi>
+                          <mo>⁡
+                            <!-- ⁡ -->
+                          </mo>
+                          <mo stretchy="false">(</mo>
+                          <msup>
+                            <mi>λ
+                              <!-- λ -->
+                            </mi>
+                            <mn>2</mn>
+                          </msup>
+                          <mi>X</mi>
+                          <mo stretchy="false">)</mo>
+                          <mo stretchy="false">)</mo>
+                        </mtd>
+                        <mtd>
+                          <mo>=</mo>
+                          <mo>∑
+                            <!-- ∑ -->
+                          </mo>
+                          <msub>
+                            <mi>b</mi>
+                            <mi>i</mi>
+                          </msub>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mo stretchy="false">|</mo>
+                          </mrow>
+                          <mi>λ
+                            <!-- λ -->
+                          </mi>
+                          <msup>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mo stretchy="false">|</mo>
+                            </mrow>
+                            <mi>i</mi>
+                          </msup>
+                          <mo>;</mo>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                    <annotation encoding="application/x-tex"> \begin{array}{lll} \Lambda _{G,H}(\exp (\lambda ^2 X)) &amp;= \sum a_i |\lambda |^i\\\Lambda _{H}^{st}(\exp (\lambda ^2 X))&amp;=\sum b_i |\lambda |^i; \end{array} </annotation>
+                  </semantics>
+                </math>
+                <p>that is, both sides of the fundamental lemma identity are polynomials in
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo stretchy="false">|</mo>
+                        </mrow>
+                        <mi>λ
+                          <!-- λ -->
+                        </mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo stretchy="false">|</mo>
+                        </mrow>
+                      </mrow>
+                      <annotation encoding="application/x-tex">|\lambda |</annotation>
+                    </semantics>
+                  </math>. If a polynomial identity holds when
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo stretchy="false">|</mo>
+                        </mrow>
+                        <mi>λ
+                          <!-- λ -->
+                        </mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo stretchy="false">|</mo>
+                        </mrow>
+                        <mo>&lt;</mo>
+                        <mi>ϵ
+                          <!-- ϵ -->
+                        </mi>
+                      </mrow>
+                      <annotation encoding="application/x-tex">|\lambda |&lt;\epsilon </annotation>
+                    </semantics>
+                  </math> for some
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>ϵ
+                          <!-- ϵ -->
+                        </mi>
+                        <mo>&gt;</mo>
+                        <mn>0</mn>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\epsilon &gt;0</annotation>
+                    </semantics>
+                  </math>, then it holds for all
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo stretchy="false">|</mo>
+                        </mrow>
+                        <mi>λ
+                          <!-- λ -->
+                        </mi>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mo stretchy="false">|</mo>
+                        </mrow>
+                        <mo>≤
+                          <!-- ≤ -->
+                        </mo>
+                        <mn>1</mn>
+                      </mrow>
+                      <annotation encoding="application/x-tex">|\lambda |\le 1</annotation>
+                    </semantics>
+                  </math>. In particular, it holds at
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <msub>
+                        <mi>γ
+                          <!-- γ -->
+                        </mi>
+                        <mi>u</mi>
+                      </msub>
+                      <annotation encoding="application/x-tex">\gamma _u</annotation>
+                    </semantics>
+                  </math> for
+                  <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <semantics>
+                      <mrow>
+                        <mi>λ
+                          <!-- λ -->
+                        </mi>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                      </mrow>
+                      <annotation encoding="application/x-tex">\lambda =1</annotation>
+                    </semantics>
+                  </math>. The polynomial growth of orbital integrals makes it possible to prove the fundamental lemma in a small neighborhood of the identity element, and then conclude that it holds in general. In this manner, the fundamental lemma can be reduced
+                  to a conjectural identity in the Lie algebra.</p>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="MathJax.js"></script>
+
+</body>
+
+</html>
