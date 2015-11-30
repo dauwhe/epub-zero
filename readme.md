@@ -50,22 +50,30 @@ Drop this in a web server, and anyone who has the URI of the folder can read eve
 ```
 
 
-* include a manifest to facilitate offline reading, caching, or other useful behaviors. In the future we hope to align with the web application manifest spec.
+* include a manifest to facilitate offline reading, caching, or other useful behaviors. In the example below, `assets` are appended to a web application manifest.
 
 ```json
 {
-  "title": "Moby-Dick",
-  "edition": 1,
+  "name": "Moby-Dick",
+  "short_name": "Moby-Dick",
+  "icons": [{
+        "src": "images/moby-dick-icon.jpg",
+        "sizes": "64x64",
+        "type": "image/jpeg"
+      }],
+  "start_url": "index.html",
+  "display": "fullscreen",
+
   "assets": [
+            
     "",
-    "index.html",
-    "css/mobydick.css",
-    "images/moby-dick-book-cover.jpg",
-    "html/c001.html",
-    "html/c002.html",
-    "html/c003.html"
-  ]
-}
+"html/title-page.html",
+"html/copyright.html",
+"html/introduction.html",
+"html/epigraph.html",
+"html/c001.html",
+"html/c002.html",
+...
 ```
 
 * include metadata inside or outside content files. By convention, metadata expressed in `index.html` is assumed to apply to the entire publication. Metadata expressed in other content files applies only to those files.
@@ -76,9 +84,16 @@ Drop this in a web server, and anyone who has the URI of the folder can read eve
 
 ##Examples
 
-[Acme Publishing](https://dauwhe.github.io/epub-zero/acme-publishing) is an attempt to prototype some of these ideas, allowing for online and offline reading of book content in web browsers. The offline functionality of this site depends on Service Workers, and so works best in recent versions of Chrome (tested in 46) or Firefox Nightly (tested in 45.0a1 (2015-11-25)).
+###Acme Publishing
 
+[Acme Publishing](https://dauwhe.github.io/epub-zero/acme-publishing) is an attempt to prototype some of these ideas, allowing for online and offline reading of book content in web browsers. 
 
+####Offline
+
+The offline functionality of this site depends on Service Workers, and so works best in recent versions of Chrome (tested in 46) or Firefox Nightly (tested in 45.0a1 (2015-11-25)).
+
+####User Interface
+The book files contain a link to a javascript file that creates the navigation bar at the top of the page and provides a bit of styling for the `body` element. It also assigns the left and right arrow keys to move to the previous and next files, respectively. 
 
 
 
