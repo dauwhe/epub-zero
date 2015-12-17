@@ -2,7 +2,7 @@
 	"name": "Moby-Dick",
 	"short_name": "Moby-Dick",
 	"icons": [{
-		"src": "images/moby-dick-icon.jpg",
+		"src": "apple-touch-icon.jpg",
 		"sizes": "64x64",
 		"type": "image/jpeg"
 	}],
