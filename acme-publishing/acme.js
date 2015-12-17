@@ -105,9 +105,22 @@ document.body.insertBefore(controlBlock, document.body.firstChild);
 // style body
 document.body.style.backgroundColor = "#F8F8F8";
 
+// try to do something different for small screens
+var mq = window.matchMedia('@media all and (max-width: 750px)');
+if(mq.matches) {
+    // the width of browser is more then 750px
+
+document.getElementsByClassName("galley-rw")[0].style.width = "30em";
+} else {
+    // the width of browser is less then 750px
+document.getElementsByClassName("galley-rw")[0].style.width = "90%";
+}
+
+
+
 // style galley-rw
 document.getElementsByClassName("galley-rw")[0].style.backgroundColor = "white";
-document.getElementsByClassName("galley-rw")[0].style.width = "30em";
+
 document.getElementsByClassName("galley-rw")[0].style.margin = "0 auto 0 auto";
 document.getElementsByClassName("galley-rw")[0].style.padding = "30px 2em 2em 2em";
 
