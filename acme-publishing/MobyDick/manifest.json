@@ -158,6 +158,7 @@
 		"index.html",
 		"images/moby-dick-book-cover.jpg",
 		"images/moby-dick-icon.jpg",
-		"css/mobydick.css"
+		"css/mobydick.css",
+		"https://drafts.csswg.org/default.css"
 	]
 }
