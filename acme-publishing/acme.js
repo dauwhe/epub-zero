@@ -49,10 +49,24 @@ var toclink = document.createElement("a");
 var libraryWrapper = document.createElement("p");
 var librarylink = document.createElement("a");
 
+var fontPlusWrapper = document.createElement("p");
+var fontPluslink = document.createElement("input");
+fontPluslink.type='button';
+fontPluslink.value='+';
+fontPluslink.addEventListener('click', function() { var cur = window.getComputedStyle(document.body).fontSize;  document.body.style.fontSize = parseInt(cur) + 2 + "px"}, false)
+
+
+var fontMinuslink = document.createElement("input");
+fontMinuslink.type='button';
+fontMinuslink.value='-';
+fontMinuslink.addEventListener('click', function() { var cur = window.getComputedStyle(document.body).fontSize;  document.body.style.fontSize = parseInt(cur) - 2 + "px"}, false)
+
 prevWrapper.appendChild(prevlink);
 nextWrapper.appendChild(nextlink);
 tocWrapper.appendChild(toclink);
 libraryWrapper.appendChild(librarylink);
+fontPlusWrapper.appendChild(fontPluslink);
+fontPlusWrapper.appendChild(fontMinuslink);
 
 // style p inside div.controls using flexbox
 
@@ -80,6 +94,13 @@ libraryWrapper.style.margin = 0;
 libraryWrapper.style.padding = 0;
 libraryWrapper.style.border = "2px solid #ddd";
 
+fontPlusWrapper.style.flex = 1;
+fontPlusWrapper.style.textAlign = "center";
+fontPlusWrapper.style.margin = 0;
+fontPlusWrapper.style.padding = 0;
+fontPlusWrapper.style.border = "2px solid #ddd";
+
+
 
 librarylink.textContent = "Library";
 librarylink.href = "../../index.html";
@@ -96,6 +117,9 @@ controlBlock.appendChild(nextWrapper);
 toclink.textContent = "Contents";
 toclink.href = "../index.html";
 controlBlock.appendChild(tocWrapper);
+
+
+controlBlock.appendChild(fontPlusWrapper);
 
 
 
