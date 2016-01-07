@@ -214,7 +214,7 @@ view.name = "viewport";
 view.content="width=device-width, initial-scale=1.0";
 document.getElementsByTagName('head')[0].appendChild(view);
 
-var controls = document.createElement('div');
+var controls = document.createElement('p');
 controls.setAttribute("class", "page-controls");
 
 
@@ -225,7 +225,7 @@ pagescript.setAttribute("async", "async");
 
 controls.appendChild(pagescript);
 
-document.getElementsByTagName('body')[0].appendChild(controls);
+//document.getElementsByTagName('body')[0].appendChild(controls);
 
 
 
@@ -314,6 +314,13 @@ nextWrapper.style.padding = 0;
 nextWrapper.style.border = "2px solid #ddd";
 
 
+controls.style.flex = 1;
+controls.style.textAlign = "center";
+controls.style.margin = 0;
+controls.style.padding = 0;
+controls.style.border = "2px solid #ddd";
+
+
 tocWrapper.style.flex = 1;
 tocWrapper.style.textAlign = "center";
 tocWrapper.style.margin = 0;
@@ -368,6 +375,9 @@ nextlink.href = document.querySelector('link[rel="next"]').href
 
 
 controlBlock.appendChild(fontPlusWrapper);
+
+
+controlBlock.appendChild(controls)
 
 
 
