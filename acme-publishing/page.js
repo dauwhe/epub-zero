@@ -26,8 +26,8 @@
   function initPageControls() {
     caches.has(publicationName).then(function(isCached) {
       ui.innerHTML =
-        '<span><label><input type="checkbox" class="work-offline"> Save</label></span>' +
-        '<span><a href="' + publicationBaseURL + 'download-publication">Download</a></span>' +
+        '<span><label><input type="checkbox" class="work-offline"> Save </label></span>' +
+        '<span><a href="' + publicationBaseURL + 'download-publication"> Download</a></span>' +
         '<span class="status"></span>' +
       '';
 
@@ -55,10 +55,14 @@
               }));
             });
           }).then(function() {
-            status.textContent = 'Offlinification complete!';
+            // status.textContent = 'Offlinification complete!';
+            alert("Offlinification complete!");
+            status.textContent = "";
           }).catch(function(err) {
             console.log(err);
-            status.textContent = 'Offlinification failed :(';
+            // status.textContent = 'Offlinification failed :(';
+            alert("Offlinification failed!");
+            status.textContent = "";
           });
         }
       });
