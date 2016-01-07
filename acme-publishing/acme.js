@@ -345,14 +345,14 @@ fontPluslink.style.padding = 0;
 fontPluslink.style.margin = 0;
 fontPluslink.style.backgroundColor = "#aaa";
 fontPluslink.style.fontSize = "1em";
-fontPluslink.style.width="50px";
+fontPluslink.style.width="20px";
 
 fontMinuslink.style.webkitAppearance = "none";
 fontMinuslink.style.border = "2px solid #ddd";
 fontMinuslink.style.padding = 0;
 fontMinuslink.style.backgroundColor = "#aaa";
 fontMinuslink.style.fontSize = "1em";
-fontMinuslink.style.width="50px";
+fontMinuslink.style.width="20px";
 
 
 
