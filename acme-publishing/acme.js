@@ -214,7 +214,15 @@ view.name = "viewport";
 view.content="width=device-width, initial-scale=1.0";
 document.getElementsByTagName('head')[0].appendChild(view);
 
+var controls = document.createElement('div');
+view.setAttribute("class", "page-controls");
+document.getElementsByTagName('body')[0].appendChild(controls);
 
+var pagescript = document.createElement('script');
+script.src = '../../page.js';
+script.type = 'text/javascript';
+script.setAttribute("async", "async");
+document.getElementsByClassName('page-controls')[0].appendChild(pagescript);
 
 // use arrow keys to navigate from chapter to chapter
 
@@ -384,7 +392,7 @@ document.getElementsByClassName("galley-rw")[0].style.margin = "0 auto 0 auto";
 document.getElementsByClassName("galley-rw")[0].style.padding = "2em 2em 2em 2em";
 
 
-document.getElementsByClassName("page-controls")[0].style.padding = "2em 0 0 0";
+//document.getElementsByClassName("page-controls")[0].style.padding = "2em 0 0 0";
 
 
 
