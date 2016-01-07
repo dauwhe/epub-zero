@@ -204,7 +204,7 @@ var window = window,
 
 
 var script = document.createElement('script');
-script.src = '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
+script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
 
@@ -251,7 +251,7 @@ controlBlock.style.top = 0;
 controlBlock.style.right = 0;
 controlBlock.style.left = 0;
 controlBlock.style.backgroundColor = "#ddd";
-controlBlock.style.height = "30px";
+controlBlock.style.height = "2em";
 var prevWrapper = document.createElement("p");
 var prevlink = document.createElement("a");
 
@@ -268,13 +268,13 @@ var fontPlusWrapper = document.createElement("p");
 var fontPluslink = document.createElement("input");
 fontPluslink.type='button';
 fontPluslink.value='+';
-fontPluslink.addEventListener('click', function() { var cur = window.getComputedStyle(document.body).fontSize;  document.body.style.fontSize = parseInt(cur) + 2 + "px"}, false)
+fontPluslink.addEventListener('click', function() { var cur = window.getComputedStyle(document.getElementsByClassName("galley-rw")[0]).fontSize;  document.getElementsByClassName('galley-rw')[0].style.fontSize = parseInt(cur) + 2 + "px"}, false)
 
 
 var fontMinuslink = document.createElement("input");
 fontMinuslink.type='button';
 fontMinuslink.value='-';
-fontMinuslink.addEventListener('click', function() { var cur = window.getComputedStyle(document.body).fontSize;  document.body.style.fontSize = parseInt(cur) - 2 + "px"}, false)
+fontMinuslink.addEventListener('click', function() { var cur = window.getComputedStyle(document.getElementsByClassName("galley-rw")[0]).fontSize;  document.getElementsByClassName('galley-rw')[0].style.fontSize = parseInt(cur) - 2 + "px"}, false)
 
 prevWrapper.appendChild(prevlink);
 nextWrapper.appendChild(nextlink);
@@ -314,6 +314,21 @@ fontPlusWrapper.style.textAlign = "center";
 fontPlusWrapper.style.margin = 0;
 fontPlusWrapper.style.padding = 0;
 fontPlusWrapper.style.border = "2px solid #ddd";
+
+fontPluslink.style.border = "2px solid #ddd";
+fontPluslink.style.padding = "4px 6px 4px 6px";
+fontPluslink.style.margin = "0px 4px 0px 0px";
+fontPluslink.style.backgroundColor = "#aaa";
+fontPluslink.style.fontSize = "1em";
+fontPluslink.style.width = "50px";
+
+fontMinuslink.style.border = "2px solid #ddd";
+fontMinuslink.style.padding = "4px 8px 4px 8px";
+fontMinuslink.style.backgroundColor = "#aaa";
+fontMinuslink.style.fontSize = "1em";
+fontMinuslink.style.width = "50px";
+
+
 
 
 
