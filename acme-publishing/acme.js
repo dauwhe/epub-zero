@@ -209,7 +209,10 @@ script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
 
 
-
+var view = document.createElement('meta');
+view.name = "viewport";
+view.content="width=device-width, initial-scale=1.0";
+document.getElementsByTagName('head')[0].appendChild(view);
 
 
 
@@ -249,7 +252,8 @@ controlBlock.style.display = "flex";
 controlBlock.style.position = "fixed";
 controlBlock.style.top = 0;
 controlBlock.style.right = 0;
-controlBlock.style.left = 0;
+// controlBlock.style.left = 0;
+controlBlock.style.width="100%";
 controlBlock.style.backgroundColor = "#ddd";
 controlBlock.style.height = "2em";
 var prevWrapper = document.createElement("p");
@@ -277,7 +281,7 @@ fontMinuslink.value='-';
 fontMinuslink.addEventListener('click', function() { var cur = window.getComputedStyle(document.getElementsByClassName("galley-rw")[0]).fontSize;  document.getElementsByClassName('galley-rw')[0].style.fontSize = parseInt(cur) - 2 + "px"}, false)
 
 prevWrapper.appendChild(prevlink);
-nextWrapper.appendChild(nextlink);
+prevWrapper.appendChild(nextlink);
 tocWrapper.appendChild(toclink);
 libraryWrapper.appendChild(librarylink);
 fontPlusWrapper.appendChild(fontPluslink);
@@ -316,17 +320,16 @@ fontPlusWrapper.style.padding = 0;
 fontPlusWrapper.style.border = "2px solid #ddd";
 
 fontPluslink.style.border = "2px solid #ddd";
-fontPluslink.style.padding = "4px 6px 4px 6px";
-fontPluslink.style.margin = "0px 4px 0px 0px";
+fontPluslink.style.padding = 0;
+fontPluslink.style.margin = 0;
 fontPluslink.style.backgroundColor = "#aaa";
 fontPluslink.style.fontSize = "1em";
-fontPluslink.style.width = "50px";
+
 
 fontMinuslink.style.border = "2px solid #ddd";
-fontMinuslink.style.padding = "4px 8px 4px 8px";
+fontMinuslink.style.padding = 0;
 fontMinuslink.style.backgroundColor = "#aaa";
 fontMinuslink.style.fontSize = "1em";
-fontMinuslink.style.width = "50px";
 
 
 
@@ -336,17 +339,19 @@ librarylink.textContent = "Library";
 librarylink.href = "../../index.html";
 controlBlock.appendChild(libraryWrapper);
 
-prevlink.textContent = "Prev";
-prevlink.href = document.querySelector('link[rel="prev"]').href
-controlBlock.appendChild(prevWrapper);
-
-nextlink.textContent = "Next";
-nextlink.href = document.querySelector('link[rel="next"]').href
-controlBlock.appendChild(nextWrapper);
-
 toclink.textContent = "Contents";
 toclink.href = "../index.html";
 controlBlock.appendChild(tocWrapper);
+
+prevlink.textContent = "<prev ";
+prevlink.href = document.querySelector('link[rel="prev"]').href
+controlBlock.appendChild(prevWrapper);
+
+nextlink.textContent = " next>";
+nextlink.href = document.querySelector('link[rel="next"]').href
+// controlBlock.appendChild(nextWrapper);
+
+
 
 
 controlBlock.appendChild(fontPlusWrapper);
@@ -376,10 +381,10 @@ document.getElementsByClassName("galley-rw")[0].style.width = "90%";
 document.getElementsByClassName("galley-rw")[0].style.backgroundColor = "white";
 
 document.getElementsByClassName("galley-rw")[0].style.margin = "0 auto 0 auto";
-document.getElementsByClassName("galley-rw")[0].style.padding = "30px 2em 2em 2em";
+document.getElementsByClassName("galley-rw")[0].style.padding = "2em 2em 2em 2em";
 
 
-document.getElementsByClassName("page-controls")[0].style.padding = "30px 0 0 0";
+document.getElementsByClassName("page-controls")[0].style.padding = "2em 0 0 0";
 
 
 
