@@ -339,13 +339,14 @@ fontPlusWrapper.style.margin = 0;
 fontPlusWrapper.style.padding = 0;
 fontPlusWrapper.style.border = "2px solid #ddd";
 
+fontMinuslink.style.display = "inline";
 fontPluslink.style.border = "2px solid #ddd";
 fontPluslink.style.padding = 0;
 fontPluslink.style.margin = 0;
 fontPluslink.style.backgroundColor = "#aaa";
 fontPluslink.style.fontSize = "1em";
 
-
+fontMinuslink.style.display = "inline";
 fontMinuslink.style.border = "2px solid #ddd";
 fontMinuslink.style.padding = 0;
 fontMinuslink.style.backgroundColor = "#aaa";
