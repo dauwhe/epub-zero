@@ -123,6 +123,7 @@ letter-spacing: 4px;
 }
 
 .title-block-rw {
+height: auto;
 min-height: 8em;
 }
 
