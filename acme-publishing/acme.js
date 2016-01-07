@@ -219,9 +219,9 @@ controls.setAttribute("class", "page-controls");
 
 
 var pagescript = document.createElement('script');
-script.src = '../../page.js';
-script.type = 'text/javascript';
-script.setAttribute("async", "async");
+pagescript.src = '../../page.js';
+pagescript.type = 'text/javascript';
+pagescript.setAttribute("async", "async");
 
 controls.appendChild(pagescript);
 
