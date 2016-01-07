@@ -215,14 +215,19 @@ view.content="width=device-width, initial-scale=1.0";
 document.getElementsByTagName('head')[0].appendChild(view);
 
 var controls = document.createElement('div');
-view.setAttribute("class", "page-controls");
-document.getElementsByTagName('body')[0].appendChild(controls);
+controls.setAttribute("class", "page-controls");
+
 
 var pagescript = document.createElement('script');
 script.src = '../../page.js';
 script.type = 'text/javascript';
 script.setAttribute("async", "async");
-document.getElementsByClassName('page-controls')[0].appendChild(pagescript);
+
+controls.appendChild(pagescript);
+
+document.getElementsByTagName('body')[0].appendChild(controls);
+
+
 
 // use arrow keys to navigate from chapter to chapter
 
