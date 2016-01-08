@@ -1,0 +1,22 @@
+{
+	"name": "Private: Rio excerpt",
+	"short_name": "Private: Rio",
+	"icons": [{
+		"src": "apple-touch-icon.png",
+		"sizes": "64x64",
+		"type": "image/png"
+	}],
+	"start_url": "index.html",
+	"display": "fullscreen",
+
+	"assets": [
+		"",
+		"html/s091-Notes-02.xhtml",
+		"s092-Teaser-01.xhtml",
+		"s093-Teaser-02.xhtml",
+		"s094-Teaser-03.xhtml",
+		"index.html",
+		"images/patterson_privaterio4c_online.jpg",
+		"css/9780316288729.css"
+	]
+}

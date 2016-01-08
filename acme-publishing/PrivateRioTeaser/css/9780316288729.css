@@ -1,0 +1,128 @@
+/* DESIGN PROFILE - eBook1 */
+/* Copyright 2015 Infogrid Pacific Pte. Ltd. All rights reserved. */
+/* Activity Name: CSS Minification */
+/* Created By: Infogrid Pacific */
+/* Creation Date: 2015-12-10 */
+/* Modified By: Infogrid Pacific */
+body, section, div, table, thead, tbody, tfoot, th, td, p, pre, span, nav, header, footer { margin: 0; padding: 0; }
+body { margin: 0; padding: 0; }
+div, section { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; }
+.galley-rw { padding: 0; font-size: 1em; font-weight: normal; color: rgb(0, 0, 0); orphans: 1; widows: 1; letter-spacing: 0; word-spacing: 0; font-family: serif; margin: 0; text-align: justify; }
+p { text-indent: 0; padding-bottom: 0; }
+p+p { text-indent: 1.2em; }
+.align-center-rw { text-align: center; text-indent: 0; }
+.firstpara-rw { text-indent: 0; }
+p.dedication-rw { text-align: center; text-indent: 0; margin-top: 1em; margin-right: 1em; }
+div+p { text-indent: 0; }
+div.indent-rw p { text-indent: 0; }
+div.indent-rw p+p { text-indent: 1.3em; }
+h2+p { text-indent: 0; }
+h3+p { text-indent: 0; }
+h4+p { text-indent: 0; }
+.block-rw p:first-child { text-indent: 0; }
+.media-rw p:first-child { text-indent: 0; }
+ol+p { text-indent: 0; }
+div.indent-rw { margin-top: 1em; margin-right: 1.2em; margin-bottom: 1em; margin-left: 1.2em; }
+div.leading-line-rw { margin-top: .64em; margin-bottom: .64em; }
+.other-rw p { text-align: left; }
+span.smallcaps-rw { font-variant: small-caps; font-size: 80%; }
+.uppercase-rw { text-transform: uppercase; }
+span.raisedcap-rw { font-size: 2.00em; line-height: 1em; }
+.-epub-media-overlay-active, .-readium-epub-media-overlay-active { color: red; background-color: inherit; }
+h2 { hyphens: none; font-size: 1.33em; font-weight: bold; -moz-hyphens: none; -o-hyphens: none; -webkit-hyphens: none; margin-top: 1.33em; margin-bottom: 1.33em; padding: 0; page-break-after: avoid; font-style: normal; text-transform: none; line-height: 1.33em; text-align: center; }
+h3 { hyphens: none; font-size: 1.00em; font-weight: bold; -moz-hyphens: none; -o-hyphens: none; -webkit-hyphens: none; margin-top: 1.91em; margin-bottom: 1.27em; padding: 0; page-break-after: avoid; font-style: italic; line-height: 1.2em; text-align: center; }
+h4 { hyphens: none; font-size: 1.00em; font-weight: bold; -moz-hyphens: none; -o-hyphens: none; -webkit-hyphens: none; margin-top: 1.27em; margin-bottom: 0.64em; padding: 0; page-break-after: avoid; font-style: italic; line-height: 1.2em; text-align: center; }
+.title-block-rw { margin: 0; min-height: 2.00em; padding-top: 2.00em; padding-bottom: 2em; }
+h1 { font-size: 1.55em; font-weight: normal; line-height: 1.2em; margin: 0; margin-top: 1.27em; margin-bottom: 1.27em; text-align: center; text-indent: 0; text-transform: none; }
+.title-num-rw { font-size: 1.55em; font-style: normal; font-weight: normal; line-height: 1.2em; margin: 0; padding-top: 2.00em; text-align: center; text-indent: 0; text-transform: none; }
+.cover-rw { height: 100%; margin: 0 auto 0 auto; padding: 0; text-indent: 0; text-align: center; }
+.cover-rw img { height: 100%; margin: 0 auto 0 auto; padding: 0; }
+.list-toc-rw ol { line-height: 1.2em; margin-left: 0em; }
+.block-rw { margin-top: 1.27em; margin-bottom: 1.27em; }
+.communication-email-rw { margin-right: 1em; font-size: 0.9em; margin-left: 1em; margin-bottom: 1em; margin-top: 1em; padding-right: 1em; padding-bottom: 0.5em; padding-top: 0.5em; font-family: sans-serif; line-height: 1.2em; padding-left: 1em; }
+.communication-email-rw p { padding-bottom: 0.5em; text-indent: 0; }
+div.dedication-rw { display: block; font-size: 1.09em; line-height: 1.2em; padding: 2em; text-align: center; }
+div.dedication-rw p { font-style: italic; text-indent: 0; font-style: italic; }
+.media-rw { page-break-inside: avoid; text-indent: 0; text-align: left; }
+.media-rw h4 { font-size: 1em; font-weight: bold; padding: 0.5em 0 0.5em 0; text-align: left; }
+.media-rw h5 { font-size: 1em; font-weight: bold; padding: 0.75em 0 0.25em 0; }
+.media-rw h6 { font-size: 1em; font-style: italic; padding: 0.75em 0 0.5em 0; }
+.media-rw p { text-indent: 0; text-align: left; }
+.image-rw { margin-top: 0.5em; margin-right: 0; margin-bottom: 0.5em; padding: 0; }
+.width-fixed-rw .pc-rw { width: auto; }
+.width-fixed-rw .pc-rw img { width: auto; }
+.pc-rw { margin: 0; padding: 0; }
+.pc-rw img { width: 100%; margin: 0; padding: 0; }
+.pc-rw table { width: 100%; margin: 0; padding: 0; }
+.pc-rw p { text-align: left; }
+div.pc-rw>:first-child { margin-top: 0; padding-top: 0; }
+div.pc-rw>:last-child { margin-bottom: 0; padding-top: 0; }
+div.align-center-rw { display: block; text-align:center; margin-left: auto; margin-right: auto; }
+.align-center-rw table { margin: 0 auto 0 auto; }
+.align-center-rw .pc-rw { margin: 0 auto 0 auto; }
+.align-center-rw .pc-rw img { margin: 0 auto 0 auto; }
+.align-center-rw .pc-rw object { margin: 0 auto 0 auto; }
+.section-break { font-size: 12px; font-weight: bold; font-family: sans-serif; text-align: center; background-color: rgb(220, 220, 220); border-top: 1px solid rgb(120, 120, 120); border-bottom: 1px solid rgb(120, 120, 120); padding-top: 15px; }
+p.alt-rw { font-family: sans-serif; }
+.center-rw { text-align: center; text-indent: 0; }
+.ecom-a-rw { font-family: sans-serif; margin-left: 1.2em; }
+.ecom-a-first-rw { font-family: sans-serif; margin-left: 1.2em; }
+.ded-rw { text-align: center; text-indent: 0; }
+.crt-rw { text-align: left; text-indent: 0; margin-bottom: 1em; }
+.adcard-rw { text-align: center; text-indent: 0; }
+.AdCard-rw p { text-align: center; text-indent: 0; }
+.l-rw { margin-left: 1.2em; }
+.l1-rw { margin-left: 1.2em; text-indent: 0; }
+.pq-rw { text-align: center; text-indent: 0; font-size: 1.2em; line-height: 1.4em; }
+.box1-rw { text-indent: 0; }
+.font1-rw { font-family: sans-serif; }
+p.list-simple-rw { margin-left: 2.4em; text-indent: -1.2em; }
+.extv-rw { margin-left: 2.4em; text-indent: -1.2em; }
+.ext1-rw { margin-left: 1.2em; text-indent: 0; }
+.ext1-indent-rw { margin-left: 1.2em; text-indent: 1.2em; }
+.ext-rw { margin-left: 1.2em; text-indent: 1.2em; }
+.ep1-rw { margin-left: 1.2em; text-indent: 0em; }
+.ep-rw { margin-left: 1.2em; text-indent: 1.2em; }
+.epv-rw { margin-left: 2.4em; text-indent: -1.2em; }
+.source-rw { text-align: right; margin-bottom: 1em; }
+.source1-rw { text-align: right; margin-bottom: 1em; }
+.signature-rw { margin-left: 1.2em; text-indent: 0em; text-align: left; margin-top: 1em; }
+.signature-rw-continued-rw { margin-left: 1.2em; text-indent: 0em; text-align: left; margin-top: 0; }
+.salute-rw { margin-left: 1.2em; text-indent: 0; margin-top: 1em; margin-bottom: 1em; }
+.letter-dateline-rw { margin-left: 1.2em; text-indent: 0; }
+.indent-rw { text-indent: 1.2em; }
+.disclaimer-rw { font-size: smaller; text-indent: 0; text-align: center !important; margin-top: 3em; }
+.BookTitlePage-rw img { width: auto !important; }
+.welcome-rw { text-align: center !important; text-indent: 0 !important; }
+.firstpara-rw { text-indent: 0; }
+.welcome-image-rw { text-indent: 0; text-align: center; }
+.list-toc-rw p { text-align: center; text-indent: 0; }
+.fsq-rw { text-indent: 0; }
+.custom-A-first-rw { text-indent: 0; margin-left: 1.2em }
+.custom-A-rw { text-indent: 1.2em; margin-left: 1.2em }
+.custom-B-first-rw { text-indent: 0; margin-left: 1.2em }
+.custom-B-rw { text-indent: 1.2em; margin-left: 1.2em }
+.ext-a-first-rw { text-indent: 0; margin-left: 1.2em }
+.ext-a-rw { text-indent: 1.2em; margin-left: 1.2em }
+.ext-b-first-rw { text-indent: 0; margin-left: 1.2em }
+.ext-b-rw { text-indent: 1.2em; margin-left: 1.2em }
+.ext-c-first-rw { text-indent: 0; margin-left: 1.2em }
+.ext-c-rw { text-indent: 1.2em; margin-left: 1.2em }
+.ext-d-first-rw { text-indent: 0; margin-left: 1.2em }
+.ext-d-rw { text-indent: 1.2em; margin-left: 1.2em }
+.dateline-rw { margin-bottom: 1em; text-indent: 0; font-style: italic; }
+div.fixed-rw img { width: auto !important; }
+div.fixed-rw { text-align: center; }
+div.pc-rw { text-align: center; }
+.toc1-rw { text-align: center; text-indent: 0; }
+h3 { margin-bottom:1em; font-style: normal; }
+a.signuplink-rw { color:white; text-decoration:none; }
+p.button-rw { margin-top:2em; margin-bottom:2em; text-align:center; text-indent: 0; }
+span.signupbutton-rw { width: 160px; height: 40px; border-radius: 5px; background: rgb(106, 115, 123); padding: 8px 24px; text-decoration: none; font-size: large; border: 1px solid #444; }
+.center-rw { text-align: center; text-indent: 0; }
+span.smaller-rw { font-size: 80%; }
+nav ol { list-style-type: none; }
+nav[hidden], ol[hidden] { display: none; visibility: hidden; }
+.bbb-rw { margin: 0; padding: 0; list-style-type: none; }
+.ccc-rw { display: none; visibility: hidden; }
+.title-block-rw p { text-align: center; }
