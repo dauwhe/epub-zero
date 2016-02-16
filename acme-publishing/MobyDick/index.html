@@ -28,12 +28,22 @@ letter-spacing: 4px;
 
 #nav2 { display: none; }
 </style>
-	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <script type="application/javascript">
+
 $.getJSON("metadata.json", function(json) {
-    console.log(json); // this will show the info it in firebug console
+ // this will show the info it in firebug console
+
+var script = document.createElement('script');
+script.type = 'text/ld+json';
+script.innerHTML = JSON.stringify(json);
+document.getElementsByTagName('head')[0].appendChild(script);
+
 });
+
+
+
 </script>
 
 <link href="manifest.json" rel="manifest">
