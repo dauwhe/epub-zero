@@ -48,6 +48,8 @@
             return response.json();
           }).then(function(data) {
             data.files.href.push('manifest.json');
+
+console.log(data.files.href);
             
             return caches.open(publicationName).then(function(cache) {
               return cache.addAll(data.files.href.map(function(url) {
