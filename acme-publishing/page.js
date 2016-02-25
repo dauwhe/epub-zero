@@ -47,10 +47,10 @@
           fetch(publicationBaseURL + 'manifest.json').then(function(response) {
             return response.json();
           }).then(function(data) {
-            data.assets.push('manifest.json');
+            data.files.href.push('manifest.json');
             
             return caches.open(publicationName).then(function(cache) {
-              return cache.addAll(data.assets.map(function(url) {
+              return cache.addAll(data.files.href.map(function(url) {
                 return new URL(url, publicationBaseURL);
               }));
             });
