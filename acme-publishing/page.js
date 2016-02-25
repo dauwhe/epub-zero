@@ -31,6 +31,7 @@
         '<span class="status"></span>' +
       '';
 
+
       var status = ui.querySelector('.status');
       var checkbox = ui.querySelector('.work-offline');
 
@@ -44,15 +45,21 @@
         else {
           status.textContent = "Offlinifying…";
 
+
           fetch(publicationBaseURL + 'manifest.json').then(function(response) {
             return response.json();
-          }).then(function(data) {
-            data.files.href.push('manifest.json');
+          }).then(function(dave) {
+return dave.files.map(function(el) { return el.href});
+}).then(function(data) {
+console.log(data);
 
-console.log(data.files.href);
+
+            data.push('manifest.json');
+
+
             
             return caches.open(publicationName).then(function(cache) {
-              return cache.addAll(data.files.href.map(function(url) {
+              return cache.addAll(data.map(function(url) {
                 return new URL(url, publicationBaseURL);
               }));
             });
