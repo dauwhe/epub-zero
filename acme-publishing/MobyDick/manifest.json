@@ -474,5 +474,16 @@
   }, {
     "href": "css/mobydick.css",
     "type": "text/css"
-  }]
+  }],
+
+  "states": [
+{ 
+  "state": "unpacked", 
+  "href": "#" 
+},
+{ "state": "packed", 
+  "href": "www.example.com/Moby.pwp" 
+}
+
+]
 }
