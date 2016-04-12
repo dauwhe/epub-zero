@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Scholarly Publishing in a Connected World</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Scholarly Publishing in a Connected World</h1>
+					<h2>Tzviya Siegman, Wiley</h2>
+					<p>WWW2016 - Montreal</p>
+					<footer>
+                        <img style="float: right; border: none; max-width: 25%; max-height: 15%;"  src="figures/Wileylogo.png" alt="Wiley logo"/>
+						<small style="float: left; right-margin: 5em;">Powered by <a href="http://lab.hakim.se/reveal-js">Reveal.js</a></small>
+					</footer>
+				</section>
+                
+                                
+                <section>
+                <h2>Research is sharing knowledge</h2>
+                    <ul>
+                    <li>Historically, publishing research meant publishing a flat, finished product</li>
+                    <li>Articles have been read by our peers before and after publication</li>
+                    <li>The published article is rather immutable</li> 
+                    </ul>
+                </section>
+
+				<section>
+                <h2>Even retractions and errata are discrete entitities</h2>
+                    <figure class="stretch"><img src="figures/LancetRetracted.JPG" alt="Retracted article from The Lancet with the title RETRACTED: Ileal-lymphoid-nodular hyperplasia, non-specific colitis, and pervasive developmental disorder in children"/></figure>
+                    <aside class="notes">
+						And, we know how well retractions have been managed. I'm not saying we could have reigned in the anti-vaxxers, but who knows?
+					</aside>
+                </section>
+                
+                <section><h2>Machines are readers too</h2>
+                <ul>
+                    <li>We are beginning to recognize the value of machines reading our research as well</li>
+                <li>Using tools of the open web platform can help researchers and even speed up research during times of crisis</li>
+                    </ul>
+                    <figure class="stretch"><img src="figures/GoogleZika.JPG" alt="Google blog post from March 3, 2016 with the title
+Providing support to combat Zika in Brazil and beyond "/><figcaption>Finding solutions to the rapid spread of the Zika virus can be aided by those with experience analyzing large sets of data. Source: <a href="https://googleblog.blogspot.com/2016/03/providing-support-to-combat-zika-in.html">Google Blog</a></figcaption></figure>
+                </section>
+                
+                <section>
+                <h2>Publishing may be a little behind</h2>
+                    <figure class="stretch"><img src="figures/TheWileyFamily.jpg" alt="Oil portrait of 18th century family standing outside near windmills" /><figcaption>1771 Portrait of The Wiley Family by William Williams, Smithsonian American Art Museum</figcaption></figure>
+                </section>
+                
+                <section>
+                <h2>Smithsonian Linked Open Data</h2>
+                    <p><a href="http://edan.si.edu/saam/id/object/2006.12.2">http://edan.si.edu/saam/id/object/2006.12.2</a></p>
+                    <figure class="stretch"><img src="figures/SmithsonianLOD.jpg" alt="The Smithsonian Linked Open Data page for the Wiley painting" /></figure>
+                </section>
+                
+                <section>
+					<h2>History Lesson</h2>
+					<ul>
+					<li>Digitization of scholarly publishing is about the same age as the Web</li>
+					<li>In 1995, libraries didn't want to build additional wings to house stacks of journals</li>
+				<li>JSTOR was created to solve a real estate problem</li>
+				<li>Earliest online journals were HTML</li>
+				<li>The appeal and efficiency of desktop publishing was too good to pass up</li> 
+						</ul>
+                    <aside class="notes">The HTML is a second-thought, a gateway drug for the PDF. 90% revenue comes from digital, but we still pay for typesetter. </aside>
+				</section>
+
+                 <section>
+                     <h2>Pages</h2>
+					<ul>
+					<li>Right now, we have a lot of faith in the “page”</li>
+					<li>Citations are usually page-based</li>
+				  <li>Even when given the choice of HTML, many researchers choose PDF</li> 
+						</ul>
+                     <aside class="notes">Pages are not bad, but they have become the unit of currency. They are how we review, revise, and cite. They provide easy-to-digest chunks. Problems arise when the page or the format becomes more important than the content.  Yet, we still often create the paginated content first and digital second. HTML is a second-class citizen.</aside>
+				</section>
+                
+                <section>
+					<h2>Benefit from the crossroads</h2>
+					<ul>
+					<li>Reap the benefits of pages, or CSS "fragmentainers"</li>
+					<li>Don't be contained by the frozen page of desktop publishing</li>
+				<li>Publications can be living documents, with typography, supported by the full stack of web technology</li>
+		</ul>
+				<aside class="notes">We are at a magnificent crossroads now. Ivan will speak more about the opportunities we have to influence the Web. </aside>
+                </section>
+				            
+                <section>
+					<h2>Connected Publishing</h2>
+					<blockquote>Serious electronic literature (for scholarship, detailed controversy and detailed collaboration) must support bidirectional and profuse links, which cannot be embedded; and must offer facilities for easily tracking re-use on a principled basis among versions and quotations.</blockquote>
+                    <cite><a href="http://xanadu.com.au/ted/XUsurvey/xuDation.html">Theodor H. Nelson,</a> "Xanalogical Structure, Needed Now More than Ever: 
+Parallel Documents, Deep Links to Content, 
+Deep Versioning and Deep Re-Use" </cite>
+					<aside class="notes">We continue to inherit from the visions of our digital ancestors. Some of the visions are beginning to be realized today. Back in the 1960's Ted Nelson had a vision for interrelated, collaborative content.
+					</aside>
+				</section>
+                
+                <!--
+                <section>
+                <h2>Visions of Connectivity</h2>
+                    <ul>
+                    <li>Hypertext is "branching and responding text". (Ted Nelson)</li>
+                    <li>Early systems linked objects, so when objects moved, links moved with them</li>
+                    <li>The Web we ended up with is one variation of the many visions that could have succeeded</li>
+                </ul>
+                </section>
+                -->
+              
+                  <section>
+					<h2>Hyper* Research</h2>
+					<ul>
+						<li><strong style="color: #ced100;">Hypertext</strong> gives us a lot of the same information as print and a protocol for sharing it</li>
+						<li><strong style="color: #ced100;">Hypermedia</strong> gives us an interactive layer</li>
+						<li><strong style="color: #ced100;">Hyperdata</strong> gives us networked, living information</li>
+					</ul>
+					<a href="https://github.com/hakimel/reveal.js#speaker-notes"></a>
+					<aside class="notes">
+						hyperdata is data objects linked to other data objects, enabling web of data that branches and responds.
+					</aside>
+				</section>
+				
+                
+                <section>
+                <h2>How Are We Doing?</h2>
+                    <ul>
+                    <li>We are still looking for the best way to convey "deeply intertwingled" information</li>
+                    <li>Traditional links rot. Is there a better way to convey relationships?</li>
+                    <li>Can information from one resource change or affect something in another resource?</li>
+                    <li>Is it possible to add information to a resource without touching it?</li>
+                </ul>
+                  </section>
+                
+              <section>
+                <h2>Hyper* check</h2>
+                    <ul>
+                        <li><strong style="color: #ced100;">Hierachical</strong> information is pretty comfortable</li>
+                        <li><strong style="color: #ced100;">Associative</strong> information has come a long way 
+                     <ul>   
+                    <li>Convey metadata and relational information without tweaking the content</li>
+                    <li>Conveying data in a manner that does not require hopping in and out of systems </li>
+                         </ul>
+                </li></ul>
+                  
+                  <aside class="notes">associative data is stored in only one place so that it need not be duplicated to allow for human interpretation - the way the mind works. Having found one item, it snaps to the next item, there is no need to exit a system and re-enter.</aside>
+                  </section>
+                
+				<section>
+                <h2>An Associative Index?</h2>
+                    <p>Read <a href= "http://www.perseus.tufts.edu/hopper/opensource">more</a> about the extensible TEI and XML code base.</p>
+                    <figure class="stretch"><img src="figures/Tufts.jpg" alt="Search results of the Tufts Perseus index showing all results for medusa across all assets"/><figcaption>The Perseus Hopper Digital Library is completely online. Users can not only read passages from texts, but use a suite of search tools to find what they are looking for, in any of the languages the Hopper supports. </figcaption></figure>
+                    <aside class="notes">The Digital Humanities understands that users are not interested in going from one site to another to find the information they want. This is the Perseus Hopper Digital Library from Tufts Univ. It has been around since before the field was called digital humanitites. One can search on any term across  the entire collection, books, articles, physical objects.  </aside>
+                </section>
+                
+                
+                <section>
+					<h2>Meaningful Metadata</h2>
+					<p>Not too long ago (and often still) author information and titles were just meaningless blobs of text</p>
+					<p><em>Linked Data to the rescue!</em></p>
+                    <figure class="stretch"> <img src="figures/AuthorRDFa.JPG" alt="linked data diagram showing author information for a journal article">
+                    <figcaption>Linked Data diagram for authors and affiliations of <i>Brain and Behavior</i> An update on immunopathogenesis, diagnosis, and treatment of multiple sclerosis, DOI: 10.1002/brb3.362, courtesy of <a href="http://www.standardanalytics.io/">Standard Analytics</a></figcaption>
+                    </figure>
+				</section>
+                
+                <section>
+                    <header>
+					<h2>Networked Publications</h2>
+                        <p>Our articles are talking to each other</p>
+                        </header>
+					<pre>
+                    <code>
+                &lt;li property="schema:author">
+                    &lt;span typeof="schema:Person" resource="https://en.wikipedia.org/wiki/Ada_Lovelace">
+                    &lt;meta property="schema:givenName" content="Ada">
+                    &lt;meta property="schema:additionalName" content="Augusta">
+                    &lt;meta property="schema:familyName" content="Lovelace">
+                    &lt;span property="schema:name">Augusta Ada Lovelace&lt;/span>
+                ...
+                    </code>
+                    </pre>
+                    
+				<aside class="notes">
+						I know there are many ways I could have marked that up. The real point is that including that in my article or as a link from my article connects my article to all of the data that the URL is already connected to.
+					</aside>
+                </section>
+                
+            <section>
+                <h2>Theory vs. Practicality</h2>
+                <ul>
+                    <li>RDFa and friends give us the tools to link anything</li>
+                    <li>A quick look through <a href="http://lov.okfn.org/dataset/lov/">LOV</a> will show hundreds of open vocabularies, with varying degrees of use</li>
+                    <li>If I don't find what I need, I can write a new vocabulary or create a namespace and some SKOS equivalents </li>
+                </ul>
+			</section>
+
+                <section>
+                <h2>What is the point?</h2>
+                    <ul>
+                    <li>Do these endless, unique vocabularies actually assist in linking content?</li>
+                    <li>Would it help to standardize on a small subset of vocabularies?</li>    
+                    </ul>
+                    <aside style="margin-top: 1.5em; color: #00ced1;"><sup>*</sup>Do not throw things at me. I am merely presenting the quandry we face today.</aside>
+                </section>
+                
+                <section>
+                <h2>Use Case: Curation of Content </h2>
+                   <ul>
+                    <li>Linked data enables gathering of content by topic</li>
+                       <li>Wiley Online Library now features hubs </li>
+                       <li>Users can subcribe to a topic instead of a specific journal</li>
+                       <li>See <a href="http://aasldpubs.onlinelibrary.wiley.com/">American Association for the Study of Liver Disease hub</a></li>
+                       </ul>
+                    <figure class="stretch"> <img src="figures/aasld.jpg" alt="landing page of aasld.org hub on wiley online library, showing search options by topic"/></figure>
+                </section>
+               
+                
+                <section>
+                <h2>Publishing Data</h2>
+                    <ul>
+                    <li>In the past, published data was, by definition, historical</li>
+                        <li>Tools like IPython, Jupyter, and GitHub allow researchers to publish and never stop!</li>
+                        <li>Web Annotations, GitHub Pull Requests allow anyone to comment</li>
+                        <li>Living publications allow for living data</li>
+                        </ul>
+                </section>
+                
+                <section>
+                <h2>Use Case: Derivatives Analytics with Python (Wiley Finance)</h2>
+                    <p>Wiley Finance is a series of books aimed at finance and investment professionals. Often authors make tools such as spreadsheets available to the readers. </p> 
+                </section>
+                <section>
+                    <ul>
+                        <li><a href="http://derivatives-analytics-with-python.com/">Derivatives Analytics with Python</a> breaks the historical mold of firewalling everything behind a book's results, tables, and figures</li>
+                        <li>Puts all Python code in an open Github Repository </li>
+                        <li>The author provides a Jupyter Notebook to host the code on the <a href = "http://pqp.io">Quant Platform</a> for a standardized execution environment </li></ul>
+                       
+                    <figure class="stretch"><img src="figures/DerivativesGH.JPG" alt="Screen capture of GitHub Repository Pyhton code for Derivatives Analytics with Python "/></figure>
+                 <aside class="notes">This allows easily reproducible and updateable research: every result, table, plot, etc. presented in the book can be reproduced by the reader and can be updated given new or different data as input.</aside>
+                        
+                </section>
+                <section>
+                <h2>Lessons from the Past</h2>
+                    <ul>
+                    <li>In 2012 Wiley launched a site called Functional Chemistry</li>
+                    <li>Instead of publishing raster images of compounds that originated in ChemDraw, we extracted  InChIKeys from the ChemDraw files</li>
+                    <li>This enabled our machines to identifying existing and novel compounds</li>
+                    <li>Users able to view the compound labels, images, and schemes as well as the spectra associated with compounds</li>
+                    </ul>    
+                    <aside class="notes">IUPAC International Chemical Identifier Keys are hashed identifiers. The InChI key was developed to make the full compounds more easily searchable on the Web.</aside>
+                </section>
+                
+                <section>
+                <figure class="stretch"><img src="figures/FunChem1.jpg" alt="Wiley Functional Chemistry site highlighting the relationship between schemes, labels, and text."/><figcaption>Functional Chemsitry offered users the option of navigation by scheme or label before the Chemical Abstract Service touched the files.</figcaption></figure>
+                    <aside class="notes">CAS takes 6 months to process schemes and compounds. That's a really long time in pharmaceuticals. KillCAS is a movement that I learned of recently.</aside>
+                </section>
+                
+                <section>
+                <figure class="stretch"><img src="figures/FunChem3.JPG" alt="Wiley Functional Chemistry site showing specific reagents highlited" /><figcaption>Wiley tagged all the compounds in text, but at the time, the purpose was highlighting.</figcaption></figure>
+                </section>
+                <aside class="notes">We had very valuable categorizations and taggging, but we did not use LOD. We didn't separate the data from the content. We are applying these lessons to the materials we create today.</aside>
+                <section>
+                <h2>Data Lives</h2>
+                    <ul>
+                    <li>Live data, annotations allow authors and users to constantly update a publication </li>
+                        <li>If an author updates the data in GitHub, the graphic representation of it will change in the article</li>
+                        <li>What, then is the "publication of record"?</li>
+                    <li>Can this be managed by versioning?</li>   
+                    </ul>
+                    </section>
+                
+                <section>
+                <h2>Use Case: Cochrane Library Systematic Reviews</h2>
+                    <p>Cochrane Reviews are systematic reviews of primary research in human health care and health policy, and are internationally recognised as the highest standard in evidence-based health care. They may either investigate the effects of interventions for prevention, treatment, and rehabilitation, or alternatively may assess the accuracy of a diagnostic test for a given condition in a specific patient group and setting. <strong style="color: #ced100;">A unique feature of Cochrane Reviews is that they are living documents in that they are updated with new evidence that emerges. They were conceived as electronic publications from the outset, and designed to take advantage of features unique to electronic publishing.</strong></p>
+                    <aside class="notes">The only reasone these are published in a tradtional journals setting is impact factor, which drives revenue</aside>
+                </section>
+                
+                
+                <section>
+                <h2>There is still work to do</h2>
+                    <ul>
+                    <li>We have come a long way in exploiting the value of data on the web and data about the web</li>
+                        <li>Many questions remain</li>
+                        <li>Interoperability is still a goal!</li>
+                        </ul>
+                </section>
+                
+                
+                <section>
+                <h2>Thank you</h2>
+                    <p>Tzviya Siegman <br/>
+                Wiley <br/>
+                        <a href="https://twitter.com/TzviyaSiegman">@TzviyaSiegman</a><br/>
+                        <a href ="mailto:tsiegman@wiley.com">tsiegman@wiley.com</a> 
+                </p>
+                </section>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
