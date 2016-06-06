@@ -1,0 +1,75 @@
+{
+  "name": "Moby-Dick",
+  "short_name": "Moby-Dick",
+  "icons": [{
+    "src": "apple-touch-icon.png",
+    "sizes": "64x64",
+    "type": "image/png"
+  }],
+  "start_url": "index.html",
+  "display": "fullscreen",
+
+  "@context": {
+    "title": "http://schema.org/name",
+    "language": "http://schema.org/inLanguage",
+    "version": "http://schema.org/version",
+    "modified": "http://schema.org/dateModified",
+    "mediaType": "http://schema.org/fileFormat",
+    "href": "http://schema.org/url"
+  },
+
+  "@type": "http://schema.org/Book",
+  "@id": "https://dauwhe.github.io/epub-zero/acme-publishing/MobyDick/",
+  "specVersion": "4.0",
+
+  "metadata": {
+    "title": "Moby-Dick",
+    "language": "en-US",
+    "modified": "2016-06-06T17:00:00Z",
+    "version": "1.0",
+    "identifier": "9780000000000"
+  },
+
+  "files": [{
+    "href": "toc.html",
+    "type": "text/html"
+  }, {
+    "href": "MobyDick_HCtextF1.html",
+    "type": "text/html"
+  },{
+    "href": "fonts/STIXGeneral.otf",
+    "type": "text/html"
+  }, {
+    "href": "fonts/STIXGeneralBol.otf",
+    "type": "font/otf"
+  }, {
+    "href": "fonts/STIXGeneralItalic.otf",
+    "type": "font/otf"
+  }, {
+    "href": "fonts/STIXGeneralBolIta.otf",
+    "type": "font/otf"
+  }, {
+    "href": "index.html",
+    "type": "text/html"
+  }, {
+    "href": "images/moby-dick-book-cover.jpg",
+    "type": "image/jpeg"
+  }, {
+    "href": "images/moby-dick-icon.jpg",
+    "type": "image/jpeg"
+  }, {
+    "href": "css/mobydick.css",
+    "type": "text/css"
+  }],
+
+  "states": [
+{ 
+  "state": "unpacked", 
+  "href": "#" 
+},
+{ "state": "packed", 
+  "href": "www.example.com/Moby.pwp" 
+}
+
+]
+}

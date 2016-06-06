@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Untitled</title>
+<style>
+iframe {
+margin: .75in auto;
+border-top: .75in solid white;
+border-bottom: .25in solid white;
+display: block;
+}
+
+body {
+background-color: #aaa;
+}
+
+
+.rh::before {
+content: 'Moby Dick';
+position: absolute;
+top: 1.1in;
+width: 100px;
+height: 20px;
+margin: 0 auto; /* Will not center vertically and won't work in IE6/7. */
+left: 0;
+right: 0;
+text-align: center;
+text-transform: lowercase;
+font-variant: small-caps;
+letter-spacing: 2px;
+}
+
+
+.toc {
+position: absolute;
+top: .4in;
+width: 100px;
+height: 20px;
+margin: 0 auto;
+left: 0;
+right: 0;
+text-align: center;
+}
+
+</style>
+</head>
+<body>
+<div class="toc"><a href="../index.html">Home</a>  <a href="toc.html" target="james-brown">Contents</a></div>
+<div class="rh"/>
+<iframe name="james-brown" src="MobyDick_HCtextF1.html" width="450" height="600">
+
+</iframe>
+<div class="rf"/>
+</body>
+</html>

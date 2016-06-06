@@ -1,0 +1,263 @@
+body {
+overflow: -webkit-paged-x;
+-webkit-scroll-snap-type: mandatory;
+-webkit-scroll-snap-points-x: repeat(100%);
+-webkit-box-decoration-break: clone;
+padding: 0in 0 0 0;
+margin: 0in 0 0 0;
+orphans: 2;
+widows: 2;
+hyphens: auto;
+hyphenate-lines: 1;
+prince-text-replace: "“… " "“.\202F.\202F.\202F" "…”" "\202F.\202F.\202F.”" "… " "\202F.\202F.\202F.\202F" "…" "\202F.\202F.\202F.\202F" "“‘" "“\200A‘" "’”" "’\200A”" "—" "—\200B";
+prince-hyphenate-before: 2;
+prince-hyphenate-after: 3;
+
+}
+
+
+div.Chapter-rw div.title-block-rw + p::first-letter {
+-webkit-initial-letter: 3;
+color: red;
+}
+
+body > div {
+padding: 60px;
+}
+
+div.body-rw {
+page-break-before: always;
+}
+
+div.frontmatter-rw + div.frontmatter-rw {
+page-break-before: always;
+}
+@page {
+size: 6in 9in;
+margin-top: 63pt;
+margin-inside: 63pt;
+margin-outside: 54pt;
+margin-bottom: 60pt;
+}
+
+@page:left {
+@top-center { 
+content: 'Herman Melville';
+font-style: italic;
+}
+}
+
+@page:right {
+@top-center { 
+content: string(chapter-title-str);
+font-variant: small-caps;
+text-transform: lowercase;
+letter-spacing: 1pt;
+}
+}
+
+p {
+font-family: 'Adobe Caslon Pro', serif;
+margin: 0;
+text-indent: 0;
+font-size: 11pt;
+line-height: 16pt;
+text-align: justify;
+hyphens: auto;
+prince-forced-breaks: full;
+}
+
+
+
+
+p + p { text-indent: 16pt; }
+
+a {
+text-decoration: none;
+color: black;
+}
+
+.title-num-rw {
+text-align: center;
+text-indent: 0;
+font-style: italic;
+padding-top: 36pt;
+}
+
+h1 {
+text-align: center;
+font-weight: normal;
+font-size: 20pt;
+text-transform: uppercase;
+letter-spacing: 2pt;
+}
+
+.Chapter-rw .title-block-rw h1 {
+string-set: chapter-title-str content();
+}
+
+.title-block-rw {
+height: 160pt;
+}
+
+
+
+.decoration-rw {
+text-align: center;
+padding-top: 16pt;
+padding-bottom: 16pt;
+padding-left: 0;
+padding-right: 0;
+}
+
+.copyright-rw {
+font-size: .8em;
+line-height: 1em;
+text-align: left;
+padding-top: 2em;
+}
+
+.copyright-rw p {
+margin-bottom: 1em;
+text-indent: 0;
+}
+
+.dedication-rw p {
+text-align: center;
+text-indent: 0;
+}
+
+.Dedication-rw {
+margin-top: 48pt;
+}
+
+.leading-line-rw {
+height: 32pt;
+}
+
+.fp-rw {
+text-indent: 0;
+}
+
+
+h2 {
+text-align: center;
+font-size: 1.33em;
+line-height: 1.2em;
+text-align: center;
+padding-bottom: 0em;
+text-align: center;
+text-transform: uppercase;
+font-weight: normal;
+letter-spacing: 3px;
+}
+
+.title-author-rw {
+text-align: center;
+font-size: 1.5em;
+text-indent: 0;
+}
+
+.title-num-rw {
+text-align: center;
+font-size: 1.5em;
+text-indent: 0;
+margin-top: 1em;
+margin-bottom: 1em;
+}
+
+.title-sub-rw {
+text-align: center;
+font-size: 1.5em;
+text-indent: 0;
+}
+
+.imprint-rw {
+text-align: center;
+}
+
+.extract-verse-rw {
+margin-top: 1.33em;
+margin-bottom: 1.33em;
+padding-left: 20pt;
+}
+
+.extract-rw {
+margin-top: 1.33em;
+margin-bottom: 1.33em;
+padding-left: 20pt;
+}
+
+.extract-verse-rw p {
+text-align: left;
+text-indent: -20pt;
+margin-left: 20pt;
+}
+
+.dialog-rw p {
+text-align: left;
+text-indent: -20pt;
+margin-left: 20pt;
+}
+
+span.speaker-rw {
+font-variant: small-caps;
+text-transform: lowercase;
+}
+
+p.stage-direction-rw { 
+font-style: italic; 
+text-indent: 0 !important;
+margin-left: 0 !important;
+}
+
+span.stage-direction-rw {
+font-style: italic;
+text-transform: lowercase;
+}
+
+.epigraph-rw {
+margin-top: 1.33em;
+margin-bottom: 1.33em;
+padding-left: 20pt;
+padding-right: 20pt;
+}
+
+   .source-rw {
+margin-bottom: 0em;
+text-align: right !important;
+font-style: italic;
+page-break-before: avoid;
+}
+
+.sc-rw {
+font-size: 75%;
+}
+.block-rw {
+margin-top: 1em;
+margin-bottom: 1em;
+margin-left: 20pt;
+margin-right: 20pt;
+}
+
+span.dropcap-rw {
+float: left;
+font-size: 2.7em;
+line-height: .87em;
+}
+
+
+.signature-rw {
+margin-left: 50%;
+text-align: left;
+text-indent: 0;
+}
+
+.extract-rw {
+break-inside: avoid;
+page-break-inside: avoid;
+}
+
+nav ol {
+list-style-type: none;
+}
