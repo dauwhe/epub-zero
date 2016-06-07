@@ -8,6 +8,7 @@ margin: 0in 0 0 0;
 orphans: 2;
 widows: 2;
 hyphens: auto;
+-webkit-hyphens: auto;
 hyphenate-lines: 1;
 prince-text-replace: "“… " "“.\202F.\202F.\202F" "…”" "\202F.\202F.\202F.”" "… " "\202F.\202F.\202F.\202F" "…" "\202F.\202F.\202F.\202F" "“‘" "“\200A‘" "’”" "’\200A”" "—" "—\200B";
 prince-hyphenate-before: 2;
@@ -17,8 +18,9 @@ prince-hyphenate-after: 3;
 
 
 div.Chapter-rw div.title-block-rw + p::first-letter {
--webkit-initial-letter: 3;
+-webkit-initial-letter: 3 3;
 color: red;
+margin-top: 1em;
 }
 
 body > div {
@@ -260,4 +262,25 @@ page-break-inside: avoid;
 
 nav ol {
 list-style-type: none;
+}
+
+
+.title-other-rw {
+text-align: center;
+text-indent: 0;
+font-style: italic;
+}
+
+
+.footnotes-rw {
+float: right;
+width: 25%;
+background-color: #eee;
+border-radius: 6px;
+padding: 3px 6px;
+clear: both;
+}
+
+div.footnotes-rw + p {
+text-indent: 16pt;
 }
