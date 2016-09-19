@@ -10,7 +10,8 @@
 
   var ui = document.querySelector('.page-controls');
 
-  navigator.serviceWorker.register(new URL('https://dauwhe.github.io/epub-zero/acme-publishing/sw.js', thisScriptURL));
+ // navigator.serviceWorker.register(new URL('sw.js', thisScriptURL));
+ navigator.serviceWorker.register('/sw.js');
 
 
   if (navigator.serviceWorker.controller) {
