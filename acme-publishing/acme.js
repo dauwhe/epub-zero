@@ -225,7 +225,7 @@ pagescript.setAttribute("async", "async");
 
 controls.appendChild(pagescript);
 
-//document.getElementsByTagName('body')[0].appendChild(controls);
+document.getElementsByTagName('body')[0].appendChild(controls);
 
 
 
