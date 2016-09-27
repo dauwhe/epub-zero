@@ -27,7 +27,7 @@
   function initPageControls() {
     caches.has(publicationName).then(function(isCached) {
       ui.innerHTML =
-        '<span><label><input type="checkbox" class="work-offline"> Save </label></span>' +
+        '<span><label><input type="checkbox" class="work-offline"/> Save </label></span>' +
         '<span><a href="' + publicationBaseURL + 'download-publication"> Download</a></span>' +
         '<span class="status"></span>' +
       '';
