@@ -47,10 +47,10 @@ function packagePublication(request) {
       const types = {};
 
       // I should reuse the asset I just downloaded but I'm lazy
-      data.assets.push('manifest.json');
+      data.files.map(function(el) { return el.href}).push('manifest.json');
 
       return Promise.all(
-        data.assets.map(path => {
+        data.files.map(function(el) { return el.href}).map(path => {
           return fetchingMethod(publicationBaseURL + path).then(response => {
             if (!path || path.endsWith('/')) path += 'index.html';
             types[path] = response.headers.get('Content-Type');
