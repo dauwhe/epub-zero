@@ -56,7 +56,7 @@ function packagePublication(request) {
             types[path] = response.headers.get('Content-Type');
             return response.arrayBuffer();
           }).then(arrayBuffer => {
-            zip.file(path, arrayBuffer);
+            zip.file(path, arrayBuffer, {createFolders: true});
           });
         })
       ).then(_ => {
@@ -68,14 +68,14 @@ function packagePublication(request) {
         }));
         const resultArray = new Uint8Array(zipArray.length + 1);
 
-        // 'encode' the archive
+        // don't 'encode' the archive
         for (var i = 0; i < zipArray.length; i++) {
-          resultArray[i+1] = zipArray[i];
+          resultArray[i+1] = zipArray[i+1];
         }
 
         return new Response(resultArray.buffer, {
           headers: {
-            'Content-Disposition': 'attachment; filename="' + publicationName + '.pubarc"'
+            'Content-Disposition': 'attachment; filename="' + publicationName + '.zip"'
           }
         });
       });
