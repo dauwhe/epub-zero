@@ -1,6 +1,8 @@
+
+
+
 body {
 overflow: -webkit-paged-x;
-overflow: -o-paged-x;
 -webkit-scroll-snap-type: mandatory;
 -webkit-scroll-snap-points-x: repeat(100%);
 -webkit-box-decoration-break: clone;
@@ -35,29 +37,7 @@ page-break-before: always;
 div.frontmatter-rw + div.frontmatter-rw {
 page-break-before: always;
 }
-@page {
-size: 6in 9in;
-margin-top: 63pt;
-margin-inside: 63pt;
-margin-outside: 54pt;
-margin-bottom: 60pt;
-}
 
-@page:left {
-@top-center { 
-content: 'Herman Melville';
-font-style: italic;
-}
-}
-
-@page:right {
-@top-center { 
-content: string(chapter-title-str);
-font-variant: small-caps;
-text-transform: lowercase;
-letter-spacing: 1pt;
-}
-}
 
 p {
 font-family: 'Adobe Caslon Pro', serif;
@@ -284,4 +264,47 @@ clear: both;
 
 div.footnotes-rw + p {
 text-indent: 16pt;
+}
+
+
+@media (-o-paged) {
+
+body { 
+overflow: -o-paged-x; 
+background-color: white;
+}
+
+.footnotes-rw {
+float: -o-bottom;
+width: auto;
+}
+
+
+div.Chapter-rw div.title-block-rw + p::first-letter {
+float: left;
+font-size: 5em;
+line-height: 1.1em;
+margin-bottom: -.3em;
+margin-top: 0;
+}
+
+
+/*
+@page:left {
+@top-center { 
+content: 'Herman Melville';
+font-style: italic;
+}
+}
+
+@page:right {
+@top-center { 
+content: string(chapter-title-str);
+font-variant: small-caps;
+text-transform: lowercase;
+letter-spacing: 1pt;
+}
+}
+*/
+
 }
