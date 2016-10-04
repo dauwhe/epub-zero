@@ -1,5 +1,6 @@
 body {
 overflow: -webkit-paged-x;
+overflow: -o-paged-x;
 -webkit-scroll-snap-type: mandatory;
 -webkit-scroll-snap-points-x: repeat(100%);
 -webkit-box-decoration-break: clone;
