@@ -27,6 +27,11 @@
 		}
 		
 		#nav2 { display: none; }
+		
+		.cover, details {
+		margin: 0 auto;
+		text-align: center;
+		}
 	</style>
 	<script src="https://code.jquery.com/jquery-1.11.0.min.js">
 	</script>
@@ -50,11 +55,20 @@
 </script>
 <main>
 <div class="galley-rw">
-	<div class="title-block-rw">
-		<h1>
-			Contents
-		</h1>
-	</div>
+
+
+<div class="cover">
+<p><a href="../index.html">Library</a></p>
+<img height="200" src="images/moby-dick-book-cover.jpg"/>
+<p><a href="html/c001.html">Begin Reading</a></p>
+</div>
+
+
+	<details>
+	
+	<summary>Table of Contents</summary>
+	
+	
 	<nav id="nav1">
 		<ol>
 			<li><a target="_self" href="html/title-page.html">Moby-Dick</a></li>
@@ -199,23 +213,9 @@
 			<li><a target="_self" href="html/c136.html">Epilogue</a></li>
 		</ol>
 	</nav>
-	<!--separate nav element for a preview of the book. there is nothing that implements this kind of thing.-->
-	<nav id="nav2">
-		<ol>
-			<li><a target="_self" href="html/title-page.html">Moby-Dick</a></li>
-			<li><a target="_self" href="html/copyright.html"></a></li>
-			<li><a target="_self" href="html/c001.html">Loomings</a></li>
-			<li><a target="_self" href="html/c002.html">The Carpet-Bag</a></li>
-			<li><a target="_self" href="html/c003.html">The Spouter-Inn</a></li>
-			<li><a target="_self" href="html/c004.html">The Counterpane</a></li>
-			<li><a target="_self" href="html/c005.html">Breakfast</a></li>
-			<li><a target="_self" href="html/c006.html">The Street</a></li>
-			<li><a target="_self" href="html/c007.html">The Chapel</a></li>
-			<li><a target="_self" href="html/c008.html">The Pulpit</a></li>
-			<li><a target="_self" href="html/c009.html">The Sermon</a></li>
-			<li><a target="_self" href="html/c010.html">A Bosom Friend</a></li>
-		</ol>
-	</nav>
+	
+	</details>
+	
 </div>
 </main>
 </body>
