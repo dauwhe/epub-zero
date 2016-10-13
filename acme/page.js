@@ -2,16 +2,37 @@
   if (!navigator.serviceWorker) return;
 
   var thisScriptURL = document.currentScript.src;
+  
+ 
 
   // some nasty url hacking that should probably be done some other way
-  var urlRE = /^.*acme-publishing\/([^\/]+)\//.exec(location.href);
-  var publicationName = urlRE[1];
-var publicationBaseURL = urlRE[0];
+//  var urlRE = /^.*acme-publishing\/([^\/]+)\//.exec(location.href);
 
- var ui = document.querySelector('.page-controls');
+ // var publicationBaseURL = urlRE[0];
+  
+  var publicationBaseURL = '/' + getPathByName() + '/';
+  
+  //what folder is the manifest in
+function getPathByName() {
 
- navigator.serviceWorker.register(new URL('sw.js', thisScriptURL));
+//this is deeply flawed. fails on MobyDick/folder/manifest.json
+ var path = RegExp('[?]manifest=' + '([^/]*)')
+                    .exec(window.location.search);
  
+    return path ?
+        decodeURIComponent(path[1].replace(/\+/g, ' '))
+        : null;
+
+}
+
+  var publicationName = getPathByName();
+
+  var ui = document.getElementById('page-controls');
+  
+
+
+ // navigator.serviceWorker.register(new URL('sw.js', thisScriptURL));
+ navigator.serviceWorker.register('/sw.js');
 
 
   if (navigator.serviceWorker.controller) {
@@ -27,11 +48,11 @@ var publicationBaseURL = urlRE[0];
   function initPageControls() {
     caches.has(publicationName).then(function(isCached) {
       ui.innerHTML =
-        '<span><label><input type="checkbox" class="work-offline"/> Save </label></span>' +
-        '<span><a href="' + publicationBaseURL + 'download-publication"> Download</a></span>' +
-        '<span class="status"></span>' +
-      '';
-
+        '<span><label class="status"><input type="checkbox" class="work-offline">Save</label></span>' +
+        '<span class="download"><a href="' + publicationBaseURL + 'download-publication">Download</a></span>';
+      
+      
+      
 
       var status = ui.querySelector('.status');
       var checkbox = ui.querySelector('.work-offline');
@@ -44,30 +65,35 @@ var publicationBaseURL = urlRE[0];
           status.textContent = "Removed";
         }
         else {
-          status.textContent = "Offlinifying…";
+         status.textContent = "Offlinifying";
+//console.log(publicationBaseURL);
 
-
-          fetch(publicationBaseURL + 'manifest.json').then(function(response) {
+          fetch(publicationBaseURL + 'manifest.json', { mode: 'no-cors' }).then(function(response) {
             return response.json();
           }).then(function(dave) {
-return dave.files.map(function(el) { return el.href});
-}).then(function(data) {
-console.log(data);
+          
+          
+    newArray = dave.resources.map(function(el) { return el.href});
+    
+return dave.spine.map(function(el) { return el.href}).concat(newArray);
 
+}).then(function(data) {
+
+
+//console.log(data);
 
             data.push('manifest.json');
-
 
             
             return caches.open(publicationName).then(function(cache) {
               return cache.addAll(data.map(function(url) {
-                return new URL(url, publicationBaseURL);
+                return new URL(url, 'http://127.0.0.1/' + publicationBaseURL);
               }));
             });
           }).then(function() {
             // status.textContent = 'Offlinification complete!';
             alert("Offlinification complete!");
-            status.textContent = "";
+            status.textContent = "Saved";
           }).catch(function(err) {
             console.log(err);
             // status.textContent = 'Offlinification failed :(';

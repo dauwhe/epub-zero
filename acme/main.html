@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book</title>
+	<style type="text/css">		
+	
+	
+	main { 
+		margin: 0 auto;
+		text-align: center;
+		background-color: #F8F8F8;
+		height: 100vh;
+		}
+		
+		iframe {
+		margin: 1em auto;
+		border-top: .75in solid white;
+		border-bottom: .25in solid white;
+		background-color: white;
+		display: block;
+		text-align: center;
+		}
+		
+		body {
+		background-color: #aaa;
+		}
+		
+		div.wrapper {
+		display: flex;
+		}
+		
+		#page-controls {
+		display: inline-block;
+		}
+		#page-controls label, span.download { 
+    display: inline-block;
+        -webkit-appearance: push-button;
+        webkit-user-select: text;
+   font: 11px BlinkMacSystemFont;
+   margin: 2px;
+   padding-bottom: 3px;
+   padding-top:  2px;
+   padding-right: 8px;
+   padding-left: 8px;
+   border-image-width: 1;
+}
+
+
+
+#page-controls input.work-offline {display: none; }
+		
+		
+	</style>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js">
+	</script>
+</head>
+<body>
+<main> 
+<div id="wrapper">
+	<div id="b">
+		<a href="index.html">Library</a>
+	</div>
+</div>
+<img id="cover-image" /> 
+
+
+
+
+
+<input type="button" value="Previous" id="decrement" />
+<!-- <input type="button" value="Begin Reading" id="begin" /> -->
+<input type="button" value="TOC" id="toc" />
+<div id="page-controls"></div>
+
+<input type="button" value="EPUB Package" id="epub" />
+<input type="button" value="Next" id="increment" />
+<br />
+
+<iframe id="pub" width="450" height="600"></iframe> </main> <script type="text/javascript">
+	
+	
+	var manifest = getParameterByName('manifest');
+	
+	console.log("here is the " + manifest);
+	
+	var count = 0;
+	
+	// set title of page to book title
+	
+	
+	var title = $.getJSON(manifest).done(
+	  function(data){
+	 
+	   document.title = data.name;
+	   console.log(document.title);
+	
+			}
+	  )  ;
+	  
+	  
+	  // display first "spine" item in iframe by default
+	
+	var content = $.getJSON(manifest).done(
+	  function(data){
+	 
+	   document.getElementById('pub').setAttribute('src', getPathByName() + '/' + data.spine[0].href);
+	
+			}
+	  );
+	
+	  // on clicking "next" go to next spine item
+	    $('#increment').click(function (e) {
+	   e.preventDefault();
+	   count++;
+	   var content = $.getJSON(manifest).done(
+	  function(data){
+	   document.getElementById('pub').setAttribute('src', getPathByName() + '/' + data.spine[count].href );
+	  })   
+	    });
+	 // on clicking "previous" go to previous spine item
+	   $('#decrement').click(function (e) {
+	   e.preventDefault();
+	   count--;
+	   var content = $.getJSON(manifest).done(
+	  function(data){
+	   document.getElementById('pub').setAttribute('src', getPathByName() + '/' + data.spine[count].href );
+	  })   
+	    });
+	    
+	 // link to table of contents
+	    $('#toc').click(function (f) {
+	   f.preventDefault();
+	    
+	   var tableofcontents = $.getJSON(manifest).done(
+	  function(data){
+	  for ( var i in data.resources ) {
+	  console.log('hello');
+	 
+			if (data.resources[i].properties === "nav") {
+	   document.getElementById('pub').setAttribute('src', getPathByName() + '/' + data.resources[i].href );
+			}
+			}
+	  })   
+	    });
+	    
+	   
+	 // "begin reading" link goes to start_url, which may not be first spine item
+	 
+	 // this screws up count, though. 
+	 
+	$('#begin').click(function (g) {
+	   g.preventDefault();
+	   
+	   var content = $.getJSON(manifest).done(
+	  function(data){
+	 
+	   document.getElementById('pub').setAttribute('src', getPathByName() + '/' + data.start_url);
+	
+			}
+	  )   
+	    });
+	    
+	// what's the path to the manifest?
+	
+function getParameterByName(name) {
+ 
+    var match = RegExp('[?&]' + name + '=([^&]*)')
+                    .exec(window.location.search);
+ 
+    return match ?
+        decodeURIComponent(match[1].replace(/\+/g, ' '))
+        : null;
+ 
+}
+//what folder is the manifest in
+function getPathByName() {
+
+//this is deeply flawed. fails on MobyDick/folder/manifest.json
+ var path = RegExp('[?]manifest=' + '([^/]*)')
+                    .exec(window.location.search);
+ 
+    return path ?
+        decodeURIComponent(path[1].replace(/\+/g, ' '))
+        : null;
+ 
+
+ 
+}
+	    
+	    
+	    
+</script>
+	<script src="page.js"></script>
+
+</body>
+</html>

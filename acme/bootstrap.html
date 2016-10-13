@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book</title>
+	<link rel="manifest" href="manifest.json">
+	
+	<style type="text/css">
+	div, details { 
+	margin: 0 auto;
+	text-align: center;
+	}
+	.page-controls {
+		margin: 0 auto;
+		background-color: #F8F8F8;
+		height: 2em;
+		text-align: center;
+	}
+	details {
+	margin-top: 1em;
+	}
+	margin: .75in auto;
+border-top: .75in solid white;
+border-bottom: .25in solid white;
+display: block;
+	</style>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	
+	<script type="application/javascript">
+	// use manifest to build landing page
+		$.getJSON("manifest.json", function(json) {	
+		// begin reading link to start_url
+		document.getElementById('a').firstChild.setAttribute('href', json.start_url);
+		// some sort of cover image
+		document.getElementById('cover-image').setAttribute('src', json.icons[0].src)
+		
+		// book title
+		document.title = json.name;
+		
+		// look through manifest for nav doc { properties: nav }
+		
+		for ( var i in json.files ) {
+		
+		if (json.files[i].properties === "nav") {
+		document.getElementById('toc').setAttribute('src', json.files[i].href);
+		}
+		}
+		
+		});
+		
+		
+	</script>
+</head>
+<body>
+<div class="page-controls"></div>
+<div class="cover">
+<p><a href="../index.html">Library</a></p>
+<img id="cover-image"></img>
+
+</div>
+<div id="a"><a>Begin Reading</a></div>
+
+<details>
+<summary>Table of Contents</summary>
+
+<iframe id="toc" width="450" height="600"></iframe>
+
+</details>
+
+</body>
+</html>
