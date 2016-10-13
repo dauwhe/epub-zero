@@ -6,11 +6,14 @@
  
 
   // some nasty url hacking that should probably be done some other way
-//  var urlRE = /^.*acme-publishing\/([^\/]+)\//.exec(location.href);
+var urlRE = /^.*acme\/([^\/]+)\//.exec(location.href);
 
- // var publicationBaseURL = urlRE[0];
+ var publicationBaseURL = location.origin + '/acme/'
+ 
+console.log(publicationBaseURL);
+
   
-  var publicationBaseURL = '/' + getPathByName() + '/';
+ // var publicationBaseURL = '/' + getPathByName() + '/';
   
   //what folder is the manifest in
 function getPathByName() {
@@ -26,6 +29,8 @@ function getPathByName() {
 }
 
   var publicationName = getPathByName();
+  
+  console.log(publicationName);
 
   var ui = document.getElementById('page-controls');
   
@@ -49,7 +54,7 @@ function getPathByName() {
     caches.has(publicationName).then(function(isCached) {
       ui.innerHTML =
         '<span><label class="status"><input type="checkbox" class="work-offline">Save</label></span>' +
-        '<span class="download"><a href="' + publicationBaseURL + 'download-publication">Download</a></span>';
+        '<span class="download"><a href="' + publicationBaseURL + publicationName + '/download-publication">Download</a></span>';
       
       
       
@@ -68,7 +73,7 @@ function getPathByName() {
          status.textContent = "Offlinifying";
 //console.log(publicationBaseURL);
 
-          fetch(publicationBaseURL + 'manifest.json', { mode: 'no-cors' }).then(function(response) {
+          fetch(publicationBaseURL + publicationName + '/manifest.json', { mode: 'no-cors' }).then(function(response) {
             return response.json();
           }).then(function(dave) {
           
@@ -83,11 +88,17 @@ return dave.spine.map(function(el) { return el.href}).concat(newArray);
 //console.log(data);
 
             data.push('manifest.json');
+            
+            publicationURL = publicationBaseURL + publicationName;
+    //        console.log(publicationURL);
 
             
             return caches.open(publicationName).then(function(cache) {
               return cache.addAll(data.map(function(url) {
-                return new URL(url, 'http://127.0.0.1/' + publicationBaseURL);
+            //  console.log(new URL(publicationName + '/' + url, publicationBaseURL));
+              
+              
+                return new URL(publicationName + '/' + url, publicationURL);
               }));
             });
           }).then(function() {
