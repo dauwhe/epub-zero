@@ -8,7 +8,7 @@
   // some nasty url hacking that should probably be done some other way
 var urlRE = /^.*acme\/([^\/]+)\//.exec(location.href);
 
- var publicationBaseURL = location.origin + '/acme/'
+ var publicationBaseURL = location.origin + '/epub-zero/acme/'
  
 console.log(publicationBaseURL);
 

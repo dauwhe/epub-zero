@@ -44,7 +44,7 @@ const urlRE = /\/([^\/]*)\/download-publication/.exec(request.url);
 //  const publicationBaseURL = urlRE[0];
 
   
-    var publicationBaseURL = location.origin + '/acme/'
+    var publicationBaseURL = location.origin + '/epub-zero/acme/'
 
   var publicationName = urlRE[1];
 //  var fileName = urlRE[1];
