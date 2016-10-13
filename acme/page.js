@@ -32,7 +32,7 @@ function getPathByName() {
 
 
  // navigator.serviceWorker.register(new URL('sw.js', thisScriptURL));
- navigator.serviceWorker.register('/sw.js');
+ navigator.serviceWorker.register('sw.js');
 
 
   if (navigator.serviceWorker.controller) {
