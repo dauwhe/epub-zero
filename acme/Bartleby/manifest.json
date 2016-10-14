@@ -1,26 +1,51 @@
 {
-  "name": "Bartleby, The Scrivener",
-  "spine": [{ "href": "html/Bartleby.html",
-    "type": "text/html"}],
-  
-  "resources": [
-  { "href": "css/Bartleby.css",
-  "type": "text/css" },
-   {
-    "href": "fonts/STIXGeneral.otf",
-    "type": "text/html"
-  }, {
-    "href": "fonts/STIXGeneralBol.otf",
-    "type": "font/otf"
-  }, {
-    "href": "fonts/STIXGeneralItalic.otf",
-    "type": "font/otf"
-  }, {
-    "href": "fonts/STIXGeneralBolIta.otf",
-    "type": "font/otf"
-  }
-  ]
-  
-  
-  
-  }
+	"name": "Bartleby, The Scrivener",
+	"spine": [{
+			"href": "html/Bartleby.html",
+			"type": "text/html"
+		}
+
+	],
+
+
+
+
+
+	"resources": [
+
+		{
+			"href": "css/Bartleby.css",
+			"type": "text/css"
+		},
+
+
+
+		{
+			"href": "fonts/STIXGeneral.otf",
+			"type": "text/html"
+		},
+
+		{
+			"href": "fonts/STIXGeneralBol.otf",
+			"type": "font/otf"
+		}, {
+			"href": "fonts/STIXGeneralItalic.otf",
+			"type": "font/otf"
+		}, {
+			"href": "fonts/STIXGeneralBolIta.otf",
+			"type": "font/otf"
+		},
+		
+		{
+			"href": "index.html",
+			"type": "text/html",
+			"properties": "nav"
+		}
+
+
+
+	]
+
+
+
+}

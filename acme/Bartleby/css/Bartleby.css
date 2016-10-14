@@ -175,8 +175,12 @@ text-indent: 0;
 margin-top: 3em;
 }
 
-.leading-line-rw {
+.leading-line-rw, .decoration-rw {
 height: 1.33em;
+}
+
+.decoration-rw p {
+text-align: center;
 }
 
 .fp-rw {

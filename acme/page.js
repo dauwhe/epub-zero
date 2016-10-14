@@ -75,6 +75,7 @@ function getPathByName() {
 
           fetch(publicationBaseURL + publicationName + '/manifest.json', { mode: 'no-cors' }).then(function(response) {
             return response.json();
+            console.log(response.json());
           }).then(function(dave) {
           
           

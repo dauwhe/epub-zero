@@ -67,8 +67,9 @@ const urlRE = /\/([^\/]*)\/download-publication/.exec(request.url);
       data.spine.map(function(el) { return el.href}).push(publicationName + '/manifest.json');
 
       return Promise.all(
-        data.spine.map(function(el) { return el.href}).map(path => {
+        data.resources.map(function(el) { return el.href}).map(path => {
         console.log(path);
+       
           return fetchingMethod(publicationBaseURL + publicationName + '/' + path).then(response => {
             if (!path || path.endsWith('/')) path += 'index.html';
             types[path] = response.headers.get('Content-Type');
@@ -83,15 +84,26 @@ const urlRE = /\/([^\/]*)\/download-publication/.exec(request.url);
           });
         })
       ).then(
-        data.resources.map(function(el) { return el.href}).map(path => {
+        data.spine.map(function(el) { return el.href}).map(path => {
         console.log(path);
           return fetchingMethod(publicationBaseURL + publicationName + '/' + path).then(response => {
-            if (!path || path.endsWith('/')) path += 'index.html';
-            types[path] = response.headers.get('Content-Type');
+          //  if (!path || path.endsWith('/')) path += 'index.html';
+         //   types[path] = response.headers.get('Content-Type');
+         
+     //     var myRe = /([^/]*)/g;
+      //  myPath = myRe.exec(path);
+    //    console.log(myPath)
+    //    zip.folder(myPath[0]);
+         
+        console.log(response.arrayBuffer);
             return response.arrayBuffer();
           }).then(arrayBuffer => {
-            zip.file(path, arrayBuffer, {createFolders: true});
-            console.log(arrayBuffer);
+          
+         
+                        zip.file(path, arrayBuffer, {createFolders: true});
+            
+          //  console.log(path);
+           // console.log(arrayBuffer);
           });
         })
       ).then(_ => {
