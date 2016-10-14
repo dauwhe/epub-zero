@@ -40,6 +40,12 @@
 			"href": "index.html",
 			"type": "text/html",
 			"properties": "nav"
+		},
+		
+		{
+			"href": "images/Bartleby.jpg",
+			"type": "image/jpeg",
+			"properties": "cover-image"
 		}
 
 
