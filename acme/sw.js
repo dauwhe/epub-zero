@@ -59,9 +59,9 @@ const urlRE = /\/([^\/]*)\/download-publication/.exec(request.url);
     return fetchingMethod(publicationBaseURL + publicationName + '/manifest.json').then(r => r.json()).then(data => {
       const zip = new JSZip();
       const types = {};
+      var manifestContent = JSON.stringify(data);
       
-      
-   
+ //  zip.file('manifest.json', manifestContent);
 
       // I should reuse the asset I just downloaded but I'm lazy
       data.spine.map(function(el) { return el.href}).push(publicationName + '/manifest.json');
@@ -78,25 +78,29 @@ const urlRE = /\/([^\/]*)\/download-publication/.exec(request.url);
     
             
           }).then(arrayBuffer => {
+            
             zip.file(path, arrayBuffer, {createFolders: true});
           });
         })
       ).then(
         data.resources.map(function(el) { return el.href}).map(path => {
+        console.log(path);
           return fetchingMethod(publicationBaseURL + publicationName + '/' + path).then(response => {
             if (!path || path.endsWith('/')) path += 'index.html';
             types[path] = response.headers.get('Content-Type');
             return response.arrayBuffer();
           }).then(arrayBuffer => {
             zip.file(path, arrayBuffer, {createFolders: true});
+            console.log(arrayBuffer);
           });
         })
       ).then(_ => {
-       zip.file('manifest.json', 'i am a manifest');
+   zip.file('manifest.json', manifestContent);
+ //  console.log(manifestContent);
 
         const zipArray = new Uint8Array(zip.generate({
           type: 'uint8array',
-          compression: 'DEFLATE'
+          compression: 'STORE'
         }));
         const resultArray = new Uint8Array(zipArray.length + 1);
 
