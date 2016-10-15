@@ -59,6 +59,14 @@ p {
 text-align: center;
 text-indent: 0;
 }
+
+section p {
+text-align: left;
+}
+
+section p + section p {
+text-indent: 1.2em;
+}
   </style>
 </head>
 <body>
@@ -82,7 +90,7 @@ text-indent: 0;
 </tr>
 
 <tr>
-<td><img src="covers/Bartleby.jpg" height="100" alt="Bartleby Book Cover"/></td>
+<td><img src="covers/bartleby.jpg" height="100" alt="Moby Dick Book Cover"/></td>
 <td><a href="main.html?manifest=Bartleby/manifest.json">Bartleby, The Scrivener</a></td>
 <td>Herman Melville</td>
 </tr>
@@ -92,7 +100,19 @@ text-indent: 0;
 </table>
 
 
-<p><i><a href="https://jakearchibald.github.io/ebook-demo/publisher-site/readme/">Service Worker</a> less and less by <a href="https://twitter.com/jaffathecake">@jaffathecake</a></i></p>
+<p><i><a href="https://jakearchibald.github.io/ebook-demo/publisher-site/readme/">Service Worker</a> by <a href="https://twitter.com/jaffathecake">@jaffathecake</a></i>, although I’ve now ruined it.</p>
+
+
+<section>
+<h1>What’s all this, then?</h1>
+<p>This is another experiment along the lines of PWP, BFF, or EPUB Zero. The goal was to provide an environment for reading books, where the content itself was as simple as possible. There’s no JavaScript in the books; information about the book is in a web application manifest style extended with a “spine” and other “resources.” The book is displayed in an iframe. The previous/next buttons read from the manifest. A service worker allows offline reading, and can download the book as a zip file. Soon I hope to be able to package as EPUB3 as well. In the absence of a framework that understands the manifest, point to the <code>index.html</code> file of each book to find ordinary navigation, etc.</p>
+<p>What have I learned? Creating zips from a cache is tricky. The one hard problem in computer science is paths. Having a list of the components of a publication is <i>really</i> useful.</p>
+
+<p>Yes, this is really buggy, mostly because I don’t know JS.</p>
+
+<aside>The content is paginated in Safari desktop, Chrome, and Opera 12.16 due to the glory of <code>overflow: paged-x</code>.</aside>
+
+</section>
 
 
 

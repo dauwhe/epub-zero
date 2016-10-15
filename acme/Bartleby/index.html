@@ -1,73 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Bartleby, the Scrivener</title>
-	<meta charset="utf-8">
-	<style type="text/css">		nav ol {
-		list-style-type: none;
-		margin-left: 0;
-		padding-left: 0;
-		font-size: .8em;
-		}
-		
-		nav ol li {
-		margin-bottom: .2em;
-		}
-		
-		nav a {
-		text-decoration: none;
-		color: #777;
-		}
-		
-		.Contents-rw h1 {
-		font-size: 1em;
-		font-weight: bold;
-		text-transform: uppercase;
-		letter-spacing: 4px;
-		}
-		
-		#nav2 { display: none; }
-		
-		.cover, details {
-		margin: 0 auto;
-		text-align: center;
-		}
-		
-		.page-controls {
-		margin: 0 auto;
-		background-color: #F8F8F8;
-		height: 2em;
-		text-align: center;
-		}
-	</style>
-	
-	<link href="manifest.json" rel="manifest">
+  <meta charset="utf-8" />
+  <title>Bookstore</title>
+  <style type="text/css">
+
+body {
+			background-color: #F8F8F8;
+}
+    h1 {
+      font-size: 1.33rem;
+      font-variant: small-caps;
+      letter-spacing: 1px;
+      font-weight: normal;
+      text-align: center;
+    }
+
+
+    ol {
+      list-style-type: none;
+    }
+
+    li {
+      line-height: 1.5rem;
+    }
+
+table {
+border-collapse: collapse;
+background-color: white;
+margin: 0 auto 0 auto;
+border: 4px solid #f8f8f8;
+}
+
+th {
+background-color: #f8f8f8;
+color: #555;
+font-family: sans-serif;
+letter-spacing: 1px;
+}
+
+td {
+background-color: white;
+border: 4px solid #f8f8f8;
+font-family: sans-serif;
+}
+
+   td, th {
+    vertical-align: top;
+    text-align: left;
+padding: 3px 6px;
+   }
+
+   a {
+color: #304A7B;
+}
+
+p {
+text-align: center;
+text-indent: 0;
+}
+
+section p {
+text-align: left;
+}
+
+section p + section p {
+text-indent: 1.2em;
+}
+  </style>
 </head>
 <body>
-<main>
-<div class="galley-rw">
+
+<h1>Acme Labs</h1>
 
 
-<div class="cover">
-<img height="300" src="images/Bartleby.jpg"/>
-<p><a href="html/Bartleby.html">Begin Reading</a></p>
-</div>
+<table>
+
+<tr>
+<th></th>
+<th>Title</th>
+<th>Author</th>
+</tr>
+
+<tr>
+<td><img src="covers/moby-dick-book-cover.jpg" height="100" alt="Moby Dick Book Cover"/></td>
+
+<td><a href="main.html?manifest=MobyDick/manifest.json">Moby-Dick</a></td>
+<td>Herman Melville</td>
+</tr>
+
+<tr>
+<td><img src="covers/bartleby.jpg" height="100" alt="Moby Dick Book Cover"/></td>
+<td><a href="main.html?manifest=Bartleby/manifest.json">Bartleby, The Scrivener</a></td>
+<td>Herman Melville</td>
+</tr>
 
 
-	<details>
-	
-	<summary>Table of Contents</summary>
-	
-	
-	<nav id="nav1">
-		<ol>
-			<li><a target="_self" href="html/Bartleby.html">Bartleby the Scrivener</a></li>
-		</ol>
-	</nav>
-	
-	</details>
-	
-</div>
-</main>
+
+</table>
+
+
+<p><i><a href="https://jakearchibald.github.io/ebook-demo/publisher-site/readme/">Service Worker</a> by <a href="https://twitter.com/jaffathecake">@jaffathecake</a></i>, although I’ve now ruined it.</p>
+
+
+<section>
+<h1>What’s all this, then?</h1>
+<p>This is another experiment along the lines of PWP, BFF, or EPUB Zero. The goal was to provide an environment for reading books, where the content itself was as simple as possible. There’s no JavaScript in the books; information about the book is in a web application manifest style extended with a “spine” and other “resources.” The book is displayed in an iframe. The previous/next buttons read from the manifest. A service worker allows offline reading, and can download the book as a zip file. Soon I hope to be able to package as EPUB3 as well. In the absence of a framework that understands the manifest, point to the <code>index.html</code> file of each book to find ordinary navigation, etc.</p>
+<p>What have I learned? Creating zips from a cache is tricky. The one hard problem in computer science is paths. Having a list of the components of a publication is <i>really</i> useful.</p>
+
+<p>Yes, this is really buggy, mostly because I don’t know JS.</p>
+
+<aside>The content is paginated in Safari desktop, Chrome, and Opera 12.16 due to the glory of <code>overflow: paged-x</code>.</aside>
+
+</section>
+
+
+
+
 </body>
 </html>
