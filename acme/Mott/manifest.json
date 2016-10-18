@@ -1,0 +1,57 @@
+{
+	"name": "Discourse On Woman",
+	"spine": [{
+			"href": "html/Mott.html",
+			"type": "text/html"
+		}
+
+	],
+
+
+
+
+
+	"resources": [
+
+		{
+			"href": "css/Mott.css",
+			"type": "text/css"
+		},
+
+
+
+		{
+			"href": "fonts/STIXGeneral.otf",
+			"type": "text/html"
+		},
+
+		{
+			"href": "fonts/STIXGeneralBol.otf",
+			"type": "font/otf"
+		}, {
+			"href": "fonts/STIXGeneralItalic.otf",
+			"type": "font/otf"
+		}, {
+			"href": "fonts/STIXGeneralBolIta.otf",
+			"type": "font/otf"
+		},
+		
+		{
+			"href": "index.html",
+			"type": "text/html",
+			"properties": "nav"
+		},
+		
+		{
+			"href": "images/Bartleby.jpg",
+			"type": "image/jpeg",
+			"properties": "cover-image"
+		}
+
+
+
+	]
+
+
+
+}
