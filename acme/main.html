@@ -72,11 +72,11 @@
 <input type="button" value="TOC" id="toc" />
 <div id="page-controls"></div>
 
-<input type="button" value="EPUB Package" id="epub" />
+<!-- <input type="button" value="EPUB Package" id="epub" /> -->
 <input type="button" value="Next" id="increment" />
 <br />
 
-<iframe id="pub" width="450" height="600"></iframe> </main> <script type="text/javascript">
+<iframe id="pub" width="450" height="600" name="book-frame"></iframe> </main> <script type="text/javascript">
 	
 	
 	var manifest = getParameterByName('manifest');
@@ -182,10 +182,32 @@ function getPathByName() {
     return path ?
         decodeURIComponent(path[1].replace(/\+/g, ' '))
         : null;
- 
 
- 
 }
+
+// want to increase/decrease font size inside iframe
+
+
+var fontPlusWrapper = document.createElement("p");
+var fontPluslink = document.createElement("input");
+fontPluslink.type='button';
+fontPluslink.value='+';
+
+
+fontPluslink.addEventListener('click', function() { var cur = window.getComputedStyle(document.getElementsByClassName("galley-rw")[0]).fontSize; 
+
+ document.getElementsByClassName('galley-rw')[0].style.fontSize = parseInt(cur) + 2 + "px"}, false)
+ 
+ 
+ var docx = document.getElementById('pub').contentDocument
+console.log(docx);
+
+var cur = docx.getComputedStyle.body.fontSize; 
+
+
+
+
+//document.getElementById('pub').contentDocument.body.style.fontSize = parseInt(cur) + 2+ "px"
 	    
 	    
 	    
