@@ -14,8 +14,8 @@
 		
 		iframe {
 		margin: 1em auto;
-		border-top: .75in solid white;
-		border-bottom: .25in solid white;
+		border-top: .5in solid white;
+		border-bottom: .5in solid white;
 		background-color: white;
 		display: block;
 		text-align: center;
@@ -74,9 +74,14 @@
 
 <!-- <input type="button" value="EPUB Package" id="epub" /> -->
 <input type="button" value="Next" id="increment" />
+
+<input type="button" value="+" id="bigger" />
+<input type="button" value="-" id="smaller" />
 <br />
 
 <iframe id="pub" width="450" height="600" name="book-frame"></iframe> </main> <script type="text/javascript">
+
+
 	
 	
 	var manifest = getParameterByName('manifest');
@@ -102,9 +107,29 @@
 	
 	var content = $.getJSON(manifest).done(
 	  function(data){
-	 
-	   document.getElementById('pub').setAttribute('src', getPathByName() + '/' + data.spine[0].href);
+	  
+	  var iframe = document.getElementById('pub')
+ 	iframe.setAttribute('src', getPathByName() + '/' + data.spine[0].href); 
+iframe.addEventListener('load', function(){ 
+	console.log('loaded');
 	
+var inside = iframe.contentWindow.document ;
+
+// want to increase/decrease font size inside iframe
+
+fontPluslink = document.getElementById('bigger');
+fontPluslink.addEventListener('click', function() { var cur = window.getComputedStyle(inside.getElementsByTagName('body')[0]).fontSize; 
+inside.getElementsByTagName('body')[0].style.fontSize = parseInt(cur) + 2 + "px"}, false)
+
+fontMinuslink = document.getElementById('smaller');
+fontMinuslink.addEventListener('click', function() { var cur = window.getComputedStyle(inside.getElementsByTagName('body')[0]).fontSize; 
+inside.getElementsByTagName('body')[0].style.fontSize = parseInt(cur) - 2 + "px"}, false)
+ 
+
+	
+	}
+	);
+
 			}
 	  );
 	
@@ -184,33 +209,7 @@ function getPathByName() {
         : null;
 
 }
-
-// want to increase/decrease font size inside iframe
-
-
-var fontPlusWrapper = document.createElement("p");
-var fontPluslink = document.createElement("input");
-fontPluslink.type='button';
-fontPluslink.value='+';
-
-
-fontPluslink.addEventListener('click', function() { var cur = window.getComputedStyle(document.getElementsByClassName("galley-rw")[0]).fontSize; 
-
- document.getElementsByClassName('galley-rw')[0].style.fontSize = parseInt(cur) + 2 + "px"}, false)
- 
- 
- var docx = document.getElementById('pub').contentDocument
-console.log(docx);
-
-var cur = docx.getComputedStyle.body.fontSize; 
-
-
-
-
-//document.getElementById('pub').contentDocument.body.style.fontSize = parseInt(cur) + 2+ "px"
-	    
-	    
-	    
+   
 </script>
 	<script src="page.js"></script>
 
