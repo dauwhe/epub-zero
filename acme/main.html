@@ -51,8 +51,15 @@
 		
 		
 	</style>
-	<script src="https://code.jquery.com/jquery-1.11.0.min.js">
+	<!-- 
+<script src="https://code.jquery.com/jquery-1.11.0.min.js">
 	</script>
+	
+ -->
+	<script src="jquery-1.9.1.min.js">
+	</script>
+	
+	
 </head>
 <body>
 <main> 
@@ -77,6 +84,7 @@
 
 <input type="button" value="+" id="bigger" />
 <input type="button" value="-" id="smaller" />
+<input type="button" value="Night" id="night" />
 <br />
 
 <iframe id="pub" width="450" height="600" name="book-frame"></iframe> </main> <script type="text/javascript">
@@ -89,6 +97,7 @@
 	//console.log("here is the " + manifest);
 	
 	var count = 0;
+var	NightLink = document.getElementById('night');
 	
 	// set title of page to book title
 	
@@ -111,7 +120,7 @@
 	  var iframe = document.getElementById('pub')
  	iframe.setAttribute('src', getPathByName() + '/' + data.spine[0].href); 
 iframe.addEventListener('load', function(){ 
-	console.log('loaded');
+
 	
 var inside = iframe.contentWindow.document ;
 
@@ -124,9 +133,28 @@ inside.getElementsByTagName('body')[0].style.fontSize = parseInt(cur) + 2 + "px"
 fontMinuslink = document.getElementById('smaller');
 fontMinuslink.addEventListener('click', function() { var cur = window.getComputedStyle(inside.getElementsByTagName('body')[0]).fontSize; 
 inside.getElementsByTagName('body')[0].style.fontSize = parseInt(cur) - 2 + "px"}, false)
- 
 
-	
+// night mode!!!!
+
+NightLink.addEventListener('click', function() { 
+if (NightLink.value==="Night") {
+inside.getElementsByTagName('html')[0].style.filter = 'invert(1) hue-rotate(180deg)';
+
+// need to check for img elements before altering styles
+// code TK... if there's no IMG then getElementsByTagName returns an empty array
+
+//inside.getElementsByTagName('img').style.filter = 'invert(1) hue-rotate(180deg)';
+
+
+inside.getElementsByTagName('html')[0].style.background = 'black';
+NightLink.value = 'Day';
+} else {
+NightLink.value = 'Night';
+inside.getElementsByTagName('html')[0].style.background = 'white';
+inside.getElementsByTagName('html')[0].style.filter = 'invert(0) hue-rotate(0deg)';
+}
+
+}, false)
 	}
 	);
 
@@ -159,7 +187,7 @@ inside.getElementsByTagName('body')[0].style.fontSize = parseInt(cur) - 2 + "px"
 	   var tableofcontents = $.getJSON(manifest).done(
 	  function(data){
 	  for ( var i in data.resources ) {
-	  console.log('hello');
+	//  console.log('hello');
 	 
 			if (data.resources[i].properties === "nav") {
 	   document.getElementById('pub').setAttribute('src', getPathByName() + '/' + data.resources[i].href );

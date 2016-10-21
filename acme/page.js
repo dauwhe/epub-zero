@@ -34,10 +34,12 @@ function getPathByName() {
 
   var ui = document.getElementById('page-controls');
   
+   var uiEpub = document.getElementById('epub-controls');
+  
 
 
  // navigator.serviceWorker.register(new URL('sw.js', thisScriptURL));
- navigator.serviceWorker.register('sw.js');
+ navigator.serviceWorker.register('kroner.js');
 
 
   if (navigator.serviceWorker.controller) {
@@ -75,7 +77,6 @@ function getPathByName() {
 
           fetch(publicationBaseURL + publicationName + '/manifest.json', { mode: 'no-cors' }).then(function(response) {
             return response.json();
-            console.log(response.json());
           }).then(function(dave) {
           
           
