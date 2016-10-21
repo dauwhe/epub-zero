@@ -122,7 +122,14 @@ var	NightLink = document.getElementById('night');
 iframe.addEventListener('load', function(){ 
 
 	
-var inside = iframe.contentWindow.document ;
+var inside = iframe.contentWindow.document;
+
+// inject a viewport meta for mobile
+var view = inside.createElement('meta');
+view.name = "viewport";
+view.content="width=device-width, initial-scale=1.0";
+inside.getElementsByTagName('head')[0].appendChild(view);
+
 
 // want to increase/decrease font size inside iframe
 
