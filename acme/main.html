@@ -56,10 +56,11 @@
 	</script>
 	
 
-<!-- 	<script src="jquery-1.9.1.min.js"> -->
-	</script>
+<!-- 	<script src="jquery-1.9.1.min.js"> 
+	</script>-->
 	
-	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 </head>
 <body>
 <main> 
@@ -87,7 +88,7 @@
 <input type="button" value="Night" id="night" />
 <br />
 
-<iframe id="pub" width="450" height="600" name="book-frame"></iframe> </main> <script type="text/javascript">
+<iframe id="book-frame" width="450" height="600" name="book-frame"></iframe> </main> <script type="text/javascript">
 
 
 	
@@ -117,18 +118,13 @@ var	NightLink = document.getElementById('night');
 	var content = $.getJSON(manifest).done(
 	  function(data){
 	  
-	  var iframe = document.getElementById('pub')
+	  var iframe = document.getElementById('book-frame')
  	iframe.setAttribute('src', getPathByName() + '/' + data.spine[0].href); 
 iframe.addEventListener('load', function(){ 
 
 	
 var inside = iframe.contentWindow.document;
 
-// inject a viewport meta for mobile
-var view = inside.createElement('meta');
-view.name = "viewport";
-view.content="width=device-width, initial-scale=1.0";
-inside.getElementsByTagName('head')[0].appendChild(view);
 
 
 // want to increase/decrease font size inside iframe
@@ -174,7 +170,7 @@ inside.getElementsByTagName('html')[0].style.filter = 'invert(0) hue-rotate(0deg
 	   count++;
 	   var content = $.getJSON(manifest).done(
 	  function(data){
-	   document.getElementById('pub').setAttribute('src', getPathByName() + '/' + data.spine[count].href );
+	   document.getElementById('book-frame').setAttribute('src', getPathByName() + '/' + data.spine[count].href );
 	  })   
 	    });
 	 // on clicking "previous" go to previous spine item
@@ -183,7 +179,7 @@ inside.getElementsByTagName('html')[0].style.filter = 'invert(0) hue-rotate(0deg
 	   count--;
 	   var content = $.getJSON(manifest).done(
 	  function(data){
-	   document.getElementById('pub').setAttribute('src', getPathByName() + '/' + data.spine[count].href );
+	   document.getElementById('book-frame').setAttribute('src', getPathByName() + '/' + data.spine[count].href );
 	  })   
 	    });
 	    
@@ -197,7 +193,7 @@ inside.getElementsByTagName('html')[0].style.filter = 'invert(0) hue-rotate(0deg
 	//  console.log('hello');
 	 
 			if (data.resources[i].properties === "nav") {
-	   document.getElementById('pub').setAttribute('src', getPathByName() + '/' + data.resources[i].href );
+	   document.getElementById('book-frame').setAttribute('src', getPathByName() + '/' + data.resources[i].href );
 			}
 			}
 	  })   
@@ -214,7 +210,7 @@ inside.getElementsByTagName('html')[0].style.filter = 'invert(0) hue-rotate(0deg
 	   var content = $.getJSON(manifest).done(
 	  function(data){
 	 
-	   document.getElementById('pub').setAttribute('src', getPathByName() + '/' + data.start_url);
+	   document.getElementById('book-frame').setAttribute('src', getPathByName() + '/' + data.start_url);
 	
 			}
 	  )   
