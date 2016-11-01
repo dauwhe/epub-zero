@@ -2,16 +2,14 @@
 <html>
 <head>
 	<title>Book</title>
-	<style type="text/css">		
-	
-	
+	<style type="text/css">
 	main { 
 		margin: 0 auto;
 		text-align: center;
 		background-color: #F8F8F8;
 		height: 100vh;
 		}
-		
+	
 		iframe {
 		margin: 1em auto;
 		border-top: .5in solid white;
@@ -22,227 +20,300 @@
 		}
 		
 		body {
-		background-color: #aaa;
+			background-color: #aaa;
 		}
 		
-		div.wrapper {
-		display: flex;
-		}
 		
-		#page-controls {
-		display: inline-block;
-		}
-		#page-controls label, span.download { 
-    display: inline-block;
-        -webkit-appearance: push-button;
-        webkit-user-select: text;
-   font: 11px BlinkMacSystemFont;
-   margin: 2px;
-   padding-bottom: 3px;
-   padding-top:  2px;
-   padding-right: 8px;
-   padding-left: 8px;
-   border-image-width: 1;
+#wrapper {
+display: flex;
+}
+/*
+#wrapper {
+position: relative;
+opacity: 0;
+    top:-20px;
+    height: 30px;
+    -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    -o-transition:all .5s ease-in-out;
+    -ms-transition:all .5s ease-in-out;
+    transition:all .5s ease-in-out;
+    display: flex;
 }
 
+#wrapper:hover {
+    opacity:1;
+    top:0px;
+    -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    -o-transition:all .5s ease-in-out;
+    -ms-transition:all .5s ease-in-out;
+    transition:all .5s ease-in-out;
+}​*/
+		
+		#page-controls {
+			display: inline-block;
+		}
 
+.button, .status, span.download {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+#wrapper input, #wrapper span, #wrapper .page-controls {
+ -webkit-flex: 1;
+-webkit-align-items: center;
+}
 
 #page-controls input.work-offline {display: none; }
-		
-		
-	</style>
 
-<script src="https://code.jquery.com/jquery-1.11.0.min.js">
-	</script>
-	
+#pub {
+width: 800px;
+height: 75vh;
+}
 
-<!-- 	<script src="jquery-1.9.1.min.js"> 
-	</script>-->
-	
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+form { 
+display: inline;
+}
+</style>
+<!-- 
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+ -->
+<script src="jquery-1.9.1.min.js"></script>
 
+<meta charset="utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 <main> 
 <div id="wrapper">
-	<div id="b">
-		<a href="index.html">Library</a>
-	</div>
-</div>
-<img id="cover-image" /> 
+
+<form method="get" action="index.html">
+    <button type="submit">Library</button>
+</form>
 
 
 
+<!-- <input type="button" value="Begin Reading" id="begin" /> -->
 
+<div id="page-controls"></div>
+<input type="button" value="TOC" id="toc" />
+<input type="button" value="Night" id="night" />
+
+<input type="button" value="+" id="bigger" />
+<input type="button" value="-" id="smaller" />
 
 <input type="button" value="Previous" id="decrement" />
-<!-- <input type="button" value="Begin Reading" id="begin" /> -->
-<input type="button" value="TOC" id="toc" />
-<div id="page-controls"></div>
 
 <!-- <input type="button" value="EPUB Package" id="epub" /> -->
 <input type="button" value="Next" id="increment" />
 
-<input type="button" value="+" id="bigger" />
-<input type="button" value="-" id="smaller" />
-<input type="button" value="Night" id="night" />
-<br />
-
-<iframe id="book-frame" width="450" height="600" name="book-frame"></iframe> </main> <script type="text/javascript">
 
 
-	
-	
-	var manifest = getParameterByName('manifest');
-	
-	//console.log("here is the " + manifest);
-	
-	var count = 0;
-var	NightLink = document.getElementById('night');
-	
-	// set title of page to book title
-	
-	
-	var title = $.getJSON(manifest).done(
+</div>
+<div class="iframe-container">
+<iframe id="pub" name="book-frame"></iframe>
+</div>
+</main> 
+
+<script type="text/javascript">
+var manifest = getParameterByName('manifest');
+var count = 0;
+var NightLink = document.getElementById('night');
+var iframe = document.getElementById('pub')
+
+// the manifest knows all
+var content = $.getJSON(manifest).done(
 	  function(data){
+// set title of page to book title  
+	    document.title = data.name; 
+
+// display first "spine" item in iframe by default
+
+if (data.spine[0].type == 'image/jpeg') {
+	   var html = '<html><body style="margin: 0 auto; text-align: center;"><img style="max-height: 100vh;" src="' + getPathByName() + '/' + data.spine[0].href + '"/></body></html>'
+	   	   console.log(html);
+	   iframe.contentWindow.document.open();
+		iframe.contentWindow.document.write(html);
+		iframe.contentWindow.document.close();
+	   } else {
+	   iframe.setAttribute('src', getPathByName() + '/' + data.spine[0].href );
+	   }
+
+// on clicking "next" go to next spine item
+	    $('#increment').click(function (e) {
+	   e.preventDefault();
+	   count++;
+// well, if we just get an image, we need to wrap it in HTML so we can style it
+	   if (data.spine[count].type == 'image/jpeg') {
+	   var html = '<html><body style="margin: 0 auto; text-align: center;"><img style="max-height: 100vh;" src="' + getPathByName() + '/' + data.spine[count].href + '" alt="' + data.spine[count].alt +   '"/></body></html>'
+	   console.log(html);
+		iframe.contentWindow.document.open();
+		iframe.contentWindow.document.write(html);
+		iframe.contentWindow.document.close();
+	   } else {
+	   iframe.setAttribute('src', getPathByName() + '/' + data.spine[count].href );
+	   }
+	   
+	  });
+
+// on clicking "previous" go to previous spine item
+	   $('#decrement').click(function (e) {
+	   e.preventDefault();
+	   count--;
+	   if (data.spine[count].type == 'image/jpeg') {
+	   var html = '<html><body style="margin: 0 auto; text-align: center;"><img style="max-height: 100vh;" src="' + getPathByName() + '/' + data.spine[count].href + '"/></body></html>'
+	   	   console.log(html);
+	   iframe.contentWindow.document.open();
+		iframe.contentWindow.document.write(html);
+		iframe.contentWindow.document.close();
+	   } else {
+	   iframe.setAttribute('src', getPathByName() + '/' + data.spine[count].href );
+	   }
+	   
+	    });
+
+// link to table of contents
+	    $('#toc').click(function (f) {
+	   f.preventDefault();
+	  for ( var i in data.resources ) {
+			if (data.resources[i].properties === "nav") {
+	   iframe.setAttribute('src', getPathByName() + '/' + data.resources[i].href );
+		}}
+	  });  
+
+// "begin reading" link goes to start_url, which may not be first spine item
+// this screws up count, though. 
 	 
-	   document.title = data.name;
-//	   console.log(document.title);
-	
-			}
-	  )  ;
-	  
-	  
-	  // display first "spine" item in iframe by default
-	
-	var content = $.getJSON(manifest).done(
-	  function(data){
-	  
-	  var iframe = document.getElementById('book-frame')
- 	iframe.setAttribute('src', getPathByName() + '/' + data.spine[0].href); 
-iframe.addEventListener('load', function(){ 
+	$('#begin').click(function (g) {
+	   g.preventDefault();
+	   iframe.setAttribute('src', getPathByName() + '/' + data.start_url);
+	});
 
-	
+// to muck around inside the iframe, we need to wait for it to load
+
+/* 
+iframe.addEventListener('unload', function(){
+console.log('unload');
+NightLink.removeEventListener('click', false);
+});
+ */
+
+});
+
+
+
+
+
+
+
+
+
+
+NightLink.addEventListener('click', function(){ 
 var inside = iframe.contentWindow.document;
+
+
+
+//NightLink.addEventListener('click', function() { 
+
+if (NightLink.value==="Night") {
+
+
+inside.getElementsByTagName('html')[0].style.filter = 'invert(1) hue-rotate(180deg)';
+
+// need to check for img elements before altering styles
+// code TK... if there's no IMG then getElementsByTagName returns an empty array
+//inside.getElementsByTagName('img').style.filter = 'invert(1) hue-rotate(180deg)';
+
+inside.getElementsByTagName('html')[0].style.background = 'black';
+
+
+document.getElementsByTagName('main')[0].style.background = 'black';
+document.getElementById('pub').style.borderColor = 'black';
+
+NightLink.value = 'Day';
+} else {
+NightLink.value = 'Night';
+inside.getElementsByTagName('html')[0].style.background = 'white';
+inside.getElementsByTagName('html')[0].style.filter = 'invert(0) hue-rotate(0deg)';
+document.getElementsByTagName('main')[0].style.background = 'white';
+document.getElementById('pub').style.borderColor = 'white';
+
+}
+
+
+
+
+
+}, false)
 
 
 
 // want to increase/decrease font size inside iframe
 
 fontPluslink = document.getElementById('bigger');
-fontPluslink.addEventListener('click', function() { var cur = window.getComputedStyle(inside.getElementsByTagName('body')[0]).fontSize; 
+fontPluslink.addEventListener('click', function() { 
+console.log('clicked bigger');
+var inside = iframe.contentWindow.document;
+
+var cur = window.getComputedStyle(inside.getElementsByTagName('body')[0]).fontSize; 
 inside.getElementsByTagName('body')[0].style.fontSize = parseInt(cur) + 2 + "px"}, false)
 
 fontMinuslink = document.getElementById('smaller');
-fontMinuslink.addEventListener('click', function() { var cur = window.getComputedStyle(inside.getElementsByTagName('body')[0]).fontSize; 
+fontMinuslink.addEventListener('click', function() { 
+
+var inside = iframe.contentWindow.document;
+var cur = window.getComputedStyle(inside.getElementsByTagName('body')[0]).fontSize; 
 inside.getElementsByTagName('body')[0].style.fontSize = parseInt(cur) - 2 + "px"}, false)
+
+
+
+
+
+
 
 // night mode!!!!
 
-NightLink.addEventListener('click', function() { 
-if (NightLink.value==="Night") {
-inside.getElementsByTagName('html')[0].style.filter = 'invert(1) hue-rotate(180deg)';
-
-// need to check for img elements before altering styles
-// code TK... if there's no IMG then getElementsByTagName returns an empty array
-
-//inside.getElementsByTagName('img').style.filter = 'invert(1) hue-rotate(180deg)';
 
 
-inside.getElementsByTagName('html')[0].style.background = 'black';
-NightLink.value = 'Day';
-} else {
-NightLink.value = 'Night';
-inside.getElementsByTagName('html')[0].style.background = 'white';
-inside.getElementsByTagName('html')[0].style.filter = 'invert(0) hue-rotate(0deg)';
-}
 
-}, false)
-	}
-	);
 
-			}
-	  );
-	
-	  // on clicking "next" go to next spine item
-	    $('#increment').click(function (e) {
-	   e.preventDefault();
-	   count++;
-	   var content = $.getJSON(manifest).done(
-	  function(data){
-	   document.getElementById('book-frame').setAttribute('src', getPathByName() + '/' + data.spine[count].href );
-	  })   
-	    });
-	 // on clicking "previous" go to previous spine item
-	   $('#decrement').click(function (e) {
-	   e.preventDefault();
-	   count--;
-	   var content = $.getJSON(manifest).done(
-	  function(data){
-	   document.getElementById('book-frame').setAttribute('src', getPathByName() + '/' + data.spine[count].href );
-	  })   
-	    });
-	    
-	 // link to table of contents
-	    $('#toc').click(function (f) {
-	   f.preventDefault();
-	    
-	   var tableofcontents = $.getJSON(manifest).done(
-	  function(data){
-	  for ( var i in data.resources ) {
-	//  console.log('hello');
-	 
-			if (data.resources[i].properties === "nav") {
-	   document.getElementById('book-frame').setAttribute('src', getPathByName() + '/' + data.resources[i].href );
-			}
-			}
-	  })   
-	    });
-	    
-	   
-	 // "begin reading" link goes to start_url, which may not be first spine item
-	 
-	 // this screws up count, though. 
-	 
-	$('#begin').click(function (g) {
-	   g.preventDefault();
-	   
-	   var content = $.getJSON(manifest).done(
-	  function(data){
-	 
-	   document.getElementById('book-frame').setAttribute('src', getPathByName() + '/' + data.start_url);
-	
-			}
-	  )   
-	    });
-	    
-	// what's the path to the manifest?
-	
+
+
+
+
+
+
+// what's the path to the manifest?
+
 function getParameterByName(name) {
- 
     var match = RegExp('[?&]' + name + '=([^&]*)')
                     .exec(window.location.search);
- 
     return match ?
         decodeURIComponent(match[1].replace(/\+/g, ' '))
         : null;
- 
 }
-//what folder is the manifest in
-function getPathByName() {
 
+//what folder is the manifest in
+
+function getPathByName() {
 //this is deeply flawed. fails on MobyDick/folder/manifest.json
  var path = RegExp('[?]manifest=' + '([^/]*)')
                     .exec(window.location.search);
- 
     return path ?
         decodeURIComponent(path[1].replace(/\+/g, ' '))
         : null;
-
 }
-   
 </script>
-	<script src="page.js"></script>
 
+<script src="page.js"></script>
 </body>
 </html>

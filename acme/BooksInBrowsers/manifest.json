@@ -1,0 +1,114 @@
+{
+	"name": "A Bag Full of Stories",
+	"spine": [{
+			"href": "html/story-000.html",
+			"type": "text/html"
+		},{
+			"href": "html/DancingAtTheEdgeOfTheWorld.jpg",
+			"type": "image/jpeg",
+			"alt": "cover image for Dancing at the Edge of the World"
+		},{
+			"href": "html/story-001.html",
+			"type": "text/html"
+		},{
+			"href": "html/vestonicka_venus.jpg",
+			"type": "image/jpeg",
+			"alt": "The Vestonicka Venus, a 29,000 year old ceramic statue"
+		},
+		{
+			"href": "html/leguin-speaking.jpg",
+			"type": "image/jpeg",
+			"alt": "Ursula K. Le Guin at a podium"
+		},
+		{
+			"href": "html/goatwalking.jpg",
+			"type": "image/jpeg",
+			"alt": "Book cover image for Goatwalking"
+		},{
+			"href": "html/Wadi_Rum_Goat.JPG",
+			"type": "image/jpeg",
+			"alt": "A goat walks through Wadi Rum, Jordan"
+		},{
+			"href": "html/cristopher.jpg",
+			"type": "image/jpeg",
+			"alt": "My son Cristopher"
+		},
+		{
+			"href": "html/coffee-gathering.jpg",
+			"type": "image/jpeg",
+			"alt": "Ethiopian woman gathers coffee beans in a basket"
+		},{
+			"href": "html/problem-list.html",
+			"type": "text/html"
+		},{
+			"href": "html/new-web.html",
+			"type": "text/html"
+		},{
+			"href": "manifest.json",
+			"type": "application/json"
+		},{
+			"href": "html/rect.svg",
+			"type": "image/svg+xml"
+		},{
+			"href": "html/kroner.jpg",
+			"type": "image/jpeg",
+			"alt": "photo of George Kerscher with his service dog Kroner"
+		},{
+			"href": "../page.js",
+			"type": "application/javascript"
+		},
+		{
+			"href": "css/BiB.css",
+			"type": "text/css"
+		},
+		{
+			"href": "html/story-999.html",
+			"type": "text/html"
+		}
+		
+		
+
+	],
+
+
+
+
+
+	"resources": [
+
+		{
+			"href": "css/BiB.css",
+			"type": "text/css"
+		},
+
+
+
+		{
+			"href": "fonts/STIXGeneral.otf",
+			"type": "text/html"
+		},
+
+		{
+			"href": "fonts/STIXGeneralBol.otf",
+			"type": "font/otf"
+		}, {
+			"href": "fonts/STIXGeneralItalic.otf",
+			"type": "font/otf"
+		}, {
+			"href": "fonts/STIXGeneralBolIta.otf",
+			"type": "font/otf"
+		},
+		
+		{
+			"href": "index.html",
+			"type": "text/html",
+			"properties": "nav"
+		},
+		
+		{
+			"href": "images/BiB.jpg",
+			"type": "image/jpeg",
+			"properties": "cover-image"
+		}
+	]
+}

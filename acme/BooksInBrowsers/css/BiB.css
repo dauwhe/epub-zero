@@ -1,14 +1,14 @@
 body {
-overflow: paged-x;
-overflow: -webkit-paged-x;
-overflow: -o-paged-x;
--webkit-scroll-snap-type: mandatory;
--webkit-scroll-snap-points-x: repeat(100%);
--webkit-box-decoration-break: clone;
-
-scroll-snap-type: mandatory;
-scroll-snap-points-x: repeat(100%);
-box-decoration-break: clone;
+  overflow: paged-x;
+  overflow: -webkit-paged-x;
+  overflow: -o-paged-x;
+  -webkit-scroll-snap-type: mandatory;
+  -webkit-scroll-snap-points-x: repeat(100%);
+  -webkit-box-decoration-break: clone;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-x: repeat(100%);
+  box-decoration-break: clone;
+  margin: 0 10%;
 }
 
 
@@ -137,6 +137,11 @@ font-weight: normal;
 font-size: 1.4em;
 text-transform: uppercase;
 letter-spacing: 4px;
+margin-top: 20vh;
+}
+
+div.media-rw {
+text-align: center;
 }
 
 .title-block-rw {
@@ -144,7 +149,11 @@ height: auto;
 min-height: 8em;
 }
 
-
+.highlight {
+font-size: 1.5em;
+line-height: 1.5em;
+color: red;
+}
 
 .decoration-rw {
 text-align: center;
@@ -326,13 +335,9 @@ margin: 0 auto;
 width: 100%;
 }
 
-.dateline-rw {
-
-text-align: left;
-font-style: italic;
-font-weight: normal;
-margin-bottom: 1em;
-text-indent: 0;
+ol, ul {
+font-size: 1.5em;
+line-height: 1.5em;
 }
 
 
